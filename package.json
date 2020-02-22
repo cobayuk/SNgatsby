@@ -1,0 +1,33 @@
+{
+  "name": "sungnikah",
+  "version": "1.0.0",
+  "description": "This site is landing page multiporpose make a branding the digital wedding invitation",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.js",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prasetyodimas/sungnikah.git"
+  },
+  "keywords": [
+    "wedding",
+    "invitation",
+    "static",
+    "site"
+  ],
+  "author": "Dimas Prasetyo & Arie Aditya Nugraha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prasetyodimas/sungnikah/issues"
+  },
+  "homepage": "https://github.com/prasetyodimas/sungnikah#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.0",
+    "css-loader": "^3.4.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.6"
+  }
+}
