@@ -55,7 +55,7 @@ const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map((dir) => {
       description: config.site_description
     },
     minify: {
-      collapseWhitespace: false,
+      collapseWhitespace: true,
       removeComments: true,
       removeRedundantAttributes: false,
       removeScriptTypeAttributes: false,

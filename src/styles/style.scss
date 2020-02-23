@@ -758,7 +758,7 @@ input[type="submit"].form-control:focus {
 
 .overlay-pattern {
   z-index: 2;
-  background-image: url("../images/general-elements/overlay-pattern.png");
+  // background-image: url("../images/general-elements/overlay-pattern.png");
   background-color: rgba(0,0,0,0.3);
   background-repeat: repeat;
   background-position: top left;
@@ -3147,7 +3147,7 @@ body {
       right: 20px;
       width: 22px;
       height: 35px;
-      background: url("../images/general-elements/pricing-column-featured-sign.png") no-repeat top center;
+      // background: url("../images/general-elements/pricing-column-featured-sign.png") no-repeat top center;
     }
   }
 
