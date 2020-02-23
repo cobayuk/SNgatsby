@@ -9,6 +9,8 @@ if (!ROOT) {
 const config = {
 	// Your website's name, used for favicon meta tags
 	site_name: 'Sungnikah.com',
+	// Your website's authors, used for own previlege's
+	site_authors: 'Sungnikah.com',
 	// Your website meta keywords user for meta keywords
 	site_keywords: 'jasa web invitation, wedding invitation, wedding invitation keren, undangan pernikahan digital',
 	// Your website's description, used for favicon meta tags
@@ -24,7 +26,7 @@ const config = {
 	// Local development URL
 	dev_host: 'localhost',
 	// Local development port
-	port: process.env.PORT || 8081,
+	port: process.env.PORT,
 	// Advanced configuration, edit with caution!
 	env: process.env.NODE_ENV,
 	root: ROOT,

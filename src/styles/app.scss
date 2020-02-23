@@ -1,46 +1,18 @@
-// SUNGNIKAH.COM
+/*=================================================================================
 
+    Theme Name: SUNGNIKAH.COM
+    Description: Landing Page HTML Template
+    Author: Dimas Prasetyo & Arie Aditya Nugraha
+    Version: 1.0
 
-// Frontend Style Guide https://github.com/akadsuki/frontend-style-guide
+    Frontend Style Guide https://github.com/akadsuki/frontend-style-guide
+    SCSS Stylesheet 
 
-/* stylelint-disable */
-// @charset "utf-8";
-
-// @import "abstracts/grid",
-//         "abstracts/mixins",
-//         "abstracts/variables/variables";
-
-// // 2. Vendors
-// @import "vendor/normalize/normalize",
-//         "vendor/woocommerce/woocommerce";
-        
-// // 3. Base
-// @import "base/base",
-//         "base/typography";
-
-// // 4. Layout
-// @import "layout/footer",
-//         "layout/footer-nav",
-//         "layout/header",
-//         "layout/main-nav",
-//         "layout/meta-nav";
-
-// // 5. Components
-// @import "components/breadcrumb",
-//         "components/button",
-//         "components/card",
-//         "components/form/form",
-//         "components/pagination",
-//         "components/table";
-
-// // 6. Page-specific styles
-// @import "pages/contact",
-//         "pages/home",
-//         "pages/login";
-
-// // 7. Helpers
-// @import "helpers/a11y",
-//         "helpers/helpers";
-
-// // X. Shame file
-// @import "shame";
+===================================================================================*/
+// TODO Need Rebuild SCSS reorganized !
+// main stylesheets
+@import  './style.scss';
+//helpers 
+@import './css-helpers';
+//vendor 
+@import './bootstrap';
