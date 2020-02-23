@@ -49,6 +49,7 @@ const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map((dir) => {
     filename,
     template: path.join(config.root, config.paths.src, filename),
     meta: {
+      authors: config.site_authors,
       viewport: config.viewport,
       keywords: config.site_keywords,
       description: config.site_description

@@ -9,6 +9,8 @@ if (!ROOT) {
 const config = {
 	// Your website's name, used for favicon meta tags
 	site_name: 'Sungnikah.com',
+	// Your website's authors, used for own previlege's
+	site_authors: 'Sungnikah.com',
 	// Your website meta keywords user for meta keywords
 	site_keywords: 'jasa web invitation, wedding invitation, wedding invitation keren, undangan pernikahan digital',
 	// Your website's description, used for favicon meta tags
