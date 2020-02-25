@@ -1,56 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
 	<title><%= htmlWebpackPlugin.options.title %></title>
-	<!-- <link href="https://fonts.googleapis.com/css?family=Poppins:400i,400,700i,700" rel="stylesheet"> -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600i,700" rel="stylesheet"> -->
 </head>
 <body>
     <div id="full-container">
-		<!-- Header -->
 		<header id="header">
-
 			<div id="header-bar-1" class="header-bar">
-
 				<div class="header-bar-wrap">
-
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-
 								<div class="hb-content">
 									<a class="logo logo-header" href="#">
-										<img src="assets/images/files/logo-header.png" data-logo-alt="assets/images/files/logo-header-alt.png" alt="">
-										<h3><span class="colored">LeadMark</span></h3>
+										<!-- <svg id="Layer_1" width="150" height="100" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 606.13 191.02"><defs><style>.cls-1{fill:#fefefe;}.cls-2{fill:#020202;}.cls-3{fill:#040404;}.cls-4{fill:#f2f2f2;}</style></defs><title>sungnikah-logo</title><path class="cls-1" d="M39.28,368q0-40.29,0-80.57c0-1.14.2-1.4,1.38-1.4q301.64,0,603.27,0c1.2,0,1.48.22,1.48,1.46q-.06,94,0,188.06c0,1.38-.43,1.5-1.61,1.5q-187.29,0-374.59,0a.42.42,0,0,1,.26-.55c3.33-1.16,5.32-3.9,7.41-6.46,5.29-6.49,9.6-13.65,14.14-20.65,6.48-10,12.51-20.26,18.71-30.42a33.51,33.51,0,0,1,8.45-9.16c2.13-1.63,2.13-1.71,1.06-4.15a3.11,3.11,0,0,1,.36-2.9c1.33-2.42,2.81-4.75,4.18-7.15,3.92-6.86,7.73-13.78,11.55-20.69.71-1.28,1.22-2.66,1.84-4,.49-1.07,1.1-2.2-.11-3.23a3.75,3.75,0,0,0-4.11-.33c-2,1.22-3.8,2.65-5.65,4q-17.4,13.05-34,27.1c-3.57,3-7,6.26-10.93,8.8a20.15,20.15,0,0,1-3.43,1.83,2.91,2.91,0,0,1-3.2-.19c-.92-.8-.84-1.88-.64-3a38.32,38.32,0,0,1,5.44-13.41c6.67-10.62,15-19.56,25.95-25.93a25,25,0,0,1,11.64-3.76,3.53,3.53,0,0,1,3.12,1.32c1,1.25,2.11,1.22,3.87.09a2.48,2.48,0,0,0,1.11-3.34,4.66,4.66,0,0,0-3.15-2.6c-2.54-.79-5.06-.23-7.54.19-5.81,1-10.81,3.83-15.5,7.25a79.48,79.48,0,0,0-17.6,17.66,8.18,8.18,0,0,1-4.86,3.14c-2.15.54-3.27-.31-3.34-2.53a22.56,22.56,0,0,1,.21-5.06,8.89,8.89,0,0,0-.06-3.37c-.5-2.67-2.21-3.69-4.8-2.84a14.5,14.5,0,0,0-3.45,1.79,167.25,167.25,0,0,0-17.07,13c-.62.54-1.35,1.58-2.1,1s.19-1.52.58-2.21c4-7.18,8.32-14.22,12.6-21.25a17.43,17.43,0,0,0,1.14-2.07,1.92,1.92,0,0,0-.22-2.22,2.16,2.16,0,0,0-2.3-.67,5.07,5.07,0,0,0-3.69,5.23,2.69,2.69,0,0,1-.51,1.74c-2.9,4.84-5.79,9.69-8.6,14.58a4.06,4.06,0,0,1-2,1.78,53.36,53.36,0,0,1-11.21,3.76,12.44,12.44,0,0,1-2.36.17,5.35,5.35,0,0,1-5.64-5.46,21.58,21.58,0,0,1,.65-6.88,26.26,26.26,0,0,0,.78-4.32c.15-1.34-.49-1.86-1.72-1.94a7.65,7.65,0,0,0-4.31,1.28c-3.52,2-6.43,4.77-9.57,7.24a176.41,176.41,0,0,1-17,12.25,31.27,31.27,0,0,1-12,4.73c-2.59.35-3.85-.74-3.83-3.36a13.35,13.35,0,0,1,1.38-5.37,53.2,53.2,0,0,1,3.62-6.89,7.17,7.17,0,0,1,2.19-2.3,6.44,6.44,0,0,0,2.62-4c.29-1.09-.27-1.72-1.37-1.86a4.36,4.36,0,0,0-4.44,1.9c-3.43,5.11-6.81,10.27-8.07,16.45-1,5,1.79,8.52,6.91,8.49A28.37,28.37,0,0,0,193,394c6.56-3.26,12.35-7.68,18-12.23,2.15-1.72,4.3-3.47,6.4-5.27a4,4,0,0,1,1.29-.8c1-.34,1.67,0,1.77,1.1a10.55,10.55,0,0,1-.13,2.86,9.8,9.8,0,0,0-.07,3.54c.83,5.11,4.56,7.53,10.25,6.69a37.73,37.73,0,0,0,9.45-2.53,8.41,8.41,0,0,1,.95-.36c.43-.12.9-.31,1.24.15a1.22,1.22,0,0,1,0,1.29,8.74,8.74,0,0,1-.58,1,34.64,34.64,0,0,0-2.7,5.83c-.64,1.87.3,3,2.27,2.78a4.21,4.21,0,0,0,1.86-.75,80.1,80.1,0,0,0,9.77-7.53c4-3.44,7.85-7.13,12.06-10.36a21.73,21.73,0,0,1,4.46-2.74c1.52-.66,2-.32,1.83,1.31a20.43,20.43,0,0,0,.22,7.06c.84,3.18,2.25,4.1,5.55,3.65.38-.05.85-.26,1.1.12.39.56,0,1.09-.28,1.56a55.68,55.68,0,0,0-4.84,10.05,37,37,0,0,0-1.78,6.86c-.73,4.79,2.1,7.38,6.83,6.18a22.85,22.85,0,0,0,6.13-2.81,179.78,179.78,0,0,0,20.42-15C312,389.42,319.33,383,327,376.87a8.89,8.89,0,0,1,1.5-1.1c.71-.38,1.47-1.19,2.26-.4s.12,1.49-.25,2.18-.84,1.72-1.36,2.53c-6.1,9.62-11.85,19.47-18.22,28.92a56.4,56.4,0,0,1-7.29,8.66A238.06,238.06,0,0,0,279,445.32a87.78,87.78,0,0,0-11.43,20.3,49.73,49.73,0,0,0-1.68,5.32c-.55,2-.47,3.91,1.1,5.5a.59.59,0,0,1,.15.62q-113.17,0-226.34,0c-1.27,0-1.56-.28-1.56-1.55q.06-51.21,0-102.42c.78,0,.82.66,1,1.12a11.35,11.35,0,0,0,6.74,5.8,30,30,0,0,0,10.45,1.77c1.75,0,3.46.4,5.23.36,7.83-.18,15.62-.89,23.4-1.84,14.17-1.74,28.18-4.54,42.31-6.51a96.89,96.89,0,0,1,17-1.15,16.65,16.65,0,0,1,4.33.68c1.95.61,2.36,1.71,1.31,3.49a13.77,13.77,0,0,1-3.48,3.66A169,169,0,0,1,130.89,392c-14,8.7-28.44,16.63-42.81,24.68-10.48,5.87-21,11.76-30.73,18.8a57,57,0,0,0-9.13,7.79c-.65.71-1.5,1.65-.66,2.49s1.7-.15,2.29-.75c7.2-7.28,16.06-12.17,24.81-17.2,11.15-6.41,22.67-12.16,33.92-18.38,11.55-6.38,23.18-12.67,33.9-20.42,4-2.88,7.94-5.78,11-9.68,3.38-4.29,2.43-7.43-2.86-8.88a41.59,41.59,0,0,0-14.08-1c-8.9.61-17.71,1.88-26.52,3.16-7.42,1.09-14.84,2.23-22.28,3.15-6.71.83-13.42,1.65-20.18,2-3.72.19-7.44.26-11.16.24a24.47,24.47,0,0,1-7.82-1.2c-4-1.38-5.45-3.84-4.45-8,1.07-4.42,3.76-7.91,6.79-11.15,9-9.65,19.71-17.15,30.8-24.15,8.55-5.4,17.37-10.32,26.39-14.86A280.81,280.81,0,0,1,148,301.72a140.16,140.16,0,0,1,25.65-6.09,40.39,40.39,0,0,1,15.94.75,13.37,13.37,0,0,1,4,1.76c3.76,2.53,4.73,5.8,2.94,10a27.27,27.27,0,0,1-4.85,7.5A74.11,74.11,0,0,1,172.5,330.5a52.7,52.7,0,0,1-15.17,6.12,10.6,10.6,0,0,1-1.49.29c-1,.07-1.82-.13-1.57-1.48a2.53,2.53,0,0,0-1.33-2.71,2.36,2.36,0,0,0-2.84.33,9.46,9.46,0,0,0-3.87,5c-.66,2.45.26,3.76,2.8,3.79a43.84,43.84,0,0,0,14.45-2.43,72.46,72.46,0,0,0,24-13.65,51.6,51.6,0,0,0,11-12.35,24.16,24.16,0,0,0,2.89-7.19c1.1-4.72-.61-8.26-4.33-11.06-3.43-2.57-7.38-3.49-11.55-3.87-10.9-1-21.29,1.63-31.65,4.39-13.34,3.56-26.07,8.75-38.64,14.42a291.51,291.51,0,0,0-39.9,21.81,168,168,0,0,0-20.55,15.71,63.22,63.22,0,0,0-11.88,13.56,25.29,25.29,0,0,0-2.41,5.39C40.19,367.15,40.19,368,39.28,368Z" transform="translate(-39.24 -286.07)"/><path class="cls-2" d="M267.14,477.06c-1.95-1.32-2.28-3.23-1.84-5.34a55.66,55.66,0,0,1,5.64-14.41c5.49-10.42,13-19.32,20.81-28,3.81-4.25,7.86-8.25,11.88-12.3a67.15,67.15,0,0,0,9.14-11.5q7.75-12.37,15.47-24.79a43.45,43.45,0,0,0,2.1-3.85c.2-.4.68-.94.21-1.38s-1,.06-1.34.32c-.88.6-1.75,1.23-2.58,1.92-9.08,7.51-18.12,15.07-27.24,22.53a123.69,123.69,0,0,1-15.87,11.2c-2.47,1.45-5,2.86-8,2.71-3.19-.16-4.87-1.79-4.93-5-.06-3.39,1-6.55,2.17-9.67A59.94,59.94,0,0,1,278,389c-.44,0-.7,0-1,.09-3.7.67-5.35-.4-6.23-4.05a21.16,21.16,0,0,1-.18-7.23c0-.39.22-.76,0-1.2a17,17,0,0,0-5.79,3.34c-4.9,3.74-9.27,8.09-14,12a70.84,70.84,0,0,1-6.86,5.22,13.26,13.26,0,0,1-1.74,1c-1.19.54-2.46.76-3.49-.2s-.76-2.17-.22-3.3c1-2,2-4,2.95-6.06.23-.48.66-.91.53-1.67a50,50,0,0,1-9,2.94,22.24,22.24,0,0,1-5.21.49c-4.94-.19-7.79-3-8.09-7.93a41.43,41.43,0,0,1,.31-4.73c0-.64.37-1.5-.29-1.87s-1.36.35-1.9.78c-2.81,2.27-5.51,4.67-8.38,6.86-5.77,4.41-11.55,8.82-18.28,11.75a33.4,33.4,0,0,1-9.08,2.51,11.61,11.61,0,0,1-2.7,0c-4.63-.43-7.13-3.9-6.32-8.73a26.75,26.75,0,0,1,3.05-8.36c1.45-2.67,3-5.3,4.59-7.88a5.44,5.44,0,0,1,5.56-2.77c1.39.17,2.08,1,1.64,2.34-.61,1.85-1.25,3.75-3.33,4.58a1.9,1.9,0,0,0-.73.68,37.21,37.21,0,0,0-5.69,11.79,7.57,7.57,0,0,0-.19,1.84c0,2.09,1.05,3,3.13,2.66a31,31,0,0,0,11.75-4.47,181,181,0,0,0,19-13.78c2.64-2.11,5.14-4.41,8.14-6a9.83,9.83,0,0,1,4.29-1.42c1.76,0,2.43.72,2.31,2.48-.15,2.32-1,4.51-1.32,6.79a19.56,19.56,0,0,0-.18,4.89c.3,2.94,2.09,4.54,5,4.62a23.12,23.12,0,0,0,8.21-1.78c6.26-2.18,6.24-2.21,9.61-8q3-5.1,6-10.16c.45-.74.86-1.38.32-2.3a1.66,1.66,0,0,1,.24-1.77,10.1,10.1,0,0,1,3.63-3.21,2.5,2.5,0,0,1,3,.44,2.22,2.22,0,0,1,.5,2.78,13.45,13.45,0,0,1-.87,1.63q-6.63,11.18-13.28,22.35a3.43,3.43,0,0,0-.76,1.87c3.69-3.11,7.15-6.14,10.86-8.87q3.93-2.91,8-5.72a16.38,16.38,0,0,1,3.72-2c2.83-1,4.92.19,5.39,3.12.38,2.32-.12,4.61-.25,6.91-.24,4.12,1,5,4.72,3.18a7.35,7.35,0,0,0,2.8-2.34,80.56,80.56,0,0,1,19.67-19.14c5.79-3.94,12.06-6.54,19.22-6.47a6.27,6.27,0,0,1,5.24,2.26,3.08,3.08,0,0,1,.22,3.91c-.78,1.14-3.46,2.21-4.51,1.78a1.72,1.72,0,0,1-.85-.77c-.72-1.6-2-1.75-3.54-1.57a23.23,23.23,0,0,0-8.2,2.48,70.8,70.8,0,0,0-32.46,35.39,20.65,20.65,0,0,0-1.38,5.21c-.37,2.48.78,3.47,3.13,2.55,3.46-1.36,6.28-3.72,9.07-6.11,13.49-11.55,27.29-22.73,41.59-33.29,1-.73,2-1.39,3-2.17a3.54,3.54,0,0,1,3.32-.7c2.7.65,3.28,1.65,2.1,4.18-4.88,10.47-10.86,20.33-16.65,30.31-.42.73-.86,1.45-1.26,2.19A2.16,2.16,0,0,0,320,406a2,2,0,0,1-.4,3.23c-5.95,4.09-9.61,10-13.21,16-8.06,13.55-16.34,27-25.32,39.94a86.34,86.34,0,0,1-5.61,7.2,14.24,14.24,0,0,1-6.24,4.62Z" transform="translate(-39.24 -286.07)"/><path class="cls-2" d="M39.28,368c.71-.59.61-1.51.87-2.27,1.81-5.32,5.23-9.56,9.06-13.5,9.5-9.77,20.47-17.67,32.06-24.72,22.88-13.93,47-25.14,72.84-32.44a110.55,110.55,0,0,1,24.22-4.43,41.29,41.29,0,0,1,12.91,1.18,18,18,0,0,1,5.9,2.83c4.26,3.05,5.72,7,4.48,12.12a29.16,29.16,0,0,1-7.25,12.8c-10.15,11-22.36,18.62-37.1,21.84a35.56,35.56,0,0,1-8.23.85c-3.09-.06-4.27-1.83-3.2-4.72A9.93,9.93,0,0,1,149.4,333c1.2-.87,2.59-1.74,4-.64a2.92,2.92,0,0,1,.85,4.28,25.41,25.41,0,0,0,7.56-1.73c12-4.5,22.39-11.28,30.74-21.07a19.69,19.69,0,0,0,4-7.19,6.5,6.5,0,0,0-2.61-7.73c-2.74-2-5.95-2.6-9.21-3-7.58-.85-14.95.47-22.27,2.2-20.23,4.8-39.11,13.09-57.46,22.63-15.67,8.15-30.84,17.11-44.49,28.42a71.51,71.51,0,0,0-12.36,12.47,19.78,19.78,0,0,0-3.59,7.21c-.92,4,.2,6,4.09,7.42a25.06,25.06,0,0,0,7.82,1.22,193.52,193.52,0,0,0,27.84-1.8c15.16-1.84,30.2-4.59,45.39-6.2,6.23-.66,12.47-1.28,18.72-.12a16.36,16.36,0,0,1,4.65,1.46c2.91,1.52,3.63,3.86,2.09,6.76a21.39,21.39,0,0,1-4.92,5.76c-7.1,6.34-15.16,11.3-23.31,16.14-15.14,9-30.87,16.95-46.31,25.44-8.13,4.48-16.27,9-23.74,14.55a59.16,59.16,0,0,0-6.8,5.84c-.83.83-1.7,1.85-3,1.06-.82-.48-.44-2.2.75-3.42A70.88,70.88,0,0,1,59,433.71c11.48-7.88,23.69-14.55,35.83-21.33,15.63-8.74,31.27-17.46,46.11-27.51a51.46,51.46,0,0,0,8.63-6.78c.88-.92,2.18-1.92,1.73-3.27s-2.1-1.27-3.36-1.43c-5.59-.75-11.15-.16-16.69.53-13.37,1.65-26.57,4.42-39.92,6.19-11.7,1.55-23.4,3-35.24,2.15a37.8,37.8,0,0,1-7.17-1.11c-4.44-1.18-7.95-3.53-9.63-8Z" transform="translate(-39.24 -286.07)"/><path class="cls-2" d="M409,400.26a10.41,10.41,0,0,0,3.18-2.07c7.47-6.11,14.28-13,21.61-19.24,6.86-5.87,13.8-11.63,21.67-16.12,1.51-.86,3.1-1.59,4.69-2.31,1.23-.55,2.54-1.21,3.74,0a4.88,4.88,0,0,1,.54,4.8,10.91,10.91,0,0,1-3.78,3.8A93.36,93.36,0,0,1,450,375.2c-2.21,1.1-4.42,2.22-6.64,3.32a8.07,8.07,0,0,0-4,4.2A51.43,51.43,0,0,0,435.27,397a14.14,14.14,0,0,0,.19,4.21c.65,3.4,3.12,5.21,7.17,5.38a16,16,0,0,1,2.19.15,1.09,1.09,0,0,1,.93,1.06,1,1,0,0,1-.83,1,4.2,4.2,0,0,1-1.13.3,21.39,21.39,0,0,1-6.72-.49c-4.34-1.15-6.72-4.08-7.08-8.6a25.63,25.63,0,0,1,1.19-9.16c.2-.72.8-1.76.11-2.18s-1.32.61-1.88,1.1q-14.28,12.6-28.51,25.23c-1,.9-1.95,1.8-3.39.89a3.61,3.61,0,0,1-1.25-4.21,14.37,14.37,0,0,1,1.06-1.92q5.39-8.79,10.79-17.56c.32-.51.62-1,1.14-1.91-4.09,1.49-7.86,2.71-11.69,3.74a55,55,0,0,1-10.91,2.16c-4.54.27-6.22-1.77-5.28-6.23.1-.48.21-1,.35-1.62-1.18.33-2.16.66-3.17.88-2.7.61-4.37-.25-5.37-2.8-1.08-2.77-.87-5.65-.6-8.52,0-.38.09-.77.14-1.24a12,12,0,0,0-4.66,2.41c-4.64,3.34-8.72,7.33-13,11a84.4,84.4,0,0,1-9.61,7.47,5.06,5.06,0,0,1-3.13,1.08,2.12,2.12,0,0,1-2.16-2.73,12.85,12.85,0,0,1,1-2.66c4.31-8.81,9.5-17.12,14.5-25.54.57-1,1.3-1.81.6-3.05a1.53,1.53,0,0,1,.31-1.6,10.83,10.83,0,0,1,3.51-3.12,2.55,2.55,0,0,1,3,.34,2.28,2.28,0,0,1,.56,2.91,17.16,17.16,0,0,1-.89,1.63l-12.87,21.62a7.18,7.18,0,0,0-1,2.38c1.25-1.05,2.51-2.09,3.76-3.15a170,170,0,0,1,14.39-11,19.42,19.42,0,0,1,4.44-2.39c2.62-.9,4.7.41,5.17,3.11.4,2.32-.15,4.6-.22,6.91,0,1.33-.47,2.89.79,3.79s2.69,0,4-.54a5.66,5.66,0,0,0,3-3A98.41,98.41,0,0,1,393,368.37a5,5,0,0,0,1.16-2.86c.11-2.38,4.48-5.62,6.86-5.33,1.23.14,1.55,1,1.55,2a4.25,4.25,0,0,1-1.1,2.41c-4.86,7-9.89,13.85-13.9,21.38-2,3.76-1.16,5.17,3.07,5.16,5,0,9.63-1.67,14.31-3.08,7-2.11,7-2.15,10.87-8.35,13.91-22.25,27.86-44.48,42.61-66.19a277.5,277.5,0,0,1,16.69-22.77,43.3,43.3,0,0,1,3-3.19,4,4,0,0,1,4.54-.83c1.65.66,1.8,2.23,1.73,3.71a27.41,27.41,0,0,1-2.46,9.09c-4,9.44-9.46,18-15,26.54a311.82,311.82,0,0,1-46.77,56.16c-3.91,5.71-7.84,11.4-11.18,17.47C409,399.8,409,399.93,409,400.26Z" transform="translate(-39.24 -286.07)"/><path class="cls-2" d="M514,396.07c1.1-.86,1.87-1.38,2.56-2,7.7-7,15.24-14.1,23.31-20.63a105.13,105.13,0,0,1,15.05-10.6,16.64,16.64,0,0,1,6.8-2.36,4.34,4.34,0,0,1,5.07,4c.44,2.85-.21,5.6-.87,8.34-1.17,4.82-2.45,9.64-1.94,14.67.39,3.95,2,5.09,5.91,4.44a35.42,35.42,0,0,0,9.23-3.13c2.81-1.31,5.52-2.8,8.2-4.36.82-.48,1.73-.88,2.37.12a1.72,1.72,0,0,1-.71,2.49c-6.14,3.87-12.23,7.9-19.58,9.17-5.68,1-9.29-1.91-9.75-7.67-.41-5.25.59-10.33,1.87-15.37a35.11,35.11,0,0,0,1.11-5.45c.23-2.79-.95-3.71-3.53-2.7-3.24,1.28-5.93,3.43-8.62,5.57-8.44,6.73-16,14.41-24.16,21.46-3.45,3-6.91,6-10.64,8.64a14.86,14.86,0,0,1-4,2.15c-2.3.74-3.9-.51-3.79-3a10.07,10.07,0,0,1,1.4-4.47c1.44-2.55,3-5,4.5-7.54a6.2,6.2,0,0,0,1.09-2.33c-2.39,1-4.69,2-7,2.93a21.26,21.26,0,0,1-8.74,1.63c-4.13-.15-6.15-2.05-6.48-6.21-.07-1,0-1.9,0-2.93a4.56,4.56,0,0,0-2.37,1.11,145,145,0,0,1-18.46,10.53,21.86,21.86,0,0,1-7.57,2.21c-3,.18-4.05-1.21-3.12-4.09a10.06,10.06,0,0,1,1.29-2.73c7.28-10.15,16.54-17.77,28.48-21.82a16.22,16.22,0,0,1,7.32-.92c3.65.48,5.79,2.81,7.17,6a2.23,2.23,0,0,1-2.1,3,2.71,2.71,0,0,1-3-3.09,1.21,1.21,0,0,0-.58-1.13,5.06,5.06,0,0,0-4.43-1.12,22.38,22.38,0,0,0-7.06,2.71,90.43,90.43,0,0,0-21.79,17.24c-.62.65-1.82,1.54-1.24,2.31s1.75-.18,2.55-.58c7.28-3.61,13.94-8.26,20.69-12.75,2.26-1.49,4.47-3,6.69-4.58,1-.72,2.12-1.18,3.26-.29s1.06,2.09.46,3.34a20.39,20.39,0,0,0-1.74,5.27c-.45,2.61.45,3.9,3,4.57a10.24,10.24,0,0,0,4.86-.17c4.31-1,8.24-3,12.2-4.82A7.56,7.56,0,0,0,520,378q22.15-35.65,44.32-71.3a8.2,8.2,0,0,1,5.43-3.61c2-.5,3.22.62,3.45,2.88a23.26,23.26,0,0,1-.88,7.69c-2.36,9.92-7.28,18.63-12.92,26.95-10.32,15.24-22.66,28.77-35.85,41.56-3.87,3.75-6.22,8.52-9.23,12.85A5.45,5.45,0,0,0,514,396.07Z" transform="translate(-39.24 -286.07)"/><path class="cls-2" d="M644.94,329a41.38,41.38,0,0,1-7.87,18.57,7.26,7.26,0,0,1-3.05,2.08c-1.59.68-2.45.31-2.9-1.37-.39-1.5-1-1.25-1.73-.37a12.28,12.28,0,0,0-.87,1c-9.31,13.21-18.52,26.49-26.62,40.49-2.84,4.92-5.53,9.94-6.31,15.71-.1.7-.38,1.39-1.17,1.47s-1.26-.61-1.56-1.3c-.68-1.56-.22-3.11.16-4.64a57.33,57.33,0,0,1,5.48-13.2c8.08-14.93,17.45-29,27.19-42.91,4.31-6.13,8.7-12.21,13.27-18.15a3.61,3.61,0,0,1,1.35-1.22C643.3,323.79,645,324.94,644.94,329Z" transform="translate(-39.24 -286.07)"/><path class="cls-3" d="M403.46,357.37c-1.16,0-2-.28-2.27-1.23s.4-1.34,1-1.69a4.71,4.71,0,0,0,2.32-2.22c.58-1.31,3.15-1.47,4.2-.48a1.39,1.39,0,0,1,.17,1.86A7.78,7.78,0,0,1,403.46,357.37Z" transform="translate(-39.24 -286.07)"/><path class="cls-3" d="M586.8,413.88c0-2.21,2.76-4.5,4.71-4.19a1.55,1.55,0,0,1,1,2.66,10.93,10.93,0,0,0-1.92,3.11,1.67,1.67,0,0,1-2.24,1C587,416,587.06,414.71,586.8,413.88Z" transform="translate(-39.24 -286.07)"/><path class="cls-1" d="M293.21,436.2a14.63,14.63,0,0,1-.92,2c-5.59,8.84-10.23,18.24-16.07,26.93a31,31,0,0,1-4.73,5.93c-.4.36-.91.92-1.45.54s-.1-.93.06-1.41a50.23,50.23,0,0,1,4.57-9.38,183.12,183.12,0,0,1,15-22.81,34.7,34.7,0,0,1,2.44-2.57.79.79,0,0,1,.9-.3C293.4,435.29,293.22,435.69,293.21,436.2Z" transform="translate(-39.24 -286.07)"/><path class="cls-1" d="M477.78,296.23c-11.16,24.58-27,46-45,66.54C433.81,358.12,474,298.65,477.78,296.23Z" transform="translate(-39.24 -286.07)"/><path class="cls-1" d="M565.72,317.68c-.38,6.42-22.79,39.88-27.83,41.54C539.77,354.46,563.2,319.5,565.72,317.68Z" transform="translate(-39.24 -286.07)"/><path class="cls-4" d="M637.25,337.71a45.68,45.68,0,0,1-3.53,6.09c-.1.17-.35.35-.56.13s-.34-.39-.3-.54a4.06,4.06,0,0,1,.54-1.38c1.11-1.56,2.28-3.07,3.43-4.6Z" transform="translate(-39.24 -286.07)"/></svg> -->
+										<img src="assets/images/sungnikah-logo.png" data-logo-alt="assets/images/files/logo-header-alt.png" alt=""> 
+										<h3><span class="colored">Sungnikah</span></h3>
 										<span>PWA Wedding Invitation</span>
-									</a><!-- .logo end -->
+									</a> 
 									<div class="hb-meta">
-									</div><!-- .hb-meta end -->
-								</div><!-- .hb-content end -->
+									</div> 
+								</div>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+		</header>
 
-							</div><!-- .col-md-12 end -->
-						</div><!-- .row end -->
-					</div><!-- .container end -->
-
-				</div><!-- .header-bar-wrap -->
-
-			</div><!-- #header-bar-1 end -->
-
-		</header><!-- #header end -->
-
-		<!-- Banner
-		============================================= -->
+		 <!-- Banner -->
 		<section id="banner">
-
 			<div class="banner-parallax" data-banner-height="930">
-				<img src="assets/images/files/parallax-bg/img-1.png" alt="">
+				<!-- <img src="assets/images/files/parallax-bg/img-1.png" alt=""> -->
 				<div class="slide-content">
-
 					<div class="container">
 						<div class="row">
 							<div class="col-md-6">
-
 								<div class="banner-center-box">
 									<span class="tag-label">Call Us : 086734222111</span>
 									<h1>
@@ -65,47 +51,133 @@
 										<div class="box-content">
 											<div class="cs-notifications">
 												<div class="cs-notifications-content"></div>
-											</div><!-- .cs-notifications end -->
+											</div>
 											<form id="form-cta-subscribe-3" class="form-inline">
 												<div class="form-group">
 													<span class="field-icon"><img src="assets/images/general-elements/field-icon-1.png" alt=""></span>
 													<input type="email" name="cs1Email" id="cs1Email" class="form-control" placeholder="Your Email Here">
 													<input type="submit" class="form-control" value="Subscribe Now">
-												</div><!-- .form-group end -->
-											</form><!-- #form-cta-subscribe-3 end -->
-										</div><!-- .box-content end -->
-									</div><!-- .box-form end -->
-								</div><!-- .banner-center-box end -->
-
-							</div><!-- .col-md-6 end -->
-						</div><!-- .row end -->
-					</div><!-- .container end -->
-
-				</div><!-- .slide-content end -->
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> 
 				<div class="section-separator rounded bottom">
 					<div class="ss-content">
 						<img class="svg" src="assets/images/general-elements/section-separators/rounded.svg" alt="">
-					</div><!-- .ss-content -->
-				</div><!-- .section-separator -->
-			</div><!-- .banner-parallax end -->
+					</div> 
+				</div> 
+			</div>
+		</section>
 
-		</section><!-- #banner end -->
+		<!-- Pricing Plans -->
+		<div id="pricing-plans" class="flat-section">
+			<div class="section-content">
 
-		<!-- Content
-		============================================= -->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+					
+						<div class="section-title text-center">
+							<span class="icon theme-color-2"><i class="flaticon-target"></i></span>
+								<h2>
+								Pricing Table
+							</h2>
+							<p class="description">
+								This should be used to tell a story and let your users know a little more about your product or service. How can you benefit them?
+							</p>
+						</div>
+					</div> 
+					<div class="col-md-12">
+						<div class="pricing-table">
+							<div class="row">
+								<div class="col-md-4 col-sm-6">
+									<div class="pt-column">
+										<div class="pt-column-header">
+											<div class="title">
+												<span>Free Plan</span>
+											</div>
+											<div class="price">
+												<h1><span>Free</span></h1>
+												<span class="period">Per Month</span>
+											</div>
+										</div>
+										<ul class="pt-column-content">
+											<li>
+												This should be used to tell a story and talk about your product or service.
+											</li>
+										</ul>
+										<div class="pt-column-footer">
+											<a class="btn colorful small hover-dark" href="#">Get Started</a>
+										</div> 
+									</div>
+
+								</div> 
+								<div class="col-md-4 col-sm-6">
+									<div class="pt-column featured">
+										<div class="pt-column-header">
+											<div class="title">
+												<span>Professional Plan</span>
+											</div> 
+											<div class="price">
+												<h1>$ <span class="counter-stats">29</span></h1>
+												<span class="period">Per Month</span>
+											</div> 
+										</div>
+										<ul class="pt-column-content">
+											<li>
+												This should be used to tell a story and talk about your product or service.
+											</li>
+										</ul> 
+										<div class="pt-column-footer">
+											<a class="btn colorful small hover-dark" href="#">Get Started</a>
+										</div> 
+									</div>
+
+								</div> 
+								<div class="col-md-4 col-sm-6">
+
+									<div class="pt-column">
+										<div class="pt-column-header">
+											<div class="title">
+												<span>Team Plan</span>
+											</div> 
+											<div class="price">
+												<h1>$ <span class="counter-stats">49</span></h1>
+												<span class="period">Per Month</span>
+											</div> 
+										</div>
+										<ul class="pt-column-content">
+											<li>
+												This should be used to tell a story and talk about your product or service.
+											</li>
+										</ul>
+										<div class="pt-column-footer">
+											<a class="btn colorful small hover-dark" href="#">Get Started</a>
+										</div> 
+									</div>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		 
+		<!-- Content  -->
 		<section id="content">
-
 			<div id="content-wrap">
-
-				<!-- === Intro Features =========== -->
-				<div id="intro-features" class="flat-section">
-
+				<!-- <div id="intro-features" class="flat-section">
 					<div class="section-content">
-
 						<div class="container">
 							<div class="row">
 								<div class="col-md-12">
-								
 									<div class="slider-services">
 										<ul class="owl-carousel">
 											<li>
@@ -119,9 +191,9 @@
 															</p>
 															<span class="tag-label">IT Solution</span>
 															<span class="tag-label">Web Design</span>
-														</div><!-- .box-content end -->
-													</div><!-- .box-info end -->
-												</div><!-- .slide end -->
+														</div>
+													</div>
+												</div>  
 											</li>
 											<li>
 												<div class="slide">
@@ -134,9 +206,9 @@
 															</p>
 															<span class="tag-label">Best Invest</span>
 															<span class="tag-label">Safety Pay</span>
-														</div><!-- .box-content end -->
-													</div><!-- .box-info end -->
-												</div><!-- .slide end -->
+														</div>
+													</div>
+												</div>
 											</li>
 											<li>
 												<div class="slide">
@@ -149,9 +221,9 @@
 															</p>
 															<span class="tag-label">Android</span>
 															<span class="tag-label">IOS</span>
-														</div><!-- .box-content end -->
-													</div><!-- .box-info end -->
-												</div><!-- .slide end -->
+														</div>
+													</div> 
+												</div> 
 											</li>
 											<li>
 												<div class="slide">
@@ -164,32 +236,24 @@
 															</p>
 															<span class="tag-label">SEO</span>
 															<span class="tag-label">Marketting</span>
-														</div><!-- .box-content end -->
-													</div><!-- .box-info end -->
-												</div><!-- .slide end -->
+														</div> 
+													</div>
+												</div>
 											</li>
 										</ul>
-									</div><!-- .slider-services end -->
-								
-								</div><!-- .col-md-12 end -->
+									</div>
+								</div>
 
 								<div class="divider-90"></div>
-
-								<div class="col-md-12 ">
-								
-									<p class="font-size-14px text-center">
-										Trusted by the world’s most innovative businesses – big and small
-									</p>
-									<div class="slider-clients">
-										
-									</div><!-- .slider-clients end -->
-
-								</div><!-- .col-md-12 end -->
-
+									<div class="col-md-12 ">
+										<p class="font-size-14px text-center">
+											Trusted by the world’s most innovative businesses – big and small
+										</p>
+										<div class="slider-clients">
+										</div> 
+									</div>
 								<div class="divider-140 divider-md-100"></div>
-
 								<div class="col-md-5 col-md-push-7 md-text-center">
-								
 									<div class="section-title">
 										<span class="icon theme-color-3"><i class="flaticon-bulb"></i></span>
  										<h2>
@@ -198,19 +262,14 @@
 										<p class="description">
 											This should be used to tell a story and let your users know a little more about your product or service. How can you benefit them?
 										</p>
-									</div><!-- .section-title end -->
+									</div> 
 
-								</div><!-- .col-md-5 end -->
+								</div>
 								<div class="col-md-6 col-md-pull-5 mb-md-60 md-text-center">
-								
 									<img src="assets/images/files/featured-img-1.png" alt="">
-								
-								</div><!-- .col-md-6 end -->
-
+								</div>
 								<div class="divider-70 divider-md-40"></div>
-
 								<div class="col-md-5 md-text-center">
-								
 									<div class="section-title">
 										<span class="icon theme-color-4"><i class="flaticon-money"></i></span>
  										<h2>
@@ -219,195 +278,63 @@
 										<p class="description">
 											This should be used to tell a story and let your users know a little more about your product or service. How can you benefit them?
 										</p>
-									</div><!-- .section-title end -->
-
-								</div><!-- .col-md-5 end -->
+									</div>
+								</div>
 								<div class="col-md-6 col-md-offset-1 md-text-center">
-								
 									<img src="assets/images/files/featured-img-2.png" alt="">
-								
-								</div><!-- .col-md-6 end -->
-
-							</div><!-- .row end -->
-						</div><!-- .container end -->
-
-					</div><!-- .section-content end -->
-
-				</div><!-- .flat-section end -->
-
-				<!-- === Pricing Plans =========== -->
-				<div id="pricing-plans" class="flat-section">
-
-					<div class="section-content">
-
-						<div class="container">
-							<div class="row">
-								<div class="col-md-8 col-md-offset-2">
-								
-									<div class="section-title text-center">
-										<span class="icon theme-color-2"><i class="flaticon-target"></i></span>
- 										<h2>
-											Pricing Table
-										</h2>
-										<p class="description">
-											This should be used to tell a story and let your users know a little more about your product or service. How can you benefit them?
-										</p>
-									</div><!-- .section-title end -->
-								
-								</div><!-- .col-md-8 end -->
-								<div class="col-md-12">
-								
-									<div class="pricing-table">
-
-										<div class="row">
-											<div class="col-md-4 col-sm-6">
-
-									            <div class="pt-column">
-									                <div class="pt-column-header">
-									                    <div class="title">
-															<span>Free Plan</span>
-									                    </div><!-- .title end -->
-									                    <div class="price">
-									                        <h1><span>Free</span></h1>
-									                        <span class="period">Per Month</span>
-									                    </div><!-- .price end -->
-									                </div>
-									                <ul class="pt-column-content">
-									                    <li>
-									                    	This should be used to tell a story and talk about your product or service.
-									                    </li>
-									                </ul><!-- .pt-column-content end -->
-									                <div class="pt-column-footer">
-														<a class="btn colorful small hover-dark" href="#">Get Started</a>
-									                </div><!-- .pt-column-footer end -->
-									            </div><!-- .pt-column end -->
-
-											</div><!-- .col-md-4 end -->
-											<div class="col-md-4 col-sm-6">
-
-									            <div class="pt-column featured">
-									                <div class="pt-column-header">
-									                    <div class="title">
-															<span>Professional Plan</span>
-									                    </div><!-- .title end -->
-									                    <div class="price">
-									                        <h1>$ <span class="counter-stats">29</span></h1>
-									                        <span class="period">Per Month</span>
-									                    </div><!-- .price end -->
-									                </div>
-									                <ul class="pt-column-content">
-									                    <li>
-									                    	This should be used to tell a story and talk about your product or service.
-									                    </li>
-									                </ul><!-- .pt-column-content end -->
-									                <div class="pt-column-footer">
-														<a class="btn colorful small hover-dark" href="#">Get Started</a>
-									                </div><!-- .pt-column-footer end -->
-									            </div><!-- .pt-column end -->
-
-											</div><!-- .col-md-4 end -->
-											<div class="col-md-4 col-sm-6">
-
-									            <div class="pt-column">
-									                <div class="pt-column-header">
-									                    <div class="title">
-															<span>Team Plan</span>
-									                    </div><!-- .title end -->
-									                    <div class="price">
-									                        <h1>$ <span class="counter-stats">49</span></h1>
-									                        <span class="period">Per Month</span>
-									                    </div><!-- .price end -->
-									                </div>
-									                <ul class="pt-column-content">
-									                    <li>
-									                    	This should be used to tell a story and talk about your product or service.
-									                    </li>
-									                </ul><!-- .pt-column-content end -->
-									                <div class="pt-column-footer">
-														<a class="btn colorful small hover-dark" href="#">Get Started</a>
-									                </div><!-- .pt-column-footer end -->
-									            </div><!-- .pt-column end -->
-
-											</div><!-- .col-md-4 end -->
-										</div><!-- .row end -->
-
-									</div><!-- .pricing-table end -->
-
-								</div><!-- .col-md-12 end -->
-
-							</div><!-- .row end -->
-						</div><!-- .container end -->
-
-					</div><!-- .section-content end -->
-
-				</div><!-- .flat-section end -->
-
-				<!-- === CTA Title 1 =========== -->
+								</div> 
+							</div> 
+						</div>
+					</div> 
+				</div> -->
+				<!-- CTA Title 1 -->
 				<div id="cta-title-1" class="parallax-section">
 
 					<div class="section-separator rounded top">
 						<div class="ss-content">
 							<img class="svg" src="assets/images/general-elements/section-separators/rounded.svg" alt="">
-						</div><!-- .ss-content -->
-					</div><!-- .section-separator -->
+						</div>
+					</div>
 					<div class="section-content">
-
 						<div class="container">
 							<div class="row">
 								<div class="col-md-10 col-md-offset-1 text-center">
-
 									<span class="tag-label">Call Us: 01093515252</span>
 									<h1>Get Best Wedding Invitation For Your Dreams</h1>
 									<p>
 										This should be used to tell a story and let your users know a little more about your product or service. How can you benefit them?
 									</p>
-									<a class="btn scroll-to x-large colorful hover-colorful-darken mt-40" href="#header">Order Now</a>
+									<a class="btn scroll-to x-large colorful hover-colorful-darken mt-40" href="https://api.whatsapp.com/send?phone=6285803256647&&text=Hallo Sungnikah.com saya tertarik dan ingin memesan jasa undangan digitalnya :)">Order Now</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-								</div><!-- .col-md-10 end -->
-							</div><!-- .row end -->
-						</div><!-- .container end -->
-
-					</div><!-- .section-content end -->
-
-				</div><!-- .parallax-section end -->
-
-			</div><!-- #content-wrap -->
-
-		</section><!-- #content end -->
-
-		<!-- Footer
-		============================================= -->
+		 <!-- Footer -->
 		<footer id="footer">
-
 			<div id="footer-bar-1" class="footer-bar">
-
 				<div class="footer-bar-wrap">
-
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-
 								<div class="fb-row">
 									<div class="copyrights-message">2020 © <a href=""><span class="colored">Sungnikah.com</span></a>. All Rights Reserved.</div>
 									<ul class="social-icons animated x4 grey hover-colorful icon-only">
 										<li><a class="si-facebook" href="#"><i class="fa fa-facebook"></i><i class="fa fa-facebook"></i></a></li>
 										<li><a class="si-twitter" href="#"><i class="fa fa-twitter"></i><i class="fa fa-twitter"></i></a></li>
 										<li><a class="si-instagramorange" href="#"><i class="fa fa-instagram"></i><i class="fa fa-instagram"></i></a></li>
-									</ul><!-- .social-icons end -->
-								</div><!-- .fb-row end -->
-
-							</div><!-- .col-md-12 end -->
-						</div><!-- .row end -->
-					</div><!-- .container end -->
-
-				</div><!-- .footer-bar-wrap -->
-
-			</div><!-- #footer-bar-1 end -->
-
-		</footer><!-- #footer end -->
-
-	</div><!-- #full-container end -->
-
+									</ul> 
+								</div> 
+							</div>
+						</div>
+					</div> 
+				</div> 
+			</div>  
+		</footer> 
+	</div>
 	<a class="scroll-top-icon scroll-top" href="#"><i class="fa fa-angle-up"></i></a>
 </body>
 </html>

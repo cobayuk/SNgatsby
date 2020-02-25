@@ -1,1 +1,1 @@
-console.log('hallo breow');
+// require('./assets/js/app');

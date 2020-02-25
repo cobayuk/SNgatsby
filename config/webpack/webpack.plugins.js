@@ -97,8 +97,6 @@ const favicons = new WebappWebpackPlugin({
   logo: config.favicon,
   prefix: 'images/favicon',
   favicons: {
-    appName: config.site_name,
-    appDescription: config.site_description,
     developerName: null,
     developerURL: null,
     icons: {
