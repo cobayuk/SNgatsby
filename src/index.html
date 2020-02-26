@@ -1,56 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
 	<title><%= htmlWebpackPlugin.options.title %></title>
-	<!-- <link href="https://fonts.googleapis.com/css?family=Poppins:400i,400,700i,700" rel="stylesheet"> -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600i,700" rel="stylesheet"> -->
 </head>
 <body>
     <div id="full-container">
-		<!-- Header -->
 		<header id="header">
-
 			<div id="header-bar-1" class="header-bar">
-
 				<div class="header-bar-wrap">
-
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-
 								<div class="hb-content">
 									<a class="logo logo-header" href="#">
-										<img src="assets/images/files/logo-header.png" data-logo-alt="assets/images/files/logo-header-alt.png" alt="">
-										<h3><span class="colored">LeadMark</span></h3>
+										<img src="assets/images/sungnikah-logo.png" data-logo-alt="assets/images/files/logo-header-alt.png" alt=""> 
+										<h3><span class="colored">Sungnikah</span></h3>
 										<span>PWA Wedding Invitation</span>
-									</a><!-- .logo end -->
+									</a> 
 									<div class="hb-meta">
-									</div><!-- .hb-meta end -->
-								</div><!-- .hb-content end -->
+									</div> 
+								</div>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+		</header>
 
-							</div><!-- .col-md-12 end -->
-						</div><!-- .row end -->
-					</div><!-- .container end -->
-
-				</div><!-- .header-bar-wrap -->
-
-			</div><!-- #header-bar-1 end -->
-
-		</header><!-- #header end -->
-
-		<!-- Banner
-		============================================= -->
+		 <!-- Banner -->
 		<section id="banner">
-
 			<div class="banner-parallax" data-banner-height="930">
-				<img src="assets/images/files/parallax-bg/img-1.png" alt="">
+				<!-- <img src="assets/images/files/parallax-bg/img-1.png" alt=""> -->
 				<div class="slide-content">
-
 					<div class="container">
 						<div class="row">
 							<div class="col-md-6">
-
 								<div class="banner-center-box">
 									<span class="tag-label">Call Us : 086734222111</span>
 									<h1>
@@ -65,47 +50,133 @@
 										<div class="box-content">
 											<div class="cs-notifications">
 												<div class="cs-notifications-content"></div>
-											</div><!-- .cs-notifications end -->
+											</div>
 											<form id="form-cta-subscribe-3" class="form-inline">
 												<div class="form-group">
 													<span class="field-icon"><img src="assets/images/general-elements/field-icon-1.png" alt=""></span>
 													<input type="email" name="cs1Email" id="cs1Email" class="form-control" placeholder="Your Email Here">
 													<input type="submit" class="form-control" value="Subscribe Now">
-												</div><!-- .form-group end -->
-											</form><!-- #form-cta-subscribe-3 end -->
-										</div><!-- .box-content end -->
-									</div><!-- .box-form end -->
-								</div><!-- .banner-center-box end -->
-
-							</div><!-- .col-md-6 end -->
-						</div><!-- .row end -->
-					</div><!-- .container end -->
-
-				</div><!-- .slide-content end -->
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> 
 				<div class="section-separator rounded bottom">
 					<div class="ss-content">
 						<img class="svg" src="assets/images/general-elements/section-separators/rounded.svg" alt="">
-					</div><!-- .ss-content -->
-				</div><!-- .section-separator -->
-			</div><!-- .banner-parallax end -->
+					</div> 
+				</div> 
+			</div>
+		</section>
 
-		</section><!-- #banner end -->
+		<!-- Pricing Plans -->
+		<div id="pricing-plans" class="flat-section">
+			<div class="section-content">
 
-		<!-- Content
-		============================================= -->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+					
+						<div class="section-title text-center">
+							<span class="icon theme-color-2"><i class="flaticon-target"></i></span>
+								<h2>
+								Pricing Table
+							</h2>
+							<p class="description">
+								This should be used to tell a story and let your users know a little more about your product or service. How can you benefit them?
+							</p>
+						</div>
+					</div> 
+					<div class="col-md-12">
+						<div class="pricing-table">
+							<div class="row">
+								<div class="col-md-4 col-sm-6">
+									<div class="pt-column">
+										<div class="pt-column-header">
+											<div class="title">
+												<span>Free Plan</span>
+											</div>
+											<div class="price">
+												<h1><span>Free</span></h1>
+												<span class="period">Per Month</span>
+											</div>
+										</div>
+										<ul class="pt-column-content">
+											<li>
+												This should be used to tell a story and talk about your product or service.
+											</li>
+										</ul>
+										<div class="pt-column-footer">
+											<a class="btn colorful small hover-dark" href="#">Get Started</a>
+										</div> 
+									</div>
+
+								</div> 
+								<div class="col-md-4 col-sm-6">
+									<div class="pt-column featured">
+										<div class="pt-column-header">
+											<div class="title">
+												<span>Professional Plan</span>
+											</div> 
+											<div class="price">
+												<h1>$ <span class="counter-stats">29</span></h1>
+												<span class="period">Per Month</span>
+											</div> 
+										</div>
+										<ul class="pt-column-content">
+											<li>
+												This should be used to tell a story and talk about your product or service.
+											</li>
+										</ul> 
+										<div class="pt-column-footer">
+											<a class="btn colorful small hover-dark" href="#">Get Started</a>
+										</div> 
+									</div>
+
+								</div> 
+								<div class="col-md-4 col-sm-6">
+
+									<div class="pt-column">
+										<div class="pt-column-header">
+											<div class="title">
+												<span>Team Plan</span>
+											</div> 
+											<div class="price">
+												<h1>$ <span class="counter-stats">49</span></h1>
+												<span class="period">Per Month</span>
+											</div> 
+										</div>
+										<ul class="pt-column-content">
+											<li>
+												This should be used to tell a story and talk about your product or service.
+											</li>
+										</ul>
+										<div class="pt-column-footer">
+											<a class="btn colorful small hover-dark" href="#">Get Started</a>
+										</div> 
+									</div>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		 
+		<!-- Content  -->
 		<section id="content">
-
 			<div id="content-wrap">
-
-				<!-- === Intro Features =========== -->
-				<div id="intro-features" class="flat-section">
-
+				<!-- <div id="intro-features" class="flat-section">
 					<div class="section-content">
-
 						<div class="container">
 							<div class="row">
 								<div class="col-md-12">
-								
 									<div class="slider-services">
 										<ul class="owl-carousel">
 											<li>
@@ -119,9 +190,9 @@
 															</p>
 															<span class="tag-label">IT Solution</span>
 															<span class="tag-label">Web Design</span>
-														</div><!-- .box-content end -->
-													</div><!-- .box-info end -->
-												</div><!-- .slide end -->
+														</div>
+													</div>
+												</div>  
 											</li>
 											<li>
 												<div class="slide">
@@ -134,9 +205,9 @@
 															</p>
 															<span class="tag-label">Best Invest</span>
 															<span class="tag-label">Safety Pay</span>
-														</div><!-- .box-content end -->
-													</div><!-- .box-info end -->
-												</div><!-- .slide end -->
+														</div>
+													</div>
+												</div>
 											</li>
 											<li>
 												<div class="slide">
@@ -149,9 +220,9 @@
 															</p>
 															<span class="tag-label">Android</span>
 															<span class="tag-label">IOS</span>
-														</div><!-- .box-content end -->
-													</div><!-- .box-info end -->
-												</div><!-- .slide end -->
+														</div>
+													</div> 
+												</div> 
 											</li>
 											<li>
 												<div class="slide">
@@ -164,32 +235,24 @@
 															</p>
 															<span class="tag-label">SEO</span>
 															<span class="tag-label">Marketting</span>
-														</div><!-- .box-content end -->
-													</div><!-- .box-info end -->
-												</div><!-- .slide end -->
+														</div> 
+													</div>
+												</div>
 											</li>
 										</ul>
-									</div><!-- .slider-services end -->
-								
-								</div><!-- .col-md-12 end -->
+									</div>
+								</div>
 
 								<div class="divider-90"></div>
-
-								<div class="col-md-12 ">
-								
-									<p class="font-size-14px text-center">
-										Trusted by the world’s most innovative businesses – big and small
-									</p>
-									<div class="slider-clients">
-										
-									</div><!-- .slider-clients end -->
-
-								</div><!-- .col-md-12 end -->
-
+									<div class="col-md-12 ">
+										<p class="font-size-14px text-center">
+											Trusted by the world’s most innovative businesses – big and small
+										</p>
+										<div class="slider-clients">
+										</div> 
+									</div>
 								<div class="divider-140 divider-md-100"></div>
-
 								<div class="col-md-5 col-md-push-7 md-text-center">
-								
 									<div class="section-title">
 										<span class="icon theme-color-3"><i class="flaticon-bulb"></i></span>
  										<h2>
@@ -198,19 +261,14 @@
 										<p class="description">
 											This should be used to tell a story and let your users know a little more about your product or service. How can you benefit them?
 										</p>
-									</div><!-- .section-title end -->
+									</div> 
 
-								</div><!-- .col-md-5 end -->
+								</div>
 								<div class="col-md-6 col-md-pull-5 mb-md-60 md-text-center">
-								
 									<img src="assets/images/files/featured-img-1.png" alt="">
-								
-								</div><!-- .col-md-6 end -->
-
+								</div>
 								<div class="divider-70 divider-md-40"></div>
-
 								<div class="col-md-5 md-text-center">
-								
 									<div class="section-title">
 										<span class="icon theme-color-4"><i class="flaticon-money"></i></span>
  										<h2>
@@ -219,195 +277,63 @@
 										<p class="description">
 											This should be used to tell a story and let your users know a little more about your product or service. How can you benefit them?
 										</p>
-									</div><!-- .section-title end -->
-
-								</div><!-- .col-md-5 end -->
+									</div>
+								</div>
 								<div class="col-md-6 col-md-offset-1 md-text-center">
-								
 									<img src="assets/images/files/featured-img-2.png" alt="">
-								
-								</div><!-- .col-md-6 end -->
-
-							</div><!-- .row end -->
-						</div><!-- .container end -->
-
-					</div><!-- .section-content end -->
-
-				</div><!-- .flat-section end -->
-
-				<!-- === Pricing Plans =========== -->
-				<div id="pricing-plans" class="flat-section">
-
-					<div class="section-content">
-
-						<div class="container">
-							<div class="row">
-								<div class="col-md-8 col-md-offset-2">
-								
-									<div class="section-title text-center">
-										<span class="icon theme-color-2"><i class="flaticon-target"></i></span>
- 										<h2>
-											Pricing Table
-										</h2>
-										<p class="description">
-											This should be used to tell a story and let your users know a little more about your product or service. How can you benefit them?
-										</p>
-									</div><!-- .section-title end -->
-								
-								</div><!-- .col-md-8 end -->
-								<div class="col-md-12">
-								
-									<div class="pricing-table">
-
-										<div class="row">
-											<div class="col-md-4 col-sm-6">
-
-									            <div class="pt-column">
-									                <div class="pt-column-header">
-									                    <div class="title">
-															<span>Free Plan</span>
-									                    </div><!-- .title end -->
-									                    <div class="price">
-									                        <h1><span>Free</span></h1>
-									                        <span class="period">Per Month</span>
-									                    </div><!-- .price end -->
-									                </div>
-									                <ul class="pt-column-content">
-									                    <li>
-									                    	This should be used to tell a story and talk about your product or service.
-									                    </li>
-									                </ul><!-- .pt-column-content end -->
-									                <div class="pt-column-footer">
-														<a class="btn colorful small hover-dark" href="#">Get Started</a>
-									                </div><!-- .pt-column-footer end -->
-									            </div><!-- .pt-column end -->
-
-											</div><!-- .col-md-4 end -->
-											<div class="col-md-4 col-sm-6">
-
-									            <div class="pt-column featured">
-									                <div class="pt-column-header">
-									                    <div class="title">
-															<span>Professional Plan</span>
-									                    </div><!-- .title end -->
-									                    <div class="price">
-									                        <h1>$ <span class="counter-stats">29</span></h1>
-									                        <span class="period">Per Month</span>
-									                    </div><!-- .price end -->
-									                </div>
-									                <ul class="pt-column-content">
-									                    <li>
-									                    	This should be used to tell a story and talk about your product or service.
-									                    </li>
-									                </ul><!-- .pt-column-content end -->
-									                <div class="pt-column-footer">
-														<a class="btn colorful small hover-dark" href="#">Get Started</a>
-									                </div><!-- .pt-column-footer end -->
-									            </div><!-- .pt-column end -->
-
-											</div><!-- .col-md-4 end -->
-											<div class="col-md-4 col-sm-6">
-
-									            <div class="pt-column">
-									                <div class="pt-column-header">
-									                    <div class="title">
-															<span>Team Plan</span>
-									                    </div><!-- .title end -->
-									                    <div class="price">
-									                        <h1>$ <span class="counter-stats">49</span></h1>
-									                        <span class="period">Per Month</span>
-									                    </div><!-- .price end -->
-									                </div>
-									                <ul class="pt-column-content">
-									                    <li>
-									                    	This should be used to tell a story and talk about your product or service.
-									                    </li>
-									                </ul><!-- .pt-column-content end -->
-									                <div class="pt-column-footer">
-														<a class="btn colorful small hover-dark" href="#">Get Started</a>
-									                </div><!-- .pt-column-footer end -->
-									            </div><!-- .pt-column end -->
-
-											</div><!-- .col-md-4 end -->
-										</div><!-- .row end -->
-
-									</div><!-- .pricing-table end -->
-
-								</div><!-- .col-md-12 end -->
-
-							</div><!-- .row end -->
-						</div><!-- .container end -->
-
-					</div><!-- .section-content end -->
-
-				</div><!-- .flat-section end -->
-
-				<!-- === CTA Title 1 =========== -->
+								</div> 
+							</div> 
+						</div>
+					</div> 
+				</div> -->
+				<!-- CTA Title 1 -->
 				<div id="cta-title-1" class="parallax-section">
 
 					<div class="section-separator rounded top">
 						<div class="ss-content">
 							<img class="svg" src="assets/images/general-elements/section-separators/rounded.svg" alt="">
-						</div><!-- .ss-content -->
-					</div><!-- .section-separator -->
+						</div>
+					</div>
 					<div class="section-content">
-
 						<div class="container">
 							<div class="row">
 								<div class="col-md-10 col-md-offset-1 text-center">
-
 									<span class="tag-label">Call Us: 01093515252</span>
 									<h1>Get Best Wedding Invitation For Your Dreams</h1>
 									<p>
 										This should be used to tell a story and let your users know a little more about your product or service. How can you benefit them?
 									</p>
-									<a class="btn scroll-to x-large colorful hover-colorful-darken mt-40" href="#header">Order Now</a>
+									<a class="btn scroll-to x-large colorful hover-colorful-darken mt-40" href="https://api.whatsapp.com/send?phone=6285803256647&&text=Hallo Sungnikah.com saya tertarik dan ingin memesan jasa undangan digitalnya :)">Order Now</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-								</div><!-- .col-md-10 end -->
-							</div><!-- .row end -->
-						</div><!-- .container end -->
-
-					</div><!-- .section-content end -->
-
-				</div><!-- .parallax-section end -->
-
-			</div><!-- #content-wrap -->
-
-		</section><!-- #content end -->
-
-		<!-- Footer
-		============================================= -->
+		 <!-- Footer -->
 		<footer id="footer">
-
 			<div id="footer-bar-1" class="footer-bar">
-
 				<div class="footer-bar-wrap">
-
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-
 								<div class="fb-row">
 									<div class="copyrights-message">2020 © <a href=""><span class="colored">Sungnikah.com</span></a>. All Rights Reserved.</div>
 									<ul class="social-icons animated x4 grey hover-colorful icon-only">
 										<li><a class="si-facebook" href="#"><i class="fa fa-facebook"></i><i class="fa fa-facebook"></i></a></li>
 										<li><a class="si-twitter" href="#"><i class="fa fa-twitter"></i><i class="fa fa-twitter"></i></a></li>
 										<li><a class="si-instagramorange" href="#"><i class="fa fa-instagram"></i><i class="fa fa-instagram"></i></a></li>
-									</ul><!-- .social-icons end -->
-								</div><!-- .fb-row end -->
-
-							</div><!-- .col-md-12 end -->
-						</div><!-- .row end -->
-					</div><!-- .container end -->
-
-				</div><!-- .footer-bar-wrap -->
-
-			</div><!-- #footer-bar-1 end -->
-
-		</footer><!-- #footer end -->
-
-	</div><!-- #full-container end -->
-
+									</ul> 
+								</div> 
+							</div>
+						</div>
+					</div> 
+				</div> 
+			</div>  
+		</footer> 
+	</div>
 	<a class="scroll-top-icon scroll-top" href="#"><i class="fa fa-angle-up"></i></a>
 </body>
 </html>

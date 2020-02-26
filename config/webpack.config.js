@@ -4,6 +4,7 @@ const config = require('./config.site');
 const loaders = require('./webpack/webpack.loaders');
 const plugins = require('./webpack/webpack.plugins');
 
+console.log(config.root);
 module.exports = {
   context: path.join(config.root, config.paths.src),
   entry: [
