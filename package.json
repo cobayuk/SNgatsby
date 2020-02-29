@@ -38,6 +38,7 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-loader": "^2.2.1",
     "eslint-plugin-import": "^2.18.2",
+    "favicons-webpack-plugin": "^3.0.1",
     "file-loader": "^4.2.0",
     "glob": "^7.1.4",
     "html-webpack-plugin": "^3.2.0",
@@ -61,5 +62,7 @@
     "webpack-merge": "^4.2.1",
     "webpackbar": "^4.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "serve": "^11.3.0"
+  }
 }
