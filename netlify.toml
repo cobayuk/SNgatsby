@@ -1,7 +1,4 @@
 # Default site wide settings
-[build.processing]
-  skip_processing = true
-
 # If skip_processing = true, all other settings are ignored
 [build.processing]
   skip_processing = false
