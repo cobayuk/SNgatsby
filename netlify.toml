@@ -16,7 +16,7 @@
 
 # Redirect Configuration Site
 [[redirects]]
-  from = "https://sungnikah.netlify.com"
+  from = "https://sungnikah.com"
   to = "https://sungnikah.com"
   status = 301
   force = true
