@@ -8,6 +8,7 @@ const WebpackBar = require('webpackbar');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const WebappWebpackPlugin = require('webapp-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -56,8 +57,8 @@ const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map((dir) => {
       description: config.site_description
     },
     minify: {
-      collapseWhitespace: false,
-      removeComments: true,
+      collapseWhitespace: config.env === 'production ' ? true : false,
+      removeComments: config.env === 'production ' ? true : false,
       removeRedundantAttributes: false,
       removeScriptTypeAttributes: false,
       removeStyleLinkTypeAttributes: false,
@@ -113,6 +114,13 @@ const robots = new RobotstxtPlugin({
 //   },
 // });
 
+const copyAssetToDist = new CopyWebpackPlugin([
+  {
+    from: 'assets/*/**/**',
+    to: '',
+  },
+]);
+
 const favicons = new FaviconsWebpackPlugin({
     // Your source logo (required)
     logo: config.favicon,
@@ -145,6 +153,7 @@ module.exports = [
 	...generateHTMLPlugins(),
   // fs.existsSync(config.favicon) && favicons,
   config.env === 'production' && optimizeCss,
+  config.env === 'production' && copyAssetToDist,
   config.env === 'production' && robots,
   config.env === 'production' && sitemap,
   webpackBar,

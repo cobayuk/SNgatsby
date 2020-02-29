@@ -16,7 +16,7 @@ const config = {
 	// Your website's description, used for favicon meta tags
 	site_description: 'A modern boilerplate for static website development',
 	// Your website's URL, used for sitemap
-	site_url: 'http://sungnikah.netlify.com',
+	site_url: 'http://sungnikah.com',
 	// Google Analytics tracking ID (leave blank to disable)
 	googleAnalyticsUA: '',
 	// The viewport meta tag added to your HTML page's <head> tag
@@ -40,7 +40,7 @@ const config = {
 	),
 	// Webpack minification rules
 	webpackHtmlPlugins: {
-		minficationRules: false,
+		minficationRules: true,
 	}
 };
 
