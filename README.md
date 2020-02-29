@@ -31,5 +31,7 @@ Please make sure to update tests as appropriate.
 Dimas Prasetyo &
 Arie Aditya Nugraha
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/36d23392-bbe3-43bd-b4c6-e9bc05fbcbd6/deploy-status)](https://app.netlify.com/sites/sungnikah/deploys)
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

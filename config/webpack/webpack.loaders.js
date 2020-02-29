@@ -34,7 +34,7 @@ const js = {
 
 // Style loaders
 const styleLoader = {
-  loader: 'style-loader'
+  loader: 'style-loader',
 };
 
 const cssLoader = {
@@ -66,7 +66,7 @@ const css = {
 const sass = {
   test: /\.s[c|a]ss$/,
   use: [
-    config.env === 'production' ? MiniCssExtractPlugin.loader : styleLoader,
+    MiniCssExtractPlugin.loader,
     cssLoader,
     postcssLoader,
     {
