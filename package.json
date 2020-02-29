@@ -62,5 +62,7 @@
     "webpack-merge": "^4.2.1",
     "webpackbar": "^4.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "serve": "^11.3.0"
+  }
 }
