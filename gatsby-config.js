@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Starter Landing Page`,
-    description: `A barebone landing page starter with some minimal styles.`,
-    author: `@gillkyle`,
-    siteUrl: `https://gatsby-starter-landing-page.netlify.com`,
+    title: `Sungnikah`,
+    description: `Sungnikah merupakan penyedia jasa tetek bengek pernikahan seperti desain jada pembuatan wedding website, jada desain seserahan, dan desain undangan.`,
+    author: `Dimas Prasetyo & Arie Aditya Nugraha`,
+    siteUrl: `https://sungnikah.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,11 +24,5 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-styled-components`,
-    //   options: {
-    //     // Add any options here
-    //   },
-    // },
   ],
 }
