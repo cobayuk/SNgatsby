@@ -6,7 +6,7 @@ import Instagram from "../images/instagram.svg";
 import Facebook from "../images/facebook.svg";
 
 const Maintenance = () => (
-  <Style.GlobalStyle>
+  <>
     <SEO title="Sungnikah - Jasa Pembuatan Wedding Website" />
     <Style.Container>
       <Style.ImageWrapper src={ConstructionImage} alt="under-construction"/>
@@ -21,7 +21,7 @@ const Maintenance = () => (
         </a>
       </Style.Footer>
     </Style.Container>
-  </Style.GlobalStyle>
+  </>
 )
 
 export default Maintenance
