@@ -13,11 +13,16 @@ export const ImageWrapper = styled.img`
   object-fit: cover;
   width: 440px;
   height: 440px;
+  @media(max-width: 425px) {
+    width: 100%;
+    height: 100%;
+  }
   margin-top: 20px;
 `;
 
 export const Title = styled.h1`
   color: #ffffff;
+  padding: 0px 20px 20px 20px;
 `;
 
 export const Description = styled.p`
@@ -28,7 +33,8 @@ export const Description = styled.p`
 `;
 
 export const Footer = styled.div`
-  margin-top: 50px;
+  margin-top: 30px;
+  padding-bottom: 20px;
 `;
 
 export const InstagramIcon = styled.img`
