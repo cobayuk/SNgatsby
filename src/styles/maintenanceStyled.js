@@ -1,4 +1,13 @@
 import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Open-Sans, Helvetica, Sans-Serif;
+  }
+`;
 
 export const Container = styled.div`
   text-align: center;
