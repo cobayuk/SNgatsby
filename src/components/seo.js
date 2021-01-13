@@ -5,39 +5,57 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
+import icon from '../assets/favicon/favicon.ico';
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, robots, index }) {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             title
-            description
             author
+            SEO {
+              description
+              robots
+              keywords
+              index
+              canonical
+            }
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaTitle = title || site.siteMetadata.title
+  const metaDescription = description || site.siteMetadata.SEO.description
+  const metaRobots = robots || site.siteMetadata.SEO.robots
+  const metaKeywords = keywords || site.siteMetadata.SEO.keywords
+  const metaIndex = index || site.siteMetadata.SEO.index
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={metaTitle}
       meta={[
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `keywords`,
+          content: metaKeywords,
+        },
+        {
+          robots: `robots`,
+          content: metaRobots,
         },
         {
           property: `og:title`,
@@ -72,15 +90,22 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: 'x2eaeqaf_8ChuMCm8FCe7Vv4eER50NLgqg1a214yh_s',
         }
       ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
-        .concat(meta)}
+      .concat(
+        keywords.length > 0
+          ? {
+              name: `keywords`,
+              content: keywords.join(`, `),
+            }
+          : []
+      )
+      .concat(meta)}
+      link={[
+        {
+          "rel": "icon",
+          "type": "image/png",
+          "href": `${icon}`
+        },
+      ]}
     />
   )
 }
