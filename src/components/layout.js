@@ -7,6 +7,7 @@
 
 import React from "react";
 import PropTypes from "prop-types";
+import { Container } from '@material-ui/core';
 import { StaticQuery, graphql } from "gatsby";
 import Footer from "./footer";
 
@@ -23,7 +24,9 @@ const Layout = ({ children }) => (
       `}
       render={data => (
         <>
-          <main>{children}</main>
+          <Container>
+            <main>{children}</main>
+          </Container>
           <Footer siteTitle={data.site.siteMetadata.title} />
         </>
       )}
