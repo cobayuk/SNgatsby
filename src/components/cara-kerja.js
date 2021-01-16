@@ -1,14 +1,49 @@
 import React from "react";
-import { Box, Typography } from '@material-ui/core';
+import { Box, Grid, Typography, makeStyles } from '@material-ui/core';
 import { COLORS } from "../styles/constants";
 
-const CaraKerja = () => (
-  <Box>
-    <h2> Bagaimana cara kerja di Sungnikah?</h2>
-    <Typography>
-      Sungnikah merupakan penyedia jasa tetek bengek pernikahan seperti desain jada pembuatan wedding website, jada desain seserahan, dan desain undangan.
-    </Typography>
-  </Box>
-)
+const useStyles = makeStyles((theme) => ({
+  boxHowitWork: {
+    marginTop: '50px'
+  },
+  headingItWork: {
+    fontFamily: 'Oxygen',
+    fontStyle: 'normal',
+    fontWeight: 'bold',
+    fontSize: '30px',
+    lineHeight: '61px',
+  },
+  taglineCaption: {
+    fontFamily: 'Oxygen',
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    fontSize: '15px',
+    lineHeight: '25px',
+    color: '#928D97',
+    display: 'flex',
+    marginBottom: '30px'
+  }
+}));
+
+const CaraKerja = () => {
+
+  const classes = useStyles();
+
+  return (
+    <Box className={classes.boxHowitWork}>
+      <Grid container>
+        <Grid item md={8} lg={8}>
+          <h2 className={classes.headingItWork}> Bagaimana cara kerja di Sungnikah?</h2>
+          <Typography className={classes.taglineCaption}>
+            Sungnikah merupakan penyedia jasa tetek bengek pernikahan seperti desain jada pembuatan wedding website, jada desain seserahan, dan desain undangan.
+          </Typography>
+        </Grid>
+        <Grid item md={4} lg={4}>
+
+        </Grid>
+      </Grid>
+    </Box>
+  );
+}
 
 export default CaraKerja

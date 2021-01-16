@@ -37,8 +37,11 @@ export const HeadingTaglineBrand = styled(Typography)`
     color: ${COLORS.white};
     font-size: 13px;
     padding-top: 55px;
-    font-weight: bold;
     display: flex;
+    font-family: Oxygen;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 16px;
   }
 `;
 
@@ -46,18 +49,23 @@ export const HeadingPaymentDigital = styled(Typography)`
   &.MuiTypography-body1 {
     text-align: center;
     margin-bottom: 10px;
+    font-family: Oxygen;
+    font-style: normal;
     font-weight: bold;
     font-size: 20px;
+    line-height: 25px;
   }
 `;
 
 export const HeadingPaymentConvention = styled(Typography)`
   &.MuiTypography-body1 {
-    font-weight: bold;
     text-align: center;
     margin-bottom: 10px;
+    font-family: Oxygen;
+    font-style: normal;
     font-weight: bold;
     font-size: 20px;
+    line-height: 25px;
   }
 `;
 
@@ -106,6 +114,7 @@ export const WrapperMediaSocial = styled(Box)`
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    margin-top: 28px;
   }
 `;
 

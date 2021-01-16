@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Box, Typography, makeStyles, Button } from '@material-ui/core';
+import { COLORS } from "../styles/constants";
 
 const useStyles = makeStyles((theme) => ({
   boxHeader: {
@@ -26,12 +27,17 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '3em'
   },
   orderNow: {
+    top: 50,
     width: '155px',
     height: '50px',
-    left: '178px',
-    top: '697px',
     background: '#F2A76D',
-    borderRadius: '30px'
+    borderRadius: '30px',
+    display: 'flex',
+    fontFamily: 'Oxygen',
+    color: `${COLORS.white}`,
+    fontWeight: 'bold',
+    fontSize: '15px',
+    border: `5px solid ${COLORS.white}`
   }
 }));
 
@@ -47,10 +53,9 @@ const HeaderTagline = () => {
           <Typography className={classes.paragraphTagline}>
             Sungnikah merupakan penyedia jasa tetek bengek pernikahan seperti desain jada pembuatan wedding website, jada desain seserahan, dan desain undangan.
           </Typography>
-          <Button className={classes.orderNow}>Pesan Sekarang</Button>
+          <Button className={classes.orderNow}>Mau Pesan</Button>
         </Grid>
         <Grid item md={6} lg={6}>
-
         </Grid>
       </Grid>
     </Box>

@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Typography, Toolbar } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import BrandLogo from '../assets/logo/brand.svg';
+import { COLORS } from "../styles/constants";
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
@@ -15,7 +16,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appBar: {
-    backgroundColor: '#fff'
+    marginTop: '50px',
+    backgroundColor: `${COLORS.white}`
   },
   logoBrand: {
     width: 'auto',
@@ -24,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'align-start'
   },
   toolbar: {
+    padding: 0,
     flexWrap: 'wrap',
   },
   toolbarTitle: {
@@ -37,26 +40,20 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: `Oxygen, sans-serif`,
     fontWeight: 600
   },
-  heroContent: {
-    padding: theme.spacing(8, 0, 6),
-  },
   cardHeader: {
-    backgroundColor: '#fff'
-  },
-  cardPricing: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'baseline',
-    marginBottom: theme.spacing(2),
+    backgroundColor: `${COLORS.white}`
   },
   buttonLogin: {
     background: 'linear-gradient(180deg, #F1D88A 0%, rgba(244, 225, 165, 0.770833) 0.01%, rgba(246, 231, 182, 0.62235) 0.02%, rgba(255, 255, 255, 0) 100%), #E2B013',
     borderRadius: '10px',
     color: '#fff',
-    width: '98px',
+    width: '104px',
     height: '36px',
     border: 'none',
-    textTransform: 'capitalize'
+    textTransform: 'capitalize',
+    fontFamily: 'Oxygen',
+    fontSize: '15px',
+    fontWeight: 'bold',
   }
 }));
 
@@ -80,6 +77,9 @@ const Header = () => {
           </Link>
           <Link color="textPrimary" to="#" className={classes.link}>
             Cara Pembayaran
+          </Link>
+          <Link color="textPrimary" to="#" className={classes.link}>
+            Paket Harga
           </Link>
           <Link color="textPrimary" to="#" className={classes.link}>
             Kontak Kami
