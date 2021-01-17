@@ -2,9 +2,12 @@ import React from "react";
 import { Grid, Avatar, Container } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
-import { COLORS } from "../styles/constants";
 import Link from '@material-ui/core/Link';
 import PropTypes from "prop-types";
+import Ovo from '../assets/logo/digital-payment/ovo.svg';
+import Dana from '../assets/logo/digital-payment/dana.svg';
+import LinkAja from '../assets/logo/digital-payment/link-aja.svg';
+import Gopay from '../assets/logo/digital-payment/gopay.svg';
 import * as Style from '../styles/footer/footerStyled';
 
 const Copyright = ({siteTitle}) => {
@@ -29,7 +32,7 @@ const Footer = ({ siteTitle }) => {
             <Style.HeadingWeLoveBuild variant="body1">
               We Love To Build Right
             </Style.HeadingWeLoveBuild>
-            <Style.HeadingTaglineBrand variant="p">
+            <Style.HeadingTaglineBrand variant="caption">
               Sungnikah.com cara pandai dan hemat membuat undangan digital.
             </Style.HeadingTaglineBrand>
             <Copyright siteTitle={siteTitle} />
@@ -41,25 +44,25 @@ const Footer = ({ siteTitle }) => {
             <Grid container>
               <Style.GridCenter item lg={3}>
                 <Style.WrapperInline>
-                  <Avatar>O</Avatar>
+                  <img src={Ovo} alt="payment-ovo" />
                   <Typography>OVO</Typography>
                 </Style.WrapperInline>
               </Style.GridCenter>
               <Style.GridCenter item lg={3}>
                 <Style.WrapperInline>
-                  <Avatar>D</Avatar>
+                  <img src={Dana} alt="payment-dana" />
                   <Typography>DANA</Typography>
                 </Style.WrapperInline>
               </Style.GridCenter>
               <Style.GridCenter item lg={3}>
                 <Style.WrapperInline>
-                  <Avatar>LA</Avatar>
+                  <img src={LinkAja} alt="payment-dana" />
                   <Typography>LINK AJA</Typography>
                 </Style.WrapperInline>
               </Style.GridCenter>
               <Style.GridCenter item lg={3}>
                 <Style.WrapperInline>
-                  <Avatar>G</Avatar>
+                  <img src={Gopay} alt="payment-dana" />
                   <Typography>GOPAY</Typography>
                 </Style.WrapperInline>
               </Style.GridCenter>

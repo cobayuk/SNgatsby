@@ -17,6 +17,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

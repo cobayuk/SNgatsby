@@ -30,11 +30,11 @@ const CaraKerja = () => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.boxHowitWork}>
+    <Box className={classes.boxHowitWork} id="itworks">
       <Grid container>
         <Grid item md={8} lg={8}>
           <h2 className={classes.headingItWork}> Bagaimana cara kerja di Sungnikah?</h2>
-          <Typography className={classes.taglineCaption}>
+          <Typography variant="h6" color="inherit" className={classes.taglineCaption}>
             Sungnikah merupakan penyedia jasa tetek bengek pernikahan seperti desain jada pembuatan wedding website, jada desain seserahan, dan desain undangan.
           </Typography>
         </Grid>

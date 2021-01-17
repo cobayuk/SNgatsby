@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Box, Typography, makeStyles, Button } from '@material-ui/core';
 import { COLORS } from "../styles/constants";
+import CircleLove from "../assets/logo/decoration/circle-love.svg";
 
 const useStyles = makeStyles((theme) => ({
   boxHeader: {
@@ -38,6 +39,20 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold',
     fontSize: '15px',
     border: `5px solid ${COLORS.white}`
+  },
+  boxReactangleSmall: {
+    width: '198px',
+    height: 'auto',
+    left: 66,
+    top: 196,
+    backgroundColor: '#EE6E53',
+    borderRadius: '15px',
+    color: `${COLORS.white}`,
+    padding: '10px',
+    position: 'relative'
+  },
+  headingLove: {
+    fontSize: '12px',
   }
 }));
 
@@ -50,12 +65,18 @@ const HeaderTagline = () => {
       <Grid container>
         <Grid item md={6} lg={6}>
           <h2 className={classes.headingTagline}> Buat langsung undangan nikah kamu secara cepat dan murah.</h2>
-          <Typography className={classes.paragraphTagline}>
+          <Typography variant="h6" color="inherit" className={classes.paragraphTagline}>
             Sungnikah merupakan penyedia jasa tetek bengek pernikahan seperti desain jada pembuatan wedding website, jada desain seserahan, dan desain undangan.
           </Typography>
           <Button className={classes.orderNow}>Mau Pesan</Button>
         </Grid>
         <Grid item md={6} lg={6}>
+          <Box className={classes.boxReactangleSmall}>
+            <img src={CircleLove} alt="cirlce-love" />
+            <Typography className={classes.headingLove}>
+              Kamu berhasil mengatur waktu tanggal pernikahan kamu.
+            </Typography>
+          </Box>
         </Grid>
       </Grid>
     </Box>

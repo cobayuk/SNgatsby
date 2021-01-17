@@ -6,6 +6,7 @@ import { AppBar, Typography, Toolbar } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import BrandLogo from '../assets/logo/brand.svg';
 import { COLORS } from "../styles/constants";
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
@@ -69,19 +70,35 @@ const Header = () => {
           <img src={BrandLogo} alt="brand-logo" className={classes.logoBrand}/>
         </Typography>
         <nav>
-          <Link color="textPrimary" to="#" className={classes.link}>
+          <Link
+            onClick={() => scrollTo('#itworks')}
+            to="#itworks"
+            className={classes.link}
+          >
             Cara Kerja Sungnikah
           </Link>
-          <Link color="textPrimary" to="/demo/landing" className={classes.link}>
+          <Link
+            to="/demo/landing"
+            className={classes.link}
+          >
             Demo
           </Link>
-          <Link color="textPrimary" to="#" className={classes.link}>
+          <Link
+            to="#payment"
+            className={classes.link}
+          >
             Cara Pembayaran
           </Link>
-          <Link color="textPrimary" to="#" className={classes.link}>
+          <Link
+            to="#pricing"
+            className={classes.link}
+          >
             Paket Harga
           </Link>
-          <Link color="textPrimary" to="#" className={classes.link}>
+          <Link
+            to="#contactus"
+            className={classes.link}
+          >
             Kontak Kami
           </Link>
         </nav>
