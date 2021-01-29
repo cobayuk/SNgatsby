@@ -2,6 +2,10 @@ import React from "react";
 import { Grid, Box, Typography, makeStyles, Button } from '@material-ui/core';
 import { COLORS } from "../styles/constants";
 import CircleLove from "../assets/logo/decoration/circle-love.svg";
+import OrnamentOne from "../assets/ornaments/header-tagline/ornament-one.svg";
+import OrnamentTwo from "../assets/ornaments/header-tagline/ornament-two.svg";
+import OrnamentThree from "../assets/ornaments/header-tagline/ornament-three.svg";
+import OrnamentFour from "../assets/ornaments/header-tagline/ornament-four.svg";
 
 const useStyles = makeStyles((theme) => ({
   boxHeader: {
@@ -41,18 +45,51 @@ const useStyles = makeStyles((theme) => ({
     border: `5px solid ${COLORS.white}`
   },
   boxReactangleSmall: {
-    width: '198px',
-    height: 'auto',
-    left: 66,
-    top: 196,
+    width: '230px',
+    height: '57px',
+    left: 28,
+    top: 256,
+    display: 'flex',
     backgroundColor: '#EE6E53',
     borderRadius: '15px',
     color: `${COLORS.white}`,
     padding: '10px',
-    position: 'relative'
+    position: 'relative',
+    zIndex: 10,
   },
   headingLove: {
     fontSize: '12px',
+  },
+  iconCircleLove: {
+    paddingRight: 10
+  },
+  ornamentsOne: {
+    display: 'flex',
+    position: 'relative',
+    right: '-12em',
+    top: '-12em',
+    float: 'left'
+  },
+  ornamentsTwo: {
+    display: 'flex',
+    position: 'relative',
+    top: '0',
+    left: '50px',
+    float: 'right'
+  },
+  ornamentsThree: {
+    display: 'flex',
+    position: 'relative',
+    right: '-2em',
+    top: '-5em',
+    float: 'right'
+  },
+  ornamentsFour: {
+    display: 'flex',
+    position: 'relative',
+    float: 'left',
+    top: '-35em',
+    right: '21em'
   }
 }));
 
@@ -66,16 +103,28 @@ const HeaderTagline = () => {
         <Grid item md={6} lg={6}>
           <h2 className={classes.headingTagline}> Buat langsung undangan nikah kamu secara cepat dan murah.</h2>
           <Typography variant="h6" color="inherit" className={classes.paragraphTagline}>
-            Sungnikah merupakan penyedia jasa tetek bengek pernikahan seperti desain jada pembuatan wedding website, jada desain seserahan, dan desain undangan.
+            Sungnikah merupakan penyedia jasa tetek bengek pernikahan seperti desain jada pembuatan wedding website, jasa desain seserahan, dan desain undangan.
           </Typography>
           <Button className={classes.orderNow}>Mau Pesan</Button>
         </Grid>
         <Grid item md={6} lg={6}>
           <Box className={classes.boxReactangleSmall}>
-            <img src={CircleLove} alt="cirlce-love" />
+            <img src={CircleLove} alt="cirlce-love" className={classes.iconCircleLove}/>
             <Typography className={classes.headingLove}>
               Kamu berhasil mengatur waktu tanggal pernikahan kamu.
             </Typography>
+          </Box>
+          <Box className={classes.ornamentsOne}>
+            <img src={OrnamentOne} alt="ornament-one" />
+          </Box>
+          <Box className={classes.ornamentsTwo}>
+            <img src={OrnamentTwo} alt="ornament-two" />
+          </Box>
+          <Box className={classes.ornamentsThree}>
+            <img src={OrnamentThree} alt="ornament-three" />
+          </Box>
+          <Box className={classes.ornamentsFour}>
+            <img src={OrnamentFour} alt="ornament-four" />
           </Box>
         </Grid>
       </Grid>

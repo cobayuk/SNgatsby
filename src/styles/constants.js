@@ -21,7 +21,9 @@ export const COLORS = {
   babyBlue      : "#50CAF9",
   blue          : "#5368f1",
   white         : "#FFFF",
-  blueMaintance : "#4c53dc"
+  blueMaintance : "#4c53dc",
+  golderDark    : "#b98d06",
+  golden        : "#E2B62E"
 }
 
 export const GRADIENT = `linear-gradient(to top right, ${COLORS.babyBlue}, ${

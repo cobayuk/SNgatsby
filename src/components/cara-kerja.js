@@ -4,7 +4,7 @@ import { COLORS } from "../styles/constants";
 
 const useStyles = makeStyles((theme) => ({
   boxHowitWork: {
-    marginTop: '50px'
+    marginTop: '24em'
   },
   headingItWork: {
     fontFamily: 'Oxygen',

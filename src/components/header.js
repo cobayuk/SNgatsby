@@ -58,7 +58,6 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-
 const Header = () => {
 
   const classes = useStyles();
@@ -102,7 +101,7 @@ const Header = () => {
             Kontak Kami
           </Link>
         </nav>
-        <Button href="#" className={classes.buttonLogin}>
+        <Button href="/client/login" className={classes.buttonLogin}>
           Login
         </Button>
       </Toolbar>

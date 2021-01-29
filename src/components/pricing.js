@@ -12,6 +12,7 @@ import  {
   makeStyles
 }
 from '@material-ui/core';
+import { COLORS } from "../styles/constants";
 import StarIcon from '@material-ui/icons/StarBorder';
 
 const useStyles = makeStyles((theme) => ({
@@ -38,6 +39,16 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '15px',
     fontFamily: 'Oxygen',
     marginBottom: '30px',
+  },
+  buttonActionPricing: {
+    backgroundColor: `${COLORS.golden}`,
+    border: '0',
+    color: `${COLORS.white}`,
+    '&:hover': {
+      backgroundColor: `${COLORS.golderDark}`,
+      color: `${COLORS.white}`,
+      border: '0'
+    }
   }
 }));
 
@@ -82,7 +93,8 @@ const tiers = [
       'Sudah Termasuk Domain'
     ],
     buttonText: 'Pesan Sekarang Nagih',
-    buttonVariant: 'outlined'
+    buttonVariant: 'outlined',
+
   }
 ];
 
@@ -104,7 +116,6 @@ const PricingPrice = () => {
       <Container maxWidth="lg" component="main" classes={classes.boxOuterPricing}>
         <Grid container spacing={5} alignItems="flex-end">
           {tiers.map((tier) => (
-            // Enterprise card is full width at sm breakpoint
             <Grid item key={tier.title} xs={12} sm={tier.title === 'Enterprise' ? 12 : 6} md={4}>
               <Card>
                 <CardHeader
@@ -133,7 +144,7 @@ const PricingPrice = () => {
                   </ul>
                 </CardContent>
                 <CardActions>
-                  <Button fullWidth variant={tier.buttonVariant} color="primary">
+                  <Button className={classes.buttonActionPricing} fullWidth variant={tier.buttonVariant} color="primary">
                     {tier.buttonText}
                   </Button>
                 </CardActions>
