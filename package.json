@@ -22,11 +22,11 @@
     "gsap": "^3.6.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
+    "react-animations": "^1.0.0",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "sharp": "^0.22.0",
-    "styled-components": "^5.2.1",
-    "styled-reset": "^4.3.4"
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "prettier": "^1.16.4"
