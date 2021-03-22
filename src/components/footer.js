@@ -73,7 +73,7 @@ const Footer = ({ siteTitle }) => {
               Pembayaran Konvensional
             </Style.HeadingPaymentConvention>
             <Grid container>
-              <Grid item lg={4}>
+              {/* <Grid item lg={4}>
                 <Style.WrapperInline>
                   <Avatar>M</Avatar>
                   <Typography>Mandiri</Typography>
@@ -90,7 +90,7 @@ const Footer = ({ siteTitle }) => {
                   <Avatar>BC</Avatar>
                   <Typography>BCA</Typography>
                 </Style.WrapperInline>
-              </Grid>
+              </Grid> */}
             </Grid>
           </Style.ContainerDigitalConventional>
           <Grid item lg={3}>
