@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Typography, Box, Button }from '@material-ui/core';
+import { Box, Link }from '@material-ui/core';
+import Map from "../../components/map";
 import * as Style from "./themeStyled";
 import Liquid from "../../assets/ornaments/themes/liquid.svg";
 import LiquidOutline from "../../assets/ornaments/themes/liquid-outline-mobile.svg";
@@ -53,25 +54,74 @@ const FirstTheme = () =>  {
     );
   });
   return (
-    // <div>
-    //   <h1>HacktoberFest {year} Countdown</h1>
-    //   <h2>With React Hooks!</h2>
-    //   {timerComponents.length ? timerComponents : <span>Time's up!</span>}
-    // </div>
     <Box>
       <Style.Introduction>
-        <Style.OrnamentLiquid src={Liquid} alt="ornament-1"/>
-        <Style.OrnamentLiquidOutline src={LiquidOutline} alt="ornament-2"/>
+        <Style.OrnamentLiquid
+          src={Liquid}
+          alt="ornament-1"
+          // data-sal="fade"
+          // data-sal-duration="2000"
+          // data-sal-delay="200"
+          // data-sal-easing="ease"
+        />
+        <Style.OrnamentLiquidOutline
+          src={LiquidOutline}
+          alt="ornament-2"
+          data-sal="fade"
+          data-sal-duration="2000"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+        />
         <Style.IntroWrapper>
-          <Style.Invite>You're Invited to</Style.Invite>
-          <Style.Title>The Wedding Of</Style.Title>
+          <Style.Invite
+            data-sal="slide-up"
+            data-sal-duration="2000" // changes duration of the animation (from 200 to 2000 ms)
+            data-sal-delay="300" // adds delay to the animation (from 5 to 1000 ms)
+            data-sal-easing="ease" // sets easing for the animation (see easings.net for reference)
+          >
+            You're Invited to
+          </Style.Invite>
+          <Style.Title
+            data-sal="slide-down"
+            data-sal-duration="2000"
+            data-sal-delay="400"
+            data-sal-easing="ease"
+          >
+            The Wedding Of
+          </Style.Title>
           <Box>
-            <Style.PersonName>Andy</Style.PersonName>
-            <Style.Ampersand>and</Style.Ampersand>
-            <Style.PersonName>Syifa</Style.PersonName>
+            <Style.PersonName
+              data-sal="slide-left"
+              data-sal-duration="2000"
+              data-sal-delay="500"
+              data-sal-easing="ease"
+            >
+              Andy
+            </Style.PersonName>
+            <Style.Ampersand
+              data-sal="slide-down"
+              data-sal-duration="2000"
+              data-sal-delay="600"
+              data-sal-easing="ease"
+            >
+              and
+            </Style.Ampersand>
+            <Style.PersonName
+              data-sal="slide-right"
+              data-sal-duration="2000"
+              data-sal-delay="700"
+              data-sal-easing="ease"
+            >
+              Syifa
+            </Style.PersonName>
           </Box>
           <Style.CountdownContainer>
-            <Style.WeddingCountdown>
+            <Style.WeddingCountdown
+              data-sal="slide-up"
+              data-sal-duration="2000"
+              data-sal-delay="1000"
+              data-sal-easing="ease"
+            >
               {timerComponents.length ? timerComponents : <span>Time's up!</span>}
             </Style.WeddingCountdown>
           </Style.CountdownContainer>
@@ -83,7 +133,7 @@ const FirstTheme = () =>  {
           <Style.FlowerLeft src={Flower} alt="flower"/>
           <Style.FlowerMiddleOne src={Flower} alt="flower"/>
         </Style.FlowerContainer>
-        <Box>
+        <Style.InvitationWrapper>
           <Style.Greeting>
             Bismillaahirrahmaanirrahiim<br/><br/>
             Assalaamu'alaikum Warahmatullaahi Wabarakaatuh
@@ -110,24 +160,32 @@ const FirstTheme = () =>  {
           <Style.WeedingTime>Pukul 10:10 - 13:00 WIB</Style.WeedingTime>
           <Style.Greeting>di POKEL Garden Resto<br/><br/>Jalan Kelapa Dua no.88, Katulisan, Kecamatan Serang Kota Serang</Style.Greeting>
           <Style.SeeMap>Lihat Peta</Style.SeeMap>
-        </Box>
+        </Style.InvitationWrapper>
         <Style.OrnamentMiddleContainer>
           <Style.OrnamentAbstract src={Abstract} alt="ornament-1"/>
           <Style.OrnamentCurved src={Curved} alt="ornament-2"/>
         </Style.OrnamentMiddleContainer>
+
+        <Map/>
       </Style.InvitationContainer>
 
       <Style.QuranVerseContainer>
-        <Box>
-          <Style.QuranVerseText>
-            “Bahwasanya Allah menciptakan kalian dari jenis kalian berupa perempuan sebagai istri, yang tinggal dengan kalian karena pernikahan, yang kalian lembut kepada istri-istri kalian dan condong kepadanya. Allah jadikan di antara kalian kecintaan, simpati dan kasih sayang, sungguh itu semua adalah tanda yang jelas akan ke-Maha Esaaan Allah dan kasih sayang-Nya kepada makhluk-Nya bagi kaum yang menjalankan akal mereka dan memikirkannya.”<br/><br/>(Q.S. Ar-Rum: 21)
-          </Style.QuranVerseText>
+        <Style.QuranVerseText
+          data-sal="slide-up"
+          data-sal-duration="2000"
+          data-sal-delay="500"
+          data-sal-easing="ease"
+        >
+          “Bahwasanya Allah menciptakan kalian dari jenis kalian berupa perempuan sebagai istri, yang tinggal dengan kalian karena pernikahan, yang kalian lembut kepada istri-istri kalian dan condong kepadanya. Allah jadikan di antara kalian kecintaan, simpati dan kasih sayang, sungguh itu semua adalah tanda yang jelas akan ke-Maha Esaaan Allah dan kasih sayang-Nya kepada makhluk-Nya bagi kaum yang menjalankan akal mereka dan memikirkannya.”<br/><br/>(Q.S. Ar-Rum: 21)
+        </Style.QuranVerseText>
 
-          <Box>
-            <Style.OrnamentAbstractBottom src={AbstractBottom} alt="ornament-3"/>
-            <Style.OrnamentFlowerBottom src={FlowerBottom} alt="ornament-4"/>
-          </Box>
-        </Box>
+        <Style.OrnamentBottomContainer>
+          <Style.OrnamentAbstractBottom src={AbstractBottom} alt="ornament-3"/>
+          <Style.OrnamentFlowerBottom src={FlowerBottom} alt="ornament-4"/>
+          <Link href="#">
+            <Style.WatermarkSungnikah> Built with <span style={{color:'red'}}>❤</span> by sungnikah.com</Style.WatermarkSungnikah>
+          </Link>
+        </Style.OrnamentBottomContainer>
 
       </Style.QuranVerseContainer>
     </Box>
