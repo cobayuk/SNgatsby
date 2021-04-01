@@ -31,3 +31,11 @@ export const GRADIENT = `linear-gradient(to top right, ${COLORS.babyBlue}, ${
 })`
 
 export const BORDER_RADIUS = "10px"
+
+export const WEDDING_PLACE = {
+  pokelGardenResto : "POKEL Garden Resto"
+}
+
+export const WEDDING_ADDRESS = {
+  pokelGardenResto : "Jl. Perjuagan, Kasemen, Kec. Kasemen, Kota Serang, Banten 42162"
+}
