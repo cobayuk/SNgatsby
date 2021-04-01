@@ -1,13 +1,15 @@
 # Sungnikah.com
 
-Sungnikah merupakan penyedia jasa tetek bengek pernikahan seperti desain jada pembuatan wedding website, jada desain seserahan, dan desain undangan..
+Sungnikah merupakan penyedia jasa segala macam pernikahan seperti desain jasa pembuatan wedding website, jasa desain seserahan, dan desain undangan..
 
 ## Installation
 
-Use the package manager [npm](https://nodejs.org/en/download/package-manager/) to install dependecy.
+Use the package manager 
+[npm](https://nodejs.org/en/download/package-manager/) or
+[yarn](https://yarnpkg.com/) to install dependecy.
 
 ```bash
-npm install
+npm install or yarn command
 ```
 
 ## Usage
