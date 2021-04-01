@@ -994,6 +994,31 @@
     ts-node "^9"
     tslib "^2"
 
+"@fontsource/dm-serif-display@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/dm-serif-display/-/dm-serif-display-4.2.2.tgz#b7e034b77013c3f0a86689168fe0d014c2135efd"
+  integrity sha512-4f9dWpCb8AbmTtl16jxOGj9THRtajXAGNBSbyhbs6+YF3IGI4bOhKMEG6hQEhMnhgOY+PKJVn4fUD4t9sn4ZKw==
+
+"@fontsource/overlock@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/overlock/-/overlock-4.2.2.tgz#de1d5126227aa338ae4ecb61e0198e9a428d1b86"
+  integrity sha512-NSpokkYUKXkio28se2cmpRFROh+1g+qUswJyaROYvfqya/+G0sgffsOpJBEvy5yzIqXlqgaizU6ZpkmuNDe5zA==
+
+"@fontsource/oxygen@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/oxygen/-/oxygen-4.2.2.tgz#0653fb38c8a0a161002cbdacf3a6765984dce6e9"
+  integrity sha512-jhT0/C5P9DsYqAjMVVvdBDhyPkDUPA2VZ+tD1KO1wqwYy8zXBm3OY5VhfYVBa3cyDWVha9i1vn07VFypb+Fw8A==
+
+"@fontsource/qwigley@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/qwigley/-/qwigley-4.2.2.tgz#dcd7de65aa27d075d12a0c529cd534fdf45a2397"
+  integrity sha512-o/NBY9z/KkidVf++0K8yQ1i1esnS8JEwWb1TJmHnJrVgiNb95tT12lLNGsAh88Wd9k2hk+ikRdfSNC50/am3jA==
+
+"@fontsource/satisfy@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/satisfy/-/satisfy-4.2.2.tgz#0524d8da9962a8ccbc4756a0ea1d28237eae9cf2"
+  integrity sha512-Y5rm7f5q7d0+L3Mc1X6h0hz0qrOP35xHCJRVuhDjsey9k7jefE8uzjtoHFgM9m3GPfinziBgJ2nW744rQE0J9Q==
+
 "@graphql-tools/batch-execute@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@graphql-tools/batch-execute/-/batch-execute-7.0.0.tgz#e79d11bd5b39f29172f6ec2eafa71103c6a6c85b"
@@ -11014,6 +11039,13 @@ react-animations@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-animations/-/react-animations-1.0.0.tgz#d96222920dfeabec8984d9b2ef2c5a5aadb40f06"
   integrity sha512-ePPpVgdKnNEXm+LP1ww5s3n0JzebBw9QdRfxRqogzeg1PDIn6kf0pmvgeTeVZQXXpGmHImkIeTiaQR1O6xjntA==
+
+react-countdown@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/react-countdown/-/react-countdown-2.3.1.tgz#6914538705075c74ac8f97fd8c31b29eadf44cbd"
+  integrity sha512-h66prF+Wwj3Ru4tDeqvXsW8iqaCyC54pjwTAlUUmUQ11EUqIO34xV4pO4q8MGT6917ep47ntKmBW99ZVN1ozdQ==
+  dependencies:
+    prop-types "^15.7.2"
 
 react-dev-utils@^4.2.3:
   version "4.2.3"

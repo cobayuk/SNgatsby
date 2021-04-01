@@ -13,13 +13,21 @@ npm install
 ## Usage
 
 ```
-npm run start (development mode)
-npm run build (production mode)
+gatsby develop / start (development mode !)
+gatsby serve (development serve !)
+gatsby build (production mode !)
+gatsby format (prettier mode !)
+gatsby test (write test mode !)
 
 example command at package.json
-"start": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.js",
-"build": "webpack --mode production",
-"test": "echo \"Error: no test specified\" && exit 1"
+"scripts": {
+  "build": "gatsby build",
+  "develop": "gatsby develop",
+  "format": "prettier --write src/**/*.{js,jsx}",
+  "start": "npm run develop",
+  "serve": "gatsby serve",
+  "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+}
 ```
 
 ## Contributing
