@@ -1,18 +1,19 @@
-import React from "react"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Hero from "../components/hero"
-import Content from "../components/content"
-import CallToAction from "../components/cta"
+import React from "react";
+import GlobalStyle from "../styles/global/globalStyled";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import Header from "../components/header";
+import Content from "../components/content";
 
 const IndexPage = () => (
-  <Layout>
-    <SEO />
-    <Hero />
-    <Content />
-    <CallToAction />
-  </Layout>
+  <>
+    <GlobalStyle />
+    <Layout>
+      <Header />
+      <SEO />
+      <Content />
+    </Layout>
+  </>
 )
 
 export default IndexPage

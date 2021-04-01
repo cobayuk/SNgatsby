@@ -5,37 +5,32 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
-
-import Footer from "./footer"
-import "../styles/default.css"
+import React from "react";
+import PropTypes from "prop-types";
+import { Container } from '@material-ui/core';
+import { StaticQuery, graphql } from "gatsby";
+import Footer from "./footer";
 
 const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+    <StaticQuery
+      query={graphql`
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              title
+            }
           }
         }
-      }
-    `}
-    render={data => (
-      <>
-        <div
-          style={{
-            padding: "0 1rem",
-          }}
-        >
-          <main>{children}</main>
-        </div>
-        <Footer siteTitle={data.site.siteMetadata.title} />
-      </>
-    )}
-  />
+      `}
+      render={data => (
+        <>
+          <Container>
+            <main>{children}</main>
+          </Container>
+          <Footer siteTitle={data.site.siteMetadata.title} />
+        </>
+      )}
+    />
 )
 
 Layout.propTypes = {
