@@ -10,6 +10,7 @@
 
 import styled, { keyframes } from 'styled-components';
 import { Box, Typography, Button } from '@material-ui/core';
+
 import { breakpoints } from '../../components/media';
 // Fonts
 import "@fontsource/oxygen";
@@ -368,5 +369,6 @@ export const Watermark = styled(Typography)`
     position: absolute;
     bottom: 15px;
     left: 25px;
+
   }
 `;
