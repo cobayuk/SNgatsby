@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import { Box, Link }from '@material-ui/core';
 import * as Style from "./secondStyle";
 import OrnamentFlowerTop from "../../assets/ornaments/themes/secondTheme/first-flower-top-left.svg";
@@ -12,22 +13,23 @@ import AmpersandDivider from "../../assets/ornaments/themes/secondTheme/ampersan
 import LineDivider from "../../assets/ornaments/themes/secondTheme/line.svg";
 import Map from "../../components/map";
 
-
-
 const SecondTheme = () =>  {
 
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
     // const difference = +new Date(`${year}-10-1`) - +new Date();
+
     let difference = +new Date(`04/30/${year}`) - +new Date(); //month - day - current year
     let timeLeft = {};
 
     if (difference > 0) {
       timeLeft = {
+
         hari: Math.floor(difference / (1000 * 60 * 60 * 24)),
         jam: Math.floor((difference / (1000 * 60 * 60)) % 24),
         menit: Math.floor((difference / 1000 / 60) % 60),
         detik: Math.floor((difference / 1000) % 60),
+
       };
     }
 
@@ -52,10 +54,13 @@ const SecondTheme = () =>  {
 
     timerComponents.push(
       <span>
+
         {timeLeft[interval]} {interval}{"  "}
+
       </span>
     );
   });
+
 
 
 
