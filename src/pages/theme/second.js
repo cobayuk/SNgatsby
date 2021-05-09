@@ -12,6 +12,7 @@ import OrnamentThirdFlowerBottom from "../../assets/ornaments/themes/secondTheme
 import AmpersandDivider from "../../assets/ornaments/themes/secondTheme/ampersand.svg";
 import LineDivider from "../../assets/ornaments/themes/secondTheme/line.svg";
 import Map from "../../components/map";
+import { configThemesSecond } from "../../mocking/client";
 
 const SecondTheme = () =>  {
 
@@ -46,7 +47,6 @@ const SecondTheme = () =>  {
   });
 
   const timerComponents = [];
-
   Object.keys(timeLeft).forEach((interval) => {
     if (!timeLeft[interval]) {
       return;
@@ -54,70 +54,72 @@ const SecondTheme = () =>  {
 
     timerComponents.push(
       <span>
-
         {timeLeft[interval]} {interval}{"  "}
-
       </span>
     );
   });
 
-
-
-
   return (
     <Box>
-        <Style.Header>
-          <Style.FlowerTopLeft src={OrnamentFlowerTop} alt="ornament-1"/>
-          <Style.InvitedPerson>YOU’RE INVITED TO</Style.InvitedPerson>
-          <Style.WeddingTitle>THE WEDDING OF</Style.WeddingTitle>
-          <Style.Grooms>Andy</Style.Grooms>
-          <Style.Ampersand src={AmpersandDivider} alt="ampersand"/>
-          <Style.Bride>Syifa</Style.Bride>
-          <Style.WeddingDate>JULY 11th, 2021</Style.WeddingDate>
-          <Style.FlowerMiddle src={MiddleFrame} alt="frame-middle"/>
-          <Style.FlowerBottomRight src={OrnamentFlowerBottom} alt="ornament-2"/>
-        </Style.Header>
-        <Style.WeddingInfoContainer>
-          <Style.SecondFlowerTop src={OrnamentSecondFlower} alt="ornament-3"/>
-          <Style.Greetings>Bismillaahirrahmaanirrahiim <br/><br/> Assalaamu'alaikum Warahmatullaahi Wabarakaatuh <br/><br/> Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. <br/><br/>Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan do'a restu pada pernikahan kami: </Style.Greetings>
-          <Style.GroomFull>Andy Winarko</Style.GroomFull>
-          <Style.Parents>Putra pertama dari Bpk. Karim Muhadin dan Ibu Jey Sabilla</Style.Parents>
-          <Style.AmpersandBride>&</Style.AmpersandBride>
-          <Style.GroomFull>Syifa Putri Lubis</Style.GroomFull>
-          <Style.Parents>Putri pertama dari Bpk. Jojo Amin dan Ibu Sari Asih</Style.Parents>
-          <Style.WeddingDateSecond>Senin, 11 July 2021</Style.WeddingDateSecond>
-          <Style.CountDown> {timerComponents.length ? timerComponents : <span>Happy Wedding!</span>}</Style.CountDown>
-          <Style.WeddingCeremony>Akad</Style.WeddingCeremony>
-          <Style.WeddingTime>Pukul 09:00 - 10:00 WIB</Style.WeddingTime>
-          <Style.LineDivider src={LineDivider} alt="divider"/>
-          <Style.WeddingCeremony>Resepsi</Style.WeddingCeremony>
-          <Style.WeddingTime>Pukul 10:10 - 13:00 WIB</Style.WeddingTime>
-          <Style.WeddingLocation>di POKEL Garden Resto<br/><br/> Jalan Kelapa Dua no.88, Katulisan, Kecamatan Serang, Kota Serang</Style.WeddingLocation>
-          <Style.SecondFlowerBottom src={OrnamentSecondFlowerBottom} alt="ornament-3"/>
-        </Style.WeddingInfoContainer>
 
-        <Style.WeddingLocationContainer>
-          <Style.LocationTitle>Lokasi</Style.LocationTitle>
-          <Style.MapContainer>
-            <Map/>
-          </Style.MapContainer>
-          <Style.SeeMap>Lihat Peta</Style.SeeMap>
-        </Style.WeddingLocationContainer>
+      <Style.Header>
+        <Style.FlowerTopLeft src={OrnamentFlowerTop} alt="ornament-1"/>
+        <Style.InvitedPerson>YOU’RE INVITED TO</Style.InvitedPerson>
+        <Style.WeddingTitle>THE WEDDING OF</Style.WeddingTitle>
+        <Style.Grooms>{configThemesSecond.groom.nickName}</Style.Grooms>
+        <Style.Ampersand src={AmpersandDivider} alt="ampersand"/>
+        <Style.Bride>{configThemesSecond.bride.nickName}</Style.Bride>
+        <Style.WeddingDate>{configThemesSecond.placeHolderTag.timeStarted}</Style.WeddingDate>
+        <Style.FlowerMiddle src={MiddleFrame} alt="frame-middle"/>
+        <Style.FlowerBottomRight src={OrnamentFlowerBottom} alt="ornament-2"/>
+      </Style.Header>
 
-        <Style.VerseContainer>
-          <Style.ThirdFlowerTop src={OrnamentThirdFlowerTop} alt="ornament-4"/>
-          <Style.VerseText>“Bahwasanya Allah menciptakan kalian dari jenis kalian berupa perempuan sebagai istri, yang tinggal dengan kalian karena pernikahan, yang kalian lembut kepada istri-istri kalian dan condong kepadanya. Allah jadikan di antara kalian kecintaan, simpati dan kasih sayang, sungguh itu semua adalah tanda yang jelas akan ke-Maha Esaaan Allah dan kasih sayang-Nya kepada makhluk-Nya bagi kaum yang menjalankan akal mereka dan memikirkannya.” <br/><br/>(Q.S. Ar-Rum: 21)</Style.VerseText>
-          <Style.ThirdFlowerBottom src={OrnamentThirdFlowerBottom} alt="ornament-5"/>
-          <Link href="#">
-            <Style.Watermark>Built with <span style={{color:'red'}}>❤</span> by sungnikah.com</Style.Watermark>
-          </Link>
+      <Style.WeddingInfoContainer>
+        <Style.SecondFlowerTop src={OrnamentSecondFlower} alt="ornament-3"/>
+        <Style.Greetings>
+          Bismillaahirrahmaanirrahiim <br/><br/>
+          Assalaamu'alaikum Warahmatullaahi Wabarakaatuh <br/><br/>
+          Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. <br/><br/>
+          Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan do'a restu pada pernikahan kami:
+        </Style.Greetings>
+        <Style.GroomFull>{configThemesSecond.groom.fullName}</Style.GroomFull>
+        <Style.Parents>{configThemesSecond.groom.parents.tagline}</Style.Parents>
+        <Style.AmpersandBride>&</Style.AmpersandBride>
+        <Style.GroomFull>{configThemesSecond.bride.fullName}</Style.GroomFull>
+        <Style.Parents>{configThemesSecond.bride.parents.tagline}</Style.Parents>
+        <Style.WeddingDateSecond>{configThemesSecond.contractMarriage.dateTime}</Style.WeddingDateSecond>
+        <Style.CountDown> {timerComponents.length ? timerComponents : <span>Happy Wedding!</span>}</Style.CountDown>
+        <Style.WeddingCeremony>Akad</Style.WeddingCeremony>
+        <Style.WeddingTime>Pukul 09:00 - 10:00 WIB</Style.WeddingTime>
+        <Style.LineDivider src={LineDivider} alt="divider"/>
+        <Style.WeddingCeremony>Resepsi</Style.WeddingCeremony>
+        <Style.WeddingTime>Pukul 10:10 - 13:00 WIB</Style.WeddingTime>
+        <Style.WeddingLocation>
+          di {configThemesSecond.location.placeName}<br/><br/>
+          {configThemesSecond.location.detailName}
+        </Style.WeddingLocation>
+        <Style.SecondFlowerBottom src={OrnamentSecondFlowerBottom} alt="ornament-3"/>
+      </Style.WeddingInfoContainer>
 
-        </Style.VerseContainer>
+      <Style.WeddingLocationContainer>
+        <Style.LocationTitle>Lokasi</Style.LocationTitle>
+        <Style.MapContainer>
+          <Map/>
+        </Style.MapContainer>
+        <Style.SeeMap>Lihat Peta</Style.SeeMap>
+      </Style.WeddingLocationContainer>
+
+      <Style.VerseContainer>
+        <Style.ThirdFlowerTop src={OrnamentThirdFlowerTop} alt="ornament-4"/>
+        <Style.VerseText>“Bahwasanya Allah menciptakan kalian dari jenis kalian berupa perempuan sebagai istri, yang tinggal dengan kalian karena pernikahan, yang kalian lembut kepada istri-istri kalian dan condong kepadanya. Allah jadikan di antara kalian kecintaan, simpati dan kasih sayang, sungguh itu semua adalah tanda yang jelas akan ke-Maha Esaaan Allah dan kasih sayang-Nya kepada makhluk-Nya bagi kaum yang menjalankan akal mereka dan memikirkannya.” <br/><br/>(Q.S. Ar-Rum: 21)</Style.VerseText>
+        <Style.ThirdFlowerBottom src={OrnamentThirdFlowerBottom} alt="ornament-5"/>
+        <Link href="#">
+          <Style.Watermark>Built with <span style={{color:'red'}}>❤</span> by sungnikah.com</Style.Watermark>
+        </Link>
+      </Style.VerseContainer>
 
     </Box>
-
   );
-
 }
 
-export default SecondTheme
+export default SecondTheme;

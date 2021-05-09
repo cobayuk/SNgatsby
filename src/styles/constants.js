@@ -13,24 +13,46 @@
 | Develop : Dimas Prasetyo, Arie Aditya Nugraha (Frontend Dev).
 */
 
+
+/**
+ *
+ * Design Systems Sungnikah Corporation.
+ * Colors Pallete
+ *
+ */
 export const COLORS = {
   lightWhite    : "#FBFDFF",
   lightGray     : "#F3F5F6",
   mediumGray    : "#B0B8BA",
   gray          : "#A0A4A6",
+  graySoftly    : "#928D97",
   babyBlue      : "#50CAF9",
   blue          : "#5368f1",
   white         : "#FFFF",
   blueMaintance : "#4c53dc",
   golderDark    : "#b98d06",
-  golden        : "#E2B62E"
+  golden        : "#E2B62E",
+  brownSugar    : "#F2A76D",
+  black         : "000"
 }
 
-export const GRADIENT = `linear-gradient(to top right, ${COLORS.babyBlue}, ${
-  COLORS.blue
-})`
+/**
+ *
+ *  Design Systems Sungnikah Corporation.
+ *  Gradients
+ *
+ */
+export const GRADIENT =
+  `linear-gradient(to top right, ${COLORS.babyBlue}, ${COLORS.blue}
+)`;
 
-export const BORDER_RADIUS = "10px"
+/**
+ *
+ *  Design Systems Sungnikah Corporation.
+ *  Border Radius
+ *
+ */
+export const BORDER_RADIUS = "10px";
 
 export const WEDDING_PLACE = {
   pokelGardenResto : "POKEL Garden Resto"

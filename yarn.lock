@@ -999,6 +999,16 @@
   resolved "https://registry.yarnpkg.com/@fontsource/dm-serif-display/-/dm-serif-display-4.2.2.tgz#b7e034b77013c3f0a86689168fe0d014c2135efd"
   integrity sha512-4f9dWpCb8AbmTtl16jxOGj9THRtajXAGNBSbyhbs6+YF3IGI4bOhKMEG6hQEhMnhgOY+PKJVn4fUD4t9sn4ZKw==
 
+"@fontsource/great-vibes@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/great-vibes/-/great-vibes-4.2.2.tgz#5fd0fc82bc560c0211fde31d617f429b708550e1"
+  integrity sha512-GoZ5RlE+eEswj4P4O18AvT7t/S/g2Bkoo6qGOEQlg1/tYYbYHczzQ5LyGNjmVK5i38eYPeJznS9o8kKGkyJmkQ==
+
+"@fontsource/open-sans@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.2.2.tgz#59046f772136a44c5999e0189d33c6a26676630c"
+  integrity sha512-NbsL1a9asJO6N/5kRxYPCy0kNhKMi9T75kl4QfIGtmpd/5IfB+UIAUxd9AICmCLaH4Osc2TImeTJj94xc9MNKg==
+
 "@fontsource/overlock@^4.2.2":
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/@fontsource/overlock/-/overlock-4.2.2.tgz#de1d5126227aa338ae4ecb61e0198e9a428d1b86"

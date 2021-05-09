@@ -12,8 +12,8 @@ import  {
   makeStyles
 }
 from '@material-ui/core';
-import { COLORS } from "../styles/constants";
 import StarIcon from '@material-ui/icons/StarBorder';
+import { COLORS } from "../styles/constants";
 
 const useStyles = makeStyles((theme) => ({
   cardPricing: {
@@ -35,6 +35,13 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '30px',
     fontWeight: 'bold'
   },
+  headingFirstTitle: {
+    fontSize: '20px',
+    fontFamily: 'Oxygen',
+    fontWeight: 'bold',
+    color: COLORS.brownSugar,
+    textTransform: 'upperCase'
+  },
   captionPricing: {
     fontSize: '15px',
     fontFamily: 'Oxygen',
@@ -52,9 +59,9 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const tiers = [
+const packages = [
   {
-    title: 'Sung Icip ( NgeCobian )',
+    title: 'Silver',
     price: '100',
     description: [
       'Responsive Layout',
@@ -66,7 +73,7 @@ const tiers = [
     buttonVariant: 'outlined',
   },
   {
-    title: 'Sung Ngeu ( Ngeunah )',
+    title: 'Gold',
     subheader: 'Paling Terlaris Boskue',
     price: '250',
     description: [
@@ -81,7 +88,7 @@ const tiers = [
     buttonVariant: 'contained',
   },
   {
-    title: 'Sung Crit ( NgeCrit ) ',
+    title: 'Platinum',
     price: '700',
     description: [
       'Audio Musik',
@@ -105,17 +112,19 @@ const PricingPrice = () => {
   return (
     <Box className={classes.wrapperPricing} id="pricing">
       <Container maxWidth="md" component="main" className={classes.heroContent}>
+      <Typography component="h1" variant="h2" align="center" color="textPrimary" className={classes.headingFirstTitle}>
+          Pilihan Paket
+        </Typography>
         <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom className={classes.headingPricing}>
-          Paket Harga Sungnikah
+          Fitur suka-suka kamu.
         </Typography>
         <Typography variant="h5" align="center" color="textSecondary" component="p" className={classes.captionPricing}>
-          Dengan Sungnikah kami akan membantu mengatasi permasalahan anda, tidak hanya pegadaian ya hehehe.... sung pilih paket sesuai kebutuhan kamu dan dompet kamu
-          dengan cara klik daftar paket di bawah ini...
+          Dengan 3 pilihan paket, kamu bebas pilih fitur manapun suka-suka kamu. Nikmati fitur sesuai dengan kebutuhan kamu dengan pelayanan yang tetap nomor satu.
         </Typography>
       </Container>
       <Container maxWidth="lg" component="main" classes={classes.boxOuterPricing}>
         <Grid container spacing={5} alignItems="flex-end">
-          {tiers.map((tier) => (
+          {packages.map((tier) => (
             <Grid item key={tier.title} xs={12} sm={tier.title === 'Enterprise' ? 12 : 6} md={4}>
               <Card>
                 <CardHeader
