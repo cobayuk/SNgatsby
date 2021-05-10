@@ -12,7 +12,7 @@ import OrnamentThirdFlowerBottom from "../../assets/ornaments/themes/secondTheme
 import AmpersandDivider from "../../assets/ornaments/themes/secondTheme/ampersand.svg";
 import LineDivider from "../../assets/ornaments/themes/secondTheme/line.svg";
 import Map from "../../components/map";
-import { configThemesSecond } from "../../mocking/client";
+import { configThemesSecond } from "../../mocking/template";
 
 const SecondTheme = () =>  {
 
