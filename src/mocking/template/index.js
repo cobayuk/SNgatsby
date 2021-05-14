@@ -41,7 +41,9 @@ export const configThemesSecond = {
    //location
    location: {
      placeName : "POKEL Garden Resto",
-     detailName : "Jl. Perjuagan, Kasemen, Kec. Kasemen, Kota Serang, Banten 42162"
+     address : "Jl. Perjuagan, Kasemen, Kec. Kasemen, Kota Serang, Banten 42162",
+     longitude : 106.14847338392859,
+     latitude : -6.0917000964338905
    },
    // akad
    contractMarriage: {

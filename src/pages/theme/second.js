@@ -20,7 +20,7 @@ const SecondTheme = () =>  {
     let year = new Date().getFullYear();
     // const difference = +new Date(`${year}-10-1`) - +new Date();
 
-    let difference = +new Date(`04/30/${year}`) - +new Date(); //month - day - current year
+    let difference = +new Date(`12/11/${year}`) - +new Date(); //month - day - current year
     let timeLeft = {};
 
     if (difference > 0) {
@@ -58,6 +58,10 @@ const SecondTheme = () =>  {
       </span>
     );
   });
+
+  const showMap = () => {
+    window.open("https://maps.google.com?q="+configThemesSecond.location.latitude+","+configThemesSecond.location.longitude);
+  };
 
   return (
     <Box>
@@ -106,7 +110,7 @@ const SecondTheme = () =>  {
         <Style.MapContainer>
           <Map/>
         </Style.MapContainer>
-        <Style.SeeMap>Lihat Peta</Style.SeeMap>
+        <Style.SeeMap onClick={showMap}>Lihat Peta</Style.SeeMap>
       </Style.WeddingLocationContainer>
 
       <Style.VerseContainer>

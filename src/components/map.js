@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "../styles/map.css";
-import { WEDDING_PLACE, WEDDING_ADDRESS } from "../styles/constants";
+import { configThemesSecond } from "../mocking/template/index";
 
 const MAPBOX_TOKEN = "pk.eyJ1IjoicmVrdG9yaXBiIiwiYSI6ImNrbXEwZzN6ZTFlejUydmx3enRkdXh5enkifQ.5kX3xMqH25BONTujixNjeg"
 
@@ -12,12 +12,12 @@ const Map = () => {
   const [map, setMap] = useState(null)
 
   useEffect(() => {
-    const weddingPlace = [106.14847338392859, -6.0917000964338905];
+    // weddingPlace = [lng, lat];
+    const weddingPlace = [configThemesSecond.location.longitude, configThemesSecond.location.latitude];
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       accessToken: MAPBOX_TOKEN,
       style: "mapbox://styles/mapbox/streets-v11",
-      // Empire State Building [lng, lat]
       center: weddingPlace,
       zoom: 14,
     })
@@ -27,7 +27,7 @@ const Map = () => {
 
     // create the popup
     let popup = new mapboxgl.Popup({ offset: 20 }).setHTML(
-      '<h3>' + WEDDING_PLACE.pokelGardenResto + '</h3><p>' + WEDDING_ADDRESS.pokelGardenResto + '</p>'
+      '<h3>' + configThemesSecond.location.placeName + '</h3><p>' + configThemesSecond.location.address + '</p>'
     );
 
     // create DOM element for the marker
