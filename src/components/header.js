@@ -77,7 +77,7 @@ const Header = () => {
             Cara Kerja Sungnikah
           </Link>
           <Link
-            to="/demo/landing"
+            to="/demo/portofolio"
             className={classes.link}
           >
             Demo
@@ -117,4 +117,4 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default Header;

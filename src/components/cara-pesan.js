@@ -6,7 +6,7 @@ import {
   makeStyles
 } from '@material-ui/core';
 import OrnamentFour from "../assets/ornaments/header-tagline/ornament-four.svg";
-import Button from "../components/button";
+import ButtonOrderNow from "./buttons/ordernow";
 import { COLORS } from "../styles/constants";
 
 const useStyles = makeStyles((theme) => ({
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const CaraKerja = (props) => {
+const CaraPesan = () => {
   const classes = useStyles();
 
   return (
@@ -61,7 +61,7 @@ const CaraKerja = (props) => {
               Pilihan desainnya sudah mantap? Nah kalau udah ada pilihannya kamu tinggal pilih deh untuk fitur paket yang telah disediakan, yaitu paket Bronze, Silver, ataupun Gold. Lalu klik order untuk pemesanan lebih lanjut.
             </Typography>
           </Box>
-          <Button> Order Sekarang </Button>
+          <ButtonOrderNow> Order Sekarang </ButtonOrderNow>
         </Grid>
         <Grid item md={4} lg={4}>
           <img src={OrnamentFour} alt="ornament-four" />
@@ -71,4 +71,4 @@ const CaraKerja = (props) => {
   );
 }
 
-export default CaraKerja
+export default CaraPesan;

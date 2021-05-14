@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
   orderNow: {
     top: 50,
-    width: '155px',
+    width: '162px',
     height: '50px',
     background: '#F2A76D',
     borderRadius: '30px',
@@ -48,7 +48,8 @@ const useStyles = makeStyles((theme) => ({
     color: `${COLORS.white}`,
     fontWeight: 'bold',
     fontSize: '15px',
-    border: `5px solid ${COLORS.white}`
+    border: `5px solid ${COLORS.white}`,
+    textTransform: 'capitalize'
   },
   boxReactangleSmall: {
     width: '230px',
@@ -113,7 +114,7 @@ const HeaderTagline = () => {
             responsif. Cocok bagi kamu yang ingin tampil beda di undangan
             digital pernikahan kamu.
           </Typography>
-          <Button className={classes.orderNow}>Mau Pesan</Button>
+          <Button className={classes.orderNow}> Order Sekarang</Button>
         </Grid>
         <Grid item md={6} lg={6}>
           <Box className={classes.boxReactangleSmall}>

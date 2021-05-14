@@ -7,8 +7,8 @@ import { WEDDING_PLACE, WEDDING_ADDRESS } from "../styles/constants";
 const MAPBOX_TOKEN = "pk.eyJ1IjoicmVrdG9yaXBiIiwiYSI6ImNrbXEwZzN6ZTFlejUydmx3enRkdXh5enkifQ.5kX3xMqH25BONTujixNjeg"
 
 const Map = () => {
-  const mapContainerRef = useRef(null)
 
+  const mapContainerRef = useRef(null)
   const [map, setMap] = useState(null)
 
   useEffect(() => {
@@ -26,12 +26,12 @@ const Map = () => {
     setMap(map)
 
     // create the popup
-    var popup = new mapboxgl.Popup({ offset: 20 }).setHTML(
+    let popup = new mapboxgl.Popup({ offset: 20 }).setHTML(
       '<h3>' + WEDDING_PLACE.pokelGardenResto + '</h3><p>' + WEDDING_ADDRESS.pokelGardenResto + '</p>'
     );
 
     // create DOM element for the marker
-    var el = document.createElement('div');
+    let el = document.createElement('div');
     el.id = 'marker';
 
     // create the marker
@@ -50,4 +50,4 @@ const Map = () => {
   return <div className={"sungnikah-map"} ref={mapContainerRef} />
 }
 
-export default Map
+export default Map;

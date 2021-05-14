@@ -13,8 +13,9 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
+import Footer from "../../components/footer";
 
-const DemoLanding = () => {
+const DemoPortofolio = () => {
 
   const useStyles = makeStyles((theme) => ({
     icon: {
@@ -48,20 +49,7 @@ const DemoLanding = () => {
     },
   }));
 
-  const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-  const Copyright = () => {
-    return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {'Copyright © '}
-        <Link color="inherit" href="https://material-ui.com/">
-          Your Website
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-    );
-  }
+  const cards = [1, 2, 3, 4 ];
 
   const classes = useStyles();
 
@@ -107,7 +95,7 @@ const DemoLanding = () => {
           {/* End hero unit */}
           <Grid container spacing={4}>
             {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
+              <Grid item key={card} xs={12} sm={6} md={6}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
@@ -133,20 +121,10 @@ const DemoLanding = () => {
           </Grid>
         </Container>
       </main>
-      {/* Footer */}
-      <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          Something here to give the footer a purpose!
-        </Typography>
-        <Copyright />
-      </footer>
-      {/* End footer */}
+      <Footer/>
     </React.Fragment>
   );
 
 }
 
-export default DemoLanding
+export default DemoPortofolio;
