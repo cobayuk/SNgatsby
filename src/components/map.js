@@ -7,7 +7,7 @@ import { configThemesSecond } from "../mocking/template/index";
 const MAPBOX_TOKEN = "pk.eyJ1IjoicmVrdG9yaXBiIiwiYSI6ImNrbXEwZzN6ZTFlejUydmx3enRkdXh5enkifQ.5kX3xMqH25BONTujixNjeg"
 
 const Map = () => {
-
+  
   const mapContainerRef = useRef(null)
   const [map, setMap] = useState(null)
 
