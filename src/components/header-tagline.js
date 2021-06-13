@@ -1,5 +1,11 @@
 import React from "react";
-import { Grid, Box, Typography, makeStyles, Button } from '@material-ui/core';
+import {
+  Grid,
+  Box,
+  Typography,
+  makeStyles,
+  Button
+} from '@material-ui/core';
 import { COLORS } from "../styles/constants";
 import CircleLove from "../assets/logo/decoration/circle-love.svg";
 import OrnamentOne from "../assets/ornaments/header-tagline/ornament-one.svg";
@@ -14,8 +20,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: `#F1EDEA`,
     border: '1px solid #f7f7f7',
     borderRadius: '20px',
-    padding: '60px 50px 0 72px',
-    marginTop: '50px'
+    padding: theme.spacing(7, 6.3, 0, 6),
+    marginTop: theme.spacing(9)
   },
   headingTagline: {
     fontFamily: 'Oxygen',
@@ -33,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
   orderNow: {
     top: 50,
-    width: '155px',
+    width: '162px',
     height: '50px',
     background: '#F2A76D',
     borderRadius: '30px',
@@ -42,7 +48,8 @@ const useStyles = makeStyles((theme) => ({
     color: `${COLORS.white}`,
     fontWeight: 'bold',
     fontSize: '15px',
-    border: `5px solid ${COLORS.white}`
+    border: `5px solid ${COLORS.white}`,
+    textTransform: 'capitalize'
   },
   boxReactangleSmall: {
     width: '230px',
@@ -103,9 +110,11 @@ const HeaderTagline = () => {
         <Grid item md={6} lg={6}>
           <h2 className={classes.headingTagline}> Buat langsung undangan nikah kamu secara cepat dan murah.</h2>
           <Typography variant="h6" color="inherit" className={classes.paragraphTagline}>
-            Sungnikah merupakan penyedia jasa tetek bengek pernikahan seperti desain jada pembuatan wedding website, jasa desain seserahan, dan desain undangan.
+            Dengan banyak pilihan desain yang elegan, minimalis dan
+            responsif. Cocok bagi kamu yang ingin tampil beda di undangan
+            digital pernikahan kamu.
           </Typography>
-          <Button className={classes.orderNow}>Mau Pesan</Button>
+          <Button className={classes.orderNow}> Order Sekarang</Button>
         </Grid>
         <Grid item md={6} lg={6}>
           <Box className={classes.boxReactangleSmall}>

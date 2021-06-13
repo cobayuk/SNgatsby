@@ -6,6 +6,8 @@
   "author": "Dimas Prasetyo & Arie Aditya Nugraha",
   "dependencies": {
     "@fontsource/dm-serif-display": "^4.2.2",
+    "@fontsource/great-vibes": "^4.2.2",
+    "@fontsource/open-sans": "^4.2.2",
     "@fontsource/overlock": "^4.2.2",
     "@fontsource/oxygen": "^4.2.2",
     "@fontsource/qwigley": "^4.2.2",

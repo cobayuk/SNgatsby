@@ -3,24 +3,91 @@ import  {
   Box,
   Grid,
   Card,
-  Button,
   Container,
   Typography,
   CardHeader,
   CardContent,
-  CardActions,
   makeStyles
 }
 from '@material-ui/core';
-import { COLORS } from "../styles/constants";
 import StarIcon from '@material-ui/icons/StarBorder';
+import { COLORS, FONT_FAMILY, FONT_SIZE } from "../styles/constants";
+import ChecklistIcon from "../assets/ornaments/checklist.svg";
 
 const useStyles = makeStyles((theme) => ({
+  headingPrice: {
+    fontWeight: 'bold',
+    fontFamily: `${FONT_FAMILY.oxygen}`,
+    marginLeft: theme.spacing(1)
+  },
+  headingPriceSeparator:{
+    position: 'relative',
+    top: '-32px',
+    bottom: 0,
+    fontWeight: 'bold',
+    fontSize: `${FONT_SIZE.font24}`,
+    color: `${COLORS.black}`
+  },
+  headingPricingSuffix: {
+    fontSize: `${FONT_SIZE.font24}`,
+    color: `${COLORS.black}`
+  },
+  boxDiscount: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: theme.spacing(1)
+  },
+  boxDiscountPrice: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  headingDiscountPrice: {
+    fontSize: '20px',
+    color: `${COLORS.mediumGray}`,
+    textDecoration: 'line-through'
+  },
+  buttonBoxDiscountGold:{
+    width: 'auto',
+    height: '24px',
+    background: `${COLORS.pinky}`,
+    borderRadius: '16px',
+    color: `${COLORS.white}`,
+    textAlign: 'center',
+    padding: '3px 11px 26px 15px'
+  },
+  buttonBoxDiscount:{
+    width: 'auto',
+    height: '24px',
+    background: `${COLORS.softlyGray}`,
+    borderRadius: '16px',
+    color: `${COLORS.softlyBlack}`,
+    textAlign: 'center',
+    padding: '3px 11px 26px 15px'
+  },
+  wrapperCards: {
+    width: '100%',
+    height: '600px',
+    maxHeight: '600px'
+  },
+  wrapperCardsGold: {
+    width: '100%',
+    height: '600px'
+  },
+  cardHeaderTier: {
+    fontWeight: 'bold'
+  },
   cardPricing: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'baseline',
     marginBottom: theme.spacing(2),
+  },
+  listPricingOrder: {
+    display: 'grid',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   wrapperPricing: {
     marginTop: '5em',
@@ -35,9 +102,16 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '30px',
     fontWeight: 'bold'
   },
+  headingFirstTitle: {
+    fontSize: '20px',
+    fontFamily: `${FONT_FAMILY.oxygen}`,
+    fontWeight: 'bold',
+    color: COLORS.brownSugar,
+    textTransform: 'upperCase'
+  },
   captionPricing: {
     fontSize: '15px',
-    fontFamily: 'Oxygen',
+    fontFamily: `${FONT_FAMILY.oxygen}`,
     marginBottom: '30px',
   },
   buttonActionPricing: {
@@ -52,49 +126,55 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const tiers = [
+const packages = [
   {
-    title: 'Sung Icip ( NgeCobian )',
-    price: '100',
+    title: 'Silver',
+    price: '69',
+    discount: 'Diskon 30%',
+    discountPrice: '99.000',
     description: [
       'Responsive Layout',
       'Desain Template',
-      'Facebook Comment',
-      'Belum Termasuk Domain',
-    ],
-    buttonText: 'Cobain Aja Dulu',
-    buttonVariant: 'outlined',
-  },
-  {
-    title: 'Sung Ngeu ( Ngeunah )',
-    subheader: 'Paling Terlaris Boskue',
-    price: '250',
-    description: [
-      'Audio Musik',
-      'Responsive Layout',
-      'CMS Support',
-      'Facebook Comment',
-      'Desain Template',
+      'Penghitung Waktu Mundur',
+      'Navigasi Peta',
+      'Quotes/Qur’an Verse',
       'Belum Termasuk Domain'
-    ],
-    buttonText: 'Pesan Sekarang Terlaris',
-    buttonVariant: 'contained',
+    ]
   },
   {
-    title: 'Sung Crit ( NgeCrit ) ',
-    price: '700',
+    title: 'Gold',
+    price: '99',
+    discount: 'Diskon 35%',
+    discountPrice: '149.000',
     description: [
-      'Audio Musik',
-      'CMS Support',
       'Responsive Layout',
-      'Live Streaming Youtube',
+      'Desain Template',
+      'Penghitung Waktu Mundur',
+      'Navigasi Peta',
+      'Quotes/Qur’an Verse',
+      'Audio Musik',
+      'Galeri Foto',
       'Facebook Comment',
-      'Desain Bisa Custom',
+      'Belum Termasuk Domain'
+    ]
+  },
+  {
+    title: 'Platinum',
+    price: '149',
+    discount: 'Diskon 25%',
+    discountPrice: '199.000',
+    description: [
+      'Responsive Layout',
+      'Desain Template',
+      'Penghitung Waktu Mundur',
+      'Navigasi Peta',
+      'Quotes/Qur’an Verse',
+      'Audio Musik',
+      'Galeri Foto',
+      'Facebook Comment',
+      'QR Code Dompet Digital',
       'Sudah Termasuk Domain'
-    ],
-    buttonText: 'Pesan Sekarang Nagih',
-    buttonVariant: 'outlined',
-
+    ]
   }
 ];
 
@@ -104,50 +184,125 @@ const PricingPrice = () => {
 
   return (
     <Box className={classes.wrapperPricing} id="pricing">
-      <Container maxWidth="md" component="main" className={classes.heroContent}>
-        <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom className={classes.headingPricing}>
-          Paket Harga Sungnikah
+      <Container
+        maxWidth="md"
+        component="main"
+        className={classes.heroContent}
+      >
+        <Typography
+          component="h1"
+          variant="h2"
+          align="center"
+          color="textPrimary"
+          className={classes.headingFirstTitle}
+        >
+          Pilihan Paket
         </Typography>
-        <Typography variant="h5" align="center" color="textSecondary" component="p" className={classes.captionPricing}>
-          Dengan Sungnikah kami akan membantu mengatasi permasalahan anda, tidak hanya pegadaian ya hehehe.... sung pilih paket sesuai kebutuhan kamu dan dompet kamu
-          dengan cara klik daftar paket di bawah ini...
+        <Typography
+          component="h1"
+          variant="h2"
+          align="center"
+          color="textPrimary"
+          gutterBottom
+          className={classes.headingPricing}
+        >
+          Fitur suka-suka kamu.
+        </Typography>
+        <Typography
+          variant="h5"
+          align="center"
+          color="textSecondary"
+          component="p"
+          className={classes.captionPricing}
+        >
+          Dengan 3 pilihan paket, kamu bebas pilih fitur manapun suka-suka kamu.
+          Nikmati fitur sesuai dengan kebutuhan kamu dengan pelayanan yang tetap nomor satu.
         </Typography>
       </Container>
-      <Container maxWidth="lg" component="main" classes={classes.boxOuterPricing}>
-        <Grid container spacing={5} alignItems="flex-end">
-          {tiers.map((tier) => (
-            <Grid item key={tier.title} xs={12} sm={tier.title === 'Enterprise' ? 12 : 6} md={4}>
-              <Card>
+      <Container
+        maxWidth="lg"
+        component="main"
+        className={classes.boxOuterPricing}
+      >
+        <Grid
+          container
+          alignItems="flex-end"
+        >
+          {packages.map((tier, key) => (
+            <Grid
+              key={key}
+              item
+              xs={12}
+              sm={tier.title === 'Gold' ? 12 : 6}
+              md={4}
+            >
+              <Card className={tier.title === 'Gold' ? classes.wrapperCardsGold: classes.wrapperCards}>
                 <CardHeader
+                  className={classes.cardHeaderTier}
                   title={tier.title}
-                  subheader={tier.subheader}
                   titleTypographyProps={{ align: 'center' }}
                   subheaderTypographyProps={{ align: 'center' }}
-                  action={tier.title === 'Pro' ? <StarIcon /> : null}
-                  className={classes.cardHeader}
+                  // action={tier.title === 'Gold' ? <StarIcon /> : null}
                 />
                 <CardContent>
-                  <div className={classes.cardPricing}>
-                    <Typography component="h2" variant="h3" color="textPrimary">
-                      Rp{tier.price}
+                  <Box className={classes.boxDiscount}>
+                    <Typography
+                      className={tier.title === 'Gold' ? classes.buttonBoxDiscountGold : classes.buttonBoxDiscount}
+                      component="span"
+                    >
+                      {tier.discount}
                     </Typography>
-                    <Typography variant="h6" color="textSecondary">
-                      /K
+                  </Box>
+                  <Box className={classes.boxDiscountPrice}>
+                    <Typography
+                      className={classes.headingDiscountPrice}
+                      component="span"
+                    >
+                      {tier.discountPrice}
                     </Typography>
-                  </div>
-                  <ul>
-                    {tier.description.map((line) => (
-                      <Typography component="li" variant="subtitle1" align="center" key={line}>
-                        {line}
+                  </Box>
+                  <Box className={classes.cardPricing}>
+
+                    <Typography
+                      component="span"
+                      variant="h6"
+                      color="textSecondary"
+                      className={classes.headingPriceSeparator}
+                    >
+                      Rp
+                    </Typography>
+                    <Typography
+                      className={classes.headingPrice}
+                      component="h2"
+                      variant="h2"
+                      color="textPrimary"
+                    >
+                      {tier.price}
+                    </Typography>
+                    <Typography
+                      className={classes.headingPricingSuffix}
+                      variant="h6"
+                      color="textSecondary"
+                    >
+                      ribu
+                    </Typography>
+                  </Box>
+                  <ul className={classes.listPricingOrder}>
+                    {tier.description.map((value, key) => (
+                      <Typography
+                        key={key}
+                        component="li"
+                        variant="subtitle1"
+                        align="left"
+                      >
+                        <Box component="span" mr={1}>
+                          <img src={ChecklistIcon} alt="checklist"/>
+                        </Box>
+                        {value}
                       </Typography>
                     ))}
                   </ul>
                 </CardContent>
-                <CardActions>
-                  <Button className={classes.buttonActionPricing} fullWidth variant={tier.buttonVariant} color="primary">
-                    {tier.buttonText}
-                  </Button>
-                </CardActions>
               </Card>
             </Grid>
           ))}
@@ -157,5 +312,5 @@ const PricingPrice = () => {
   );
 }
 
-export default PricingPrice
+export default PricingPrice;
 

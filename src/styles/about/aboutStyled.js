@@ -13,9 +13,9 @@
 
 
 import styled from 'styled-components';
-import { COLORS, BORDER_RADIUS, GRADIENT } from "../../styles/constants";
+import { COLORS, FONT_SIZE } from "../../styles/constants";
 
 export const Title = styled.h2`
-  font-size: 20px;
+  font-size: ${FONT_SIZE.font20};
   color: ${COLORS.white};
 `;

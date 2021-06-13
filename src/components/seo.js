@@ -9,7 +9,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-import icon from '../assets/favicon/favicon.ico';
+import icon from '../assets/favicon/sungnikah-48x48.png';
 
 function SEO({ description, lang, meta, keywords, title, robots, index }) {
   const { site } = useStaticQuery(
