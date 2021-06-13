@@ -68,12 +68,14 @@ const SecondTheme = () =>  {
 
       <Style.Header>
         <Style.FlowerTopLeft src={OrnamentFlowerTop} alt="ornament-1"/>
-        <Style.InvitedPerson>YOU’RE INVITED TO</Style.InvitedPerson>
-        <Style.WeddingTitle>THE WEDDING OF</Style.WeddingTitle>
-        <Style.Grooms>{configThemesSecond.groom.nickName}</Style.Grooms>
-        <Style.Ampersand src={AmpersandDivider} alt="ampersand"/>
-        <Style.Bride>{configThemesSecond.bride.nickName}</Style.Bride>
-        <Style.WeddingDate>{configThemesSecond.placeHolderTag.timeStarted}</Style.WeddingDate>
+        <Style.WrapperInvite>
+          <Style.InvitedPerson>YOU’RE INVITED TO</Style.InvitedPerson>
+          <Style.WeddingTitle>THE WEDDING OF</Style.WeddingTitle>
+          <Style.Grooms>{configThemesSecond.groom.nickName}</Style.Grooms>
+          <Style.Ampersand src={AmpersandDivider} alt="ampersand"/>
+          <Style.Bride>{configThemesSecond.bride.nickName}</Style.Bride>
+          <Style.WeddingDate>{configThemesSecond.placeHolderTag.timeStarted}</Style.WeddingDate>
+        </Style.WrapperInvite>
         <Style.FlowerMiddle src={MiddleFrame} alt="frame-middle"/>
         <Style.FlowerBottomRight src={OrnamentFlowerBottom} alt="ornament-2"/>
       </Style.Header>
@@ -110,7 +112,7 @@ const SecondTheme = () =>  {
         <Style.MapContainer>
           <Map/>
         </Style.MapContainer>
-        <Style.SeeMap onClick={showMap}>Lihat Peta</Style.SeeMap>
+        <Style.SeeMap onClick={showMap}>Lihat di Google Maps</Style.SeeMap>
       </Style.WeddingLocationContainer>
 
       <Style.VerseContainer>
