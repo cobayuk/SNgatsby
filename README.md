@@ -1,6 +1,7 @@
 # Sungnikah.com
 
-Sungnikah merupakan penyedia jasa segala macam pernikahan seperti desain jasa pembuatan wedding website, jasa desain seserahan, dan desain undangan..
+Sungnikah merupakan penyedia jasa segala macam pernikahan seperti desain jasa pembuatan wedding website, jasa desain seserahan, dan desain undangan.
+
 
 ## Installation
 
