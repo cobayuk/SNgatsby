@@ -1,4 +1,5 @@
 import React from 'react';
+import { navigate } from "@reach/router";
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import CameraIcon from '@material-ui/icons/PhotoCamera';
@@ -12,7 +13,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
 import Footer from "../../components/footer";
 
 const DemoPortofolio = () => {
@@ -52,6 +52,10 @@ const DemoPortofolio = () => {
   const cards = [1, 2, 3, 4 ];
 
   const classes = useStyles();
+
+  const redirectTemplate = (url) => {
+    navigate(url);
+  }
 
   return (
     <React.Fragment>
@@ -111,7 +115,7 @@ const DemoPortofolio = () => {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
+                    <Button size="small" color="primary" onClick={() => redirectTemplate('/theme/first')}>
                       LIHAT DESAIN
                     </Button>
                   </CardActions>
