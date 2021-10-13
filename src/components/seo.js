@@ -19,7 +19,7 @@ function SEO({ description, lang, meta, keywords, title, robots, index }) {
           siteMetadata {
             title
             author
-            SEO {
+            seo {
               description
               robots
               keywords
@@ -33,10 +33,10 @@ function SEO({ description, lang, meta, keywords, title, robots, index }) {
   )
 
   const metaTitle = title || site.siteMetadata.title
-  const metaDescription = description || site.siteMetadata.SEO.description
-  const metaRobots = robots || site.siteMetadata.SEO.robots
-  const metaKeywords = keywords || site.siteMetadata.SEO.keywords
-  const metaIndex = index || site.siteMetadata.SEO.index
+  const metaDescription = description || site.siteMetadata.seo.description
+  const metaRobots = robots || site.siteMetadata.seo.robots
+  const metaKeywords = keywords || site.siteMetadata.seo.keywords
+  const metaIndex = index || site.siteMetadata.seo.index
 
   return (
     <Helmet

@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "author": "Dimas Prasetyo & Arie Aditya Nugraha",
   "dependencies": {
+    "@babel/eslint-parser": "^7.15.8",
     "@fontsource/dm-serif-display": "^4.2.2",
     "@fontsource/great-vibes": "^4.2.2",
     "@fontsource/open-sans": "^4.2.2",
