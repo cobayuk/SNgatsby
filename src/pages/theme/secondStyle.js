@@ -8,7 +8,7 @@
 | Develop : Dimas Prasetyo, Arie Aditya Nugraha (Frontend Dev).
 */
 
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Box, Typography, Button } from '@material-ui/core';
 
 import { breakpoints } from '../../components/media';
@@ -43,7 +43,9 @@ export const FlowerTopLeft = styled.img`
     width: 70%;
     position: absolute;
   }
-
+  @media (min-width: ${breakpoints.tabletSmall}) {
+    width: 50%;
+  }
 `;
 
 export const FlowerMiddle = styled.img`
@@ -53,6 +55,33 @@ export const FlowerMiddle = styled.img`
     position: absolute;
     top: 10em;
     left: 5%;
+    @media (max-width: ${breakpoints.mobileSmall}) {
+      top: 9em;
+    }
+    @media (min-width: ${breakpoints.mobileLarge}) {
+      width: 85%;
+      left: 8%;
+    }
+    @media (min-width: 425px) {
+      width: 75%;
+      position: absolute;
+      top: 11em;
+      left: 13%;
+    }
+    @media (min-width: ${breakpoints.tabletSmall}) {
+      width: 60%;
+      position: absolute;
+      top: 14em;
+      left: 21%;
+    }
+`;
+
+export const WrapperInvite = styled.div`
+  @media (min-width: 768px) {
+    top: 21em;
+    position: relative;
+  }
+  
 `;
 
 export const InvitedPerson = styled(Typography)`
@@ -68,6 +97,9 @@ export const InvitedPerson = styled(Typography)`
     display: table;
     top: -10em;
     letter-spacing: 0.3em;
+    @media (min-width: ${breakpoints.tabletSmall}) {
+      font-size: 15px;
+    }
   }
 `;
 
@@ -84,6 +116,14 @@ export const WeddingTitle = styled(Typography)`
     display: table;
     letter-spacing: 0.3em;
     top: 2em;
+    @media (max-width: ${breakpoints.mobileSmall}) {
+      font-size: 8px;
+      top: -2em;
+    }
+    @media (min-width: ${breakpoints.tabletSmall}) {
+      font-size: 14px;
+      top: -1em;
+    }
   }
 `;
 
@@ -99,6 +139,17 @@ export const Grooms = styled(Typography)`
     margin: 0 auto;
     display: table;
     top: 35px;
+    @media (min-width: ${breakpoints.mobileSmall}) {
+      font-size: 60px;
+      top: -6px;
+    }
+    @media (min-width: ${breakpoints.mobileMedium}) {
+      top: 25px;
+    }
+    @media (min-width: ${breakpoints.tabletSmall}) {
+      font-size: 90px;
+      top: 26px;
+    }
   }
 `;
 
@@ -108,6 +159,17 @@ export const Ampersand = styled.img`
     margin: 0 auto;
     display: grid;
     top: 30px;
+    @media (min-width: ${breakpoints.mobileSmall}) {
+      width: 35%;
+      top: -10px;
+    }
+    @media (min-width: ${breakpoints.mobileMedium}) {
+      top: 20px;
+    }
+    @media (min-width: ${breakpoints.tabletSmall}) {
+      width: 35%;
+      top: 40px;
+    }
 `;
 
 export const Bride = styled(Typography)`
@@ -122,6 +184,17 @@ export const Bride = styled(Typography)`
     margin: 0 auto;
     display: table;
     top: 35px;
+    @media (min-width: ${breakpoints.mobileSmall}) {
+      font-size: 60px;
+      top: -5px;
+    }
+    @media (min-width: ${breakpoints.mobileMedium}) {
+      top: 20px;
+    }
+    @media (min-width: ${breakpoints.tabletSmall}) {
+      font-size: 90px;
+      top: 65px;
+    }
   }
 `;
 
@@ -136,6 +209,16 @@ export const WeddingDate = styled(Typography)`
     text-align: center;
     top: 50px;
     position: relative;
+    @media (min-width: ${breakpoints.mobileSmall}) {
+      top: -5px;
+    }
+    @media (min-width: ${breakpoints.mobileMedium}) {
+      top: 25px;
+    }
+    @media (min-width: ${breakpoints.tabletSmall}) {
+      font-size: 15px;
+      top: 93px;
+    }
   }
 `;
 
@@ -146,6 +229,9 @@ export const FlowerBottomRight = styled.img`
   right: 0;
   @media (min-width: ${breakpoints.mobileMin}) {
     width: 70%;
+  }
+  @media (min-width: ${breakpoints.tabletSmall}) {
+    width: 60%;
   }
 `;
 
@@ -164,6 +250,12 @@ export const Greetings = styled(Typography)`
     text-align: center;
     color: #58595B;
     padding: 100px 30px 30px 30px;
+    @media (min-width: ${breakpoints.mobileSmall}) {
+      font-size: 12px;
+    }
+    @media (min-width: ${breakpoints.tabletSmall}) {
+      padding: 100px 60px 30px 60px;
+    }
   }
 `;
 
@@ -183,6 +275,9 @@ export const GroomFull = styled(Typography)`
     line-height: 60px;
     text-align: center;
     color: #5B5B5F;
+    @media (min-width: ${breakpoints.mobileSmall}) {
+      font-size: 40px;
+    }
   }
 `;
 
@@ -196,6 +291,9 @@ export const Parents = styled(Typography)`
     text-align: center;
     color: #58595B;
     padding: 10px 30px 30px 30px;
+    @media (min-width: ${breakpoints.mobileSmall}) {
+      font-size: 12px;
+    }
   }
 `
 export const AmpersandBride = styled(Typography)`
@@ -294,7 +392,8 @@ export const WeddingLocationContainer = styled(Box)`
 
 export const MapContainer = styled(Box)`
   width: 95%;
-  padding: 10px;
+  padding: 8px;
+  margin: 0 auto;
 `;
 
 export const SeeMap = styled(Button)`
@@ -308,9 +407,12 @@ export const SeeMap = styled(Button)`
     background: #E6B772;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
-    width: 134px;
+    width: 230px;
     height: 45px;
     z-index: 10;
+    @media (min-width: ${breakpoints.mobileSmall}) {
+      width: 150px;
+    }
     .MuiButton-label {
       font-family: "Overlock";
       font-style: normal;
@@ -319,6 +421,9 @@ export const SeeMap = styled(Button)`
       line-height: 22px;
       text-align: center;
       color: #FFFFFF;
+      @media (min-width: ${breakpoints.mobileSmall}) {
+        font-size: 12px;
+      }
     }
   }
 `;
@@ -333,6 +438,9 @@ export const ThirdFlowerTop = styled.img`
   width: 70%;
   top: 0;
   left: 0;
+  @media (min-width: ${breakpoints.tabletSmall}) {
+    width: 60%;
+  }
 `;
 
 export const VerseText = styled(Typography)`
@@ -348,6 +456,25 @@ export const VerseText = styled(Typography)`
     padding: 70px;
     position: relative;
     top: 10em;
+    @media (min-width: ${breakpoints.mobileSmall}) {
+      font-size: 10px;
+      padding: 70px 40px 0px 40px;
+    }
+    @media (min-width: ${breakpoints.mobileMedium}) {
+      font-size: 14px;
+      padding: 55px 45px;
+      line-height: 20px;
+    }
+    @media (min-width: ${breakpoints.mobileLarge}) {
+      font-size: 14px;
+      padding: 85px 65px;
+    }
+    @media (min-width: ${breakpoints.tabletSmall}) {
+      font-size: 16px;
+      padding: 9em;
+      top: 13em;
+      line-height: 2em;
+    }
   }
 `;
 
@@ -356,6 +483,12 @@ export const ThirdFlowerBottom = styled.img`
   width: 70%;
   bottom: 0;
   right: 0;
+  @media (min-width: ${breakpoints.mobileSmall}) {
+    width: 55%;
+  }
+  @media (min-width: ${breakpoints.tabletSmall}) {
+    width: 60%;
+  }
 `;
 
 export const Watermark = styled(Typography)`
@@ -369,6 +502,13 @@ export const Watermark = styled(Typography)`
     position: absolute;
     bottom: 15px;
     left: 25px;
-
+    @media (min-width: ${breakpoints.mobileSmall}) {
+      left: 20px;
+    }
+    @media (min-width: ${breakpoints.tabletSmall}) {
+      font-size: 15px;
+      bottom: 30px;
+      left: 50px;
+    }
   }
 `;
