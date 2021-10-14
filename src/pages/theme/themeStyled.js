@@ -8,7 +8,7 @@
 | Develop : Dimas Prasetyo, Arie Aditya Nugraha (Frontend Dev).
 */
 
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Box, Typography, Button } from '@material-ui/core';
 // Fonts
 import "@fontsource/overlock";

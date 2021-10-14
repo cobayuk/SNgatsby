@@ -1,8 +1,7 @@
 import React from "react";
 import { Box, Grid, Typography, makeStyles } from '@material-ui/core';
-import { COLORS } from "../styles/constants";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   boxHowitWork: {
     marginTop: '24em'
   },

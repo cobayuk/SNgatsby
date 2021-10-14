@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 
 import { Box, Link }from '@material-ui/core';
 import * as Style from "./secondStyle";
-import OrnamentFlowerTop from "../../assets/ornaments/themes/secondTheme/first-flower-top-left.svg";
-import OrnamentFlowerBottom from "../../assets/ornaments/themes/secondTheme/first-flower-bottom-right.svg";
-import MiddleFrame from "../../assets/ornaments/themes/secondTheme/first-middle-frame.svg";
-import OrnamentSecondFlower from "../../assets/ornaments/themes/secondTheme/second-flower-top-right.svg";
-import OrnamentSecondFlowerBottom from "../../assets/ornaments/themes/secondTheme/second-flower-bottom-left.svg";
-import OrnamentThirdFlowerTop from "../../assets/ornaments/themes/secondTheme/third-flower-top.svg";
-import OrnamentThirdFlowerBottom from "../../assets/ornaments/themes/secondTheme/third-flower-bottom.svg";
-import AmpersandDivider from "../../assets/ornaments/themes/secondTheme/ampersand.svg";
-import LineDivider from "../../assets/ornaments/themes/secondTheme/line.svg";
-import Map from "../../components/map";
-import { configThemesSecond } from "../../mocking/template";
+import OrnamentFlowerTop from "@assets/ornaments/themes/secondTheme/first-flower-top-left.svg";
+import OrnamentFlowerBottom from "@assets/ornaments/themes/secondTheme/first-flower-bottom-right.svg";
+import MiddleFrame from "@assets/ornaments/themes/secondTheme/first-middle-frame.svg";
+import OrnamentSecondFlower from "@assets/ornaments/themes/secondTheme/second-flower-top-right.svg";
+import OrnamentSecondFlowerBottom from "@assets/ornaments/themes/secondTheme/second-flower-bottom-left.svg";
+import OrnamentThirdFlowerTop from "@assets/ornaments/themes/secondTheme/third-flower-top.svg";
+import OrnamentThirdFlowerBottom from "@assets/ornaments/themes/secondTheme/third-flower-bottom.svg";
+import AmpersandDivider from "@assets/ornaments/themes/secondTheme/ampersand.svg";
+import LineDivider from "@assets/ornaments/themes/secondTheme/line.svg";
+import Map from "@components/map";
+import { configThemesSecond } from "@mocking/template";
 
 const SecondTheme = () =>  {
 
@@ -25,12 +25,10 @@ const SecondTheme = () =>  {
 
     if (difference > 0) {
       timeLeft = {
-
         hari: Math.floor(difference / (1000 * 60 * 60 * 24)),
         jam: Math.floor((difference / (1000 * 60 * 60)) % 24),
         menit: Math.floor((difference / 1000 / 60) % 60),
         detik: Math.floor((difference / 1000) % 60),
-
       };
     }
 
@@ -65,7 +63,6 @@ const SecondTheme = () =>  {
 
   return (
     <Box>
-
       <Style.Header>
         <Style.FlowerTopLeft src={OrnamentFlowerTop} alt="ornament-1"/>
         <Style.WrapperInvite>
@@ -84,9 +81,9 @@ const SecondTheme = () =>  {
         <Style.SecondFlowerTop src={OrnamentSecondFlower} alt="ornament-3"/>
         <Style.Greetings>
           Bismillaahirrahmaanirrahiim <br/><br/>
-          Assalaamu'alaikum Warahmatullaahi Wabarakaatuh <br/><br/>
+          Assalaamu&apos;alaikum Warahmatullaahi Wabarakaatuh <br/><br/>
           Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. <br/><br/>
-          Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan do'a restu pada pernikahan kami:
+          Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan do&apos;a restu pada pernikahan kami:
         </Style.Greetings>
         <Style.GroomFull>{configThemesSecond.groom.fullName}</Style.GroomFull>
         <Style.Parents>{configThemesSecond.groom.parents.tagline}</Style.Parents>
@@ -123,7 +120,6 @@ const SecondTheme = () =>  {
           <Style.Watermark>Built with <span style={{color:'red'}}>❤</span> by sungnikah.com</Style.Watermark>
         </Link>
       </Style.VerseContainer>
-
     </Box>
   );
 }

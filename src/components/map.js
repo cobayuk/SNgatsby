@@ -1,15 +1,14 @@
 import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import "../styles/map.css";
+import "@styles/map.css";
 import { configThemesSecond } from "../mocking/template/index";
-
-const MAPBOX_TOKEN = "pk.eyJ1IjoicmVrdG9yaXBiIiwiYSI6ImNrbXEwZzN6ZTFlejUydmx3enRkdXh5enkifQ.5kX3xMqH25BONTujixNjeg"
+const MAPBOX_TOKEN = "pk.eyJ1IjoicmVrdG9yaXBiIiwiYSI6ImNrbXEwZzN6ZTFlejUydmx3enRkdXh5enkifQ.5kX3xMqH25BONTujixNjeg";
 
 const Map = () => {
-  
-  const mapContainerRef = useRef(null)
-  const [map, setMap] = useState(null)
+
+  const mapContainerRef = useRef(null);
+  const [map, setMap] = useState(null);
 
   useEffect(() => {
     // weddingPlace = [lng, lat];
@@ -20,10 +19,10 @@ const Map = () => {
       style: "mapbox://styles/mapbox/streets-v11",
       center: weddingPlace,
       zoom: 14,
-    })
-    map.addControl(new mapboxgl.NavigationControl(), "top-right")
+    });
 
-    setMap(map)
+    map.addControl(new mapboxgl.NavigationControl(), "top-right");
+    setMap(map);
 
     // create the popup
     let popup = new mapboxgl.Popup({ offset: 20 }).setHTML(
@@ -44,8 +43,8 @@ const Map = () => {
       map.rotateTo(180, { duration: 10000 });
     });
 
-    return () => map.remove()
-  }, [])
+    return () => map.remove();
+  }, []);
 
   return <div className={"sungnikah-map"} ref={mapContainerRef} />
 }

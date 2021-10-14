@@ -4,8 +4,8 @@ import { Link } from "gatsby";
 import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Typography, Toolbar } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
-import BrandLogo from '../assets/logo/brand.svg';
-import { COLORS } from "../styles/constants";
+import BrandLogo from '@assets/logo/brand.svg';
+import { COLORS } from "@styles/constants";
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const useStyles = makeStyles((theme) => ({
