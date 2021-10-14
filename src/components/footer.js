@@ -1,8 +1,13 @@
 import React from "react";
-import { Grid, Avatar, Container } from '@material-ui/core';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+import {
+  Grid,
+  Link,
+  Avatar,
+  Container,
+  Typography,
+  CssBaseline
+}
+from '@material-ui/core';
 import PropTypes from "prop-types";
 import Ovo from '@assets/logo/digital-payment/ovo.svg';
 import Dana from '@assets/logo/digital-payment/dana.svg';
