@@ -1,10 +1,12 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: `Sungnikah`,
     author: `Dimas Prasetyo & Arie Aditya Nugraha`,
     siteUrl: `https://sungnikah.com`,
     seo: {
-      description: `Sungnikah merupakan penyedia jasa tetek bengek pernikahan seperti desain jada pembuatan wedding website, jada desain seserahan, dan desain undangan.`,
+      description: `Sungnikah merupakan penyedia jasa tetek bengek pernikahan seperti desain jada pembuatan wedding website, jada desain seserahan, dan desain undangan souvenir dan vendor pernikahan.`,
       robots: `index, follow`,
       keywords: `Buat undangan, Jasa Undangan Digital, Undangan Digital Keren, Undangan Unik, Undangan Kreatif 2021`,
       index: `2021`,
@@ -36,7 +38,7 @@ module.exports = {
       options: {
         fonts: [
           `Oxygen`,
-          `sans-serif\:700`// you can also specify font weights and styles
+          `sans-serif:700`// you can also specify font weights and styles
         ],
         display: 'swap'
       }
@@ -55,6 +57,22 @@ module.exports = {
         rootMargin: '0% 50%', // Corresponds to root's bounding box margin
         enterEventName: 'sal:in', // Enter event name
         exitEventName: 'sal:out', // Exit event name
+      }
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@components": path.resolve(__dirname, 'src/components'),
+          "@pages": path.resolve(__dirname, 'src/pages'),
+          "@assets": path.resolve(__dirname, 'src/assets'),
+          "@images": path.resolve(__dirname, 'src/images'),
+          "@mocking": path.resolve(__dirname, 'src/mocking'),
+          "@styles": path.resolve(__dirname, 'src/styles'),
+        },
+        extensions: [
+          "js"
+        ]
       }
     }
   ],
