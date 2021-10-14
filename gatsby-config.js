@@ -79,10 +79,10 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-custom`,
+      resolve: "gatsby-source-custom-api",
       options: {
-        apiKey: process.env.API_KEY,
-      },
+        url: "https://snanorest.api.dev"
+      }
     },
   ],
 }
