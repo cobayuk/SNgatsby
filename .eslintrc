@@ -1,8 +1,8 @@
 {
 	"parserOptions": {
-    "sourceType": "module",
-		"ecmaVersion": 2017
+    "sourceType": "module"
 	},
+  "parser": "babel-eslint",
 	"env": {
     "browser" : true,
     "node" : true,
@@ -11,5 +11,9 @@
   "rules" : {
     "no-unused-vars" : 2,
     "no-undef" : 2
-  }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ]
 }
