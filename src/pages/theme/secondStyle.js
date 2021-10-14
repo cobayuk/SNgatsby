@@ -10,8 +10,7 @@
 
 import styled from 'styled-components';
 import { Box, Typography, Button } from '@material-ui/core';
-
-import { breakpoints } from '../../components/media';
+import { breakpoints } from '@components/media';
 // Fonts
 import "@fontsource/oxygen";
 import "@fontsource/great-vibes";
@@ -81,7 +80,7 @@ export const WrapperInvite = styled.div`
     top: 21em;
     position: relative;
   }
-  
+
 `;
 
 export const InvitedPerson = styled(Typography)`

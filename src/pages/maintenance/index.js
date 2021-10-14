@@ -1,9 +1,9 @@
 import React from "react";
-import SEO from "../../components/seo";
+import SEO from "@components/seo";
 import * as Style from "../../styles/maintenance/maintenanceStyled";
-import ConstructionImage from "../../images/under-construction.gif";
-import Instagram from "../../images/instagram.svg";
-import Facebook from "../../images/facebook.svg";
+import ConstructionImage from "@images/under-construction.gif";
+import Instagram from "@images/instagram.svg";
+import Facebook from "@images/facebook.svg";
 import "../maintenance/maintenance.css";
 
 const Maintenance = () => (

@@ -6,12 +6,12 @@ import {
   makeStyles,
   Button
 } from '@material-ui/core';
-import { COLORS } from "../styles/constants";
-import CircleLove from "../assets/logo/decoration/circle-love.svg";
-import OrnamentOne from "../assets/ornaments/header-tagline/ornament-one.svg";
-import OrnamentTwo from "../assets/ornaments/header-tagline/ornament-two.svg";
-import OrnamentThree from "../assets/ornaments/header-tagline/ornament-three.svg";
-import OrnamentFour from "../assets/ornaments/header-tagline/ornament-four.svg";
+import { COLORS } from "@styles/constants";
+import CircleLove from "@assets/logo/decoration/circle-love.svg";
+import OrnamentOne from "@assets/ornaments/header-tagline/ornament-one.svg";
+import OrnamentTwo from "@assets/ornaments/header-tagline/ornament-two.svg";
+import OrnamentThree from "@assets/ornaments/header-tagline/ornament-three.svg";
+import OrnamentFour from "@assets/ornaments/header-tagline/ornament-four.svg";
 
 const useStyles = makeStyles((theme) => ({
   boxHeader: {

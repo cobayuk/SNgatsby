@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Box, Link }from '@material-ui/core';
-import Map from "../../components/map";
+import Map from "@components/map";
 import * as Style from "./themeStyled";
-import Liquid from "../../assets/ornaments/themes/liquid.svg";
-import LiquidOutline from "../../assets/ornaments/themes/liquid-outline-mobile.svg";
-import Flower from "../../assets/ornaments/themes/flower.svg";
-import Line from "../../assets/ornaments/themes/line.svg";
-import Curved from "../../assets/ornaments/themes/curved.svg";
-import Abstract from "../../assets/ornaments/themes/abstract.svg";
-import AbstractBottom from "../../assets/ornaments/themes/abstract-bottom.svg";
-import FlowerBottom from "../../assets/ornaments/themes/flower-bottom.svg";
+import Liquid from "@assets/ornaments/themes/liquid.svg";
+import LiquidOutline from "@assets/ornaments/themes/liquid-outline-mobile.svg";
+import Flower from "@assets/ornaments/themes/flower.svg";
+import Line from "@assets/ornaments/themes/line.svg";
+import Curved from "@assets/ornaments/themes/curved.svg";
+import Abstract from "@assets/ornaments/themes/abstract.svg";
+import AbstractBottom from "@assets/ornaments/themes/abstract-bottom.svg";
+import FlowerBottom from "@assets/ornaments/themes/flower-bottom.svg";
 
 const FirstTheme = () =>  {
 
@@ -53,6 +53,7 @@ const FirstTheme = () =>  {
       </span>
     );
   });
+
   return (
     <Box>
       <Style.Introduction>
@@ -79,7 +80,7 @@ const FirstTheme = () =>  {
             data-sal-delay="300" // adds delay to the animation (from 5 to 1000 ms)
             data-sal-easing="ease" // sets easing for the animation (see easings.net for reference)
           >
-            You're Invited to
+            You&apos;re Invited to
           </Style.Invite>
           <Style.Title
             data-sal="slide-down"
@@ -122,7 +123,7 @@ const FirstTheme = () =>  {
               data-sal-delay="1000"
               data-sal-easing="ease"
             >
-              {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+              {timerComponents.length ? timerComponents : <span>Time&apos;s up!</span>}
             </Style.WeddingCountdown>
           </Style.CountdownContainer>
         </Style.IntroWrapper>
@@ -136,13 +137,13 @@ const FirstTheme = () =>  {
         <Style.InvitationWrapper>
           <Style.Greeting>
             Bismillaahirrahmaanirrahiim<br/><br/>
-            Assalaamu'alaikum Warahmatullaahi Wabarakaatuh
+            Assalaamu&apos;alaikum Warahmatullaahi Wabarakaatuh
             <br/><br/>
             Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan.
             <br/><br/>
-            Dengan mengharap ridho dan rahmat Allah Subhanahu wa Ta’ala untuk melaksanakan syari'at agama-Nya dan mengikuti sunnah Rasul-Nya dalam membentuk rumah tangga yang sakinah, mawaddah, warahmah.
+            Dengan mengharap ridho dan rahmat Allah Subhanahu wa Ta’ala untuk melaksanakan syari&apos;at agama-Nya dan mengikuti sunnah Rasul-Nya dalam membentuk rumah tangga yang sakinah, mawaddah, warahmah.
             <br/><br/>
-            Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan do'a restu pada pernikahan kami:
+            Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan do&apos;a restu pada pernikahan kami:
           </Style.Greeting>
           <Style.Groom>Andy Winarko S.Pd</Style.Groom>
           <Style.Parents>Putra pertama dari Bpk. H. Karim Muhadin dan Ibu Hj. Jey Sabilla</Style.Parents>

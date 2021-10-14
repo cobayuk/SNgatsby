@@ -9,9 +9,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-import icon from '../assets/favicon/sungnikah-48x48.png';
+import icon from '@assets/favicon/sungnikah-48x48.png';
 
-function SEO({ description, lang, meta, keywords, title, robots, index }) {
+function SEO({ description, lang, meta, keywords, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,9 +21,7 @@ function SEO({ description, lang, meta, keywords, title, robots, index }) {
             author
             seo {
               description
-              robots
               keywords
-              index
               canonical
             }
           }
@@ -34,9 +32,7 @@ function SEO({ description, lang, meta, keywords, title, robots, index }) {
 
   const metaTitle = title || site.siteMetadata.title
   const metaDescription = description || site.siteMetadata.seo.description
-  const metaRobots = robots || site.siteMetadata.seo.robots
   const metaKeywords = keywords || site.siteMetadata.seo.keywords
-  const metaIndex = index || site.siteMetadata.seo.index
 
   return (
     <Helmet
@@ -52,10 +48,6 @@ function SEO({ description, lang, meta, keywords, title, robots, index }) {
         {
           name: `keywords`,
           content: metaKeywords,
-        },
-        {
-          robots: `robots`,
-          content: metaRobots,
         },
         {
           property: `og:title`,
@@ -113,6 +105,7 @@ function SEO({ description, lang, meta, keywords, title, robots, index }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
+  robots: '',
   keywords: [],
 }
 

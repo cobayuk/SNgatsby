@@ -10,7 +10,6 @@ import  {
   makeStyles
 }
 from '@material-ui/core';
-import StarIcon from '@material-ui/icons/StarBorder';
 import { COLORS, FONT_FAMILY, FONT_SIZE } from "../styles/constants";
 import ChecklistIcon from "../assets/ornaments/checklist.svg";
 

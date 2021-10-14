@@ -5,7 +5,7 @@ import {
   Typography,
   makeStyles
 } from '@material-ui/core';
-import OrnamentFour from "../assets/ornaments/header-tagline/ornament-four.svg";
+import OrnamentFour from "@assets/ornaments/header-tagline/ornament-four.svg";
 import ButtonOrderNow from "./buttons/ordernow";
 import { COLORS } from "../styles/constants";
 
