@@ -56,6 +56,12 @@ module.exports = {
           enterEventName: 'sal:in', // Enter event name
           exitEventName: 'sal:out', // Exit event name
       }
-    }
+    },
+    {
+      resolve: `gatsby-source-custom-api`,
+      options: {
+        apiKey: process.env.API_KEY,
+      },
+    },
   ],
 }
