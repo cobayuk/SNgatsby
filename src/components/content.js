@@ -4,11 +4,11 @@ import CaraPesan from '../components/cara-pesan';
 import PricingPrice from '../components/pricing';
 
 const Content = () => (
-  <content>
+  <main>
     <HeaderTagline />
     <CaraPesan />
     <PricingPrice />
-  </content>
+  </main>
 )
 
 export default Content
