@@ -12,8 +12,8 @@ import {
   CardMedia,
   CardContent,
   CardActions,
-
-} from '@material-ui/core';
+}
+from '@material-ui/core';
 import Footer from "@components/footer";
 import CameraIcon from '@material-ui/icons/PhotoCamera';
 import useStyles from "@pages/demo/portofolioStyle";
