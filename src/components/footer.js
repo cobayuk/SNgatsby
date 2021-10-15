@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   Grid,
   Link,
@@ -8,26 +9,25 @@ import {
   CssBaseline
 }
 from '@material-ui/core';
-import PropTypes from "prop-types";
 import Ovo from '@assets/logo/digital-payment/ovo.svg';
 import Dana from '@assets/logo/digital-payment/dana.svg';
 import LinkAja from '@assets/logo/digital-payment/link-aja.svg';
 import Gopay from '@assets/logo/digital-payment/gopay.svg';
 import * as Style from '@styles/footer/footerStyled';
 
-const Copyright = ({ siteTitle }) => {
+const Copyright = ({ titles }) => {
   return (
     <Style.HeadingCopyright variant="body2" color="textSecondary">
       {'©'}
-      <Link color="inherit" href="https://material-ui.com/">
-        {`${siteTitle}.com`}
+      <Link color="inherit" href="#">
+        {`${titles}.com`}
       </Link>
       {',All Right Reserved'}
     </Style.HeadingCopyright>
   );
 }
 
-const Footer = ({ siteTitle }) => {
+const Footer = (siteTitle) => {
   return (
     <Style.MainFooter>
       <CssBaseline />
@@ -121,7 +121,11 @@ const Footer = ({ siteTitle }) => {
 }
 
 Footer.propTypes = {
-  siteTitle: PropTypes.string
+  siteTitle: PropTypes.node.isRequired,
+}
+
+Copyright.PropTypes = {
+  titles: PropTypes.string.isRequired
 }
 
 export default Footer

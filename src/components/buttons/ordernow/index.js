@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   Button,
   makeStyles
@@ -9,7 +10,7 @@ import {
   FONT_SIZE,
   FONT_FAMILY
 }
-from "../../../styles/constants";
+from "@styles/constants";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -35,6 +36,10 @@ const ButtonOrderNow = ({ children }) => {
       {children}
     </Button>
   );
+}
+
+ButtonOrderNow.propTypes = {
+  children: PropTypes.any.isRequired
 }
 
 export default ButtonOrderNow;

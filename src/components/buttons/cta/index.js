@@ -1,6 +1,7 @@
 import React from "react";
-import { COLORS, BORDER_RADIUS, GRADIENT } from "../styles/constants";
-import "../styles/button.css"
+import PropTypes from "prop-types";
+import { COLORS, BORDER_RADIUS, GRADIENT } from "@styles/constants";
+import "@styles/button.css"
 
 const Button = ({ children }) => (
   <button
@@ -17,5 +18,9 @@ const Button = ({ children }) => (
     {children}
   </button>
 )
+
+Button.propTypes = {
+  children: PropTypes.any.isRequired
+}
 
 export default Button
