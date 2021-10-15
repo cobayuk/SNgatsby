@@ -27,7 +27,7 @@ const Copyright = ({ titles }) => {
   );
 }
 
-const Footer = (siteTitle) => {
+const Footer = ({ siteTitle }) => {
   return (
     <Style.MainFooter>
       <CssBaseline />
@@ -124,8 +124,16 @@ Footer.propTypes = {
   siteTitle: PropTypes.node.isRequired,
 }
 
-Copyright.PropTypes = {
-  titles: PropTypes.string.isRequired
+Copyright.propTypes = {
+  titles: PropTypes.node.isRequired
+}
+
+Footer.defaultProps = {
+  siteTitle: "Sungnikah",
+}
+
+Copyright.defaultProps = {
+  titles: ''
 }
 
 export default Footer
