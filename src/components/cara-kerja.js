@@ -14,7 +14,6 @@ from '@material-ui/core';
 
 const useStyles = makeStyles((themes) => ({
   boxHowitWork: {
-    marginTop: '24em',
     paddingTop: '50px'
   },
   headingItWork: {
@@ -29,12 +28,10 @@ const useStyles = makeStyles((themes) => ({
     fontSize: '40px',
     fontFamily: `${FONT_FAMILY.oxygen}`,
     fontWeight: 'bold',
-    color: COLORS.black,
-    textTransform: 'capitalize',
+    color: COLORS.black
   },
   taglineDescription: {
-    fontSize: '15px',
-    marginBottom: themes.spacing(5)
+    fontSize: '15px'
   },
   headingIlustration: {
     textAlign: 'left',
@@ -58,7 +55,7 @@ const CaraKerja = () => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.boxHowitWork}>
+    <Box className={classes.boxHowitWork} id="howitworks">
       <Container
         maxWidth="md"
         component="main"
@@ -73,7 +70,7 @@ const CaraKerja = () => {
               color="textPrimary"
               className={classes.headingItWork}
             >
-              Cara Kerja
+              Tentang Kami
             </Typography>
             <Typography
               component="h2"
@@ -83,7 +80,7 @@ const CaraKerja = () => {
               gutterBottom
               className={classes.taglineCaption}
             >
-              Bagaimana Sungnikah Berkerja <br/> Untuk Kamu
+              Bagaimana kami bekerja <br/> untuk kamu.
             </Typography>
             <Typography
               variant="h3"
@@ -126,7 +123,7 @@ const CaraKerja = () => {
                 component="p"
                 className={classes.descriptionChooseThemeKece}
               >
-                Sesuaikan tema dan mood anda sendiri dengan cara klik order sekarang atau langsung aja ke menu demo ya kak, disana banyak variant desain yang mungkin cocok buat kaka selamat mencoba ya.
+                Sesuaikan tema dan mood kamu sendiri dengan cara klik order sekarang atau langsung aja ke menu demo ya kak, disana banyak varian desain yang mungkin cocok untuk kamu. Selamat mencoba
               </Typography>
             </Box>
           </Grid>
@@ -148,7 +145,7 @@ const CaraKerja = () => {
                 component="p"
                 className={classes.descriptionChooseThemeKece}
               >
-                Silahkan isi dengan lengkap ya kaka data diri serta data calon mempelai untuk kebutuhan undangan digital yang kaka ingin kan. Jika sudah mengisi semua data dari formulir yang kami sediakan, jangan lupa kaka submit ya.
+                Silahkan isi lengkap data diri kamu beserta data calon mempelai untuk kebutuhan undangan digital yang kamu inginkan dan langsung submit.
               </Typography>
             </Box>
           </Grid>
@@ -188,7 +185,7 @@ const CaraKerja = () => {
                 component="p"
                 className={classes.descriptionChooseThemeKece}
               >
-                Setelah mengisi formulir dan data diri selanjutnya kaka akan diberikan invoice terkait informasi paket yang kaka pilih serta total invoce atau tagihan kaka yang harus bayar. Setelah melakukan pembayaran jangan lupa kirim bukti pemesanannya ya kak.
+                Setelah mengisi formulir dan data diri selanjutnya kamu akan diberikan invoice terkait informasi paket dipilih serta total tagihan yang harus dibayar. Setelah melakukan pembayaran jangan lupa kirim bukti pemesanannya ya.
               </Typography>
             </Box>
           </Grid>
