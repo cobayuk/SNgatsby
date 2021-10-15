@@ -6,7 +6,14 @@ import { AppBar, Typography, Toolbar } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import BrandLogo from '@assets/logo/brand.svg';
 import { COLORS } from "@styles/constants";
+import UserIcon from "@assets/svg/user.svg";
 import scrollTo from 'gatsby-plugin-smoothscroll';
+import styled from 'styled-components';
+
+const LoginIcon = styled.img`
+  width: 30px;
+  height: 30px;
+`;
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
@@ -39,7 +46,8 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
     color: '#000',
     fontFamily: `Oxygen, sans-serif`,
-    fontWeight: 600
+    fontWeight: 600,
+    textTransform: 'capitalize'
   },
   cardHeader: {
     backgroundColor: `${COLORS.white}`
@@ -69,40 +77,27 @@ const Header = () => {
           <img src={BrandLogo} alt="brand-logo" className={classes.logoBrand}/>
         </Typography>
         <nav>
-          <Link
+          <Button
             onClick={() => scrollTo('#itworks')}
-            to="#itworks"
             className={classes.link}
           >
-            Cara Kerja Sungnikah
-          </Link>
+            Cara Pesan
+          </Button>
+          <Button
+            onClick={() => scrollTo('#pricing')}
+            className={classes.link}
+          >
+            Paket Harga
+          </Button>
           <Link
             to="/demo/portofolio"
             className={classes.link}
           >
             Demo
           </Link>
-          <Link
-            to="#payment"
-            className={classes.link}
-          >
-            Cara Pembayaran
-          </Link>
-          <Link
-            to="#pricing"
-            className={classes.link}
-          >
-            Paket Harga
-          </Link>
-          <Link
-            to="#contactus"
-            className={classes.link}
-          >
-            Kontak Kami
-          </Link>
         </nav>
-        <Button href="/client/login" className={classes.buttonLogin}>
-          Login
+        <Button href="/client/login">
+          <LoginIcon src={UserIcon} alt="user-icon"/>
         </Button>
       </Toolbar>
     </AppBar>

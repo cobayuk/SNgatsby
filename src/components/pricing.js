@@ -90,7 +90,8 @@ const useStyles = makeStyles((theme) => ({
   },
   wrapperPricing: {
     marginTop: '5em',
-    marginBottom: '5em'
+    marginBottom: '5em',
+    paddingTop: '50px'
   },
   boxOuterPricing: {
     marginTop: '2em'

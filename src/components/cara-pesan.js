@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme) => ({
   boxHowitWork: {
     display: 'flex',
     marginTop: theme.spacing(50),
-    padding: theme.spacing(0, 10, 0, 10)
+    padding: theme.spacing(0, 10, 0, 10),
+    paddingTop: '50px'
   },
   headingItWork: {
     fontFamily: 'Oxygen',
