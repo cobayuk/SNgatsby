@@ -89,6 +89,12 @@ const Header = () => {
           >
             Paket Harga
           </Button>
+          <Button
+            onClick={() => scrollTo('#howitworks')}
+            className={classes.link}
+          >
+            Tentang Kami
+          </Button>
           <Link
             to="/demo/portofolio"
             className={classes.link}
