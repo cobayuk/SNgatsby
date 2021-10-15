@@ -14,7 +14,7 @@ from '@material-ui/core';
 
 const useStyles = makeStyles((themes) => ({
   boxHowitWork: {
-    marginTop: '24em',
+    marginTop: '150px',
     paddingTop: '50px'
   },
   headingItWork: {
