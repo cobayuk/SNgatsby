@@ -25,6 +25,19 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContent: {
     flexGrow: 1,
+  },
+  headingPorto: {
+    fontFamily: 'Oxygen',
+    fontStyle: 'normal',
+    fontWeight: 'bold',
+    fontSize: '30px',
+    lineHeight: 1.4,
+  },
+  headingDescPorto: {
+    fontFamily: 'Oxygen',
+    fontStyle: 'normal',
+    fontWeight: '500',
+    fontSize: '15px',
   }
 }));
 
