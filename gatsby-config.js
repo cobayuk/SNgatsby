@@ -4,6 +4,7 @@ require("dotenv").config({
 })
 
 module.exports = {
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   siteMetadata: {
     title: `Sungnikah`,
     author: `Dimas Prasetyo & Arie Aditya Nugraha`,
@@ -52,7 +53,6 @@ module.exports = {
         threshold: 1, // Percentage of an element's area that needs to be visible to launch animation
         once: true, // Defines if animation needs to be launched once
         disable: false, // Flag for disabling animations
-
         // Advanced Options
         selector: '[data-sal]', // Selector of the elements to be animated
         animateClassName: 'sal-animate', // Class name which triggers animation
@@ -90,5 +90,14 @@ module.exports = {
         // Add any options here
       },
     },
+    {
+      resolve: 'gatsby-plugin-crisp-chat',
+      options: {
+        websiteId: 'b9c7c743-c6d3-494c-bb87-9189204d7a5d',
+        enableDuringDevelop: true, // Optional. Disables Crisp Chat during gatsby develop. Defaults to true.
+        defer: true, // Optional. Sets the Crisp loading script to defer instead of async. Defaults to false.
+        enableImprovedAccessibility: false // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.
+      },
+    }
   ],
 }
