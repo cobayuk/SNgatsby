@@ -32,7 +32,7 @@ const DemoPortofolio = () => {
     },
     {
       id: Math.floor(Math.random() * 100),
-      image: 'https://via.placeholder.com/250',
+      image: 'https://via.placeholder.com/250x500',
       name: 'SN-02',
       description: 'describe the content',
       url: 'theme/second',
@@ -69,12 +69,13 @@ const DemoPortofolio = () => {
       </Container>
       <Box className={classes.heroContent}>
         <Typography component="h1" variant="h1" align="center" color="textPrimary" gutterBottom className={classes.headingPorto}>
-          Pilih Desain Undangan Kamu
+          Pilih Desain Undangan Kesukaan Kamu
         </Typography>
         <Typography variant="h2" align="center" color="textSecondary" paragraph className={classes.headingDescPorto}>
           Kini lebih mudah hanya sekali klik dan order desain undangan kesukaan kamu,
           boleh lihat - lihat dahulu, jika ada yang kaka ingin tanyakan bisa langsung hubungi kami ya, dengan cara klik tombol dibawah ini
         </Typography>
+        <Box className={classes.innerTriangleContent}></Box>
       </Box>
       <Layout>
         <Container className={classes.cardGrid} maxWidth="md">

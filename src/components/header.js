@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   link: {
-    margin: theme.spacing(1, 4),
+    margin: theme.spacing(1, 2),
     fontSize: '14px',
     textDecoration: 'none',
     color: '#000',
