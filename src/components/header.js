@@ -1,9 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Typography, Toolbar } from '@material-ui/core';
-import Button from '@material-ui/core/Button';
+import {
+  AppBar,
+  Toolbar,
+  Button,
+  Typography,
+  makeStyles,
+}
+from '@material-ui/core';
 import BrandLogo from '@assets/logo/brand.svg';
 import { COLORS } from "@styles/constants";
 import UserIcon from "@assets/svg/user.svg";
