@@ -1,7 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
-  Button,
-  makeStyles
+  Button
 } from '@material-ui/core';
 import {
   COLORS,
@@ -9,32 +9,38 @@ import {
   FONT_SIZE,
   FONT_FAMILY
 }
-from "../../../styles/constants";
+from "@styles/constants";
+import styled from 'styled-components';
 
-const useStyles = makeStyles(() => ({
-  root: {
-    top: 50,
-    width: '162px',
-    height: '50px',
-    backgroundColor: '#F2A76D',
-    borderRadius: BORDER_RADIUS.radius30,
-    display: 'flex',
-    fontFamily: FONT_FAMILY.oxygen,
-    color: `${COLORS.white}`,
-    fontWeight: 'bold',
-    fontSize: FONT_SIZE.font15,
-    border: `5px solid #f7e8e1`,
-    textTransform: 'capitalize'
-  }
-}));
+export const OrderNow = styled(Button)`
+    color: ${COLORS.white};
+    width: 162px;
+    border: 5px solid #f7e8e1;
+    height: 50px;
+    display: flex;
+    font-size: ${FONT_SIZE.font15};
+    font-family: ${FONT_FAMILY.oxygen};
+    font-weight: bold;
+    border-radius: ${BORDER_RADIUS.radius30};
+    text-transform: capitalize;
+    background-color: #F2A76D;
+    &:hover {
+      color: #F2A76D;
+      border: 5px solid #F2A76D;
+      background-color: ${COLORS.white};
+    }
+`;
 
 const ButtonOrderNow = ({ children }) => {
-  const classes = useStyles();
   return (
-    <Button className={classes.root}>
+    <OrderNow>
       {children}
-    </Button>
+    </OrderNow>
   );
+}
+
+ButtonOrderNow.propTypes = {
+  children: PropTypes.any.isRequired
 }
 
 export default ButtonOrderNow;

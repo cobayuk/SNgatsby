@@ -1,21 +1,26 @@
 import React from "react";
-import { Grid, Avatar, Container } from '@material-ui/core';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
 import PropTypes from "prop-types";
+import {
+  Grid,
+  Link,
+  Avatar,
+  Container,
+  Typography,
+  CssBaseline
+}
+from '@material-ui/core';
 import Ovo from '@assets/logo/digital-payment/ovo.svg';
 import Dana from '@assets/logo/digital-payment/dana.svg';
 import LinkAja from '@assets/logo/digital-payment/link-aja.svg';
 import Gopay from '@assets/logo/digital-payment/gopay.svg';
 import * as Style from '@styles/footer/footerStyled';
 
-const Copyright = ({ siteTitle }) => {
+const Copyright = ({ titles }) => {
   return (
     <Style.HeadingCopyright variant="body2" color="textSecondary">
       {'©'}
-      <Link color="inherit" href="https://material-ui.com/">
-        {`${siteTitle}.com`}
+      <Link color="inherit" href="#">
+        {`${titles}.com`}
       </Link>
       {',All Right Reserved'}
     </Style.HeadingCopyright>
@@ -116,7 +121,19 @@ const Footer = ({ siteTitle }) => {
 }
 
 Footer.propTypes = {
-  siteTitle: PropTypes.string
+  siteTitle: PropTypes.node.isRequired,
+}
+
+Copyright.propTypes = {
+  titles: PropTypes.node.isRequired
+}
+
+Footer.defaultProps = {
+  siteTitle: "Sungnikah",
+}
+
+Copyright.defaultProps = {
+  titles: ''
 }
 
 export default Footer

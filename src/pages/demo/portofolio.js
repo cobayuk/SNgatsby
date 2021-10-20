@@ -1,88 +1,102 @@
-import React from 'react';
-import { navigate } from "@reach/router";
-import AppBar from '@material-ui/core/AppBar';
-import Button from '@material-ui/core/Button';
-import CameraIcon from '@material-ui/icons/PhotoCamera';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid from '@material-ui/core/Grid';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
-import Footer from "@components/footer";
+import React, { useState } from 'react';
+import {
+  Card,
+  Grid,
+  Box,
+  Button,
+  Container,
+  Typography,
+  CssBaseline,
+  CardMedia,
+  CardContent,
+  CardActions,
+}
+from '@material-ui/core';
+import Header from "@components/Header";
+import Layout from "@components/layout";
+import GlobalStyle from "@styles/global/globalStyled";
 import useStyles from "@pages/demo/portofolioStyle";
 
 const DemoPortofolio = () => {
   const classes = useStyles();
-  const cards = [1, 2, 3, 4 ];
+
+  // TODO : change this data get from API SNanorestfull !
+  const [ themes ] = useState([
+    {
+      id: Math.floor(Math.random() * 100),
+      image: 'https://source.unsplash.com/random',
+      name: 'SN-01',
+      description: 'describe the content',
+      url: 'theme/first',
+      cta: 'Lihat Desain'
+    },
+    {
+      id: Math.floor(Math.random() * 100),
+      image: 'https://source.unsplash.com/random',
+      name: 'SN-02',
+      description: 'describe the content',
+      url: 'theme/second',
+      cta: 'Lihat Desain'
+    },
+    {
+      id: Math.floor(Math.random() * 100),
+      name: 'SN-03',
+      image: 'https://source.unsplash.com/random',
+      url: 'theme/first',
+      description: 'describe the content',
+      cta: 'Lihat Desain'
+    },
+    {
+      id: Math.floor(Math.random() * 100),
+      name: 'SN-04',
+      image: 'https://source.unsplash.com/random',
+      url: 'theme/second',
+      description: 'describe the content',
+      cta: 'Lihat Desain'
+    }
+  ]);
 
   const redirectTemplate = (url) => {
-    navigate(url);
+    window.location.href = `/${url}`;
   }
 
   return (
     <React.Fragment>
+      <GlobalStyle />
       <CssBaseline />
-      <AppBar position="relative">
-        <Toolbar>
-          <CameraIcon className={classes.icon} />
-          <Typography variant="h6" color="inherit" noWrap>
-            Sungnikah
+      <Layout>
+        <Header/>
+        <Box className={classes.heroContent}>
+          <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+            Pilih Desain Undangan Kamu
           </Typography>
-        </Toolbar>
-      </AppBar>
-      <main>
-        {/* Hero unit */}
-        <div className={classes.heroContent}>
-          <Container maxWidth="sm">
-            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              Pilih Desain Undangan Kamu
-            </Typography>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              Kini lebih mudah hanya sekali klik dan order desain undangan kesukaan kamu, boleh lihat - lihat dahulu,
-              jika ada yang kaka ingin tanyakan bisa langsung hubungi kami ya, dengan cara klik tombol dibawah ini
-            </Typography>
-            <div className={classes.heroButtons}>
-              <Grid container spacing={2} justify="center">
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    Bantuan Chat
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Email Customer Service
-                  </Button>
-                </Grid>
-              </Grid>
-            </div>
-          </Container>
-        </div>
+          <Typography variant="h5" align="center" color="textSecondary" paragraph>
+            Kini lebih mudah hanya sekali klik dan order desain undangan kesukaan kamu,
+            boleh lihat - lihat dahulu, jika ada yang kaka ingin tanyakan bisa langsung hubungi kami ya, dengan cara klik tombol dibawah ini
+          </Typography>
+        </Box>
         <Container className={classes.cardGrid} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={6}>
+            {themes.map((value, key) => (
+              <Grid item key={key} xs={12} sm={6} md={6}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
+                    image={value.image}
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      {value.name}
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the content.
+                      <em>{value.name}</em> {value.description}
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary" onClick={() => redirectTemplate('/theme/first')}>
-                      LIHAT DESAIN
+                    <Button size="small" color="primary" onClick={() => redirectTemplate(value.url)}>
+                      {value.cta}
                     </Button>
                   </CardActions>
                 </Card>
@@ -90,8 +104,7 @@ const DemoPortofolio = () => {
             ))}
           </Grid>
         </Container>
-      </main>
-      <Footer/>
+      </Layout>
     </React.Fragment>
   );
 

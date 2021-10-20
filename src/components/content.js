@@ -1,14 +1,16 @@
-import React from "react";
-import HeaderTagline from '../components/header-tagline';
-import CaraPesan from '../components/cara-pesan';
-import PricingPrice from '../components/pricing';
+import React, { Fragment } from "react";
+import HeaderTagline from '@components/header-tagline';
+import CaraPesan from '@components/cara-pesan';
+import PricingPrice from '@components/pricing';
+import CaraKerja from '@components/cara-kerja';
 
 const Content = () => (
-  <main>
+  <Fragment>
     <HeaderTagline />
     <CaraPesan />
     <PricingPrice />
-  </main>
+    <CaraKerja />
+  </Fragment>
 )
 
 export default Content
