@@ -1010,6 +1010,16 @@
     ts-node "^9"
     tslib "^2"
 
+"@fontsource/crimson-text@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/crimson-text/-/crimson-text-4.5.0.tgz#aa9f4aae4a770e460d8af89a0ae6ce922f18de1e"
+  integrity sha512-uRd6jkUw5n/s/ZjLz2sOu/H2ijzMRtRPO1waN2Ps7IDxXzLmysvJo0cqDoPCw25VTkgxLdPvQAcIqFONJUT9/g==
+
+"@fontsource/dancing-script@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/dancing-script/-/dancing-script-4.5.0.tgz#cd3b195c09d7ca2e092a068f3352fc0638f94a41"
+  integrity sha512-geUMFz174TbFxjRIb/VgOLFHfTrkiyZLo/z8Tk/zURVHhD5N9mzardE6zAzjX+Nusm0irm+ClDKBI4l+ZavJMQ==
+
 "@fontsource/dm-serif-display@^4.2.2":
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/@fontsource/dm-serif-display/-/dm-serif-display-4.2.2.tgz#b7e034b77013c3f0a86689168fe0d014c2135efd"
@@ -1034,6 +1044,11 @@
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/@fontsource/oxygen/-/oxygen-4.2.2.tgz#0653fb38c8a0a161002cbdacf3a6765984dce6e9"
   integrity sha512-jhT0/C5P9DsYqAjMVVvdBDhyPkDUPA2VZ+tD1KO1wqwYy8zXBm3OY5VhfYVBa3cyDWVha9i1vn07VFypb+Fw8A==
+
+"@fontsource/questrial@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/questrial/-/questrial-4.5.0.tgz#85a6c5be5240f4ccc89d4894840136446065fc41"
+  integrity sha512-qRWWv8KFoa6GAm5yh7z+qgk33fNf1wQ9rjL+tBPDSw033pWmPyvgV7+uFqNfXPL9IxjPnJwbXPa4TnrXBgAkCQ==
 
 "@fontsource/qwigley@^4.2.2":
   version "4.2.2"
