@@ -8,7 +8,7 @@ from '@material-ui/core';
 import IlustrationsOne from "@assets/ornaments/cara-kerja/ilustration-one.svg";
 import IlustrationsTwo from "@assets/ornaments/cara-kerja/ilustration-two.svg";
 import IlustrationsThree from "@assets/ornaments/cara-kerja/ilustration-three.svg";
-import * as Style from '@components/CaraKerja/CaraKerjaStyled';
+import * as Style from '@components/Content/CaraKerja/CaraKerjaStyled';
 
 const CaraKerja = () => {
   return (

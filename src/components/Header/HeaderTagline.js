@@ -9,7 +9,7 @@ import OrnamentOne from "@assets/ornaments/header-tagline/ornament-one.svg";
 import OrnamentTwo from "@assets/ornaments/header-tagline/ornament-two.svg";
 import OrnamentThree from "@assets/ornaments/header-tagline/ornament-three.svg";
 import OrnamentFour from "@assets/ornaments/header-tagline/ornament-four.svg";
-import ButtonOrderNow from "./buttons/ordernow";
+import ButtonOrderNow from "../buttons/ordernow";
 import styled from 'styled-components';
 
 const BoxHeader = styled(Box)`
@@ -39,7 +39,7 @@ const ParagraphTagline = styled(Typography)`
       font-family: Oxygen;
       line-height: 25px;
       margin-bottom: 15px;
-    } 
+    }
 `;
 
 const BoxReactangleSmall = styled(Box)`

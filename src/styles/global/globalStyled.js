@@ -12,8 +12,8 @@
 */
 
 import { createGlobalStyle } from 'styled-components';
-import { COLORS } from "../../styles/constants";
-import OxygenBold from '../../assets/fonts/Oxygen-Bold.ttf';
+import { COLORS } from "@styles/constants";
+import OxygenBold from '@assets/fonts/Oxygen-Bold.ttf';
 
 const GlobalStyle = createGlobalStyle`
   * {
