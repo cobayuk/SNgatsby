@@ -1,97 +1,49 @@
 import React from "react";
-import { COLORS, FONT_FAMILY } from "@styles/constants";
-import IlustrationsOne from "@assets/ornaments/cara-kerja/ilustration-one.svg";
-import IlustrationsTwo from "@assets/ornaments/cara-kerja/ilustration-two.svg";
-import IlustrationsThree from "@assets/ornaments/cara-kerja/ilustration-three.svg";
 import {
   Box,
   Grid,
-  Container,
-  Typography,
-  makeStyles
+  Container
 }
 from '@material-ui/core';
-
-const useStyles = makeStyles((themes) => ({
-  boxHowitWork: {
-    marginTop: '150px',
-    paddingTop: '50px'
-  },
-  headingItWork: {
-    fontSize: '20px',
-    fontFamily: `${FONT_FAMILY.oxygen}`,
-    fontWeight: 'bold',
-    color: COLORS.brownSugar,
-    textTransform: 'uppercase',
-    marginBottom: themes.spacing(2)
-  },
-  taglineCaption: {
-    fontSize: '40px',
-    fontFamily: `${FONT_FAMILY.oxygen}`,
-    fontWeight: 'bold',
-    color: COLORS.black
-  },
-  taglineDescription: {
-    fontSize: '15px'
-  },
-  headingIlustration: {
-    textAlign: 'left',
-    color: COLORS.black,
-    fontWeight: 'bold',
-    fontFamily: `${FONT_FAMILY.oxygen}`,
-    marginBottom: themes.spacing(3)
-  },
-  descriptionChooseThemeKece: {
-    fontSize: '15px',
-    textAlign: 'left',
-    fontFamily: `${FONT_FAMILY.oxygen}`,
-  },
-  ilustrationSpace: {
-    padding: themes.spacing(4)
-  }
-}));
+import IlustrationsOne from "@assets/ornaments/cara-kerja/ilustration-one.svg";
+import IlustrationsTwo from "@assets/ornaments/cara-kerja/ilustration-two.svg";
+import IlustrationsThree from "@assets/ornaments/cara-kerja/ilustration-three.svg";
+import * as Style from '@components/Content/CaraKerja/CaraKerjaStyled';
 
 const CaraKerja = () => {
-
-  const classes = useStyles();
-
   return (
-    <Box className={classes.boxHowitWork} id="howitworks">
+    <Style.BoxHowItWorks id="howitworks">
       <Container
         maxWidth="md"
         component="main"
-        className={classes.heroContent}
       >
         <Grid container>
           <Grid item md={12} lg={12}>
-            <Typography
+            <Style.HeadingItWork
               component="h1"
               variant="h1"
               align="center"
               color="textPrimary"
-              className={classes.headingItWork}
             >
               Tentang Kami
-            </Typography>
-            <Typography
+            </Style.HeadingItWork>
+            <Style.TaglineCaption
               component="h2"
               variant="h2"
               align="center"
               color="textPrimary"
               gutterBottom
-              className={classes.taglineCaption}
             >
               Bagaimana kami bekerja <br/> untuk kamu.
-            </Typography>
-            <Typography
+            </Style.TaglineCaption>
+            <Style.TaglineDescription
               variant="h3"
               align="center"
               color="textSecondary"
               component="p"
-              className={classes.taglineDescription}
             >
               Dengan Fitur ini sekarang kamu mudah memilih desain sesuai keiginan kamu dan engga perlu ribet lagi.
-            </Typography>
+            </Style.TaglineDescription>
           </Grid>
         </Grid>
       </Container>
@@ -103,51 +55,47 @@ const CaraKerja = () => {
               alignItems="flex-start"
               justifyContent="flex-start"
             >
-              <img src={IlustrationsOne} alt="ilustration-one" width="540" height="457" className={classes.ilustrationSpace}/>
+              <Style.ImageIlustration src={IlustrationsOne} alt="ilustration-one" width="540" height="457"/>
             </Box>
           </Grid>
           <Grid item md={6} lg={6}>
             <Box mt={20}>
-              <Typography
+              <Style.HeadingIlustration
                 variant="h5"
                 align="center"
                 color="textSecondary"
                 component="p"
-                className={classes.headingIlustration}
               >
                 Pilih Tema Kece Kamu Sendiri
-              </Typography>
-              <Typography
+              </Style.HeadingIlustration>
+              <Style.DescriptionChooseThemeKece
                 variant="h5"
                 align="center"
                 color="textSecondary"
                 component="p"
-                className={classes.descriptionChooseThemeKece}
               >
                 Sesuaikan tema dan mood kamu sendiri dengan cara klik order sekarang atau langsung aja ke menu demo ya kak, disana banyak varian desain yang mungkin cocok untuk kamu. Selamat mencoba
-              </Typography>
+              </Style.DescriptionChooseThemeKece>
             </Box>
           </Grid>
           <Grid item md={6} lg={6}>
             <Box mt={20}>
-              <Typography
+              <Style.HeadingIlustration
                 variant="h5"
                 align="center"
                 color="textSecondary"
                 component="p"
-                className={classes.headingIlustration}
               >
                 Isi Data Diri Kamu dan Calon Mempelai
-              </Typography>
-              <Typography
+              </Style.HeadingIlustration>
+              <Style.DescriptionChooseThemeKece
                 variant="h5"
                 align="center"
                 color="textSecondary"
                 component="p"
-                className={classes.descriptionChooseThemeKece}
               >
                 Silahkan isi lengkap data diri kamu beserta data calon mempelai untuk kebutuhan undangan digital yang kamu inginkan dan langsung submit.
-              </Typography>
+              </Style.DescriptionChooseThemeKece>
             </Box>
           </Grid>
           <Grid item md={6} lg={6}>
@@ -156,7 +104,7 @@ const CaraKerja = () => {
               alignItems="flex-end"
               justifyContent="flex-end"
             >
-              <img src={IlustrationsTwo} alt="ilustration-one" width="540" height="457" className={classes.ilustrationSpace}/>
+              <Style.ImageIlustration src={IlustrationsTwo} alt="ilustration-one" width="540" height="457"/>
             </Box>
           </Grid>
           <Grid item md={6} lg={6}>
@@ -165,34 +113,32 @@ const CaraKerja = () => {
               alignItems="flex-start"
               justifyContent="flex-start"
             >
-              <img src={IlustrationsThree} alt="ilustration-one" width="540" height="457" className={classes.ilustrationSpace}/>
+              <Style.ImageIlustration src={IlustrationsThree} alt="ilustration-one" width="540" height="457"/>
             </Box>
           </Grid>
           <Grid item md={6} lg={6}>
             <Box mt={20}>
-              <Typography
+              <Style.HeadingIlustration
                 variant="h5"
                 align="center"
                 color="textSecondary"
                 component="p"
-                className={classes.headingIlustration}
               >
                 Tunggu Proses Verifikasi Data
-              </Typography>
-              <Typography
+              </Style.HeadingIlustration>
+              <Style.DescriptionChooseThemeKece
                 variant="h5"
                 align="center"
                 color="textSecondary"
                 component="p"
-                className={classes.descriptionChooseThemeKece}
               >
                 Setelah mengisi formulir dan data diri selanjutnya kamu akan diberikan invoice terkait informasi paket dipilih serta total tagihan yang harus dibayar. Setelah melakukan pembayaran jangan lupa kirim bukti pemesanannya ya.
-              </Typography>
+              </Style.DescriptionChooseThemeKece>
             </Box>
           </Grid>
         </Grid>
       </Box>
-    </Box>
+    </Style.BoxHowItWorks>
   );
 }
 

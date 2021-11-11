@@ -12,7 +12,7 @@
 */
 
 import styled from 'styled-components';
-import { COLORS } from "../../styles/constants";
+import { COLORS } from "@styles/constants";
 import  { Typography, Box, Grid } from '@material-ui/core';
 
 export const MainFooter = styled.footer`

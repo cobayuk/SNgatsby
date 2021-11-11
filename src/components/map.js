@@ -8,6 +8,7 @@ const MAPBOX_TOKEN = "pk.eyJ1IjoicmVrdG9yaXBiIiwiYSI6ImNrbXEwZzN6ZTFlejUydmx3enR
 const Map = () => {
 
   const mapContainerRef = useRef(null);
+  // eslint-disable-next-line no-unused-vars
   const [map, setMap] = useState(null);
 
   useEffect(() => {

@@ -13,7 +13,7 @@ import Ovo from '@assets/logo/digital-payment/ovo.svg';
 import Dana from '@assets/logo/digital-payment/dana.svg';
 import LinkAja from '@assets/logo/digital-payment/link-aja.svg';
 import Gopay from '@assets/logo/digital-payment/gopay.svg';
-import * as Style from '@styles/footer/footerStyled';
+import * as Style from '@components/Footer/FooterStyled';
 
 const Copyright = ({ titles }) => {
   return (

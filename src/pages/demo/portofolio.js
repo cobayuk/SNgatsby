@@ -12,7 +12,7 @@ import {
   CardActions,
 }
 from '@material-ui/core';
-import Header from "@components/Header";
+import Header from "@components/Header/Header";
 import Layout from "@components/layout";
 import GlobalStyle from "@styles/global/globalStyled";
 import useStyles from "@pages/demo/portofolioStyle";

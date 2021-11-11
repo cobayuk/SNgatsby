@@ -6,8 +6,8 @@ import {
   makeStyles
 } from '@material-ui/core';
 import OrnamentFour from "@assets/ornaments/header-tagline/ornament-four.svg";
-import ButtonOrderNow from "./buttons/ordernow";
-import { COLORS } from "../styles/constants";
+import ButtonOrderNow from "../../buttons/ordernow";
+import { COLORS } from "../../../styles/constants";
 
 const useStyles = makeStyles((theme) => ({
   boxHowitWork: {
