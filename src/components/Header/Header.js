@@ -37,9 +37,9 @@ const Header = () => {
         <Style.ButtonLogin href="/client/login">
           Login
         </Style.ButtonLogin>
-        <Style.Links href="/client/daftar">
+        <Style.ButtonDaftar href="/client/daftar">
           Daftar
-        </Style.Links>
+        </Style.ButtonDaftar>
       </Style.HeaderToolbar>
     </Style.HeaderAppBar>
   );

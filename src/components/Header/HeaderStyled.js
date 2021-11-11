@@ -53,11 +53,24 @@ export const Links = styled(Button)`
 `;
 
 export const ButtonLogin = styled(Button)`
+  border-radius: 6px;
+  border: 1px solid #E2B013;
+  color: #E2B013;
+  width: 77px;
+  height: 30px;
+  text-transform: capitalize;
+  font-family: Oxygen;
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 10px;
+`;
+
+export const ButtonDaftar = styled(Button)`
   background: linear-gradient(180deg, #F1D88A 0%, rgba(244, 225, 165, 0.770833) 0.01%, rgba(246, 231, 182, 0.62235) 0.02%, rgba(255, 255, 255, 0) 100%), #E2B013;
-  border-radius: 10px;
+  border-radius: 6px;
   color: ${COLORS.white};
-  width: 104px;
-  height: 36px;
+  width: 77px;
+  height: 30px;
   border: none;
   text-transform: capitalize;
   font-family: Oxygen;
