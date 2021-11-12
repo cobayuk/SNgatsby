@@ -3,13 +3,12 @@ import PropTypes from "prop-types";
 import {
   Grid,
   Link,
-  // Avatar,
+  Box,
   Container,
-  // Typography,
+  Typography,
   CssBaseline
 }
 from '@material-ui/core';
-// import Gopay from '@assets/logo/digital-payment/gopay.svg';
 import * as Style from '@components/Footer/FooterStyled';
 
 const Copyright = ({ titles }) => {
@@ -30,8 +29,12 @@ const Footer = () => {
       <CssBaseline />
       <Container fixed>
         <Grid container>
-          <Grid item lg={3}>
-
+          <Grid item lg={12}>
+            <Box>
+              <Typography>
+                Tunggu apa lagi? Pesan sekarang juga!
+              </Typography>
+            </Box>
           </Grid>
         </Grid>
       </Container>

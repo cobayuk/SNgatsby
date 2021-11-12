@@ -5,8 +5,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 import BrandLogo from '@assets/logo/brand.svg';
 import * as Style from '@components/Header/HeaderStyled';
 
-const Header = (props) => {
-  console.log(props);
+const Header = () => {
   const redirection = (url) => {
     return window.location = url;
   }
