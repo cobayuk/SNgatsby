@@ -1,16 +1,23 @@
 import React from "react";
+import { Link } from "gatsby"
 import PropTypes from "prop-types";
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import BrandLogo from '@assets/logo/brand.svg';
 import * as Style from '@components/Header/HeaderStyled';
 
-const Header = () => {
+const Header = (props) => {
+  console.log(props);
+  const redirection = (url) => {
+    return window.location = url;
+  }
 
   return (
     <Style.HeaderAppBar position="static" color="default" elevation={0}>
       <Style.HeaderToolbar>
         <Style.HeaderToolbarTitle variant="h6" color="inherit" noWrap>
-          <Style.Logobrand src={BrandLogo} alt="brand-logo"/>
+          <Link to="/">
+            <Style.Logobrand src={BrandLogo} alt="brand-logo"/>
+          </Link>
         </Style.HeaderToolbarTitle>
         <nav>
           <Style.Links
@@ -29,7 +36,7 @@ const Header = () => {
             Tentang Kami
           </Style.Links>
           <Style.Links
-            to="/demo/portofolio"
+            onClick={()=> redirection("/demo/portofolio")}
           >
             Demo
           </Style.Links>
