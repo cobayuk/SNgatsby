@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "@material-ui/core";
 import SEO from "@components/seo";
-import * as Style from "../../styles/maintenance/maintenanceStyled";
+import * as Style from "@styles/maintenance/maintenanceStyled";
 import ConstructionImage from "@images/under-construction.gif";
 import Instagram from "@images/instagram.svg";
 import Facebook from "@images/facebook.svg";
@@ -14,12 +15,12 @@ const Maintenance = () => (
       <Style.Title>Website under construction</Style.Title>
       <Style.Description>Welcome to <b>Sungnikah.com</b>, we are currently working on this site. <br/>Meanwhile, you can get updates in our social media below!</Style.Description>
       <Style.Footer>
-        <a href="https://www.instagram.com/sungnikah/">
+        <Link href="https://www.instagram.com/sungnikah/">
           <Style.InstagramIcon src={Instagram} alt="instagram"/>
-        </a>
-        <a href="https://www.facebook.com/sungnikah/">
+        </Link>
+        <Link href="https://www.facebook.com/sungnikah/">
           <Style.FacebookIcon src={Facebook} alt="facebook"/>
-        </a>
+        </Link>
       </Style.Footer>
     </Style.Container>
   </>
