@@ -48,20 +48,22 @@ const PlatinumTheme = () =>  {
     return(
         <Fragment>
             <Style.Header id="header">
-                <Style.Invite>Dear you, you’re invited to</Style.Invite>
-                <Style.Title>THE WEDDING OF</Style.Title>
-                <Grid container spacing={2}>
-                    <Grid item xs={12} lg={4}>
-                        <Style.Person>Prasetyo</Style.Person>
+                <Style.WrapperInvitation>
+                    <Style.Invite>Dear you, you’re invited to</Style.Invite>
+                    <Style.Title>THE WEDDING OF</Style.Title>
+                    <Grid container spacing={2}>
+                        <Grid item xs={12} md={6}>
+                            <Style.Groom>Prasetyo</Style.Groom>
+                        </Grid>
+                        <Grid item xs={12} md={1}>
+                            <Style.Ampersand>&</Style.Ampersand>
+                        </Grid>
+                        <Grid item xs={12} md={5}>
+                            <Style.Bride>Rere</Style.Bride>
+                        </Grid>
                     </Grid>
-                    <Grid item xs={12} lg={4}>
-                        <Style.Person>&</Style.Person>
-                    </Grid>
-                    <Grid item xs={12} lg={4}>
-                        <Style.Person>Rere</Style.Person>
-                    </Grid>
-                </Grid>
-                <Style.CountDown>{timerComponents.length ? timerComponents : <span>Happy Wedding!</span>}</Style.CountDown>
+                    <Style.CountDown>{timerComponents.length ? timerComponents : <span>Happy Wedding!</span>}</Style.CountDown>
+                </Style.WrapperInvitation>
             </Style.Header>
         </Fragment>
     )

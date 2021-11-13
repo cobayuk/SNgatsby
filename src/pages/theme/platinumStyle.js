@@ -17,12 +17,17 @@ import "@fontsource/crimson-text";
 import "@fontsource/questrial";
 import "@fontsource/dancing-script";
 
+export const WrapperInvitation = styled(Box)`
+    top: 160px;
+    position: relative;
+`;
+
 export const Invite = styled.p`
     font-family: Crimson Text;
     font-style: italic;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 24px;
+    line-height: 45px;
     color: white;
 `;
 
@@ -30,27 +35,47 @@ export const Title = styled.p`
     font-family: Questrial;
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 36px;
+    line-height: 37px;
     letter-spacing: 0.3em;
     color: white;
 `;
 
-export const Person = styled.p`
+export const Groom = styled.p`
     font-family: Dancing Script;
     font-style: normal;
     font-weight: normal;
-    font-size: 36px;
-    line-height: 43px;
+    font-size: 96px;
+    line-height: 24px;
     color: white;
+    text-align: right;
+`;
+
+export const Ampersand = styled.p`
+    font-family: Dancing Script;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 24px;
+    color: white;
+`;
+
+export const Bride = styled.p`
+    font-family: Dancing Script;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 24px;
+    color: white;
+    text-align: left;
 `;
 
 export const CountDown = styled.p`
     font-family: Crimson Text;
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 17px;
+    font-size: 24px;
+    line-height: 24px;
     color: white;
 `;
 
@@ -61,4 +86,5 @@ export const Header = styled(Box)`
     background-size: cover;
     position: relative;
     background-position: 50%;
+    text-align: center;
 `;
