@@ -52,15 +52,15 @@ const PlatinumTheme = () =>  {
                     <Style.Invite>Dear you, you’re invited to</Style.Invite>
                     <Style.Title>THE WEDDING OF</Style.Title>
                     <Grid container spacing={2}>
-                        <Grid item xs={12} md={6}>
+                        <Style.ResponsiveGrid item xs={12} md={6}>
                             <Style.Groom>Prasetyo</Style.Groom>
-                        </Grid>
-                        <Grid item xs={12} md={1}>
+                        </Style.ResponsiveGrid>
+                        <Style.ResponsiveGrid item xs={12} md={1}>
                             <Style.Ampersand>&</Style.Ampersand>
-                        </Grid>
-                        <Grid item xs={12} md={5}>
+                        </Style.ResponsiveGrid>
+                        <Style.ResponsiveGrid item xs={12} md={5}>
                             <Style.Bride>Rere</Style.Bride>
-                        </Grid>
+                        </Style.ResponsiveGrid>
                     </Grid>
                     <Style.CountDown>{timerComponents.length ? timerComponents : <span>Happy Wedding!</span>}</Style.CountDown>
                 </Style.WrapperInvitation>
