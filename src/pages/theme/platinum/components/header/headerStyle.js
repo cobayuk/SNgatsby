@@ -1,6 +1,6 @@
 /*
 | ===========================================================
-|    This file contains all styles for Themes 2.
+|    This file contains Header styles for Themes Platinum.
 | ===========================================================
 |
 | Author  : Sungnikah Corporation's.
@@ -9,8 +9,7 @@
 */
 
 import styled from 'styled-components';
-import { Box, Grid, Typography, Button } from '@material-ui/core';
-import { breakpoints } from '@components/media';
+import { Box, Grid } from '@material-ui/core';
 import AssetHeader from "@assets/photos/asset-3.jpeg";
 // Fonts
 import "@fontsource/crimson-text";
@@ -129,7 +128,13 @@ export const CountDown = styled.p`
 export const Header = styled(Box)`
     width: 100vw;
     height: 100vh;
-    background-image: url(${AssetHeader});
+    background:
+       linear-gradient(
+          rgba(0, 0, 0, 0.1), 
+          rgba(0, 0, 0, 0.6)
+        ),
+        url(${AssetHeader});
+    }
     background-size: cover;
     position: relative;
     background-position: 50%;
