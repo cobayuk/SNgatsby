@@ -5,12 +5,11 @@ import {
 } from "@material-ui/core";
 import PropTypes from "prop-types";
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import DrawerComponent from "@components/Drawer/Drawer";
 import * as Style from '@components/Navbar/NavbarMenuStyled';
 
 const NavbarMenu = (props) => {
+
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -22,9 +21,6 @@ const NavbarMenu = (props) => {
     <Fragment>
       {isMobile ? (
         <>
-          <IconButton edge="start" color="inherit" aria-label="menu">
-            <MenuIcon/>
-          </IconButton>
           <DrawerComponent/>
         </>
       ) : (

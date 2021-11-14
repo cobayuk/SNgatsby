@@ -20,14 +20,17 @@ import {
 } from "@material-ui/core";
 import { COLORS } from "@styles/constants";
 
-export const LinkDrawer =  styled(Link)`
+export const LinkDrawer = styled(Link)`
   text-decoration: none;
   color: blue;
   font-size: 20px;
 `;
 
-export const IconButtons =  styled(IconButton)`
+export const IconButtons = styled(IconButton)`
   color: ${COLORS.black};
+  &.MuiSvgIcon-root {
+    font-size: 150px;
+  }
 `;
 
 export const Links = styled(Button)`

@@ -19,8 +19,6 @@ import useStyles from "@pages/demo/portofolioStyle";
 
 const DemoPortofolio = () => {
   const classes = useStyles();
-
-  // TODO : change this data get from API SNanorestfull !
   const [ themes ] = useState([
     {
       id: Math.floor(Math.random() * 100),
@@ -67,6 +65,7 @@ const DemoPortofolio = () => {
       <Container maxWidth="lg">
         <Header/>
       </Container>
+
       <Box className={classes.heroContent}>
         <Typography
           component="h1"
@@ -90,6 +89,7 @@ const DemoPortofolio = () => {
         </Typography>
         <Box className={classes.innerTriangleContent}></Box>
       </Box>
+
       <Layout>
         <Container className={classes.cardGrid} maxWidth="md">
           {/* End hero unit */}
@@ -121,6 +121,7 @@ const DemoPortofolio = () => {
           </Grid>
         </Container>
       </Layout>
+
     </React.Fragment>
   );
 }

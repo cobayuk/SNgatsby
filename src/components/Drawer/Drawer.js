@@ -6,6 +6,7 @@ import {
   ListItemText,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import * as Style from '@components/Drawer/DrawerStyled';
 
 const DrawerComponent = () => {
@@ -20,25 +21,41 @@ const DrawerComponent = () => {
         <List>
           <ListItem onClick={() => setOpenDrawer(false)}>
           <ListItemText>
-            <Style.LinkDrawer to="/" >Home</Style.LinkDrawer>
+            <Style.LinkDrawer
+              onClick={() => scrollTo('#itworks')}
+            >
+              Cara Pesan
+            </Style.LinkDrawer>
           </ListItemText>
           </ListItem>
           <Divider/>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Style.LinkDrawer to="/about">About</Style.LinkDrawer>
+              <Style.LinkDrawer
+                onClick={() => scrollTo('#pricing')}
+              >
+                Paket Harga
+              </Style.LinkDrawer>
             </ListItemText>
           </ListItem>
           <Divider/>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Style.LinkDrawer to="/contact">Contact</Style.LinkDrawer>
+              <Style.LinkDrawer
+                onClick={() => scrollTo('#howitworks')}
+              >
+                Tentang Kami
+              </Style.LinkDrawer>
             </ListItemText>
           </ListItem>
           <Divider/>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Style.LinkDrawer to="/about">Faq</Style.LinkDrawer>
+              <Style.LinkDrawer
+                onClick={() => scrollTo('#pricing')}
+              >
+                Paket Harga
+              </Style.LinkDrawer>
             </ListItemText>
           </ListItem>
           <Divider/>
