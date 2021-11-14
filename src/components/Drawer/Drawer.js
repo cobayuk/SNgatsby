@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   List,
-  Drawer,
   Divider,
   ListItem,
   ListItemText,
@@ -14,7 +13,7 @@ const DrawerComponent = () => {
 
   return (
     <>
-      <Drawer
+      <Style.MenuDrawer
         open={openDrawer}
         onClose={() => setOpenDrawer(false)}
       >
@@ -44,7 +43,7 @@ const DrawerComponent = () => {
           </ListItem>
           <Divider/>
         </List>
-      </Drawer>
+      </Style.MenuDrawer>
       <Style.IconButtons onClick={() => setOpenDrawer(!openDrawer)}>
         <MenuIcon />
       </Style.IconButtons>

@@ -27,6 +27,9 @@ export const HeaderToolbarTitle = styled(Typography)`
 export const HeaderAppBar = styled(AppBar)`
   margin-top: 50px;
   background-color: ${COLORS.white};
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
 `;
 
 export const HeaderToolbar = styled(Toolbar)`

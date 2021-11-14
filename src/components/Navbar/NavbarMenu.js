@@ -23,9 +23,9 @@ const NavbarMenu = (props) => {
       {isMobile ? (
         <>
           <IconButton edge="start" color="inherit" aria-label="menu">
-            <MenuIcon />
+            <MenuIcon/>
           </IconButton>
-        <DrawerComponent />
+          <DrawerComponent/>
         </>
       ) : (
         <>

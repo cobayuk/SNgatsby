@@ -33,6 +33,9 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 300;
     font-style: normal;
   }
+  ul {
+    list-style: none;
+  }
 `;
 
 export default GlobalStyle

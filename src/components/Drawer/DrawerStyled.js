@@ -15,6 +15,7 @@ import styled from 'styled-components';
 import {
   Link,
   Button,
+  Drawer,
   IconButton,
 } from "@material-ui/core";
 import { COLORS } from "@styles/constants";
@@ -33,8 +34,15 @@ export const Links = styled(Button)`
   margin: 10px;
   font-size: 14px;
   text-decoration: none;
-  color: #000;
+  color: ${COLORS.black};
   font-family: Oxygen, sans-serif;
   font-weight: 600;
   text-transform: capitalize;
+`;
+
+export const MenuDrawer = styled(Drawer)`
+  & .MuiDrawer-paper {
+    max-width: 100%;
+    width: 70%;
+  }
 `;
