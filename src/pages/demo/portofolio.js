@@ -68,10 +68,23 @@ const DemoPortofolio = () => {
         <Header/>
       </Container>
       <Box className={classes.heroContent}>
-        <Typography component="h1" variant="h1" align="center" color="textPrimary" gutterBottom className={classes.headingPorto}>
+        <Typography
+          component="h1"
+          variant="h1"
+          align="center"
+          color="textPrimary"
+          gutterBottom
+          className={classes.headingPorto}
+        >
           Pilih Desain Undangan Kesukaan Kamu
         </Typography>
-        <Typography variant="h2" align="center" color="textSecondary" paragraph className={classes.headingDescPorto}>
+        <Typography
+          variant="h2"
+          align="center"
+          color="textSecondary"
+          paragraph
+          className={classes.headingDescPorto}
+        >
           Kini lebih mudah hanya sekali klik dan order desain undangan kesukaan kamu,
           boleh lihat - lihat dahulu, jika ada yang kaka ingin tanyakan bisa langsung hubungi kami ya, dengan cara klik tombol dibawah ini
         </Typography>
@@ -110,7 +123,6 @@ const DemoPortofolio = () => {
       </Layout>
     </React.Fragment>
   );
-
 }
 
 export default DemoPortofolio;

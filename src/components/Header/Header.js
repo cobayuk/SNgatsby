@@ -1,86 +1,37 @@
 import React from "react";
 import { Link } from "gatsby"
 import PropTypes from "prop-types";
-import scrollTo from 'gatsby-plugin-smoothscroll';
+import {
+  useTheme,
+  CssBaseline,
+  useMediaQuery,
+} from "@material-ui/core";
 import BrandLogo from '@assets/logo/brand.svg';
+import NavbarMenu from '@components/Navbar/NavbarMenu';
+import DrawerComponent from "@components/Drawer/Drawer";
 import * as Style from '@components/Header/HeaderStyled';
 
 const Header = () => {
+
   let url = window.location.pathname;
   let sanitizeUrl = url.substring(1, url.lastIndexOf('/'));
-
-  const redirection = (url) => {
-    return window.location = url;
-  }
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Style.HeaderAppBar position="static" color="default" elevation={0}>
+      <CssBaseline />
       <Style.HeaderToolbar>
         <Style.HeaderToolbarTitle variant="h6" color="inherit" noWrap>
           <Link to="/">
             <Style.Logobrand src={BrandLogo} alt="brand-logo"/>
           </Link>
         </Style.HeaderToolbarTitle>
-        <nav>
-          {(sanitizeUrl === 'demo' ? (
-            <>
-              <Style.Links
-                onClick={() => redirection('/')}
-              >
-                Cara Pesan
-              </Style.Links>
-              <Style.Links
-                onClick={() => redirection('/')}
-              >
-                Paket Harga
-              </Style.Links>
-              <Style.Links
-                onClick={() => redirection('/')}
-              >
-                Tentang Kami
-              </Style.Links>
-              <Style.Links
-                onClick={() => redirection('/')}
-              >
-                Paket Harga
-              </Style.Links>
-            </>
-          ) : (
-            <>
-              <Style.Links
-                onClick={() => scrollTo('#itworks')}
-              >
-                Cara Pesan
-              </Style.Links>
-              <Style.Links
-                onClick={() => scrollTo('#pricing')}
-              >
-                Paket Harga
-              </Style.Links>
-              <Style.Links
-                onClick={() => scrollTo('#howitworks')}
-              >
-                Tentang Kami
-              </Style.Links>
-              <Style.Links
-                onClick={() => scrollTo('#pricing')}
-              >
-                Paket Harga
-              </Style.Links>
-            </>
-          ))}
-          <Style.Links
-            onClick={()=> redirection("/demo/portofolio")}
-          >
-            Demo
-          </Style.Links>
-        </nav>
-        <Style.ButtonLogin href="/client/login">
-          Login
-        </Style.ButtonLogin>
-        <Style.ButtonDaftar href="/client/daftar">
-          Daftar
-        </Style.ButtonDaftar>
+        {isMobile ? (
+          <DrawerComponent />
+        ) : (
+          <NavbarMenu url={sanitizeUrl}/>
+        )}
       </Style.HeaderToolbar>
     </Style.HeaderAppBar>
   );
@@ -93,5 +44,6 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
 }
+
 
 export default Header;
