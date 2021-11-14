@@ -9,7 +9,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container } from '@material-ui/core';
 import { StaticQuery, graphql } from "gatsby";
-import Footer from "@components/Footer/Footer";
+// import Footer from "@components/Footer/Footer";
 
 const Layout = ({ children }) => (
     <StaticQuery
@@ -24,10 +24,10 @@ const Layout = ({ children }) => (
       `}
       render={data => (
         <>
-          <Container>
-            <main>{children}</main>
+          <Container maxWidth="lg">
+            {children}
           </Container>
-          <Footer siteTitle={data.site.siteMetadata.title} />
+          {/* <Footer siteTitle={data.site.siteMetadata.title} /> */}
         </>
       )}
     />

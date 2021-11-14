@@ -68,6 +68,10 @@ export const BORDER_RADIUS = {
  *
 */
 export const FONT_SIZE = {
+  font8: '8px',
+  font9: '9px',
+  font10: '10px',
+  font11: '11px',
   font12: '12px',
   font13: '13px',
   font14: '14px',

@@ -14,6 +14,7 @@ import {
 from '@material-ui/core';
 import Header from "@components/Header/Header";
 import Layout from "@components/layout";
+import SEO from "@components/seo";
 import GlobalStyle from "@styles/global/globalStyled";
 import useStyles from "@pages/demo/portofolioStyle";
 
@@ -60,6 +61,7 @@ const DemoPortofolio = () => {
 
   return (
     <React.Fragment>
+      <SEO />
       <GlobalStyle />
       <CssBaseline />
       <Container maxWidth="lg">

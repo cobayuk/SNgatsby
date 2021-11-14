@@ -27,6 +27,18 @@ export const BoxHeader = styled(Box)`
   margin-top: 72px;
   border-radius: 20px;
   background-color: #F1EDEA;
+  @media (max-width: 320px) {
+    margin-top: 10px;
+    padding: 48px 15px 0px 15px;
+    height: 350px;
+    margin-bottom: 45px;
+  }
+  @media (min-width: 375px) and (max-width: 768px) {
+    margin-top: 10px;
+    padding: 48px 21px 0px 21px;
+    height: 400px;
+    margin-bottom: 45px;
+  }
 `;
 
 export const HeadingTagline = styled.h1`
@@ -35,6 +47,10 @@ export const HeadingTagline = styled.h1`
   font-family: Oxygen;
   font-weight: bold;
   line-height: 61px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
 `;
 
 export const ParagraphTagline = styled(Typography)`
@@ -46,6 +62,14 @@ export const ParagraphTagline = styled(Typography)`
     font-family: Oxygen;
     line-height: 25px;
     margin-bottom: 15px;
+    @media (max-width: 320px) {
+      font-size: 9px;
+      line-height: 10px;
+    }
+    @media (min-width: 375px) and (max-width: 768px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 `;
 
@@ -78,10 +102,21 @@ export const IconCircleLove = styled.img`
 export const BoxOrnamentsOne = styled(Box)`
   &.MuiBox-root {
     top: -12em;
-    float: left;
     right: -12em;
     display: flex;
     position: relative;
+    @media (max-width: 320px) {
+      top: -2px;
+      left: 30px;
+      width: auto;
+      height: 72%;
+      justify-content: flex-end;
+    }
+    @media (min-width: 375px) and (max-width: 768px) {
+      top: -2em;
+      left: 38px;
+      justify-content: flex-end;
+    }
   }
 `;
 
@@ -107,10 +142,22 @@ export const BoxOrnamentsThree = styled(Box)`
 
 export const BoxOrnamentsFour = styled(Box)`
   &.MuiBox-root {
-    top: -35em;
-    float: left;
-    right: 16em;
     display: flex;
     position: relative;
+    @media (max-width: 320px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @media (min-width: 375px) and (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
+`;
+
+export const ImageTagOrnaments = styled.img`
+  width: auto;
+  height: 155px;
 `;

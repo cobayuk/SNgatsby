@@ -42,4 +42,7 @@ export const Logobrand = styled.img`
   height: 35px;
   display: flex;
   align-items: align-start;
+  @media (max-width: 768px) {
+    height: 25px;
+  }
 `;
