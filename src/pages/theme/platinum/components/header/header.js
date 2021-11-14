@@ -1,8 +1,8 @@
-import React, { useEffect, useState, Fragment } from "react";
-import { Box, Grid, Typography }from '@material-ui/core';
-import * as Style from "./platinumStyle";
+import React, { useEffect, useState } from "react";
+import { Grid }from '@material-ui/core';
+import * as Style from "./headerStyle";
 
-const PlatinumTheme = () =>  {
+const HeaderPlatinum = () =>  {
 
     const calculateTimeLeft = () => {
         let year = new Date().getFullYear();
@@ -46,7 +46,7 @@ const PlatinumTheme = () =>  {
     });
 
     return(
-        <Fragment>
+        <>
             <Style.Header id="header">
                 <Style.WrapperInvitation>
                     <Style.Invite>Dear you, you’re invited to</Style.Invite>
@@ -65,8 +65,8 @@ const PlatinumTheme = () =>  {
                     <Style.CountDown>{timerComponents.length ? timerComponents : <span>Happy Wedding!</span>}</Style.CountDown>
                 </Style.WrapperInvitation>
             </Style.Header>
-        </Fragment>
+        </>
     )
 }
 
-export default PlatinumTheme;
+export default HeaderPlatinum;
