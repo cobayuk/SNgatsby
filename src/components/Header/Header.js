@@ -6,6 +6,9 @@ import BrandLogo from '@assets/logo/brand.svg';
 import * as Style from '@components/Header/HeaderStyled';
 
 const Header = () => {
+  let url = window.location.pathname;
+  let sanitizeUrl = url.substring(1, url.lastIndexOf('/'));
+
   const redirection = (url) => {
     return window.location = url;
   }
@@ -19,21 +22,53 @@ const Header = () => {
           </Link>
         </Style.HeaderToolbarTitle>
         <nav>
-          <Style.Links
-            onClick={() => scrollTo('#itworks')}
-          >
-            Cara Pesan
-          </Style.Links>
-          <Style.Links
-            onClick={() => scrollTo('#pricing')}
-          >
-            Paket Harga
-          </Style.Links>
-          <Style.Links
-            onClick={() => scrollTo('#howitworks')}
-          >
-            Tentang Kami
-          </Style.Links>
+          {(sanitizeUrl === 'demo' ? (
+            <>
+              <Style.Links
+                onClick={() => redirection('/')}
+              >
+                Cara Pesan
+              </Style.Links>
+              <Style.Links
+                onClick={() => redirection('/')}
+              >
+                Paket Harga
+              </Style.Links>
+              <Style.Links
+                onClick={() => redirection('/')}
+              >
+                Tentang Kami
+              </Style.Links>
+              <Style.Links
+                onClick={() => redirection('/')}
+              >
+                Paket Harga
+              </Style.Links>
+            </>
+          ) : (
+            <>
+              <Style.Links
+                onClick={() => scrollTo('#itworks')}
+              >
+                Cara Pesan
+              </Style.Links>
+              <Style.Links
+                onClick={() => scrollTo('#pricing')}
+              >
+                Paket Harga
+              </Style.Links>
+              <Style.Links
+                onClick={() => scrollTo('#howitworks')}
+              >
+                Tentang Kami
+              </Style.Links>
+              <Style.Links
+                onClick={() => scrollTo('#pricing')}
+              >
+                Paket Harga
+              </Style.Links>
+            </>
+          ))}
           <Style.Links
             onClick={()=> redirection("/demo/portofolio")}
           >
