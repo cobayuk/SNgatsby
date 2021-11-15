@@ -27,9 +27,12 @@ export const ContentGridCaraPesan = styled(Grid)`
 
 export const BoxHowItWorks = styled(Box)`
   display: flex;
-  margin-top: 10px;
+  margin-top: 350px;
   padding: 0 10px 0 10px;
   padding-top: 50px;
+  @media (min-width: 320px) and (max-width: 768px) {
+    margin-top: 0;
+  }
 `;
 
 export const HeadingItWork = styled(Typography)`
@@ -86,16 +89,18 @@ export const ImageTagOrnaments = styled.img`
 `;
 
 export const WrapperHeadings = styled(Box)`
-  padding-right: 36px;
+  padding-right: 160px;
   @media (min-width: 320px) and (max-width: 768px) {
     padding-right: 0;
   }
 `;
 
 export const WrapperButtonCaraPesan = styled(Box)`
-  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  @media (min-width: 320px) and (max-width: 768px) {
+    margin: 0 auto;
+    justify-content: center;
+  }
 `;
 
 export const SpacerOrnamentsMobile = styled(Box)`

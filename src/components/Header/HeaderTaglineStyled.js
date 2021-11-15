@@ -102,9 +102,10 @@ export const IconCircleLove = styled.img`
 export const BoxOrnamentsOne = styled(Box)`
   &.MuiBox-root {
     top: -12em;
-    right: -12em;
+    right: 150px;
     display: flex;
     position: relative;
+    justify-content: flex-end;
     @media (max-width: 320px) {
       top: -2px;
       left: 30px;
@@ -122,7 +123,7 @@ export const BoxOrnamentsOne = styled(Box)`
 
 export const BoxOrnamentsTwo = styled(Box)`
   &.MuiBox-root {
-    top: 0;
+    top: -310px;
     left: 50px;
     float: right;
     display: flex;
@@ -144,6 +145,7 @@ export const BoxOrnamentsFour = styled(Box)`
   &.MuiBox-root {
     display: flex;
     position: relative;
+    right: 271px;
     @media (max-width: 320px) {
       display: flex;
       justify-content: center;

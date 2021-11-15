@@ -19,9 +19,9 @@ const HeaderTagline = () => {
 
   return (
     <Style.BoxHeader>
-      {isMobile ? (
-        <>
-          <Grid container>
+      <Grid container>
+        {isMobile ? (
+          <>
             <Grid item xs={6} md={6}>
               <Style.HeadingTagline> Buat langsung undangan nikah kamu secara cepat dan murah.</Style.HeadingTagline>
               <Style.ParagraphTagline color="inherit">
@@ -36,43 +36,43 @@ const HeaderTagline = () => {
                 <img src={OrnamentOne} alt="ornament-one"/>
               </Style.BoxOrnamentsOne>
             </Grid>
-          </Grid>
-        </>
-      ) : (
-        <>
-          <Grid item md={6} lg={6}>
-            <Style.HeadingTagline> Buat langsung undangan nikah kamu secara cepat dan murah.</Style.HeadingTagline>
-            <Style.ParagraphTagline color="inherit">
-              Dengan banyak pilihan desain yang elegan, minimalis dan
-              responsif. Cocok bagi kamu yang ingin tampil beda di undangan
-              digital pernikahan kamu.
-            </Style.ParagraphTagline>
-            <ButtonOrderNow> Order Sekarang </ButtonOrderNow>
-          </Grid>
+          </>
+        ) : (
+          <>
+            <Grid item md={6} lg={6}>
+              <Style.HeadingTagline> Buat langsung undangan nikah kamu secara cepat dan murah.</Style.HeadingTagline>
+              <Style.ParagraphTagline color="inherit">
+                Dengan banyak pilihan desain yang elegan, minimalis dan
+                responsif. Cocok bagi kamu yang ingin tampil beda di undangan
+                digital pernikahan kamu.
+              </Style.ParagraphTagline>
+              <ButtonOrderNow> Order Sekarang </ButtonOrderNow>
+            </Grid>
 
-          <Grid item md={6} lg={6}>
-            <Style.BoxReactangleSmall>
-              <Style.IconCircleLove src={CircleLove} alt="circle-love"/>
-              <Style.HeadingLove>
-                Kamu berhasil mengatur waktu tanggal pernikahan kamu.
-              </Style.HeadingLove>
-            </Style.BoxReactangleSmall>
+            <Grid item md={6} lg={6}>
+              <Style.BoxReactangleSmall>
+                <Style.IconCircleLove src={CircleLove} alt="circle-love"/>
+                <Style.HeadingLove>
+                  Kamu berhasil mengatur waktu tanggal pernikahan kamu.
+                </Style.HeadingLove>
+              </Style.BoxReactangleSmall>
 
-            <Style.BoxOrnamentsOne>
-              <img src={OrnamentOne} alt="ornament-one"/>
-            </Style.BoxOrnamentsOne>
-            <Style.BoxOrnamentsTwo>
-              <img src={OrnamentTwo} alt="ornament-two"/>
-            </Style.BoxOrnamentsTwo>
-            <Style.BoxOrnamentsThree>
-              <img src={OrnamentThree} alt="ornament-three"/>
-            </Style.BoxOrnamentsThree>
-            <Style.BoxOrnamentsFour>
-              <img src={OrnamentFour} alt="ornament-four"/>
-            </Style.BoxOrnamentsFour>
-          </Grid>
-        </>
-      )}
+              <Style.BoxOrnamentsOne>
+                <img src={OrnamentOne} alt="ornament-one"/>
+              </Style.BoxOrnamentsOne>
+              <Style.BoxOrnamentsTwo>
+                <img src={OrnamentTwo} alt="ornament-two"/>
+              </Style.BoxOrnamentsTwo>
+              <Style.BoxOrnamentsThree>
+                <img src={OrnamentThree} alt="ornament-three"/>
+              </Style.BoxOrnamentsThree>
+              <Style.BoxOrnamentsFour>
+                <img src={OrnamentFour} alt="ornament-four"/>
+              </Style.BoxOrnamentsFour>
+            </Grid>
+          </>
+        )}
+      </Grid>
     </Style.BoxHeader>
   );
 }
