@@ -58,7 +58,7 @@ const DrawerComponent = () => {
               <ListItem onClick={() => setOpenDrawer(false)}>
               <ListItemText>
                 <Style.LinkDrawer
-                  onClick={() => scrollTo(value.url_name)}
+                  onClick={() => scrollTo(`${value.url_name}`)}
                 >
                   {value.label_name}
                 </Style.LinkDrawer>
