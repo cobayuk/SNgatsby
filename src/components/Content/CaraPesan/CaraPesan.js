@@ -1,74 +1,50 @@
 import React from "react";
 import {
-  Box,
   Grid,
-  Typography,
-  makeStyles
+  useTheme,
+  useMediaQuery
 } from '@material-ui/core';
 import OrnamentFour from "@assets/ornaments/header-tagline/ornament-four.svg";
-import ButtonOrderNow from "../../buttons/ordernow";
-import { COLORS } from "../../../styles/constants";
-
-const useStyles = makeStyles((theme) => ({
-  boxHowitWork: {
-    display: 'flex',
-    marginTop: theme.spacing(50),
-    padding: theme.spacing(0, 10, 0, 10),
-    paddingTop: '50px'
-  },
-  headingItWork: {
-    fontFamily: 'Oxygen',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
-    fontSize: '30px',
-    lineHeight: 1.4,
-    margin: theme.spacing(2, 0, 3, 0)
-  },
-  headingHowToOrder: {
-    fontFamily: 'Oxygen',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
-    fontSize: '20px',
-    color: COLORS.brownSugar,
-    textTransform: 'uppercase'
-  },
-  taglineCaption: {
-    fontFamily: 'Oxygen',
-    fontStyle: 'normal',
-    fontWeight: 'normal',
-    fontSize: '15px',
-    lineHeight: '25px',
-    color: COLORS.graySoftly,
-    display: 'flex',
-    marginBottom: theme.spacing(2)
-  }
-}));
+import ButtonOrderNow from "@components/Buttons/OrderNow";
+import * as Style from '@components/Content/CaraPesan/CaraPesanStyled';
 
 const CaraPesan = () => {
-  const classes = useStyles();
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Box className={classes.boxHowitWork} id="itworks">
-      <Grid container>
+    <Style.BoxHowItWorks id="itworks">
+      <Style.ContentGridCaraPesan container>
         <Grid item md={8} lg={8}>
-          <Box pr={16}>
-            <Typography variant="h1" color="inherit" className={classes.headingHowToOrder}>
+          <Style.WrapperHeadings>
+            <Style.HeadingHowToOrder variant="h1" color="inherit">
               Cara Pesan
-            </Typography>
-            <Typography variant="h2" color="inherit" className={classes.headingItWork}>
+            </Style.HeadingHowToOrder>
+            <Style.HeadingItWork variant="h2" color="inherit">
               Pilih desain, tentukan paket, sung order deh.
-            </Typography>
-            <Typography variant="h6" color="inherit" className={classes.taglineCaption}>
+            </Style.HeadingItWork>
+            <Style.TaglineCaption variant="h6" color="inherit">
               Pilihan desainnya sudah mantap? Nah kalau udah ada pilihannya kamu tinggal pilih deh untuk fitur paket yang telah disediakan, yaitu paket Bronze, Silver, ataupun Gold. Lalu klik order untuk pemesanan lebih lanjut.
-            </Typography>
-          </Box>
-          <ButtonOrderNow> Order Sekarang </ButtonOrderNow>
+            </Style.TaglineCaption>
+          </Style.WrapperHeadings>
+          <Style.WrapperButtonCaraPesan>
+            <ButtonOrderNow> Order Sekarang </ButtonOrderNow>
+          </Style.WrapperButtonCaraPesan>
         </Grid>
-        <Grid item md={4} lg={4}>
-          <img src={OrnamentFour} alt="ornament-four" />
-        </Grid>
-      </Grid>
-    </Box>
+        {isMobile ? (
+          <Style.SpacerOrnamentsMobile mt={5}>
+            <Grid>
+              <Style.ImageTagOrnaments src={OrnamentFour} alt="ornament-four"/>
+            </Grid>
+          </Style.SpacerOrnamentsMobile>
+        ) : (
+          <Grid item md={4} lg={4}>
+            <img src={OrnamentFour} alt="ornament-four" />
+          </Grid>
+        )}
+      </Style.ContentGridCaraPesan>
+    </Style.BoxHowItWorks>
   );
 }
 

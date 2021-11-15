@@ -3,9 +3,7 @@ import PropTypes from "prop-types";
 import {
   Grid,
   Link,
-  Box,
   Container,
-  Typography,
   CssBaseline
 }
 from '@material-ui/core';
@@ -29,12 +27,10 @@ const Footer = () => {
       <CssBaseline />
       <Container fixed>
         <Grid container>
-          <Grid item lg={12}>
-            <Box>
-              <Typography>
-                Tunggu apa lagi? Pesan sekarang juga!
-              </Typography>
-            </Box>
+          <Grid item xs={12} md={12} lg={12}>
+            <Style.HeadingBanner>
+              Tunggu apa lagi? Pesan sekarang juga!
+            </Style.HeadingBanner>
           </Grid>
         </Grid>
       </Container>

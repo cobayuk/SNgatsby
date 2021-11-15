@@ -157,7 +157,3 @@ export const BoxOrnamentsFour = styled(Box)`
   }
 `;
 
-export const ImageTagOrnaments = styled.img`
-  width: auto;
-  height: 155px;
-`;

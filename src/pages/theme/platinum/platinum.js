@@ -9,17 +9,17 @@ import Footer from "./components/footer/footer";
 
 const PlatinumTheme = () =>  {
 
-    return(
-        <Fragment>
-            <HeaderPlatinum/>
-            <Intro/>
-            <Gallery/>
-            <QuotesAndDates/>
-            <Protocol/>
-            <AmplopCashless/>
-            <Footer/>
-        </Fragment>
-    )
+  return(
+    <Fragment>
+      <HeaderPlatinum/>
+      <Intro/>
+      <Gallery/>
+      <QuotesAndDates/>
+      <Protocol/>
+      <AmplopCashless/>
+      <Footer/>
+    </Fragment>
+  )
 }
 
 export default PlatinumTheme;

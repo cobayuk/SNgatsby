@@ -12,15 +12,23 @@
 */
 
 import styled from 'styled-components';
-import { COLORS } from "@styles/constants";
-import  { Typography, Box, Grid } from '@material-ui/core';
+import { COLORS, FONT_FAMILY } from "@styles/constants";
+import  {
+  Typography,
+  Box,
+  Grid
+}
+from '@material-ui/core';
 
 export const MainFooter = styled.footer`
   display: flex;
   flex-direction: column;
   padding: 20px 20px 0 20px;
-  margin-top: auto;
   background-color: #E2B62E;
+  bottom: 0;
+  width: 100%;
+  height: 193px;
+  margin-top: 300px;
 `;
 
 export const HeadingWeLoveBuild = styled(Typography)`
@@ -121,4 +129,15 @@ export const WrapperMediaSocial = styled(Box)`
 export const BoxMediaSocial = styled(Box)`
   padding-left: 15px;
   display: flex;
+`;
+
+export const HeadingBanner = styled(Typography)`
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: ${FONT_FAMILY.oxygen};
+  color: ${COLORS.white};
+  @media (max-width: 768px) {
+    font-size: 19px;
+  }
 `;

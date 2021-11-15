@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Box,
   Grid,
   useTheme,
   useMediaQuery
@@ -38,13 +37,6 @@ const HeaderTagline = () => {
               </Style.BoxOrnamentsOne>
             </Grid>
           </Grid>
-          <Box mt={5}>
-            <Grid>
-              <Style.BoxOrnamentsFour>
-                <Style.ImageTagOrnaments src={OrnamentFour} alt="ornament-four"/>
-              </Style.BoxOrnamentsFour>
-            </Grid>
-          </Box>
         </>
       ) : (
         <>
@@ -79,7 +71,6 @@ const HeaderTagline = () => {
               <img src={OrnamentFour} alt="ornament-four"/>
             </Style.BoxOrnamentsFour>
           </Grid>
-
         </>
       )}
     </Style.BoxHeader>
