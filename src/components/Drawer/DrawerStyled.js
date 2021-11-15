@@ -18,12 +18,13 @@ import {
   Drawer,
   IconButton,
 } from "@material-ui/core";
-import { COLORS } from "@styles/constants";
+import { COLORS, FONT_FAMILY } from "@styles/constants";
 
 export const LinkDrawer = styled(Link)`
   text-decoration: none;
-  color: blue;
-  font-size: 20px;
+  color: ${COLORS.black};
+  font-family: ${FONT_FAMILY.oxygen};
+  font-size: 14px;
 `;
 
 export const IconButtons = styled(IconButton)`
@@ -38,7 +39,7 @@ export const Links = styled(Button)`
   font-size: 14px;
   text-decoration: none;
   color: ${COLORS.black};
-  font-family: Oxygen, sans-serif;
+  font-family: ${FONT_FAMILY.oxygen};
   font-weight: 600;
   text-transform: capitalize;
 `;

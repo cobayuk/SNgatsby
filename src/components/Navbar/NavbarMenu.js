@@ -42,11 +42,6 @@ const NavbarMenu = (props) => {
               >
                 Tentang Kami
               </Style.Links>
-              <Style.Links
-                onClick={() => redirection('/')}
-              >
-                Paket Harga
-              </Style.Links>
             </>
           ) : (
             <>
@@ -64,11 +59,6 @@ const NavbarMenu = (props) => {
                 onClick={() => scrollTo('#howitworks')}
               >
                 Tentang Kami
-              </Style.Links>
-              <Style.Links
-                onClick={() => scrollTo('#pricing')}
-              >
-                Paket Harga
               </Style.Links>
             </>
           )}
