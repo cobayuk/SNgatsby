@@ -1,15 +1,15 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
   Grid,
   Container,
   CssBaseline
 }
 from '@material-ui/core';
-import * as Style from '@components/Footer/FooterStyled';
+// import * as Style from '@components/Faq/FaqStyled';
 
 const FaqContent = () => {
   return (
-    <Style.MainFooter>
+    <Fragment>
       <CssBaseline />
       <Container fixed>
         <Grid container>
@@ -18,7 +18,7 @@ const FaqContent = () => {
           </Grid>
         </Grid>
       </Container>
-    </Style.MainFooter>
+    </Fragment>
   );
 }
 

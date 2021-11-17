@@ -12,13 +12,9 @@ import  {
 from '@material-ui/core';
 import { COLORS, FONT_FAMILY, FONT_SIZE } from "@styles/constants";
 import ChecklistIcon from "@assets/ornaments/checklist.svg";
+import * as Style from '@components/Content/Pricing/PricingStyled';
 
 const useStyles = makeStyles((theme) => ({
-  headingPrice: {
-    fontWeight: 'bold',
-    fontFamily: `${FONT_FAMILY.oxygen}`,
-    marginLeft: theme.spacing(1)
-  },
   headingPriceSeparator:{
     position: 'relative',
     top: '-32px',
@@ -183,46 +179,41 @@ const PricingPrice = () => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.wrapperPricing} id="pricing">
+    <Style.WrapperPricing id="pricing">
       <Container
         maxWidth="md"
         component="main"
-        className={classes.heroContent}
       >
-        <Typography
+        <Style.HeadingFirstTitle
           component="h1"
           variant="h2"
           align="center"
           color="textPrimary"
-          className={classes.headingFirstTitle}
         >
           Pilihan Paket
-        </Typography>
-        <Typography
+        </Style.HeadingFirstTitle>
+        <Style.HeadingPricing
           component="h1"
           variant="h2"
           align="center"
           color="textPrimary"
           gutterBottom
-          className={classes.headingPricing}
         >
           Fitur suka-suka kamu.
-        </Typography>
-        <Typography
+        </Style.HeadingPricing>
+        <Style.CaptionPricing
           variant="h5"
           align="center"
           color="textSecondary"
           component="p"
-          className={classes.captionPricing}
         >
           Dengan 3 pilihan paket, kamu bebas pilih fitur manapun suka-suka kamu.
           Nikmati fitur sesuai dengan kebutuhan kamu dengan pelayanan yang tetap nomor satu.
-        </Typography>
+        </Style.CaptionPricing>
       </Container>
-      <Container
+      <Style.BoxOuterPricing
         maxWidth="lg"
         component="main"
-        className={classes.boxOuterPricing}
       >
         <Grid
           container
@@ -245,49 +236,44 @@ const PricingPrice = () => {
                   // action={tier.title === 'Gold' ? <StarIcon /> : null}
                 />
                 <CardContent>
-                  <Box className={classes.boxDiscount}>
+                  <Style.BoxDiscount>
                     <Typography
                       className={tier.title === 'Gold' ? classes.buttonBoxDiscountGold : classes.buttonBoxDiscount}
                       component="span"
                     >
                       {tier.discount}
                     </Typography>
-                  </Box>
-                  <Box className={classes.boxDiscountPrice}>
-                    <Typography
-                      className={classes.headingDiscountPrice}
+                  </Style.BoxDiscount>
+                  <Style.BoxDiscountPrice>
+                    <Style.HeadingDiscountPrice
                       component="span"
                     >
                       {tier.discountPrice}
-                    </Typography>
-                  </Box>
-                  <Box className={classes.cardPricing}>
-
-                    <Typography
+                    </Style.HeadingDiscountPrice>
+                  </Style.BoxDiscountPrice>
+                  <Style.CardPricing>
+                    <Style.HeadingPriceSeparator
                       component="span"
                       variant="h6"
                       color="textSecondary"
-                      className={classes.headingPriceSeparator}
                     >
                       Rp
-                    </Typography>
-                    <Typography
-                      className={classes.headingPrice}
+                    </Style.HeadingPriceSeparator>
+                    <Style.HeadingPrice
                       component="h2"
                       variant="h2"
                       color="textPrimary"
                     >
                       {tier.price}
-                    </Typography>
-                    <Typography
-                      className={classes.headingPricingSuffix}
+                    </Style.HeadingPrice>
+                    <Style.HeadingPricingSuffix
                       variant="h6"
                       color="textSecondary"
                     >
                       ribu
-                    </Typography>
-                  </Box>
-                  <ul className={classes.listPricingOrder}>
+                    </Style.HeadingPricingSuffix>
+                  </Style.CardPricing>
+                  <Style.ListPricingOrder>
                     {tier.description.map((value, key) => (
                       <Typography
                         key={key}
@@ -301,14 +287,14 @@ const PricingPrice = () => {
                         {value}
                       </Typography>
                     ))}
-                  </ul>
+                  </Style.ListPricingOrder>
                 </CardContent>
               </Card>
             </Grid>
           ))}
         </Grid>
-      </Container>
-    </Box>
+      </Style.BoxOuterPricing>
+    </Style.WrapperPricing>
   );
 }
 
