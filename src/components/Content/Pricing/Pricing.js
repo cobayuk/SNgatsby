@@ -2,47 +2,17 @@ import React from "react";
 import  {
   Box,
   Grid,
-  Card,
   Container,
   Typography,
-  CardHeader,
   CardContent,
   makeStyles
 }
 from '@material-ui/core';
-import { COLORS, FONT_FAMILY, FONT_SIZE } from "@styles/constants";
+import { COLORS } from "@styles/constants";
 import ChecklistIcon from "@assets/ornaments/checklist.svg";
 import * as Style from '@components/Content/Pricing/PricingStyled';
 
 const useStyles = makeStyles((theme) => ({
-  headingPriceSeparator:{
-    position: 'relative',
-    top: '-32px',
-    bottom: 0,
-    fontWeight: 'bold',
-    fontSize: `${FONT_SIZE.font24}`,
-    color: `${COLORS.black}`
-  },
-  headingPricingSuffix: {
-    fontSize: `${FONT_SIZE.font24}`,
-    color: `${COLORS.black}`
-  },
-  boxDiscount: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: theme.spacing(1)
-  },
-  boxDiscountPrice: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  headingDiscountPrice: {
-    fontSize: '20px',
-    color: `${COLORS.mediumGray}`,
-    textDecoration: 'line-through'
-  },
   buttonBoxDiscountGold:{
     width: 'auto',
     height: '24px',
@@ -60,65 +30,6 @@ const useStyles = makeStyles((theme) => ({
     color: `${COLORS.softlyBlack}`,
     textAlign: 'center',
     padding: '3px 11px 26px 15px'
-  },
-  wrapperCards: {
-    width: '100%',
-    height: '600px',
-    maxHeight: '600px'
-  },
-  wrapperCardsGold: {
-    width: '100%',
-    height: '600px'
-  },
-  cardHeaderTier: {
-    fontWeight: 'bold'
-  },
-  cardPricing: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'baseline',
-    marginBottom: theme.spacing(2),
-  },
-  listPricingOrder: {
-    display: 'grid',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  wrapperPricing: {
-    marginTop: '5em',
-    marginBottom: '5em',
-    paddingTop: '50px'
-  },
-  boxOuterPricing: {
-    marginTop: '2em'
-  },
-  headingPricing: {
-    fontSize: '40px',
-    fontFamily: 'Oxygen',
-    marginBottom: '30px',
-    fontWeight: 'bold'
-  },
-  headingFirstTitle: {
-    fontSize: '20px',
-    fontFamily: `${FONT_FAMILY.oxygen}`,
-    fontWeight: 'bold',
-    color: COLORS.brownSugar,
-    textTransform: 'upperCase'
-  },
-  captionPricing: {
-    fontSize: '15px',
-    fontFamily: `${FONT_FAMILY.oxygen}`,
-    marginBottom: '30px',
-  },
-  buttonActionPricing: {
-    backgroundColor: `${COLORS.golden}`,
-    border: '0',
-    color: `${COLORS.white}`,
-    '&:hover': {
-      backgroundColor: `${COLORS.golderDark}`,
-      color: `${COLORS.white}`,
-      border: '0'
-    }
   }
 }));
 
@@ -217,7 +128,7 @@ const PricingPrice = () => {
       >
         <Grid
           container
-          alignItems="flex-end"
+          alignItems="flex-start"
         >
           {packages.map((tier, key) => (
             <Grid
@@ -227,14 +138,16 @@ const PricingPrice = () => {
               sm={tier.title === 'Gold' ? 12 : 6}
               md={4}
             >
-              <Card className={tier.title === 'Gold' ? classes.wrapperCardsGold: classes.wrapperCards}>
-                <CardHeader
-                  className={classes.cardHeaderTier}
-                  title={tier.title}
-                  titleTypographyProps={{ align: 'center' }}
-                  subheaderTypographyProps={{ align: 'center' }}
+              <Style.CardsContentArea title={tier.title}>
+                <Style.CardHeaderTier
                   // action={tier.title === 'Gold' ? <StarIcon /> : null}
-                />
+                >
+                  <Style.HeadingTierPackages
+                    component="span"
+                  >
+                    {tier.title}
+                  </Style.HeadingTierPackages>
+                </Style.CardHeaderTier>
                 <CardContent>
                   <Style.BoxDiscount>
                     <Typography
@@ -289,7 +202,7 @@ const PricingPrice = () => {
                     ))}
                   </Style.ListPricingOrder>
                 </CardContent>
-              </Card>
+              </Style.CardsContentArea>
             </Grid>
           ))}
         </Grid>

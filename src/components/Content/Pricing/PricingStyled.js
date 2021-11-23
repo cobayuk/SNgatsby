@@ -17,8 +17,7 @@ import  {
   Card,
   Button,
   Container,
-  CardHeader,
-  Typography,
+  Typography
 } from '@material-ui/core';
 import { COLORS, FONT_SIZE, FONT_FAMILY } from "@styles/constants";
 
@@ -82,19 +81,24 @@ export const ButtonBoxDiscount = styled(Typography)`
   padding: 3px 11px 26px 15px;
 `;
 
-export const WrapperCards = styled(Card)`
+export const CardsContentArea = styled(Card)`
   width: 100%;
-  height: 600px;
-  max-height: 600px;
+  height: ${props => props.title === 'Gold' ? '700px;' : '600px;'}
+  ${props => props.title === 'Gold' ? 'margin-top: -3em;' : ''}
 `;
 
-export const WrapperCardsGold = styled(Card)`
-  width: 100%;
-  height: 600px;
+export const CardHeaderTier = styled.div`
+  display: flex;
+  justify-content: center;
+  align-item: center;
 `;
 
-export const CardHeaderTier = styled(CardHeader)`
+export const HeadingTierPackages = styled(Typography)`
+  font-size: 36px;
+  font-style: normal;
   font-weight: bold;
+  line-height: 42px;
+
 `;
 
 export const CardPricing = styled(Box)`
@@ -117,7 +121,7 @@ export const WrapperPricing = styled(Box)`
 `;
 
 export const BoxOuterPricing = styled(Container)`
-  margin-top: 2em;
+  margin-top: 10em;
 `;
 
 export const HeadingFirstTitle = styled(Typography)`

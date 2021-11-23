@@ -86,7 +86,8 @@ export const FONT_SIZE = {
  *
 */
 export const FONT_FAMILY = {
-  oxygen: 'Oxygen'
+  oxygen: 'Oxygen',
+  roboto: 'Roboto'
 }
 
 export const WEDDING_PLACE = {
