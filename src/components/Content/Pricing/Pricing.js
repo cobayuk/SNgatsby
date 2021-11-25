@@ -139,9 +139,7 @@ const PricingPrice = () => {
               md={4}
             >
               <Style.CardsContentArea title={tier.title}>
-                <Style.CardHeaderTier
-                  // action={tier.title === 'Gold' ? <StarIcon /> : null}
-                >
+                <Style.CardHeaderTier>
                   <Style.HeadingTierPackages
                     component="span"
                   >

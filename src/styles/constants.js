@@ -13,8 +13,6 @@
 | Develop : Dimas Prasetyo, Arie Aditya Nugraha (Frontend Dev).
 */
 
-
-
 /**
  *
  * Design Systems Sungnikah Corporation.
@@ -79,6 +77,7 @@ export const FONT_SIZE = {
   font20: '20px',
   font24: '24px'
 }
+
 /**
  *
  *  Design Systems Sungnikah Corporation.
