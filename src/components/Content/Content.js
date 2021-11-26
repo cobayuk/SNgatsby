@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import HeaderTagline from '@components/Header/HeaderTagline';
 import CaraPesan from '@components/Content/CaraPesan/CaraPesan';
 import PricingPrice from '@components/Content/Pricing/Pricing';
-// import CaraKerja from '@components/Content/CaraKerja/CaraKerja';
+import CaraKerja from '@components/Content/CaraKerja/CaraKerja';
 import Faq from '@components/Content/Faq/Faq';
 
 const Content = () => (
@@ -10,7 +10,7 @@ const Content = () => (
     <HeaderTagline />
     <CaraPesan />
     <PricingPrice />
-    {/* <CaraKerja /> */}
+    <CaraKerja />
     <Faq/>
   </Fragment>
 )

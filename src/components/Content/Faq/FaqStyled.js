@@ -4,7 +4,7 @@
 | ===========================================================
 |
 | Table Of Contents
-| - Faq
+| - Faq ( Frequently Ask Quetions ).
 |
 | Author  : Sungnikah Corporation's.
 | Date    : 2 Februari 2020

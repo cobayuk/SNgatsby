@@ -47,7 +47,7 @@ const CaraKerja = () => {
           </Grid>
         </Grid>
       </Container>
-      <Box mt={10} mb={5}>
+      {/* <Box mt={10} mb={5}>
         <Grid container>
           <Grid item md={6} lg={6}>
             <Box
@@ -137,7 +137,7 @@ const CaraKerja = () => {
             </Box>
           </Grid>
         </Grid>
-      </Box>
+      </Box> */}
     </Style.BoxHowItWorks>
   );
 }
