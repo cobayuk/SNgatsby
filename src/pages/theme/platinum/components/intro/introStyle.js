@@ -30,6 +30,9 @@ export const WrapperIntro = styled.div`
 
 export const ContainerIntro = styled.div`
     padding: 30px 100px 0px 100px;
+    @media (max-width: 600px) {
+        padding: 30px 50px 0px 50px;
+    }
 `;
 
 export const IntroText = styled.p`
@@ -39,6 +42,10 @@ export const IntroText = styled.p`
     line-height: 24px;
     text-align: center;
     color: #58595B;
+    @media (max-width: 600px) {
+        font-size: 16px;
+        line-height: 20px;
+    }
 `;
 
 export const Ampersand = styled.p`
@@ -50,6 +57,10 @@ export const Ampersand = styled.p`
     color: #B37C62;
     display: block;
     padding-bottom: 20px;
+    @media (max-width: 600px) {
+        font-size: 48px;
+        line-height: 24px;
+    }
 `;
 
 export const Person = styled.p`
@@ -59,6 +70,10 @@ export const Person = styled.p`
     line-height: 24px;
     text-align: center;
     color: #B37C62;
+    @media (max-width: 600px) {
+        font-size: 48px;
+        line-height: 24px;
+    }
 `;
 
 export const Parent = styled.p`
@@ -69,8 +84,21 @@ export const Parent = styled.p`
     text-align: center;
     color: #58595B;
     margin-top : -30px;
+    @media (max-width: 600px) {
+        font-size: 16px;
+        line-height: 20px;
+    }
 `;
 
 export const GroomWrapper = styled.div`
     margin-top: -24px;
+    @media (max-width: 600px) {
+        padding: 0px 25px;
+    }
+`;
+
+export const BrideWrapper = styled.div`
+    @media (max-width: 600px) {
+        padding: 0px 25px;
+    }
 `;

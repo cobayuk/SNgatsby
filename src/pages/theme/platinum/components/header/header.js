@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Grid }from '@material-ui/core';
+import { Grid, Box }from '@material-ui/core';
 import * as Style from "./headerStyle";
 
 const HeaderPlatinum = () =>  {
@@ -49,20 +49,57 @@ const HeaderPlatinum = () =>  {
         <>
             <Style.Header id="header">
                 <Style.WrapperInvitation>
-                    <Style.Invite>Dear you, you’re invited to</Style.Invite>
-                    <Style.Title>THE WEDDING OF</Style.Title>
+                    <Box
+                        data-sal="slide-up"
+                        data-sal-duration="2000"
+                        data-sal-delay="1000"
+                        data-sal-easing="ease"
+                    >
+                         <Style.Invite>Dear you, you’re invited to</Style.Invite>
+                        <Style.Title>THE WEDDING OF</Style.Title>
+                    </Box>
+                   
                     <Grid container spacing={2}>
                         <Style.ResponsiveGrid item xs={12} md={6}>
-                            <Style.Groom>Prasetyo</Style.Groom>
+                            <Style.Groom
+                                 data-sal="slide-left"
+                                 data-sal-duration="2000"
+                                 data-sal-delay="1000"
+                                 data-sal-easing="ease"
+                            >
+                                Agung
+                            </Style.Groom>
                         </Style.ResponsiveGrid>
                         <Style.ResponsiveGrid item xs={12} md={1}>
-                            <Style.Ampersand>&</Style.Ampersand>
+                            <Style.Ampersand
+                                data-sal="slide-up"
+                                data-sal-duration="2000"
+                                data-sal-delay="1000"
+                                data-sal-easing="ease"
+                            >
+                                &
+                            </Style.Ampersand>
                         </Style.ResponsiveGrid>
                         <Style.ResponsiveGrid item xs={12} md={5}>
-                            <Style.Bride>Rere</Style.Bride>
+                            <Style.Bride
+                                data-sal="slide-right"
+                                data-sal-duration="2000"
+                                data-sal-delay="1000"
+                                data-sal-easing="ease"
+                                data-sal-repeat
+                            >
+                                Reni
+                            </Style.Bride>
                         </Style.ResponsiveGrid>
                     </Grid>
-                    <Style.CountDown>{timerComponents.length ? timerComponents : <span>Happy Wedding!</span>}</Style.CountDown>
+                    <Style.CountDown
+                        data-sal="slide-up"
+                        data-sal-duration="2000"
+                        data-sal-delay="1000"
+                        data-sal-easing="ease"
+                    >
+                        {timerComponents.length ? timerComponents : <span>Happy Wedding!</span>}
+                    </Style.CountDown>
                 </Style.WrapperInvitation>
             </Style.Header>
         </>

@@ -10,7 +10,7 @@
 
 import styled from 'styled-components';
 import { Box, Grid } from '@material-ui/core';
-import AssetHeader from "@assets/photos/asset-3.jpeg";
+import AssetHeader from "@assets/photos/agung-rere/cover.jpg";
 // Fonts
 import "@fontsource/crimson-text";
 import "@fontsource/questrial";
@@ -48,6 +48,10 @@ export const Title = styled.p`
     @media (max-width: 600px) {
         font-size: 16px;
         line-height: 15px;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+        font-size: 24;
+        line-height: 24px;
     }
 `;
 
@@ -126,12 +130,13 @@ export const CountDown = styled.p`
 `;
 
 export const Header = styled(Box)`
+    margin-top: -15px;
     width: 100vw;
     height: 100vh;
     background:
-       linear-gradient(
-          rgba(0, 0, 0, 0.1), 
-          rgba(0, 0, 0, 0.6)
+        linear-gradient(
+            rgba(0, 0, 0, 0.1), 
+            rgba(0, 0, 0, 0.9)
         ),
         url(${AssetHeader});
     }
