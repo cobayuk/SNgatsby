@@ -2,7 +2,9 @@ import React from "react";
 import {
   Box,
   Grid,
-  Container
+  useTheme,
+  Container,
+  useMediaQuery
 }
 from '@material-ui/core';
 import IlustrationsOne from "@assets/ornaments/cara-kerja/ilustration-one.svg";
@@ -11,6 +13,10 @@ import IlustrationsThree from "@assets/ornaments/cara-kerja/ilustration-three.sv
 import * as Style from '@components/Content/CaraKerja/CaraKerjaStyled';
 
 const CaraKerja = () => {
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Style.BoxHowItWorks id="howitworks">
       <Container
@@ -47,9 +53,9 @@ const CaraKerja = () => {
           </Grid>
         </Grid>
       </Container>
-      {/* <Box mt={10} mb={5}>
+      <Box mt={10} mb={5}>
         <Grid container>
-          <Grid item md={6} lg={6}>
+          <Grid item xs={12} md={6} lg={6}>
             <Box
               display="flex"
               alignItems="flex-start"
@@ -58,8 +64,8 @@ const CaraKerja = () => {
               <Style.ImageIlustration src={IlustrationsOne} alt="ilustration-one" width="540" height="457"/>
             </Box>
           </Grid>
-          <Grid item md={6} lg={6}>
-            <Box mt={20}>
+          <Grid item xs={12} md={6} lg={6}>
+            <Box mt={isMobile ? 5 : 20}>
               <Style.HeadingIlustration
                 variant="h5"
                 align="center"
@@ -78,37 +84,75 @@ const CaraKerja = () => {
               </Style.DescriptionChooseThemeKece>
             </Box>
           </Grid>
-          <Grid item md={6} lg={6}>
-            <Box mt={20}>
-              <Style.HeadingIlustration
-                variant="h5"
-                align="center"
-                color="textSecondary"
-                component="p"
+          {isMobile ? (
+            <>
+              <Grid item md={6} lg={6}>
+              <Box
+                mt={10}
+                display="flex"
+                alignItems="flex-end"
+                justifyContent="flex-end"
               >
-                Isi Data Diri Kamu dan Calon Mempelai
-              </Style.HeadingIlustration>
-              <Style.DescriptionChooseThemeKece
-                variant="h5"
-                align="center"
-                color="textSecondary"
-                component="p"
-              >
-                Silahkan isi lengkap data diri kamu beserta data calon mempelai untuk kebutuhan undangan digital yang kamu inginkan dan langsung submit.
-              </Style.DescriptionChooseThemeKece>
-            </Box>
-          </Grid>
+                <Style.ImageIlustration src={IlustrationsTwo} alt="ilustration-one" width="540" height="457"/>
+              </Box>
+              </Grid>
+              <Grid item md={6} lg={6}>
+                <Box mt={isMobile ? 5 : 20}>
+                  <Style.HeadingIlustration
+                    variant="h5"
+                    align="center"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Isi Data Diri Kamu dan Calon Mempelai
+                  </Style.HeadingIlustration>
+                  <Style.DescriptionChooseThemeKece
+                    variant="h5"
+                    align="center"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Silahkan isi lengkap data diri kamu beserta data calon mempelai untuk kebutuhan undangan digital yang kamu inginkan dan langsung submit.
+                  </Style.DescriptionChooseThemeKece>
+                </Box>
+              </Grid>
+            </>
+          ) : (
+            <>
+              <Grid item md={6} lg={6}>
+                <Box mt={20}>
+                  <Style.HeadingIlustration
+                    variant="h5"
+                    align="center"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Isi Data Diri Kamu dan Calon Mempelai
+                  </Style.HeadingIlustration>
+                  <Style.DescriptionChooseThemeKece
+                    variant="h5"
+                    align="center"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Silahkan isi lengkap data diri kamu beserta data calon mempelai untuk kebutuhan undangan digital yang kamu inginkan dan langsung submit.
+                  </Style.DescriptionChooseThemeKece>
+                </Box>
+              </Grid>
+              <Grid item md={6} lg={6}>
+                <Box
+                  display="flex"
+                  alignItems="flex-end"
+                  justifyContent="flex-end"
+                >
+                  <Style.ImageIlustration src={IlustrationsTwo} alt="ilustration-one" width="540" height="457"/>
+                </Box>
+              </Grid>
+            </>
+          )}
           <Grid item md={6} lg={6}>
             <Box
-              display="flex"
-              alignItems="flex-end"
-              justifyContent="flex-end"
-            >
-              <Style.ImageIlustration src={IlustrationsTwo} alt="ilustration-one" width="540" height="457"/>
-            </Box>
-          </Grid>
-          <Grid item md={6} lg={6}>
-            <Box
+              mt={10}
               display="flex"
               alignItems="flex-start"
               justifyContent="flex-start"
@@ -117,7 +161,7 @@ const CaraKerja = () => {
             </Box>
           </Grid>
           <Grid item md={6} lg={6}>
-            <Box mt={20}>
+            <Box mt={isMobile ? 5 : 20}>
               <Style.HeadingIlustration
                 variant="h5"
                 align="center"
@@ -137,7 +181,7 @@ const CaraKerja = () => {
             </Box>
           </Grid>
         </Grid>
-      </Box> */}
+      </Box>
     </Style.BoxHowItWorks>
   );
 }
