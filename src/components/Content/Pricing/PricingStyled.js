@@ -39,6 +39,9 @@ export const HeadingPriceSeparator = styled(Typography)`
 
 export const  HeadingPricing = styled(Typography)`
   font-size: 40px;
+  @media (min-width: 320px) and (max-width: 425px) {
+    font-size: 30px;
+  }
   font-family: Oxygen;
   margin-bottom: 30px;
   font-weight: bold;

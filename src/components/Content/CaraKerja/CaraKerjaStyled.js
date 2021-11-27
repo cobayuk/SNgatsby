@@ -37,6 +37,9 @@ export const HeadingItWork = styled(Typography)`
 
 export const TaglineCaption = styled(Typography)`
   font-size: 40px;
+  @media (min-width: 320px) and (max-width: 425px) {
+		font-size: 30px;
+  }
   font-family: ${FONT_FAMILY.oxygen};
   font-weight: bold;
   color: ${COLORS.black};
