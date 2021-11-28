@@ -1,8 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Grid }from '@material-ui/core';
+import { Grid, Box }from '@material-ui/core';
 import * as Style from "./headerStyle";
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
 const HeaderPlatinum = () =>  {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1200, // values from 0 to 3000, with step 50ms
+            once: false, // whether animation should happen only once - while scrolling down
+        });
+    }, []);
 
     const calculateTimeLeft = () => {
         let year = new Date().getFullYear();
@@ -34,35 +43,51 @@ const HeaderPlatinum = () =>  {
     
     const timerComponents = [];
     Object.keys(timeLeft).forEach((interval) => {
-    if (!timeLeft[interval]) {
-        return;
-    }
+        if (!timeLeft[interval]) {
+            return;
+        }
 
-    timerComponents.push(
-        <span>
-        {timeLeft[interval]} {interval}{"  "}
-        </span>
-    );
+        timerComponents.push(
+            <span key={interval.toString()}>
+                {timeLeft[interval]} {interval}{"  "}
+            </span>
+        );
     });
 
     return(
         <>
             <Style.Header id="header">
                 <Style.WrapperInvitation>
-                    <Style.Invite>Dear you, you’re invited to</Style.Invite>
-                    <Style.Title>THE WEDDING OF</Style.Title>
+                    <Box data-aos="fade-up">
+                         <Style.Invite>Dear you, you’re invited to</Style.Invite>
+                        <Style.Title >THE WEDDING OF</Style.Title>
+                    </Box>
+                   
                     <Grid container spacing={2}>
                         <Style.ResponsiveGrid item xs={12} md={6}>
-                            <Style.Groom>Prasetyo</Style.Groom>
+                            <Style.Groom data-aos="fade-up">
+                                Agung
+                            </Style.Groom>
                         </Style.ResponsiveGrid>
                         <Style.ResponsiveGrid item xs={12} md={1}>
-                            <Style.Ampersand>&</Style.Ampersand>
+                            <Style.Ampersand data-aos="fade-up">
+                                &
+                            </Style.Ampersand>
                         </Style.ResponsiveGrid>
                         <Style.ResponsiveGrid item xs={12} md={5}>
-                            <Style.Bride>Rere</Style.Bride>
+                            <Style.Bride data-aos="fade-up">
+                                Reni
+                            </Style.Bride>
                         </Style.ResponsiveGrid>
                     </Grid>
-                    <Style.CountDown>{timerComponents.length ? timerComponents : <span>Happy Wedding!</span>}</Style.CountDown>
+                    <Style.CountDown data-aos="fade-up" data-aos-once="true">
+                        {timerComponents.length ? timerComponents : <span>It's our wedding time!</span>}
+                    </Style.CountDown>
+                    <Style.Arrow data-aos="fade-up" data-aos-once="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </Style.Arrow>
                 </Style.WrapperInvitation>
             </Style.Header>
         </>
