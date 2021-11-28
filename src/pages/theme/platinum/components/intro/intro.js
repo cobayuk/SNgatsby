@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as Style from "./introStyle";
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
 const Intro = () =>  {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1200, // values from 0 to 3000, with step 50ms
+            once: false, // whether animation should happen only once - while scrolling down
+        });
+    }, []);
 
     return(
         <>
             <Style.WrapperIntro>
-                <Style.ContainerIntro
-                    data-sal="slide-up"
-                    data-sal-duration="2000"
-                    data-sal-delay="10"
-                    data-sal-easing="ease in"
-                    data-sal-once="true"
-                >
+                <Style.ContainerIntro data-aos="fade-up">
                     <Style.IntroText>Bismillaahirrahmaanirrahiim</Style.IntroText>
                     <br/>
                     <Style.IntroText>Assalaamu'alaikum Warahmatullaahi Wabarakaatuh</Style.IntroText>
@@ -24,29 +27,14 @@ const Intro = () =>  {
                     <Style.IntroText>Tanpa mengurangi rasa hormat, kami memohon do'a restu pada pernikahan kami:</Style.IntroText>
                     <br/>
                 </Style.ContainerIntro>
-                <Style.GroomWrapper
-                    data-sal="slide-left"
-                    data-sal-duration="2000"
-                    data-sal-delay="10"
-                    data-sal-easing="ease"
-                >
+                <Style.GroomWrapper data-aos="fade-up">
                     <Style.Person>Agung Tri Wibowo</Style.Person>
                     <Style.Parent>Putra ketiga dari Bpk. Jhony Popoy dan Ibu Endang Trisnowati</Style.Parent>
                 </Style.GroomWrapper>
-                <Style.Ampersand
-                    data-sal="slide-up"
-                    data-sal-duration="2000"
-                    data-sal-delay="10"
-                    data-sal-easing="ease in"
-                >
+                <Style.Ampersand data-aos="fade-up">
                     &
                 </Style.Ampersand>
-                <Style.BrideWrapper
-                    data-sal="slide-right"
-                    data-sal-duration="2000"
-                    data-sal-delay="10"
-                    data-sal-easing="ease"
-                >
+                <Style.BrideWrapper data-aos="fade-up">
                     <Style.Person>Reni Fitria</Style.Person>
                     <Style.Parent>Putri keempat dari (Alm) Bpk. Zaini Tanjung dan Ibu Sofiyarti</Style.Parent>
                 </Style.BrideWrapper>
