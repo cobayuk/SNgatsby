@@ -1,6 +1,6 @@
 /*
 | ===========================================================
-|    This file contains Header styles for Themes Platinum.
+|    This file contains Gallery styles for Themes Platinum.
 | ===========================================================
 |
 | Author  : Sungnikah Corporation's.
