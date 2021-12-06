@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import "@fontsource/oxygen";
-import { Grid } from '@material-ui/core';
 
 export const SectionCashless = styled.section`
     text-align: center;

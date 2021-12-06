@@ -16,7 +16,7 @@ import Header from "@components/Header/Header";
 import Layout from "@components/layout";
 import SEO from "@components/seo";
 import GlobalStyle from "@styles/global/globalStyled";
-import useStyles from "@pages/demo/portofolioStyle";
+import useStyles from "@styles/demo/portofolioStyle";
 
 const DemoPortofolio = () => {
   const classes = useStyles();

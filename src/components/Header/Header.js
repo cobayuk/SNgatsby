@@ -13,8 +13,9 @@ import * as Style from '@components/Header/HeaderStyled';
 
 const Header = () => {
 
-  let url = window.location.pathname;
-  let sanitizeUrl = url.substring(1, url.lastIndexOf('/'));
+  // let url = typeof window !== 'undefined' ? window.location.pathname : 'undefined';
+
+  // let sanitizeUrl = url.substring(1, url.lastIndexOf('/'));
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -30,7 +31,7 @@ const Header = () => {
         {isMobile ? (
           <DrawerComponent />
         ) : (
-          <NavbarMenu url={sanitizeUrl}/>
+          <NavbarMenu url="test"/>
         )}
       </Style.HeaderToolbar>
     </Style.HeaderAppBar>

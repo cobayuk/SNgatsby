@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import * as Style from "./quoteAndDatesStyle";
+import * as Style from "@styles/platinum/quoteAndDatesStyle";
 import { Grid } from '@material-ui/core';
 import AOS from 'aos'
 import 'aos/dist/aos.css';

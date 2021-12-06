@@ -5,7 +5,7 @@ import {
     LightgalleryItem
 } from "react-lightgallery";
 import "lightgallery.js/dist/css/lightgallery.css";
-import * as Style from "./galleryStyle";
+import * as Style from "@styles/platinum/galleryStyle";
 import "./additional.css";
 import FirstLandscape from "@assets/photos/agree/landscape-1.jpg";
 import SecondLandscape from "@assets/photos/agree/landscape-2.jpg";

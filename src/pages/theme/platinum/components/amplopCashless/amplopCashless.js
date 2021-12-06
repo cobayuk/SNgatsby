@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import * as Style from "./amplopCashlessStyle";
+import * as Style from "@styles/platinum/amplopCashlessStyle";
 import AllWallet from "@assets/e-wallet/e-wallet.png";
 import WomanAvatar from "@assets/e-wallet/girl-marry.png";
 import ManAvatar from "@assets/e-wallet/man-marry.png";
