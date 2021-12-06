@@ -1160,10 +1160,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/great-vibes/-/great-vibes-4.2.2.tgz#5fd0fc82bc560c0211fde31d617f429b708550e1"
   integrity sha512-GoZ5RlE+eEswj4P4O18AvT7t/S/g2Bkoo6qGOEQlg1/tYYbYHczzQ5LyGNjmVK5i38eYPeJznS9o8kKGkyJmkQ==
 
-"@fontsource/open-sans@^4.2.2":
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.2.2.tgz#59046f772136a44c5999e0189d33c6a26676630c"
-  integrity sha512-NbsL1a9asJO6N/5kRxYPCy0kNhKMi9T75kl4QfIGtmpd/5IfB+UIAUxd9AICmCLaH4Osc2TImeTJj94xc9MNKg==
+"@fontsource/open-sans@^4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.5.2.tgz#6953650035d5b42be645013b1465544d0af49d7d"
+  integrity sha512-aDQrW8s0KslG2aKb9nM5R6fiQR9iPomqWXf6iZCC30qv/UFlSY14SppodA3rE//+w37EqsJjyUq3BSEYzLdisg==
 
 "@fontsource/overlock@^4.2.2":
   version "4.2.2"
