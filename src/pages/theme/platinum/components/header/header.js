@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Box }from '@material-ui/core';
-import * as Style from "./headerStyle";
+import * as Style from "@styles/platinum/headerStyle";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 

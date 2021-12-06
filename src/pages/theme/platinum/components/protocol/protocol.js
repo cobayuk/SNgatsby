@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import * as Style from "./protocolStyle";
+import * as Style from "@styles/platinum/protocolStyle";
 import WearMask from "@assets/protocol/wear-mask.jpg";
 import HandSanitizer from "@assets/protocol/HandSanitizer.jpg";
 import Distance from "@assets/protocol/distance.jpg";
