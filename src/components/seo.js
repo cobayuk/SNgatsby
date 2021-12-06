@@ -5,10 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
+import icon from '@assets/favicon/sungnikah-48x48.png';
 
 function SEO({ description, lang, meta, keywords, title }) {
   const { site } = useStaticQuery(
@@ -17,27 +18,36 @@ function SEO({ description, lang, meta, keywords, title }) {
         site {
           siteMetadata {
             title
-            description
             author
+            seo {
+              description
+              keywords
+              canonical
+            }
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaTitle = title || site.siteMetadata.title
+  const metaDescription = description || site.siteMetadata.seo.description
+  const metaKeywords = keywords || site.siteMetadata.seo.keywords
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={metaTitle}
       meta={[
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `keywords`,
+          content: metaKeywords,
         },
         {
           property: `og:title`,
@@ -72,15 +82,22 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: 'x2eaeqaf_8ChuMCm8FCe7Vv4eER50NLgqg1a214yh_s',
         }
       ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
-        .concat(meta)}
+      .concat(
+        keywords.length > 0
+          ? {
+              name: `keywords`,
+              content: keywords.join(`, `),
+            }
+          : []
+      )
+      .concat(meta)}
+      link={[
+        {
+          "rel": "icon",
+          "type": "image/png",
+          "href": `${icon}`
+        },
+      ]}
     />
   )
 }
@@ -88,6 +105,7 @@ function SEO({ description, lang, meta, keywords, title }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
+  robots: '',
   keywords: [],
 }
 
