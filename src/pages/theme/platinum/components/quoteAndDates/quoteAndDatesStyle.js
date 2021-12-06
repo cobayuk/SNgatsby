@@ -13,6 +13,11 @@ import "@fontsource/crimson-text";
 import "@fontsource/dm-serif-display";
 import "@fontsource/overlock";
 
+export const QuotesContainer = styled.div`
+    background-color: #FFFFFF;
+    // background-color: #F7F7F7;
+`;
+
 export const QuotesText = styled.p`
     font-family: Crimson Text;
     font-style: normal;

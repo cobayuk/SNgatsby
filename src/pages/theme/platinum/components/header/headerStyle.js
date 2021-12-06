@@ -10,7 +10,7 @@
 
 import styled from 'styled-components';
 import { Box, Grid } from '@material-ui/core';
-import AssetHeader from "@assets/photos/agung-rere/cover.jpg";
+import AssetHeader from "@assets/photos/agree/cover.jpg";
 // Fonts
 import "@fontsource/crimson-text";
 import "@fontsource/questrial";
@@ -145,10 +145,10 @@ export const Header = styled(Box)`
     }
     background-size: cover;
     position: relative;
-    background-position: 50%;
+    background-position: 44%;
     @media (min-width: 768px) {
         margin-top: -16px;
-        background-position: 50% 20%;
+        background-position: 35% 20%;
     }
     text-align: center;
 `;
