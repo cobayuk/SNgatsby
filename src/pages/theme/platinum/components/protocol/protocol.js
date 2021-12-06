@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import * as Style from "@styles/platinum/protocolStyle";
 import WearMask from "@assets/protocol/wear-mask.jpg";
-import HandSanitizer from "@assets/protocol/handSanitizer.jpg";
+import HandSanitizer from "@assets/protocol/handsanitizer.jpg";
 import Distance from "@assets/protocol/distance.jpg";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
