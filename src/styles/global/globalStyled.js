@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background-color: ${COLORS.white};
+    background-color: ${COLORS.white} !important;
   }
   @font-face {
     font-family: 'Oxygen';
