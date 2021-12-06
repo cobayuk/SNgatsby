@@ -32,6 +32,7 @@
     "gatsby-plugin-crisp-chat": "^3.2.2",
     "gatsby-plugin-google-analytics": "^2.0.17",
     "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-material-ui": "^4.0.2",
     "gatsby-plugin-react-helmet": "^3.0.10",
     "gatsby-plugin-scroll-reveal": "0.0.7",
     "gatsby-plugin-sharp": "^2.0.29",
