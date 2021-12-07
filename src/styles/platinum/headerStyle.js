@@ -22,6 +22,9 @@ export const WrapperInvitation = styled(Box)`
     @media only screen and (min-width: 768px) and (max-width: 992px) {
         top: 75px;
     }
+    @media only screen and (min-width: 736px) and (max-width: 737px) {
+        top: 30px;
+    }
 `;
 
 export const Invite = styled.p`
@@ -30,7 +33,7 @@ export const Invite = styled.p`
     font-weight: normal;
     font-size: 16px;
     line-height: 30px;
-    @media (max-width: 600px) {
+    @media (max-width: 767px) {
         font-size: 14px;
         line-height: 15px;
     }
@@ -45,7 +48,7 @@ export const Title = styled.p`
     line-height: 37px;
     letter-spacing: 0.3em;
     color: white;
-    @media (max-width: 600px) {
+    @media (max-width: 767px) {
         font-size: 16px;
         line-height: 15px;
     }
@@ -61,10 +64,13 @@ export const Groom = styled.p`
     font-weight: normal;
     font-size: 65px;
     line-height: 24px;
-    @media (max-width: 600px) {
+    @media (max-width: 767px) {
         font-size: 54px;
         line-height: 12px;
         text-align: center;
+    }
+    @media only screen and (min-width: 736px) and (max-width: 737px) {
+        margin-top: 30px;
     }
     @media only screen and (min-width: 768px) and (max-width: 992px) {
         font-size: 65px;
@@ -82,7 +88,7 @@ export const Ampersand = styled.p`
     font-weight: normal;
     font-size: 65px;
     line-height: 24px;
-    @media (max-width: 600px) {
+    @media (max-width: 767px) {
         font-size: 36px;
         line-height: 36px;
         text-align: center;
@@ -102,7 +108,7 @@ export const Bride = styled.p`
     font-weight: normal;
     font-size: 65px;
     line-height: 24px;
-    @media (max-width: 600px) {
+    @media (max-width: 767px) {
         font-size: 54px;
         line-height: 12px;
         text-align: center;
@@ -125,7 +131,7 @@ export const CountDown = styled.p`
     @media (min-width: 768px) {
         margin-top: -20px;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 767px) {
         font-size: 14px;
         line-height: 17px;
     }
@@ -154,7 +160,7 @@ export const Header = styled(Box)`
 `;
 
 export const ResponsiveGrid = styled(Grid)`
-    @media (max-width: 600px) {
+    @media (max-width: 767px) {
         padding: 0 !important;
     }
 `;
@@ -165,12 +171,19 @@ export const Arrow = styled.div`
     }
     position: absolute;
     top: 125%;
+    @media only screen and (min-width: 736px) and (max-width: 737px) {
+        top: 115%;
+    }
     left: 50%;
     transform: translate(-50%,-50%);
     span {
         display: block;
         width: 15px;
         height: 15px;
+        @media only screen and (min-width: 736px) and (max-width: 737px) {
+            width: 10px;
+            height: 10px;
+        }
         border-bottom: 2px solid #FFFFFF;
         border-right: 2px solid #FFFFFF;
         transform: rotate(45deg);

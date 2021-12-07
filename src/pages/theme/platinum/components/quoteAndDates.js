@@ -22,7 +22,7 @@ const QuotesAndDates = () =>  {
                 </Style.QuotesText>
                 <Style.WeddingDate>Sabtu, 11 Desember 2021</Style.WeddingDate>
                 <Grid container>
-                    <Grid item xs={6}>
+                    {/* <Grid item xs={6}>
                         <Style.ContainerProgram>
                             <Style.ProgramTitle>Akad Nikah</Style.ProgramTitle>
                             <Style.ProgramTime>Pukul 09:00 - 10:00 WIB</Style.ProgramTime>
@@ -33,16 +33,22 @@ const QuotesAndDates = () =>  {
                             <Style.ProgramTitle>Resepsi</Style.ProgramTitle>
                             <Style.ProgramTime>Pukul 10:10 - 13:00 WIB</Style.ProgramTime>
                         </Style.SecondContainerProgram>
+                    </Grid> */}
+                    <Grid item xs={12}>
+                        <Style.ContainerProgram>
+                            <Style.ProgramTitle>Intimate Wedding</Style.ProgramTitle>
+                            <Style.ProgramTime>Pukul 15.00 - 19.00 WIB</Style.ProgramTime>
+                        </Style.ContainerProgram>
                     </Grid>
                 </Grid>
-                <Style.WeddingLocation>
+                {/* <Style.WeddingLocation>
                     di POKEL Garden Resto
                     <br/><br/>
                     Jalan Kelapa Dua no.88, Katulisan, Kecamatan Serang
                     Kota Serang
-                </Style.WeddingLocation>
+                </Style.WeddingLocation> */}
                 <Style.WrapperMap>
-                    <Style.GoToMap>Lihat Peta</Style.GoToMap>
+                    <Style.GoToMap>Live Streaming</Style.GoToMap>
                 </Style.WrapperMap>
             </Style.QuotesContainer>
         </>

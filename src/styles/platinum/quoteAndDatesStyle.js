@@ -14,8 +14,8 @@ import "@fontsource/dm-serif-display";
 import "@fontsource/overlock";
 
 export const QuotesContainer = styled.div`
-    background-color: #FFFFFF;
-    // background-color: #F7F7F7;
+    // background-color: #FFFFFF;
+    background-color: #F7F7F7;
 `;
 
 export const QuotesText = styled.p`
@@ -99,4 +99,7 @@ export const GoToMap = styled.button`
     border-radius: 30px;
     border: none;
     margin-bottom: 24px;
+    &:focus, &:hover {
+        background: #f79c96;
+    }
 `;
