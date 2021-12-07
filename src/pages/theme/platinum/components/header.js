@@ -71,7 +71,7 @@ const HeaderPlatinum = () =>  {
                         </Style.ResponsiveGrid>
                         <Style.ResponsiveGrid item xs={12} md={1}>
                             <Style.Ampersand data-aos="fade-up">
-                                &
+                                &#38;
                             </Style.Ampersand>
                         </Style.ResponsiveGrid>
                         <Style.ResponsiveGrid item xs={12} md={5}>
@@ -81,7 +81,7 @@ const HeaderPlatinum = () =>  {
                         </Style.ResponsiveGrid>
                     </Grid>
                     <Style.CountDown data-aos="fade-up" data-aos-once="true">
-                        {timerComponents.length ? timerComponents : <span>It's our wedding time!</span>}
+                        {timerComponents.length ? timerComponents : <span>11 December 2021</span>}
                     </Style.CountDown>
                     <Style.Arrow data-aos="fade-up" data-aos-once="true">
                         <span></span>
