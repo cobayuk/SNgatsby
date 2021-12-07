@@ -51,7 +51,7 @@ const SecondTheme = () =>  {
     }
 
     timerComponents.push(
-      <span>
+      <span key={interval.toString()}>
         {timeLeft[interval]} {interval}{"  "}
       </span>
     );
