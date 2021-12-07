@@ -18,5 +18,5 @@
 [[redirects]]
   from = "https://sungnikah.netlify.com"
   to = "https://sungnikah.com"
-  status = 301
-  force = false # Default true
+  #status = 301
+  #force = false # Default true
