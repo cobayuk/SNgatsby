@@ -5,24 +5,24 @@ import {
     LightgalleryItem
 } from "react-lightgallery";
 import "lightgallery.js/dist/css/lightgallery.css";
-import * as Style from "./galleryStyle";
+import * as Style from "@styles/platinum/galleryStyle";
 import "./additional.css";
-import FirstLandscape from "@assets/photos/agung-rere/landscape-1.jpg";
-import SecondLandscape from "@assets/photos/agung-rere/landscape-2.jpg";
-import ThirdLandscape from "@assets/photos/agung-rere/landscape-3.jpg";
-import LastLandscape from "@assets/photos/agung-rere/landscape-last.jpg";
-import FirstSquare from "@assets/photos/agung-rere/square-1.jpg";
-import SecondSquare from "@assets/photos/agung-rere/square-2.jpg";
-import ThirdSquare from "@assets/photos/agung-rere/square-3.jpg";
-import FourthSquare from "@assets/photos/agung-rere/square-4.jpg";
+import FirstLandscape from "@assets/photos/agree/landscape-1.jpg";
+import SecondLandscape from "@assets/photos/agree/landscape-2.jpg";
+import ThirdLandscape from "@assets/photos/agree/landscape-3.jpg";
+import LastLandscape from "@assets/photos/agree/landscape-4.jpg";
+import FirstSquare from "@assets/photos/agree/potrait-1.jpg";
+import SecondSquare from "@assets/photos/agree/potrait-2.jpg";
+import ThirdSquare from "@assets/photos/agree/potrait-3.jpg";
+import FourthSquare from "@assets/photos/agree/potrait-4.jpg";
 
 const OurGallery = () =>  {
 
     const ListPhotos = [
         FirstLandscape,
+        FirstSquare,
         SecondLandscape,
         ThirdLandscape,
-        FirstSquare,
         SecondSquare,
         ThirdSquare,
         FourthSquare,

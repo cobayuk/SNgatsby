@@ -21,6 +21,9 @@ import { COLORS, FONT_FAMILY } from "@styles/constants";
 export const BoxHowItWorks = styled(Box)`
   margin-top: 150px;
   padding-top: 50px;
+  @media (min-width: 320px) and (max-width: 425px) {
+    margin-top: 15px;
+  }
 `;
 
 export const HeadingItWork = styled(Typography)`
@@ -34,6 +37,9 @@ export const HeadingItWork = styled(Typography)`
 
 export const TaglineCaption = styled(Typography)`
   font-size: 40px;
+  @media (min-width: 320px) and (max-width: 425px) {
+		font-size: 30px;
+  }
   font-family: ${FONT_FAMILY.oxygen};
   font-weight: bold;
   color: ${COLORS.black};
@@ -45,6 +51,9 @@ export const TaglineDescription = styled(Typography)`
 
 export const HeadingIlustration = styled(Typography)`
   text-align: left;
+  @media (min-width: 320px) and (max-width: 425px) {
+    text-align: center;
+  }
   color: ${COLORS.black};
   font-weight: bold;
   font-family: ${FONT_FAMILY.oxygen};
@@ -59,4 +68,9 @@ export const DescriptionChooseThemeKece = styled(Typography)`
 
 export const ImageIlustration = styled.img`
   padding: 100px;
+  @media (min-width: 320px) and (max-width: 425px) {
+    padding: 0px 55px;
+    width: 100%;
+    height: auto;
+  }
 `;

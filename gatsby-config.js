@@ -78,16 +78,16 @@ module.exports = {
         ]
       }
     },
-    {
-      resolve: `gatsby-source-custom-api`,
-      options: {
-        url: "https://snanorest.api.dev"
-      }
-    },
+    // {
+    //   resolve: `gatsby-source-custom-api`,
+    //   options: {
+    //     url: "https://snanorest.api.dev"
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        // Add any options here
+        "ssr": true
       },
     },
     // {

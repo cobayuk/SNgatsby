@@ -35,7 +35,6 @@ export const IntroProtocol = styled.h1`
     line-height: 48px;
     color: #000000;
     padding-top: 40px;
-    // padding-bottom: 27px; 
     text-align: center;
 `;
 
