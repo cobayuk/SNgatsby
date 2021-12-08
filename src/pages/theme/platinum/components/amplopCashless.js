@@ -1,13 +1,33 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Snackbar from '@material-ui/core/Snackbar';
+import Alert from '@material-ui/lab/Alert';
 import * as Style from "@styles/platinum/amplopCashlessStyle";
 import AllWallet from "@assets/e-wallet/e-wallet.png";
 import WomanAvatar from "@assets/e-wallet/girl-marry.png";
 import ManAvatar from "@assets/e-wallet/man-marry.png";
-import SampleQRCode from "@assets/e-wallet/qr-code-example.png";
+import ManAvatarFull from "@assets/e-wallet/man-marry-full.png";
+// import SampleQRCode from "@assets/e-wallet/qr-code-example.png";
+import MandiriLogo from "@assets/e-wallet/mandiri-logo.png";
+import BCALogo from "@assets/e-wallet/bca-logo.png";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 
 const AmplopCashless = () =>  {
+
+    const [alertOpenFirst, setAlertOpenFirst] = useState(false);
+    const [alertOpenSecond, setAlertOpenSecond] = useState(false);
+
+    const CopyToClipboard = toCopy => {
+        const el = document.createElement(`textarea`)
+        el.value = toCopy
+        el.setAttribute(`readonly`, ``)
+        el.style.position = `absolute`
+        el.style.left = `-9999px`
+        document.body.appendChild(el)
+        el.select()
+        document.execCommand(`copy`)
+        document.body.removeChild(el)
+      }
 
     useEffect(() => {
         AOS.init({
@@ -19,20 +39,93 @@ const AmplopCashless = () =>  {
     return(
         <>
             <Style.SectionCashless>
-                <Style.CashlessTitle data-aos="fade-in">Amplop Cashless</Style.CashlessTitle>
-                <Style.CashlessDescription data-aos="fade-in">Kami menerima amplop cashless melalui</Style.CashlessDescription>
-                <Style.AllEwallet data-aos="fade-in" src={AllWallet} alt="e-wallet" width="330" height="32"/>
-                <Style.CashlessDescription data-aos="fade-in">dan seluruh aplikasi yang mendukung QRIS</Style.CashlessDescription>
+                <div data-aos="fade-in">
+                    <Style.CashlessTitle>Amplop Cashless</Style.CashlessTitle>
+                    <Style.CashlessDescription>Kami menerima amplop cashless melalui</Style.CashlessDescription>
+                    <Style.AllEwallet src={AllWallet} alt="e-wallet" width="330" height="32"/>
+                </div>
+                
+                {/* <Style.CashlessDescription data-aos="fade-in">dan seluruh aplikasi yang mendukung QRIS</Style.CashlessDescription> */}
                 <Style.SectionBarcode>
-                    <p>Scan kode QR melalui e-wallet favorit Kamu</p>
+                    {/* <p>Scan kode QR melalui e-wallet favorit Kamu</p> */}
+                    <p>Transfer melalui melalui e-wallet atau mobile banking favorit Kamu</p>
                     <Style.InnerBarcode>
                         <Style.GirlAvatar src={WomanAvatar} alt="woman-avatar"/>
                         <Style.SquareBarcode>
-                            <Style.QRCode src={SampleQRCode} alt="qr-code"/>
-                            <Style.PersonTitle>Atas Nama</Style.PersonTitle>
-                            <Style.PersonName>Reni Fitria</Style.PersonName>
+                            {/* <Style.QRCode src={SampleQRCode} alt="qr-code"/> */}
+                            <div>
+                                <Style.BankLogo src={MandiriLogo} alt="mandiri-logo" width="70"/>
+                                <Style.AccountNumber>006-000-9900-980</Style.AccountNumber>
+                                <Style.PersonTitle>atas nama</Style.PersonTitle>
+                                <Style.PersonName>Reni Fitria</Style.PersonName>
+                                <Style.CopyToClipboardButton
+                                    onClick={() => {
+                                    CopyToClipboard("0060009900980")
+                                    setAlertOpenFirst(true)
+                                    }}
+                                >
+                                    Salin Nomor Rekening
+                                </Style.CopyToClipboardButton>
+
+                                <Snackbar
+                                    open={alertOpenFirst}
+                                    autoHideDuration={3000}
+                                    onClose={() => setAlertOpenFirst(false)}
+                                    anchorOrigin={{
+                                    vertical: "top",
+                                    horizontal: "center"
+                                    }}
+                                >
+                                    <Alert
+                                    onClose={() => setAlertOpenFirst(false)}
+                                    severity="success"
+                                    variant="filled"
+                                    >
+                                        Nomor rekening Reni Fitria Berhasil disalin
+                                    </Alert>
+                                </Snackbar>
+                            </div>
+
+                            <Style.SeparatorContainer>
+                                <Style.LineSeparator/><Style.WordSeparator>atau</Style.WordSeparator><Style.LineSeparator/> 
+                            </Style.SeparatorContainer>
+
+                            <div>
+                                <Style.BankLogo src={BCALogo} alt="bca-logo" width="53"/>
+                                <Style.AccountNumber>8990-663-409</Style.AccountNumber>
+                                <Style.PersonTitle>atas nama</Style.PersonTitle>
+                                <Style.PersonName>Agung Tri Wibowo</Style.PersonName>
+                                <Style.CopyToClipboardButton
+                                    onClick={() => {
+                                    CopyToClipboard("8990663409")
+                                    setAlertOpenSecond(true)
+                                    }}
+                                >
+                                    Salin Nomor Rekening
+                                </Style.CopyToClipboardButton>
+
+                                <Snackbar
+                                    open={alertOpenSecond}
+                                    autoHideDuration={3000}
+                                    onClose={() => setAlertOpenSecond(false)}
+                                    anchorOrigin={{
+                                    vertical: "top",
+                                    horizontal: "center"
+                                    }}
+                                >
+                                    <Alert
+                                    onClose={() => setAlertOpenSecond(false)}
+                                    severity="success"
+                                    variant="filled"
+                                    >
+                                        Nomor rekening Agung Tri Wibowo Berhasil disalin
+                                    </Alert>
+                                </Snackbar>
+                            </div>
+                            
                         </Style.SquareBarcode>
                         <Style.ManAvatar src={ManAvatar} alt="woman-avatar"/>
+                        <Style.ManAvatarFull src={ManAvatarFull} alt="woman-avatar"/>
                     </Style.InnerBarcode>
                     
                 </Style.SectionBarcode>

@@ -83,7 +83,7 @@ const HeaderPlatinum = () =>  {
                     <Style.CountDown data-aos="fade-up" data-aos-once="true">
                         {timerComponents.length ? timerComponents : <span>11 December 2021</span>}
                     </Style.CountDown>
-                    <Style.Arrow data-aos="fade-up" data-aos-once="true">
+                    <Style.Arrow>
                         <span></span>
                         <span></span>
                         <span></span>

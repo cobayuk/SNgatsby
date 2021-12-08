@@ -17,7 +17,7 @@ import "@fontsource/questrial";
 import "@fontsource/dancing-script";
 
 export const WrapperInvitation = styled(Box)`
-    top: 160px;
+    top: 100px;
     position: relative;
     @media only screen and (min-width: 768px) and (max-width: 992px) {
         top: 75px;
@@ -170,7 +170,7 @@ export const Arrow = styled.div`
         margin-top: -20px;
     }
     position: absolute;
-    top: 125%;
+    top: 115%;
     @media only screen and (min-width: 736px) and (max-width: 737px) {
         top: 115%;
     }

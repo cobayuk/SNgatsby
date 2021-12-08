@@ -48,7 +48,7 @@ const QuotesAndDates = () =>  {
                     Kota Serang
                 </Style.WeddingLocation> */}
                 <Style.WrapperMap>
-                    <Style.GoToMap>Live Streaming</Style.GoToMap>
+                    <Style.GoToMap href="https://www.instagram.com/isaidagree/" target="_blank">Live Streaming</Style.GoToMap>
                 </Style.WrapperMap>
             </Style.QuotesContainer>
         </>
