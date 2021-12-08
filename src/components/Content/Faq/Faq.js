@@ -48,8 +48,6 @@ const FaqListQuestions = [
   }
 ];
 
-console.log(FaqListQuestions);
-
 const FaqContent = () => {
   const [expanded, setExpanded] = useState(false);
   

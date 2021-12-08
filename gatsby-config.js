@@ -10,9 +10,9 @@ module.exports = {
     author: `Dimas Prasetyo & Arie Aditya Nugraha`,
     siteUrl: `https://sungnikah.com`,
     seo: {
-      description: `Sungnikah merupakan penyedia jasa tetek bengek pernikahan seperti desain jada pembuatan wedding website, jada desain seserahan, dan desain undangan souvenir dan vendor pernikahan.`,
+      description: `Sungnikah merupakan penyedia jasa digital invitation wedding / pernikahan seperti desain jada pembuatan wedding website, jada desain seserahan, dan desain undangan souvenir dan mempertemukan antara client / user dan vendor pernikahan.`,
       robots: `index, follow`,
-      keywords: `Buat undangan, Jasa Undangan Digital, Undangan Digital Keren, Undangan Unik, Undangan Kreatif 2021`,
+      keywords: `Buat undangan, Jasa Undangan Digital, Undangan Digital Keren, Undangan Unik, Undangan Kreatif 2021, Vendor Wedding`,
       index: `2021`,
       canonical: `https://sungnikah.com/articles`
     }

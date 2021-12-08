@@ -67,10 +67,10 @@ const NavbarMenu = (props) => {
           >
             Demo
           </Style.Links>
-          <Style.ButtonLogin href="/client/login">
+          <Style.ButtonLogin href="#">
             Login
           </Style.ButtonLogin>
-          <Style.ButtonDaftar href="/client/daftar">
+          <Style.ButtonDaftar href="#">
             Daftar
           </Style.ButtonDaftar>
         </>
