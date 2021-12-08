@@ -87,6 +87,18 @@ export const WrapperMap = styled.div`
     margin-top: 40px;
 `;
 
+export const ReasonDescription = styled.p`
+    font-family: Oxygen;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    font-size: 14px;
+    padding: 0px 40px;
+    color: #707070;
+    margin-top: 40px;
+    text-align: center;
+`;
+
 export const GoToMap = styled.a`
     font-style: normal;
     font-weight: bold;

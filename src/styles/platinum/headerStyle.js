@@ -170,7 +170,7 @@ export const Arrow = styled.div`
         margin-top: -20px;
     }
     position: absolute;
-    top: 115%;
+    top: 125%;
     @media only screen and (min-width: 736px) and (max-width: 737px) {
         top: 115%;
     }
