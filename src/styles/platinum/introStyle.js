@@ -56,12 +56,18 @@ export const Ampersand = styled.p`
 export const Person = styled.p`
     font-family: Dancing Script;
     font-weight: normal;
-    font-size: 50px;
-    line-height: 24px;
     text-align: center;
     color: #B37C62;
-    @media (max-width: 600px) {
+    @media (min-width: 375px) {
         font-size: 48px;
+        line-height: 24px;
+    }
+    @media (max-width: 360px) {
+        font-size: 36px;
+        line-height: 36px;
+    }
+    @media (min-width: 600px) {
+        font-size: 50px;
         line-height: 24px;
     }
 `;
