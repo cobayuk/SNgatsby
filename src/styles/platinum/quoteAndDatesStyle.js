@@ -16,6 +16,7 @@ import "@fontsource/overlock";
 export const QuotesContainer = styled.div`
     // background-color: #FFFFFF;
     background-color: #F7F7F7;
+    padding: 50px 0px 50px 0px;
 `;
 
 export const QuotesText = styled.p`
@@ -44,8 +45,8 @@ export const ProgramTitle = styled.span`
     font-family: DM Serif Display;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 30px;
+    line-height: 40px;
     text-align: center;
     color: #C2A38E;
 `;
@@ -86,7 +87,7 @@ export const WrapperMap = styled.div`
     margin-top: 40px;
 `;
 
-export const GoToMap = styled.button`
+export const GoToMap = styled.a`
     font-style: normal;
     font-weight: bold;
     font-size: 13px;
@@ -99,6 +100,7 @@ export const GoToMap = styled.button`
     border-radius: 30px;
     border: none;
     margin-bottom: 24px;
+    text-decoration: none;
     &:focus, &:hover {
         background: #f79c96;
     }

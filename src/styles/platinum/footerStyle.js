@@ -17,9 +17,10 @@ export const Footer = styled.div`
     background-size: cover;
     position: relative;
     background-position: 50% 20%;
+    margin-top: -40px;
     @media (min-width: 768px) {
-        margin-top: -16px;
         background-position: 50% 20%;
+        margin-top: -30px;
     }
     text-align: center;
     z-index: 99;
