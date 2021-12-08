@@ -17,10 +17,13 @@ package = "@netlify/plugin-gatsby"
 [build.processing.images]
   compress = true
 
-
 # Redirect Configuration Site
 [[redirects]]
   from = "https://sungnikah.netlify.com"
   to = "https://sungnikah.com/maintenance"
   status = 301
   force = true
+
+# Set Redirection when got 404 
+/en/* /en/404.html 404
+/de/* /de/404.html 404
