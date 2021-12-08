@@ -25,5 +25,5 @@ package = "@netlify/plugin-gatsby"
   force = true
 
 # Set Redirection when got 404 
-/en/* /en/404.html 404
-/de/* /de/404.html 404
+/en/* /en/404
+/de/* /de/404
