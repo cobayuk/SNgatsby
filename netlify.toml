@@ -1,3 +1,7 @@
+# Install the Netlify build plugin
+[[plugins]]
+package = "@netlify/plugin-gatsby"
+
 # Default site wide settings
 # If skip_processing = true, all other settings are ignored
 [build.processing]
@@ -18,5 +22,5 @@
 [[redirects]]
   from = "https://sungnikah.netlify.com"
   to = "https://sungnikah.com/maintenance"
-  #status = 301
-  #force = true
+  status = 301
+  force = true
