@@ -137,6 +137,7 @@ export const AccountNumber = styled.span`
     line-height: 18px;
     color: #2B2929;
     margin: 10px;
+    text-decoration: none;
 `;
 
 export const QRCode = styled.img`

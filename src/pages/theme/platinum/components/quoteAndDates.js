@@ -38,6 +38,7 @@ const QuotesAndDates = () =>  {
                         <Style.ContainerProgram>
                             <Style.ProgramTitle>Intimate Wedding</Style.ProgramTitle>
                             <Style.ProgramTime>Pukul 15.00 - 19.00 WIB</Style.ProgramTime>
+                            <Style.ReasonDescription>So alongside with the real event we also plan to publish our wedding virtually via Instagram Live Streaming that you can join through the following link</Style.ReasonDescription>
                         </Style.ContainerProgram>
                     </Grid>
                 </Grid>
@@ -48,7 +49,7 @@ const QuotesAndDates = () =>  {
                     Kota Serang
                 </Style.WeddingLocation> */}
                 <Style.WrapperMap>
-                    <Style.GoToMap href="https://www.instagram.com/isaidagree/" target="_blank">Live Streaming</Style.GoToMap>
+                    <Style.GoToMap href="https://www.instagram.com/isaidagree/" target="_blank">See Live Streaming</Style.GoToMap>
                 </Style.WrapperMap>
             </Style.QuotesContainer>
         </>
