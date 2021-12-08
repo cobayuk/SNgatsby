@@ -18,13 +18,13 @@ const Intro = () =>  {
                 <Style.ContainerIntro data-aos="fade-up">
                     <Style.IntroText>Bismillaahirrahmaanirrahiim</Style.IntroText>
                     <br/>
-                    <Style.IntroText>Assalaamu'alaikum Warahmatullaahi Wabarakaatuh</Style.IntroText>
+                    <Style.IntroText>Assalaamu&#39;alaikum Warahmatullaahi Wabarakaatuh</Style.IntroText>
                     <br/>
                     <Style.IntroText>Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan.</Style.IntroText>
                     <br/>
-                    <Style.IntroText>Dengan mengharap ridho dan rahmat Allah Subhanahu wa Ta’ala untuk melaksanakan syari'at agama-Nya dan mengikuti sunnah Rasul-Nya dalam membentuk rumah tangga yang sakinah, mawaddah, warahmah.</Style.IntroText>
+                    <Style.IntroText>Dengan mengharap ridho dan rahmat Allah Subhanahu wa Ta’ala untuk melaksanakan syari&#39;at agama-Nya dan mengikuti sunnah Rasul-Nya dalam membentuk rumah tangga yang sakinah, mawaddah, warahmah.</Style.IntroText>
                     <br/>
-                    <Style.IntroText>Tanpa mengurangi rasa hormat, kami memohon do'a restu pada pernikahan kami:</Style.IntroText>
+                    <Style.IntroText>Tanpa mengurangi rasa hormat, kami memohon do&#39;a restu pada pernikahan kami:</Style.IntroText>
                     <br/>
                 </Style.ContainerIntro>
                 <Style.GroomWrapper data-aos="fade-up">
@@ -32,7 +32,7 @@ const Intro = () =>  {
                     <Style.Parent>Putra ketiga dari Bpk. Jhony Popoy dan Ibu Endang Trisnowati</Style.Parent>
                 </Style.GroomWrapper>
                 <Style.Ampersand data-aos="fade-up">
-                    &
+                    &#38;
                 </Style.Ampersand>
                 <Style.BrideWrapper data-aos="fade-up">
                     <Style.Person>Reni Fitria</Style.Person>
