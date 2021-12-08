@@ -20,10 +20,6 @@ package = "@netlify/plugin-gatsby"
 # Redirect Configuration Site
 [[redirects]]
   from = "https://sungnikah.netlify.com"
-  to = "https://sungnikah.com/maintenance"
-  status = 301
+  to = "https://sungnikah.com"
+  status = 200
   force = true
-
-# Set Redirection when got 404 
-/en/* /en/404
-/de/* /de/404
