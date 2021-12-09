@@ -16,6 +16,7 @@ import  {
 	Box,
 	Typography,
 	Accordion,
+	AccordionDetails,
 	AccordionSummary,
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -68,7 +69,26 @@ export const ArrowFaq = styled(ExpandMoreIcon)`
 	transform: rotateZ(265deg);
 `;
 
-export const FaqDescriptions = styled(Typography)`
-	font-size: 13px;
-	font-style: italic;
+export const CustomAccordion = styled(AccordionDetails)`
+	padding: 0px 32px 32px;
+	margin-top: -10px;
+`;
+
+export const FaqTitle = styled.p`
+	font-family: Oxygen;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	color: #000000;
+	padding: 22px 32px 22px 15px;
+`;
+
+export const FaqDescriptions = styled.p`
+	font-family: Oxygen;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 25px;
+	color: #474747;
 `;

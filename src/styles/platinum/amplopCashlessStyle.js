@@ -185,7 +185,7 @@ export const PersonName = styled.span`
 `;
 
 export const CopyToClipboardButton = styled.button`
-    width: 120px;
+    width: 150px;
     height: 30px;
     background: #E2B62E;
     border-radius: 50px;

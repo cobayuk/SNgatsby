@@ -91,13 +91,13 @@ const AmplopCashless = () =>  {
                             </Style.SeparatorContainer>
 
                             <div>
-                                <Style.BankLogo src={BCALogo} alt="bca-logo" width="53"/>
-                                <Style.AccountNumber>8990-663-409</Style.AccountNumber>
+                                <Style.BankLogo src={MandiriLogo} alt="mandiri-logo" width="70"/>
+                                <Style.AccountNumber>164-001-4079-232</Style.AccountNumber>
                                 <Style.PersonTitle>atas nama</Style.PersonTitle>
                                 <Style.PersonName>Agung Tri Wibowo</Style.PersonName>
                                 <Style.CopyToClipboardButton
                                     onClick={() => {
-                                    CopyToClipboard("8990663409")
+                                    CopyToClipboard("1640014079232")
                                     setAlertOpenSecond(true)
                                     }}
                                 >
