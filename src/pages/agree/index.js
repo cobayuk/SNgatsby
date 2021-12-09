@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import SEO from "@components/seo";
 import HeaderPlatinum from "@pages/theme/platinum/components/header";
 import Intro from "@pages/theme/platinum/components/intro";
 import OurGallery from "@pages/theme/platinum/components/gallery";
@@ -11,6 +12,7 @@ const Agree = () =>  {
 
   return(
     <Fragment>
+      <SEO title="Agung &amp; Rere"/>
       <HeaderPlatinum/>
       <Intro/>
       <OurGallery/>
