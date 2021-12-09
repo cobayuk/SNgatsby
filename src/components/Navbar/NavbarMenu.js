@@ -63,7 +63,7 @@ const NavbarMenu = (props) => {
             </>
           )}
           <Style.Links
-            onClick={() => redirection('/demo/portofolio')}
+            onClick={() => redirection('#')}
           >
             Demo
           </Style.Links>
