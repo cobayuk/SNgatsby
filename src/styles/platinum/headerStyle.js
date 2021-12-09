@@ -25,6 +25,9 @@ export const WrapperInvitation = styled(Box)`
     @media only screen and (min-width: 736px) and (max-width: 737px) {
         top: 30px;
     }
+    @media (min-width: 1024px) {
+        top: 160px;
+    }
 `;
 
 export const Invite = styled.p`
@@ -168,6 +171,9 @@ export const ResponsiveGrid = styled(Grid)`
 export const Arrow = styled.div`
     @media (min-width: 768px) {
         margin-top: -20px;
+    }
+    @media (min-width: 1024px) {
+        margin-top: 50px;
     }
     position: absolute;
     top: 125%;
