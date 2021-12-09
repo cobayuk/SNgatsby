@@ -52,7 +52,7 @@ const FaqContent = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const handleChange = (panel) => (event, isExpanded) => {
+  const handleChange = (panel) => (e, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
 
