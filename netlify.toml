@@ -15,7 +15,7 @@ package = "@netlify/plugin-gatsby"
 [build.processing.html]
   pretty_urls = true
 [build.processing.images]
-  compress = true
+  compress = false
 
 # Redirect Configuration Site
 [[redirects]]

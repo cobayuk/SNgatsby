@@ -27,11 +27,15 @@ export const BoxHeader = styled(Box)`
   margin-top: 72px;
   border-radius: 20px;
   background-color: #F1EDEA;
-  @media (max-width: 320px) {
+  @media (min-width: 320px) and (max-width: 360px) {
     margin-top: 10px;
     padding: 48px 15px 0px 15px;
     height: 350px;
     margin-bottom: 45px;
+  }
+  @media (min-width: 325px) and (max-width: 360px) {
+    margin-top: 7px;
+    padding: 48px 21px 0px 21px;
   }
   @media (min-width: 375px) and (max-width: 768px) {
     margin-top: 10px;
@@ -62,9 +66,9 @@ export const ParagraphTagline = styled(Typography)`
     font-family: Oxygen;
     line-height: 25px;
     margin-bottom: 15px;
-    @media (max-width: 320px) {
-      font-size: 9px;
-      line-height: 10px;
+    @media (min-width: 320px) and (max-width: 360px) {
+      font-size: 10px;
+      line-height: 12px;
     }
     @media (min-width: 375px) and (max-width: 768px) {
       font-size: 12px;
@@ -106,7 +110,7 @@ export const BoxOrnamentsOne = styled(Box)`
     display: flex;
     position: relative;
     justify-content: flex-end;
-    @media (max-width: 320px) {
+    @media (min-width: 320px) and (max-width: 360px) {
       top: -2px;
       left: 30px;
       width: auto;

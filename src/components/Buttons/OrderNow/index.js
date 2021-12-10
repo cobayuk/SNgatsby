@@ -29,7 +29,7 @@ export const OrderNow = styled(Button)`
     border: 5px solid #F2A76D;
     background-color: ${COLORS.white};
   }
-  @media (max-width: 320px) {
+  @media (min-width: 320px) and (max-width: 360px) {
     width: 108px;
     height: 39px;
     font-size: ${FONT_SIZE.font9};

@@ -4,10 +4,10 @@ import Snackbar from '@material-ui/core/Snackbar';
 import Alert from '@material-ui/lab/Alert';
 
 export default function CopyLink() {
-  const [alertOpen, setAlertOpen] = React.useState(false)
+  const [alertOpen, setAlertOpen] = React.useState(false);
 
   const CopyToClipboard = toCopy => {
-    const el = document.createElement(`textarea`)
+    const el = document.createElement(`textarea`);
     el.value = toCopy
     el.setAttribute(`readonly`, ``)
     el.style.position = `absolute`
@@ -43,9 +43,7 @@ export default function CopyLink() {
           onClose={() => setAlertOpen(false)}
           severity="success"
           variant="filled"
-        >
-          
-        </Alert>
+        />
       </Snackbar>
     </>
   )

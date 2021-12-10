@@ -23,7 +23,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { COLORS, FONT_FAMILY, FONT_SIZE } from "@styles/constants";
 
 export const ContainerFaq = styled(Box)`
-  display: block;
+	display: block;
 	margin-top: 200px;
 	@media (min-width: 320px) and (max-width: 425px) {
 		margin-top: 100px;
@@ -78,17 +78,26 @@ export const FaqTitle = styled.p`
 	font-family: Oxygen;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 24px;
-	line-height: 30px;
-	color: #000000;
+	font-size: 22px;
+	line-height: 13px;
+	color: ${COLORS.black};
 	padding: 22px 32px 22px 15px;
+	@media (min-width: 320px) and (max-width: 768px) {
+		font-size: 14px;
+		line-height: 20px;
+		padding: 5px 12px 5px 15px;
+	}
 `;
 
 export const FaqDescriptions = styled.p`
 	font-family: Oxygen;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 20px;
-	line-height: 25px;
+	font-size: 16px;
+	line-height: 18px;
 	color: #474747;
+	@media (min-width: 320px) and (max-width: 768px) {
+		font-size: 10px;
+		line-height: 15px;
+	}
 `;
