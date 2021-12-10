@@ -28,7 +28,10 @@ export const MainFooter = styled.footer`
   bottom: 0;
   width: 100%;
   height: 193px;
-  margin-top: 300px;
+  margin-top: 150px;
+  @media (max-width: 768px) {
+    margin-top: 50px;
+  }
 `;
 
 export const HeadingWeLoveBuild = styled(Typography)`
