@@ -12,7 +12,7 @@
 */
 
 import styled from 'styled-components';
-import { COLORS } from "../../styles/constants";
+import { COLORS } from "@styles/constants";
 
 export const Container = styled.div`
   text-align: center;

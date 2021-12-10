@@ -12,13 +12,13 @@
 */
 
 import styled from 'styled-components';
-import { COLORS, FONT_FAMILY } from "@styles/constants";
 import  {
   Typography,
   Box,
   Grid
 }
 from '@material-ui/core';
+import { FONT_SIZE, FONT_FAMILY, COLORS } from '@styles/constants';
 
 export const MainFooter = styled.footer`
   display: flex;
@@ -81,7 +81,7 @@ export const HeadingCopyright = styled(Typography)`
   &.MuiTypography-root {
     display: flex;
     font-size: 14px;
-    color: ${COLORS.white};
+    color: ${COLORS.grayLigter};
     margin: 0;
     padding-top: 22px;
     padding-bottom: 20px;
@@ -140,4 +140,42 @@ export const HeadingBanner = styled(Typography)`
   @media (max-width: 768px) {
     font-size: 19px;
   }
+`;
+
+export const InnerFooter = styled(Box)`
+  display: flex;
+`;
+
+export const SubFooter = styled(Box)`
+  display: flex;
+  flex-direction: colum;
+  width: 100%;
+  justify-content: center;
+  align-item: center;
+  margin-top: 25px;
+  border-top: 1px solid ${COLORS.softlyGray};
+`;
+
+export const ImageBrandFooter = styled.img`
+  width: 139px;
+  height: 28px;
+  display: block;
+`;
+
+export const HeadingInnerFooter = styled(Typography)`
+  font-family: ${FONT_FAMILY.oxygen};
+  font-style: normal;
+  font-weight: bold;
+  font-size: ${FONT_SIZE.font20};
+  line-height: 25px;
+  color: ${COLORS.grayLigter}; 
+  margin-bottom: 15px;                                                                                                                                           
+`;
+
+export const NavList = styled.li`
+  font-family: ${FONT_FAMILY.oxygen};
+  font-style: normal;
+  font-weight: normal;
+  font-size: ${FONT_SIZE.font13};
+  line-height: 28px;
 `;

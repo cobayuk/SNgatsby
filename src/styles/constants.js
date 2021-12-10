@@ -26,6 +26,7 @@ export const COLORS = {
   mediumGray    : "#B0B8BA",
   gray          : "#A0A4A6",
   graySoftly    : "#928D97",
+  grayLigter    : "#9D9D9D",
   babyBlue      : "#50CAF9",
   blue          : "#5368f1",
   white         : "#FFFF",
