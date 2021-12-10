@@ -14,10 +14,10 @@ const HeaderPlatinum = () =>  {
     }, []);
 
     const calculateTimeLeft = () => {
-        let year = new Date().getFullYear();
-        // const difference = +new Date(`${year}-10-1`) - +new Date();
+        var countDownDate = new Date("Dec 11, 2021 15:00:00").getTime();
+        var now = new Date().getTime();
     
-        let difference = +new Date(`12/11/${year}`) - +new Date(); //month - day - current year
+        let difference = countDownDate - now;
         let timeLeft = {};
     
         if (difference > 0) {
