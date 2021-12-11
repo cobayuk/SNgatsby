@@ -29,7 +29,7 @@ const HeaderTagline = () => {
                 responsif. Cocok bagi kamu yang ingin tampil beda di undangan
                 digital pernikahan kamu.
               </Style.ParagraphTagline>
-              <ButtonOrderNow> Order Sekarang </ButtonOrderNow>
+              <ButtonOrderNow> <span>Order Sekarang</span> </ButtonOrderNow>
             </Grid>
             <Grid item xs={6} md={6}>
               <Style.BoxOrnamentsOne>
@@ -46,7 +46,7 @@ const HeaderTagline = () => {
                 responsif. Cocok bagi kamu yang ingin tampil beda di undangan
                 digital pernikahan kamu.
               </Style.ParagraphTagline>
-              <ButtonOrderNow> Order Sekarang </ButtonOrderNow>
+              <ButtonOrderNow> <span>Order Sekarang</span> </ButtonOrderNow>
             </Grid>
 
             <Grid item md={6} lg={6}>

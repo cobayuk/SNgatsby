@@ -12,6 +12,7 @@
 */
 
 import styled from 'styled-components';
+import { Link } from "gatsby";
 import  {
   Typography,
   Box,
@@ -28,6 +29,9 @@ export const MainFooter = styled.footer`
   bottom: 0;
   width: 100%;
   height: 193px;
+  @media (max-width: 768px) {
+    height: 170px;
+  }
   margin-top: 150px;
   @media (max-width: 768px) {
     margin-top: 50px;
@@ -163,6 +167,9 @@ export const ImageBrandFooter = styled.img`
   width: 139px;
   height: 28px;
   display: block;
+  @media (max-width: 767px) {
+    margin-left: 30px;
+  }
 `;
 
 export const HeadingInnerFooter = styled(Typography)`
@@ -171,14 +178,75 @@ export const HeadingInnerFooter = styled(Typography)`
   font-weight: bold;
   font-size: ${FONT_SIZE.font20};
   line-height: 25px;
+  @media (min-width: 1024px) {
+    font-size: 16px;
+  }
   color: ${COLORS.grayLigter}; 
   margin-bottom: 15px;                                                                                                                                           
 `;
 
-export const NavList = styled.li`
+export const NavList = styled(Link)`
   font-family: ${FONT_FAMILY.oxygen};
   font-style: normal;
   font-weight: normal;
-  font-size: ${FONT_SIZE.font13};
+  font-size: 12px;
   line-height: 28px;
+`;
+
+export const InnerContainer = styled.div`
+  @media (max-width: 768px) {
+    padding-left: 32px;
+  }
+  padding-top: 32px;
+`;
+
+export const AccountList = styled.img`
+  transform: scale(0.7);
+  right: 55px;
+  top: -15px;
+  position: relative;
+`;
+
+export const OrderContainer = styled.div`
+  text-align: center;
+  margin-top: 35px;
+`;
+
+export const OuterOrderButton = styled.div`
+  border: 1px solid white;
+  width: 173px;
+  height: 62px;
+  border-radius: 30px;
+  margin: 0 auto;
+  &:hover, &:focus {
+    box-shadow: 0px 5px 20px -4px rgb(0 0 0 / 25%);
+  }
+`;
+
+export const OrderNow = styled.a`
+  font-family: Oxygen;
+  font-style: normal;
+  font-weight: bold;
+  background: #FFFFFF;
+  border-radius: 30px;
+  color: #E2B62E;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  top: 20px;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+`;
+
+export const CenterGrid = styled(Grid)`
+  text-align: center;
+`;
+
+export const LeftGrid = styled(Grid)`
+  text-align: left;
+`;
+
+export const RightGrid = styled(Grid)`
+  text-align: right;
 `;

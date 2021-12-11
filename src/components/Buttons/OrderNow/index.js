@@ -12,38 +12,63 @@ import {
 from "@styles/constants";
 import styled from 'styled-components';
 
-export const OrderNow = styled(Button)`
-  color: ${COLORS.white};
+export const OrderNow = styled.a`
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  display: block;
   width: 162px;
   border: 5px solid #f7e8e1;
   height: 50px;
-  display: flex;
-  font-size: ${FONT_SIZE.font15};
-  font-family: ${FONT_FAMILY.oxygen};
-  font-weight: bold;
+  span {
+    color: ${COLORS.white};
+    font-size: ${FONT_SIZE.font15};
+    font-family: ${FONT_FAMILY.oxygen};
+    font-weight: bold;
+    top: 8px;
+    position: relative;
+    &:hover {
+      color: #F2A76D;
+    }
+  }
   border-radius: ${BORDER_RADIUS.radius30};
   text-transform: capitalize;
   background-color: #F2A76D;
   &:hover {
-    color: #F2A76D;
-    border: 5px solid #F2A76D;
     background-color: ${COLORS.white};
+    span {
+      color: #F2A76D;
+    }
   }
   @media (min-width: 320px) and (max-width: 360px) {
     width: 108px;
     height: 39px;
-    font-size: ${FONT_SIZE.font9};
+    span {
+      font-size: ${FONT_SIZE.font9};
+      top: 2px;
+      position: relative;
+      &:hover {
+        color: #F2A76D;
+      }
+    }
   }
   @media (min-width: 375px) and (max-width: 768px) {
     width: 119px;
     height: 41px;
-    font-size: ${FONT_SIZE.font10};
+    span {
+      font-size: ${FONT_SIZE.font10};
+      top: 3px;
+      position: relative;
+      &:hover {
+        color: #F2A76D;
+      }
+    }
   }
 `;
 
 const ButtonOrderNow = ({ children }) => {
   return (
-    <OrderNow>
+    <OrderNow href="https://wa.me/6287872136170?text=Halo%20Tim Sungnikah%2C%20saya%20ingin%20bertanya" target="_blank">
       {children}
     </OrderNow>
   );

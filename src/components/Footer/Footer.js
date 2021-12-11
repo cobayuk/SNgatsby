@@ -5,8 +5,7 @@ import {
   Grid,
   Link,
   Container,
-  CssBaseline,
-  Typography
+  CssBaseline
 }
 from '@material-ui/core';
 import { SocialMediaIconsReact } from 'social-media-icons-react';
@@ -15,11 +14,14 @@ import PaymentGroup from "@assets/payments/icon-payment.svg";
 import * as Style from '@components/Footer/FooterStyled';
 
 const Copyright = ({ titles }) => {
+
+  let year = new Date().getFullYear();
+
   return (
     <Style.HeadingCopyright variant="body2" color="textSecondary">
       {'©'}
-      <Link color="inherit" href="#">
-        {`2021 ${titles}.com,`}&nbsp;
+      <Link color="inherit" to="/">
+        {`${year} ${titles}.com,`}&nbsp;
       </Link>
       {'All Right Reserved'}
     </Style.HeadingCopyright>
@@ -37,6 +39,12 @@ const Footer = () => {
               <Style.HeadingBanner>
                 Tunggu apa lagi? Pesan sekarang juga!
               </Style.HeadingBanner>
+              <Style.OrderContainer>
+                <Style.OuterOrderButton>
+                  <Style.OrderNow href="https://wa.me/6287872136170?text=Halo%20Tim Sungnikah%2C%20saya%20ingin%20bertanya" target="_blank">Order Sekarang</Style.OrderNow>
+                </Style.OuterOrderButton>
+                
+              </Style.OrderContainer>  
             </Grid>
           </Grid>
         </Container>
@@ -44,70 +52,82 @@ const Footer = () => {
       <Style.InnerFooter>
         <Grid container>
           <Grid item xs={12} md={3} lg={3}>
-            <Box pl={4} pt={4}>
+            <Style.InnerContainer>
               <Style.ImageBrandFooter src={BrandLogo} alt="sungnikah" />
-              <Typography>
+              {/* <Typography>
                 Cara pandai membuat undangan  
                 masa kini ya sungnikah aja !
-              </Typography>
-            </Box>
+              </Typography> */}
+            </Style.InnerContainer>
           </Grid>
           <Grid item xs={12} md={3} lg={3}>
-            <Box pl={4} pt={4}>
+            <Style.InnerContainer>
               <Style.HeadingInnerFooter>
                 Metode Pembayaran
               </Style.HeadingInnerFooter>
-              <img src={PaymentGroup} alt="payment-icon" />
-            </Box>
+              <Style.AccountList src={PaymentGroup} alt="payment-icon" />
+            </Style.InnerContainer>
           </Grid>
           <Grid item xs={12} md={3} lg={3}>
-            <Box pl={4} pt={4}>
+            <Style.InnerContainer>
               <Style.HeadingInnerFooter>
                 Sungnikah
               </Style.HeadingInnerFooter>
               <Grid container>
                 <Grid item xs={6} md={6} lg={6}>
                   <ul>
-                    <Style.NavList>Cara Pesan</Style.NavList>
-                    <Style.NavList>Tentang Kami</Style.NavList>
-                    <Style.NavList>FAQ (Tanya Jawab)</Style.NavList>
+                    <li>
+                      <Style.NavList>Cara Pesan</Style.NavList>
+                    </li>
+                    <li>
+                      <Style.NavList>Tentang Kami</Style.NavList>
+                    </li>
+                    <li>
+                      <Style.NavList>FAQ (Tanya Jawab)</Style.NavList>
+                    </li>
                   </ul>
                 </Grid>
                 <Grid item xs={6} md={6} lg={6}>
                   <ul>
-                    <Style.NavList>Paket Harga</Style.NavList>
-                    <Style.NavList>Demo</Style.NavList>
-                    <Style.NavList>Syarat dan Ketentuan</Style.NavList>
+                    <li>
+                      <Style.NavList>Paket Harga</Style.NavList>
+                    </li>
+                    <li>
+                      <Style.NavList>Demo</Style.NavList>
+                    </li>
+                    <li>
+                      <Style.NavList>Syarat dan Ketentuan</Style.NavList>
+                    </li>
                   </ul>
                 </Grid>
               </Grid>
-            </Box>
+            </Style.InnerContainer>
           </Grid>
           <Grid item xs={12} md={3} lg={3}>
-            <Box pl={4} pt={4}>
+            <Style.InnerContainer>
               <Style.HeadingInnerFooter>
                 Lebih Dekat Dengan Kami
               </Style.HeadingInnerFooter>
               <Box mt={5}>
                 <Grid container>
-                  <Grid item xs={4} md={4} lg={4}>
+                  <Style.LeftGrid item xs={4} md={4} lg={4}>
                     <SocialMediaIconsReact 
-                      borderColor="rgba(0,0,0,0.25)" 
-                      borderWidth="4" 
+                      borderColor="white" 
+                      borderWidth="2" 
                       borderStyle="solid" 
-                      icon="twitter" 
+                      icon="facebook" 
                       iconColor="rgba(255,255,255,1)" 
                       backgroundColor="rgba(255,176,44,1)" 
                       iconSize="0" 
                       roundness="50%" 
                       url="https://www.facebook.com/sungnikah/" 
-                      size="48" 
+                      size="37" 
                     />
-                  </Grid>
-                  <Grid item xs={4} md={4} lg={4}>
+                  </Style.LeftGrid>
+                  <Style.LeftGrid item xs={4} md={4} lg={4}>
                     <SocialMediaIconsReact 
-                      borderColor="rgba(0,0,0,0.25)" 
-                      borderWidth="4" 
+                      borderColor="white" 
+                      borderWidth="2" 
                       borderStyle="solid" 
                       icon="instagram" 
                       iconColor="rgba(255,255,255,1)" 
@@ -115,26 +135,26 @@ const Footer = () => {
                       iconSize="0" 
                       roundness="50%" 
                       url="https://www.instagram.com/sungnikah/" 
-                      size="48" 
+                      size="37" 
                     />
-                  </Grid>
-                  <Grid item xs={4} md={4} lg={4}>
+                  </Style.LeftGrid>
+                  <Style.LeftGrid item xs={4} md={4} lg={4}>
                     <SocialMediaIconsReact 
-                      borderColor="rgba(0,0,0,0.25)" 
-                      borderWidth="4" 
+                      borderColor="white" 
+                      borderWidth="2" 
                       borderStyle="solid" 
                       icon="whatsapp" 
                       iconColor="rgba(255,255,255,1)" 
                       backgroundColor="rgba(255,176,44,1)" 
                       iconSize="0" 
                       roundness="50%"
-                      url="#" 
-                      size="48" 
+                      url="https://wa.me/6287872136170?text=Halo%20Tim Sungnikah%2C%20saya%20ingin%20bertanya"
+                      size="37" 
                     />
-                  </Grid>
+                  </Style.LeftGrid>
                 </Grid>
               </Box>
-            </Box>
+            </Style.InnerContainer>
           </Grid>
         </Grid>
       </Style.InnerFooter>

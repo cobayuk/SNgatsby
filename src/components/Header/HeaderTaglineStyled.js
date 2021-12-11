@@ -24,21 +24,18 @@ export const BoxHeader = styled(Box)`
   border: 1px solid #f7f7f7;
   height: 600px;
   padding: 56px 50px 0px 48px;
-  margin-top: 72px;
+  margin-top: 130px;
   border-radius: 20px;
   background-color: #F1EDEA;
   @media (min-width: 320px) and (max-width: 360px) {
-    margin-top: 10px;
     padding: 48px 15px 0px 15px;
     height: 350px;
     margin-bottom: 45px;
   }
   @media (min-width: 325px) and (max-width: 360px) {
-    margin-top: 7px;
     padding: 48px 21px 0px 21px;
   }
   @media (min-width: 375px) and (max-width: 768px) {
-    margin-top: 10px;
     padding: 48px 21px 0px 21px;
     height: 400px;
     margin-bottom: 45px;
@@ -117,10 +114,14 @@ export const BoxOrnamentsOne = styled(Box)`
       height: 72%;
       justify-content: flex-end;
     }
-    @media (min-width: 375px) and (max-width: 768px) {
+    @media (min-width: 375px) and (max-width: 767px) {
       top: -2em;
       left: 38px;
       justify-content: flex-end;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      top: -2em;
+      right: 0;
     }
   }
 `;
@@ -128,7 +129,7 @@ export const BoxOrnamentsOne = styled(Box)`
 export const BoxOrnamentsTwo = styled(Box)`
   &.MuiBox-root {
     top: -310px;
-    left: 50px;
+    left: 140px;
     float: right;
     display: flex;
     position: relative;
@@ -139,7 +140,7 @@ export const BoxOrnamentsThree = styled(Box)`
   &.MuiBox-root {
     top: -5em;
     float: right;
-    right: -2em;
+    right: -9em;
     display: flex;
     position: relative;
   }
@@ -149,7 +150,7 @@ export const BoxOrnamentsFour = styled(Box)`
   &.MuiBox-root {
     display: flex;
     position: relative;
-    right: 271px;
+    right: 16em;
     @media (max-width: 320px) {
       display: flex;
       justify-content: center;

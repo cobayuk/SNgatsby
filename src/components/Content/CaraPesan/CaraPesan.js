@@ -29,7 +29,7 @@ const CaraPesan = () => {
             </Style.TaglineCaption>
           </Style.WrapperHeadings>
           <Style.WrapperButtonCaraPesan>
-            <ButtonOrderNow> Order Sekarang </ButtonOrderNow>
+            <ButtonOrderNow> <span>Order Sekarang</span> </ButtonOrderNow>
           </Style.WrapperButtonCaraPesan>
         </Grid>
         {isMobile ? (
