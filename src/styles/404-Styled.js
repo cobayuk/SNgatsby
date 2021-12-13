@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import { Link } from "gatsby";
 
 export const ImageNotFound = styled.img`
-    width: 100%;
+    width: 500px;
+    height: auto;
+    max-width: 100%;
 `;
 
 export const DescriptionContainer = styled.div`

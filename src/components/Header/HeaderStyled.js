@@ -14,15 +14,16 @@
 import styled from 'styled-components';
 import {
   // AppBar,
-  Toolbar
+  Toolbar,
+  Typography
 }
 from '@material-ui/core';
 import { COLORS } from "@styles/constants";
 
-export const NavbarContainer = styled.div`
-  right: 0;
-  position: fixed;
-`;
+// export const NavbarContainer = styled.div`
+//   right: 0;
+//   position: fixed;
+// `;
 
 // export const HeaderAppBar = styled(AppBar)`
 //   position: fixed;
@@ -39,10 +40,14 @@ export const HeaderToolbar = styled(Toolbar)`
   flex-wrap: wrap;
 `;
 
+export const HeaderToolbarTitle = styled(Typography)`
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+`;
+
 export const Logobrand = styled.img`
-  width: 100%;
   height: 35px;
-  margin-left: 20px;
+  // margin-left: 20px;
   display: flex;
   align-items: align-start;
   @media (max-width: 768px) {

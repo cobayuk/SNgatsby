@@ -29,9 +29,6 @@ export const MainFooter = styled.footer`
   bottom: 0;
   width: 100%;
   height: 193px;
-  @media (max-width: 768px) {
-    height: 170px;
-  }
   margin-top: 150px;
   @media (max-width: 768px) {
     margin-top: 50px;
@@ -167,7 +164,7 @@ export const ImageBrandFooter = styled.img`
   width: 139px;
   height: 28px;
   display: block;
-  @media (max-width: 767px) {
+  @media (min-width: 1024px) {
     margin-left: 30px;
   }
 `;
@@ -205,6 +202,10 @@ export const AccountList = styled.img`
   right: 55px;
   top: -15px;
   position: relative;
+  @media (min-width: 1280px) {
+    transform: scale(0.9);
+    right: 30px;
+  }
 `;
 
 export const OrderContainer = styled.div`

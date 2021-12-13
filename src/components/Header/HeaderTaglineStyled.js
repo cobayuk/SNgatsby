@@ -24,7 +24,7 @@ export const BoxHeader = styled(Box)`
   border: 1px solid #f7f7f7;
   height: 600px;
   padding: 56px 50px 0px 48px;
-  margin-top: 130px;
+  margin-top: 80px;
   border-radius: 20px;
   background-color: #F1EDEA;
   @media (min-width: 320px) and (max-width: 360px) {
