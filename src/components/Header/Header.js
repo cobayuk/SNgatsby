@@ -21,39 +21,38 @@ const Header = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const [isScroll, setIsScroll] = useState(false);
-
   const HeaderAppBar = styled(AppBar)`
-    position: fixed;
     left: 0;
     top: 0;
     background-color: white;
-    box-shadow: ${isScroll ? "0 5px 20px rgb(45 102 229 / 10%);" : "none;"}
+    box-shadow: none;
+    @media (min-width: 1024px) {
+      padding-top: 50px;
+    }
+    transition: all 2s ease;
   `;
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () =>
-      setIsScroll(window.pageYOffset > 1)
-      );
-    }
-  }, []);
+  const NavbarContainer = styled.div`
+    right: 0;
+    position: absolute;
+    transition: all 2s ease;
+  `;
 
   return (
     <HeaderAppBar position="static" color="default">
       <CssBaseline />
       <Style.HeaderToolbar>
-        {/* <Style.HeaderToolbarTitle variant="h6" color="inherit" noWrap> */}
+        <Style.HeaderToolbarTitle variant="h6" color="inherit" noWrap>
           <Link to="/">
             <Style.Logobrand src={BrandLogo} alt="brand-logo"/>
           </Link>
-        {/* </Style.HeaderToolbarTitle> */}
+        </Style.HeaderToolbarTitle>
         {isMobile ? (
-          <DrawerComponent />
+            <DrawerComponent />
         ) : (
-          <Style.NavbarContainer>
+          <NavbarContainer>
              <NavbarMenu/>
-          </Style.NavbarContainer>
+          </NavbarContainer>
         )}
       </Style.HeaderToolbar>
     </HeaderAppBar>

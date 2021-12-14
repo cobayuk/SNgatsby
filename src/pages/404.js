@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "@components/seo";
 import AssetJPG from "@assets/404/404.jpg";
 import AssetWebP from "@assets/404/404.webp";
-import * as Style from "@styles/404-styled.js";
+import * as Style from "../styles/404-Styled";
 
 const NotFoundPage = () => (
   <>
@@ -10,7 +10,7 @@ const NotFoundPage = () => (
     <Style.DescriptionContainer>
       <picture>
         <source srcSet={AssetWebP} />
-        <Style.ImageNotFound src={AssetJPG} alt="404-not-found"/>
+        <Style.ImageNotFound src={AssetJPG} alt="404-not-found" width="500" height="375"/>
       </picture>
     
       <h1>Page not Found </h1>

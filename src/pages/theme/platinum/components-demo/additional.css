@@ -1,0 +1,97 @@
+.__react_modal_image__modal_content {
+  max-width: 100vw;
+}
+
+.__react_modal_image__modal_container {
+  max-width: 100vw;
+}
+
+.flexbin {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin: 0 -2.5px;
+    padding: 2.5px 0;
+}
+
+.flexbin>* {
+  position: relative;
+  display: block;
+  height: 300px;
+  margin: 2.5px;
+  flex-grow: 1;
+}
+
+.flexbin>*>img {
+  height: 300px;
+  object-fit: cover;
+  max-width: 100%;
+  min-width: 100%;
+  vertical-align: bottom;
+}
+
+.flexbin.flexbin-margin {
+  margin: 2.5px;
+}
+
+@media (max-width: 980px) {
+    .flexbin {
+        display: flex;
+        overflow: hidden;
+        flex-wrap: wrap;
+        margin: -2.5px;
+    }
+
+    .flexbin>* {
+        position: relative;
+        display: block;
+        height: 150px;
+        margin: 2.5px;
+        flex-grow: 1;
+    }
+
+    .flexbin>*>img {
+        height: 150px;
+        object-fit: cover;
+        max-width: 100%;
+        min-width: 100%;
+        vertical-align: bottom;
+    }
+
+    .flexbin.flexbin-margin {
+        margin: 2.5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .flexbin {
+        display: flex;
+        overflow: hidden;
+        flex-wrap: wrap;
+        margin: -2.5px;
+    }
+
+    .flexbin>* {
+        position: relative;
+        display: block;
+        height: 100px;
+        margin: 2.5px;
+        flex-grow: 1;
+    }
+
+    .flexbin>*>img {
+        height: 100px;
+        object-fit: cover;
+        max-width: 100%;
+        min-width: 100%;
+        vertical-align: bottom;
+    }
+
+    .flexbin.flexbin-margin {
+        margin: 2.5px;
+    }
+}
+
+.w-100 {
+    width: 100% !important;
+}

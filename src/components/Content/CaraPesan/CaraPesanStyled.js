@@ -33,9 +33,6 @@ export const BoxHowItWorks = styled(Box)`
   @media (min-width: 320px) and (max-width: 768px) {
     margin-top: 0;
   }
-  @media (min-width: 1280px) {
-    margin-top: 400px;
-  }
 `;
 
 export const HeadingItWork = styled(Typography)`

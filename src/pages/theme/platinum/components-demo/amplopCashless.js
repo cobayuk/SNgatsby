@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Snackbar from '@material-ui/core/Snackbar';
 import Alert from '@material-ui/lab/Alert';
-import * as Style from "@styles/platinum/amplopCashlessStyle";
+import * as Style from "@styles/demo/platinum/amplopCashlessStyle";
 import AllWallet from "@assets/e-wallet/e-wallet.png";
 import WomanAvatar from "@assets/e-wallet/girl-marry.png";
 import ManAvatar from "@assets/e-wallet/man-marry.png";
@@ -41,7 +41,7 @@ const AmplopCashless = () =>  {
             <Style.SectionCashless>
                 <div data-aos="fade-in">
                     <Style.CashlessTitle>Amplop Cashless</Style.CashlessTitle>
-                    <Style.CashlessDescription>Kirim hadiah untuk Agung &#38; Reni melalui</Style.CashlessDescription>
+                    <Style.CashlessDescription>Kirim hadiah untuk Karim &#38; Alyssa melalui</Style.CashlessDescription>
                     <Style.AllEwallet src={AllWallet} alt="e-wallet" width="330" height="32"/>
                 </div>
                 
@@ -55,12 +55,12 @@ const AmplopCashless = () =>  {
                             {/* <Style.QRCode src={SampleQRCode} alt="qr-code"/> */}
                             <div>
                                 <Style.BankLogo src={MandiriLogo} alt="mandiri-logo" width="70"/>
-                                <Style.AccountNumber>006-000-9900-980</Style.AccountNumber>
+                                <Style.AccountNumber>123-456-7890-123</Style.AccountNumber>
                                 <Style.PersonTitle>atas nama</Style.PersonTitle>
-                                <Style.PersonName>Reni Fitria</Style.PersonName>
+                                <Style.PersonName>Karim Prasetyo</Style.PersonName>
                                 <Style.CopyToClipboardButton
                                     onClick={() => {
-                                    CopyToClipboard("0060009900980")
+                                    CopyToClipboard("1234567890123")
                                     setAlertOpenFirst(true)
                                     }}
                                 >
@@ -81,7 +81,7 @@ const AmplopCashless = () =>  {
                                     severity="success"
                                     variant="filled"
                                     >
-                                        Nomor rekening Reni Fitria Berhasil disalin
+                                        Nomor rekening Karim Prasetyo Berhasil disalin
                                     </Alert>
                                 </Snackbar>
                             </div>
@@ -91,13 +91,13 @@ const AmplopCashless = () =>  {
                             </Style.SeparatorContainer>
 
                             <div>
-                                <Style.BankLogo src={MandiriLogo} alt="mandiri-logo" width="70"/>
-                                <Style.AccountNumber>164-001-4079-232</Style.AccountNumber>
+                                <Style.BankLogo src={BCALogo} alt="BCA-logo" width="70"/>
+                                <Style.AccountNumber>1234-567-890</Style.AccountNumber>
                                 <Style.PersonTitle>atas nama</Style.PersonTitle>
-                                <Style.PersonName>Agung Tri Wibowo</Style.PersonName>
+                                <Style.PersonName>Alyssa Reni</Style.PersonName>
                                 <Style.CopyToClipboardButton
                                     onClick={() => {
-                                    CopyToClipboard("1640014079232")
+                                    CopyToClipboard("1234567890")
                                     setAlertOpenSecond(true)
                                     }}
                                 >
@@ -118,7 +118,7 @@ const AmplopCashless = () =>  {
                                     severity="success"
                                     variant="filled"
                                     >
-                                        Nomor rekening Agung Tri Wibowo Berhasil disalin
+                                        Nomor rekening Alyssa Reni Berhasil disalin
                                     </Alert>
                                 </Snackbar>
                             </div>

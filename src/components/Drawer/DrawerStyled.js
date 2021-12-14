@@ -29,8 +29,6 @@ export const LinkDrawer = styled(Link)`
 
 export const IconButtons = styled(IconButton)`
   color: ${COLORS.black};
-  right: 0;
-  position: fixed;
   &.MuiSvgIcon-root {
     font-size: 150px;
   }

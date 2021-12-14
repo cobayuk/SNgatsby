@@ -521,10 +521,10 @@ const Watermark = styled(Typography)`
 const SecondTheme = () =>  {
 
   const calculateTimeLeft = () => {
-    let year = new Date().getFullYear();
-    // const difference = +new Date(`${year}-10-1`) - +new Date();
-
-    let difference = +new Date(`12/11/${year}`) - +new Date(); //month - day - current year
+    let countDownDate = new Date("Jan 31, 2022 15:00:00").getTime();
+    let now = new Date().getTime();
+    
+    let difference = countDownDate - now;
     let timeLeft = {};
 
     if (difference > 0) {

@@ -715,9 +715,10 @@ const WatermarkSungnikah = styled(Typography)`
 const FirstTheme = () =>  {
 
   const calculateTimeLeft = () => {
-    let year = new Date().getFullYear();
-    // const difference = +new Date(`${year}-10-1`) - +new Date();
-    let difference = +new Date(`04/30/${year}`) - +new Date(); //month - day - current year
+    let countDownDate = new Date("Jan 31, 2022 15:00:00").getTime();
+    let now = new Date().getTime();
+    
+    let difference = countDownDate - now;
     let timeLeft = {};
 
     if (difference > 0) {
@@ -769,60 +770,60 @@ const FirstTheme = () =>  {
         <OrnamentLiquidOutline
           src={LiquidOutline}
           alt="ornament-2"
-          data-sal="fade"
-          data-sal-duration="2000"
-          data-sal-delay="300"
-          data-sal-easing="ease"
+          // data-sal="fade"
+          // data-sal-duration="2000"
+          // data-sal-delay="300"
+          // data-sal-easing="ease"
         />
         <IntroWrapper>
           <Invite
-            data-sal="slide-up"
-            data-sal-duration="2000" // changes duration of the animation (from 200 to 2000 ms)
-            data-sal-delay="300" // adds delay to the animation (from 5 to 1000 ms)
-            data-sal-easing="ease" // sets easing for the animation (see easings.net for reference)
+            // data-sal="slide-up"
+            // data-sal-duration="2000" // changes duration of the animation (from 200 to 2000 ms)
+            // data-sal-delay="300" // adds delay to the animation (from 5 to 1000 ms)
+            // data-sal-easing="ease" // sets easing for the animation (see easings.net for reference)
           >
             You&apos;re Invited to
           </Invite>
           <Title
-            data-sal="slide-down"
-            data-sal-duration="2000"
-            data-sal-delay="400"
-            data-sal-easing="ease"
+            // data-sal="slide-down"
+            // data-sal-duration="2000"
+            // data-sal-delay="400"
+            // data-sal-easing="ease"
           >
             The Wedding Of
           </Title>
           <Box>
             <PersonName
-              data-sal="slide-left"
-              data-sal-duration="2000"
-              data-sal-delay="500"
-              data-sal-easing="ease"
+              // data-sal="slide-left"
+              // data-sal-duration="2000"
+              // data-sal-delay="500"
+              // data-sal-easing="ease"
             >
               Andy
             </PersonName>
             <Ampersand
-              data-sal="slide-down"
-              data-sal-duration="2000"
-              data-sal-delay="600"
-              data-sal-easing="ease"
+              // data-sal="slide-down"
+              // data-sal-duration="2000"
+              // data-sal-delay="600"
+              // data-sal-easing="ease"
             >
               and
             </Ampersand>
             <PersonName
-              data-sal="slide-right"
-              data-sal-duration="2000"
-              data-sal-delay="700"
-              data-sal-easing="ease"
+              // data-sal="slide-right"
+              // data-sal-duration="2000"
+              // data-sal-delay="700"
+              // data-sal-easing="ease"
             >
               Syifa
             </PersonName>
           </Box>
           <CountdownContainer>
             <WeddingCountdown
-              data-sal="slide-up"
-              data-sal-duration="2000"
-              data-sal-delay="1000"
-              data-sal-easing="ease"
+              // data-sal="slide-up"
+              // data-sal-duration="2000"
+              // data-sal-delay="1000"
+              // data-sal-easing="ease"
             >
               {timerComponents.length ? timerComponents : <span>Time&apos;s up!</span>}
             </WeddingCountdown>
