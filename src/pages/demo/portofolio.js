@@ -1,15 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
-  Card,
   Grid,
-  Box,
-  Button,
   Container,
-  Typography,
   CssBaseline,
-  CardMedia,
-  CardContent,
-  CardActions,
 }
 from '@material-ui/core';
 import Header from "@components/Header/Header";
@@ -17,47 +10,140 @@ import Layout from "@components/layout";
 import SEO from "@components/seo";
 import GlobalStyle from "@styles/global/globalStyled";
 import useStyles from "@styles/demo/portofolioStyle";
+import CandyPastel from "../../assets/demo/candy-pastel.png";
+import ComingSoon from "../../assets/demo/coming-soon.png";
+import LeafOfLove from "../../assets/demo/leaf-of-love.png";
+import ModernMinimalism from "../../assets/demo/modern-minimalism.png";
+import ChevronDown from "../../assets/svg/chevron-down.svg";
+import FilterIcon from "../../assets/svg/filter-icon.svg";
+import * as Style from "@styles/demo/portofolioStyled";
 
 const DemoPortofolio = () => {
   const classes = useStyles();
   const [ themes ] = useState([
     {
-      id: Math.floor(Math.random() * 100),
-      image: 'https://via.placeholder.com/250',
-      name: 'SN-01',
-      description: 'describe the content',
+      id: 1,
+      image: CandyPastel,
+      name: 'Candy Pastel',
       url: 'theme/first',
-      cta: 'Lihat Desain'
+      type: 'silver',
+      tags: ['pastel', 'floral']
     },
     {
-      id: Math.floor(Math.random() * 100),
-      image: 'https://via.placeholder.com/250x500',
-      name: 'SN-02',
-      description: 'describe the content',
+      id: 2,
+      image: ModernMinimalism,
+      name: 'Solid Minimalism',
+      url: 'theme/platinum/platinum',
+      type: 'gold',
+      tags: ['minimalist']
+    },
+    {
+      id: 3,
+      image: ModernMinimalism,
+      name: 'Modern Minimalism',
+      url: 'theme/platinum/platinum',
+      type: 'platinum',
+      tags: ['minimalist']
+    },
+    {
+      id: 4,
+      image: LeafOfLove,
+      name: 'Leaf of Love',
       url: 'theme/second',
-      cta: 'Lihat Desain'
+      type: 'silver',
+      tags: ['rustic', 'floral']
     },
     {
-      id: Math.floor(Math.random() * 100),
-      name: 'SN-03',
-      image: 'https://via.placeholder.com/250',
-      url: 'theme/first',
-      description: 'describe the content',
-      cta: 'Lihat Desain'
-    },
-    {
-      id: Math.floor(Math.random() * 100),
-      name: 'SN-04',
-      image: 'https://via.placeholder.com/250',
-      url: 'theme/second',
-      description: 'describe the content',
-      cta: 'Lihat Desain'
+      id: 5,
+      image: ComingSoon,
+      name: 'Coming Soon',
+      url: 'demo/portofolio/#',
+      type: null,
+      tags: null
     }
   ]);
 
   const redirectTemplate = (url) => {
     window.location.href = `/${url}`;
   }
+
+  const primarySort = [
+    { id: 1, text: "popular" },
+    { id: 2, text: "silver" },
+    { id: 3, text: "gold" },
+    { id: 4, text: "platinum" },
+  ];
+
+  const sortList = [
+    { id: 1, text: "All" },
+    { id: 2, text: "Minimalist" },
+    { id: 3, text: "Rustic" },
+    { id: 4, text: "Floral" },
+    { id: 5, text: "Silver Package" },
+    { id: 6, text: "Gold Package" },
+    { id: 7, text: "Platinum Package" },
+  ];
+
+  const [ sortActive, setSortActive ] = useState(false);
+  const [ sortName, setSortName ] = useState("popular");
+  const [ dropdownSortActive, setDropdownSortActive ] = useState();
+  const [ sortListActive, setSortListActive ] = useState();
+  const [ filterActive, setFilterActive ] = useState(false);
+
+  const [products, setProducts] = useState(themes);
+  const [category, setCategory] = useState("all");
+
+  const handleFilterChange = value => () => {
+
+    // if (value !== "all") {
+    //   setCategory(value);
+    //   setSortName(value);
+    //   setSortActive(true);
+    //   setDropdownSortActive(true);
+    // } else {
+    //   setCategory("all");
+    // }
+
+    //changes state 
+    switch (value) {
+      case "popular":
+        setCategory("all")
+        setSortName(value)
+        setSortActive(true)
+        setDropdownSortActive(value.text)
+        break;
+      case "silver":
+        setCategory(value)
+        setSortName(value)
+        setSortActive(true)
+        setDropdownSortActive(value.text)
+        break;
+      case "gold":
+        setCategory(value)
+        setSortName(value)
+        setSortActive(true)
+        setDropdownSortActive(value.text)
+        break;
+      case "platinum":
+        setCategory(value)
+        setSortName(value)
+        setSortActive(true)
+        setDropdownSortActive(value.text)
+        break;
+      default: break;
+  }
+
+  }
+
+  useEffect(() => {
+    let filteredProducts = themes;
+
+    if (category !== "all") {
+        filteredProducts = filteredProducts.filter(product => product.type === category)
+    }
+      setProducts(filteredProducts)
+  }, [category])
+
 
   return (
     <React.Fragment>
@@ -68,56 +154,83 @@ const DemoPortofolio = () => {
         <Header/>
       </Container>
 
-      <Box className={classes.heroContent}>
-        <Typography
-          component="h1"
-          variant="h1"
-          align="center"
-          color="textPrimary"
-          gutterBottom
-          className={classes.headingPorto}
-        >
-          Pilih Desain Undangan Kesukaan Kamu
-        </Typography>
-        <Typography
-          variant="h2"
-          align="center"
-          color="textSecondary"
-          paragraph
-          className={classes.headingDescPorto}
-        >
-          Kini lebih mudah hanya sekali klik dan order desain undangan kesukaan kamu,
-          boleh lihat - lihat dahulu, jika ada yang kaka ingin tanyakan bisa langsung hubungi kami ya, dengan cara klik tombol dibawah ini
-        </Typography>
-        <Box className={classes.innerTriangleContent}></Box>
-      </Box>
+      <Style.HeroContent>
+        <Style.Title>Pilih Desain Undangan Kesukaan Kamu</Style.Title>
+        <Style.Description>
+          Tersedia berbagai macam desain yang sesuai dengan preferensi kamu. Mulai dari minimalis, rustic, floral, elegan, pastel sampai custom.
+        </Style.Description>
+        <Style.InnerContent/>
+      </Style.HeroContent>
 
       <Layout>
         <Container className={classes.cardGrid} maxWidth="md">
-          {/* End hero unit */}
+    
+          <Style.CategoryContainer>
+            <Style.FilterView>
+              <Style.DrowdownSort>
+                <Style.DropdownLink onClick={() => setSortActive(!sortActive) || setFilterActive(false)}>
+                  <Style.DropdownImage src={ChevronDown} alt="chevron"/>
+                  <span>{sortName}</span>
+                  <Style.DropdownOptions className={`${sortActive ? "active" : ""}`}>
+                    <ul>
+                      <li className={`${dropdownSortActive ? "active" : ""}`} onClick={handleFilterChange("popular")}>
+                        <a>Popular</a>
+                      </li> 
+                      <li className={`${dropdownSortActive ? "active" : ""}`} onClick={handleFilterChange("silver")}>
+                        <a>Silver</a>
+                      </li>
+                      <li className={`${dropdownSortActive ? "active" : ""}`} onClick={handleFilterChange("gold")}>
+                        <a>Gold</a>
+                      </li>
+                      <li className={`${dropdownSortActive ? "active" : ""}`} onClick={handleFilterChange("platinum")}>
+                        <a>Platinum</a>
+                      </li>
+                    </ul>
+                  </Style.DropdownOptions>
+                </Style.DropdownLink>
+              </Style.DrowdownSort>
+            </Style.FilterView>
+            <Style.FilterCategory>
+              <Style.Category>
+                {sortList.map((value, key) => (
+                  <li key={key} className={`${sortListActive == value.id ? 'active' : ''}`} onClick={() => setSortListActive(value.id)}>
+                    <a>{value.text}</a>
+                  </li>
+                ))}
+              </Style.Category>
+            </Style.FilterCategory>
+            <Style.FilterSetting>
+              <Style.FilterButton onClick={() => setFilterActive(!filterActive) || setSortActive(false)}>
+                <Style.FilterImage src={FilterIcon} alt="filter-icon"/>
+                <span>Filter</span>
+                <Style.DropdownFilterOptions className={`${filterActive ? "active" : ""}`}>
+                    <ul>
+                      <li>
+                        <a>Rustic</a>
+                      </li>
+                      <li>
+                        <a>Minimalist</a>
+                      </li>
+                      <li>
+                        <a>Floral</a>
+                      </li>
+                      <li>
+                        <a>Pastel</a>
+                      </li>
+                    </ul>
+                  </Style.DropdownFilterOptions>
+              </Style.FilterButton>
+            </Style.FilterSetting>
+          </Style.CategoryContainer>
+
           <Grid container spacing={4}>
-            {themes.map((value, key) => (
-              <Grid item key={key} xs={12} sm={6} md={6}>
-                <Card className={classes.card}>
-                  <CardMedia
-                    className={classes.cardMedia}
-                    image={value.image}
-                    title="Image title"
-                  />
-                  <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      {value.name}
-                    </Typography>
-                    <Typography>
-                      <em>{value.name}</em> {value.description}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary" onClick={() => redirectTemplate(value.url)}>
-                      {value.cta}
-                    </Button>
-                  </CardActions>
-                </Card>
+            {products.map((value, key) => (
+              <Grid item key={key} xs={6} sm={6} md={4}>
+                <Style.ThemeCard onClick={() => redirectTemplate(value.url)}>
+                  <Style.ThemeImage src={value.image} alt={value.name} width="150" height="auto"/>
+                  <Style.ThemeName>{value.name}</Style.ThemeName>
+                </Style.ThemeCard>
+                
               </Grid>
             ))}
           </Grid>
