@@ -13,7 +13,8 @@ const NavbarMenu = () => {
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  const pathname = window.location.pathname;
+  const window = global.window;
+  let pathname = typeof window !== 'undefined' ? window.location.pathname : 'undefined';
 
   const redirection = (url) => {
     return window.location = url;
@@ -44,6 +45,9 @@ const NavbarMenu = () => {
               >
                 Tentang Kami
               </Style.Links>
+              <Style.Links>
+                Demo
+              </Style.Links>
             </>
           ) : (
             <>
@@ -62,13 +66,18 @@ const NavbarMenu = () => {
               >
                 Tentang Kami
               </Style.Links>
+              <Style.Links
+                onClick={() => redirection('demo/portofolio')}
+              >
+                Demo
+              </Style.Links>
             </>
           )}
-          <Style.Links
+          {/* <Style.Links
             onClick={() => redirection('demo/portofolio')}
           >
             Demo
-          </Style.Links>
+          </Style.Links> */}
           {/* <Style.ButtonLogin href="#">
             Login
           </Style.ButtonLogin>

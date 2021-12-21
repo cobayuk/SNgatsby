@@ -50,7 +50,7 @@ const DemoPortofolio = () => {
       image: LeafOfLove,
       name: 'Leaf of Love',
       url: 'theme/second',
-      type: 'silver',
+      type: 'gold',
       tags: 'floral'
     },
     {
