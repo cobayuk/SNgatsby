@@ -87,8 +87,8 @@ export const ButtonBoxDiscount = styled(Typography)`
 
 export const CardsContentArea = styled(Card)`
   width: 100%;
-  height: ${props => props.title === 'Gold' ? '700px' : '600px'};
-  ${props => props.title === 'Gold' ? 'margin-top: -3em' : ''};
+  height: ${props => props.title === 'Platinum' ? '600px' : '500px'};
+  ${props => props.title === 'Platinum' ? 'margin-top: -3em' : ''};
   box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 3%), 0px 1px 13px 0px rgb(0 0 0 / 4%), 0px 1px 3px 0px rgb(0 0 0 / 47%);
 `;
 
@@ -96,7 +96,7 @@ export const CardHeaderTier = styled.div`
   display: flex;
   justify-content: center;
   align-item: center;
-  padding-top: ${props => props.title === 'Gold' ? '80px' : '40px'};
+  padding-top: ${props => props.title === 'Platinum' ? '80px' : '40px'};
 `;
 
 export const HeadingTierPackages = styled(Typography)`

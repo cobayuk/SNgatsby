@@ -27,23 +27,23 @@ const DemoPortofolio = () => {
       name: 'Candy Pastel',
       url: 'theme/first',
       type: 'silver',
-      tags: ['pastel', 'floral']
+      tags: 'pastel'
     },
-    {
-      id: 2,
-      image: ModernMinimalism,
-      name: 'Solid Minimalism',
-      url: 'theme/platinum/platinum',
-      type: 'gold',
-      tags: ['minimalist']
-    },
+    // {
+    //   id: 2,
+    //   image: ModernMinimalism,
+    //   name: 'Solid Minimalism',
+    //   url: 'theme/platinum/platinum',
+    //   type: 'gold',
+    //   tags: ['minimalist']
+    // },
     {
       id: 3,
       image: ModernMinimalism,
       name: 'Modern Minimalism',
       url: 'theme/platinum/platinum',
       type: 'platinum',
-      tags: ['minimalist']
+      tags: 'minimalist'
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ const DemoPortofolio = () => {
       name: 'Leaf of Love',
       url: 'theme/second',
       type: 'silver',
-      tags: ['rustic', 'floral']
+      tags: 'floral'
     },
     {
       id: 5,
@@ -59,7 +59,7 @@ const DemoPortofolio = () => {
       name: 'Coming Soon',
       url: 'demo/portofolio/#',
       type: null,
-      tags: null
+      tags: []
     }
   ]);
 
@@ -74,37 +74,35 @@ const DemoPortofolio = () => {
     { id: 4, text: "platinum" },
   ];
 
-  const sortList = [
-    { id: 1, text: "All" },
-    { id: 2, text: "Minimalist" },
-    { id: 3, text: "Rustic" },
-    { id: 4, text: "Floral" },
-    { id: 5, text: "Silver Package" },
-    { id: 6, text: "Gold Package" },
-    { id: 7, text: "Platinum Package" },
-  ];
+  // const sortList = [
+  //   { id: 1, text: "all" },
+  //   { id: 2, text: "minimalist" },
+  //   { id: 3, text: "rustic" },
+  //   { id: 4, text: "floral" },
+  //   { id: 5, text: "silver" },
+  //   { id: 6, text: "gold" },
+  //   { id: 7, text: "platinum" },
+  // ];
+
+  const primaryFilter = [
+    // { id: 1, text: "rustic" },
+    { id: 2, text: "minimalist" },
+    { id: 3, text: "floral" },
+    { id: 4, text: "pastel" },
+  ]
 
   const [ sortActive, setSortActive ] = useState(false);
   const [ sortName, setSortName ] = useState("popular");
   const [ dropdownSortActive, setDropdownSortActive ] = useState();
-  const [ sortListActive, setSortListActive ] = useState();
+
+  // const [ sortListActive, setSortListActive ] = useState();
   const [ filterActive, setFilterActive ] = useState(false);
 
-  const [products, setProducts] = useState(themes);
-  const [category, setCategory] = useState("all");
+  const [ products, setProducts ] = useState(themes);
+  const [ category, setCategory ] = useState("all");
+  const [ themeTag, setThemeTag ] = useState("all");
 
-  const handleFilterChange = value => () => {
-
-    // if (value !== "all") {
-    //   setCategory(value);
-    //   setSortName(value);
-    //   setSortActive(true);
-    //   setDropdownSortActive(true);
-    // } else {
-    //   setCategory("all");
-    // }
-
-    //changes state 
+  const handleSortChange = value => () => {
     switch (value) {
       case "popular":
         setCategory("all")
@@ -131,18 +129,72 @@ const DemoPortofolio = () => {
         setDropdownSortActive(value.text)
         break;
       default: break;
+    }
   }
 
+  const handleFilterChange = value => () => {
+    switch (value) {
+      case "rustic":
+        setThemeTag(value)
+        break;
+      case "floral":
+        setThemeTag(value)
+        break;
+      case "minimalist":
+        setThemeTag(value)
+        break;
+      case "pastel":
+        setThemeTag(value)
+        break;
+      default: break;
+    }
   }
+
+  const primarySortList = primarySort.map((value, key) =>
+    <li
+      key={key}
+      className={`${dropdownSortActive ? "active" : ""}`}
+      onClick={handleSortChange(value.text)}
+    >
+      <a>{value.text}</a>
+    </li>
+  );
+
+  const primaryFilterList = primaryFilter.map((value, key) =>
+    <li
+      key={key}
+      className={`${dropdownSortActive ? "active" : ""}`}
+      onClick={handleFilterChange(value.text)}
+    >
+      <a>{value.text}</a>
+    </li>
+  );
+
+  // const sortListCategory = sortList.map((value, key) =>
+  //     <li key={key} className={`${sortListActive == value.id ? 'active' : ''}`} onClick={() => setSortListActive(value.id)}>
+  //       <a>{value.text}</a>
+  //     </li>
+  // );
 
   useEffect(() => {
     let filteredProducts = themes;
 
     if (category !== "all") {
-        filteredProducts = filteredProducts.filter(product => product.type === category)
+      filteredProducts = filteredProducts.filter(product => product.type === category)
     }
-      setProducts(filteredProducts)
+
+    setProducts(filteredProducts)
   }, [category])
+
+  useEffect(() => {
+    let filteredProducts = themes;
+
+    if (themeTag !== "all") {
+      filteredProducts = filteredProducts.filter(product => product.tags === themeTag)
+    }
+
+    setProducts(filteredProducts)
+  }, [themeTag])
 
 
   return (
@@ -164,7 +216,7 @@ const DemoPortofolio = () => {
 
       <Layout>
         <Container className={classes.cardGrid} maxWidth="md">
-    
+
           <Style.CategoryContainer>
             <Style.FilterView>
               <Style.DrowdownSort>
@@ -173,39 +225,25 @@ const DemoPortofolio = () => {
                   <span>{sortName}</span>
                   <Style.DropdownOptions className={`${sortActive ? "active" : ""}`}>
                     <ul>
-                      <li className={`${dropdownSortActive ? "active" : ""}`} onClick={handleFilterChange("popular")}>
-                        <a>Popular</a>
-                      </li> 
-                      <li className={`${dropdownSortActive ? "active" : ""}`} onClick={handleFilterChange("silver")}>
-                        <a>Silver</a>
-                      </li>
-                      <li className={`${dropdownSortActive ? "active" : ""}`} onClick={handleFilterChange("gold")}>
-                        <a>Gold</a>
-                      </li>
-                      <li className={`${dropdownSortActive ? "active" : ""}`} onClick={handleFilterChange("platinum")}>
-                        <a>Platinum</a>
-                      </li>
+                      {primarySortList}
                     </ul>
                   </Style.DropdownOptions>
                 </Style.DropdownLink>
               </Style.DrowdownSort>
             </Style.FilterView>
-            <Style.FilterCategory>
+            {/* <Style.FilterCategory>
               <Style.Category>
-                {sortList.map((value, key) => (
-                  <li key={key} className={`${sortListActive == value.id ? 'active' : ''}`} onClick={() => setSortListActive(value.id)}>
-                    <a>{value.text}</a>
-                  </li>
-                ))}
+                {sortListCategory}
               </Style.Category>
-            </Style.FilterCategory>
+            </Style.FilterCategory> */}
             <Style.FilterSetting>
               <Style.FilterButton onClick={() => setFilterActive(!filterActive) || setSortActive(false)}>
                 <Style.FilterImage src={FilterIcon} alt="filter-icon"/>
                 <span>Filter</span>
                 <Style.DropdownFilterOptions className={`${filterActive ? "active" : ""}`}>
                     <ul>
-                      <li>
+                      {primaryFilterList}
+                      {/* <li>
                         <a>Rustic</a>
                       </li>
                       <li>
@@ -216,7 +254,7 @@ const DemoPortofolio = () => {
                       </li>
                       <li>
                         <a>Pastel</a>
-                      </li>
+                      </li> */}
                     </ul>
                   </Style.DropdownFilterOptions>
               </Style.FilterButton>
@@ -224,15 +262,25 @@ const DemoPortofolio = () => {
           </Style.CategoryContainer>
 
           <Grid container spacing={4}>
-            {products.map((value, key) => (
-              <Grid item key={key} xs={6} sm={6} md={4}>
-                <Style.ThemeCard onClick={() => redirectTemplate(value.url)}>
-                  <Style.ThemeImage src={value.image} alt={value.name} width="150" height="auto"/>
-                  <Style.ThemeName>{value.name}</Style.ThemeName>
-                </Style.ThemeCard>
-                
-              </Grid>
-            ))}
+            {products.length === 0 ? (
+              <>
+                <Grid item xs={12} sm={12} md={12}>
+                  <Style.ProductNotAvailable>Belum ada tema</Style.ProductNotAvailable>
+                </Grid>
+              </>
+            ) : (
+              <>
+                {products.map((value, key) => (
+                  <Grid item key={key} xs={6} sm={6} md={4}>
+                    <Style.ThemeCard onClick={() => redirectTemplate(value.url)}>
+                      <Style.ThemeImage src={value.image} alt={value.name} width="150" height="auto"/>
+                      <Style.ThemeName>{value.name}</Style.ThemeName>
+                    </Style.ThemeCard>
+                  </Grid>
+                ))}
+              </>
+            )}
+
           </Grid>
         </Container>
       </Layout>

@@ -214,6 +214,7 @@ export const DropdownFilterOptions = styled.div`
     ul {
         padding: 8px 0;
         list-style: none;
+        text-transform: capitalize;
     }
     li.active {
         a {
@@ -312,4 +313,12 @@ export const Category = styled.ul`
             border-radius: 4px;
         }
     }
+`;
+
+export const ProductNotAvailable = styled.p`
+    text-align: center;
+    font-family: Oxygen;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
 `;

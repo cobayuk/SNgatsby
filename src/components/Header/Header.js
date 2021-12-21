@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useMemo } from "react";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import {

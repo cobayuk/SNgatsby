@@ -55,24 +55,7 @@ const packages = [
       'Penghitung Waktu Mundur',
       'Navigasi Peta',
       'Quotes/Qur’an Verse',
-      'Belum Termasuk Domain'
-    ]
-  },
-  {
-    title: 'Gold',
-    price: '99',
-    discount: 'Diskon 35%',
-    discountPrice: '149.000',
-    description: [
-      'Responsive Layout',
-      'Desain Template',
-      'Penghitung Waktu Mundur',
-      'Navigasi Peta',
-      'Quotes/Qur’an Verse',
-      'Audio Musik',
-      'Galeri Foto',
-      'Facebook Comment',
-      'Belum Termasuk Domain'
+      // 'Belum Termasuk Domain'
     ]
   },
   {
@@ -86,13 +69,34 @@ const packages = [
       'Penghitung Waktu Mundur',
       'Navigasi Peta',
       'Quotes/Qur’an Verse',
-      'Audio Musik',
+      'Protokol Kesehatan',
+      // 'Audio Musik',
       'Galeri Foto',
-      'Facebook Comment',
-      'QR Code Dompet Digital',
-      'Sudah Termasuk Domain'
+      // 'Facebook Comment',
+      'Amplop Digital',
+      // 'Sudah Termasuk Domain'
     ]
-  }
+  },
+  {
+    title: 'Gold',
+    price: '99',
+    discount: 'Diskon 35%',
+    discountPrice: '149.000',
+    description: [
+      'Responsive Layout',
+      'Desain Template',
+      'Penghitung Waktu Mundur',
+      'Navigasi Peta',
+      'Quotes/Qur’an Verse',
+      'Protokol Kesehatan',
+      'Amplop Digital',
+      // 'Audio Musik',
+      // 'Galeri Foto',
+      // 'Facebook Comment',
+      // 'Belum Termasuk Domain'
+    ]
+  },
+
 ];
 
 const PricingPrice = () => {
@@ -177,7 +181,7 @@ const PricingPrice = () => {
                   <CardContent>
                     <Style.BoxDiscount>
                       <Typography
-                        className={tier.title === 'Gold' ? classes.buttonBoxDiscountGold : classes.buttonBoxDiscount}
+                        className={tier.title === 'Platinum' ? classes.buttonBoxDiscountGold : classes.buttonBoxDiscount}
                         component="span"
                       >
                         {tier.discount}
@@ -262,7 +266,7 @@ const PricingPrice = () => {
                   <CardContent>
                     <Style.BoxDiscount>
                       <Typography
-                        className={tier.title === 'Gold' ? classes.buttonBoxDiscountGold : classes.buttonBoxDiscount}
+                        className={tier.title === 'Platinum' ? classes.buttonBoxDiscountGold : classes.buttonBoxDiscount}
                         component="span"
                       >
                         {tier.discount}

@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { Link } from "gatsby";
 import {
   useTheme,
   useMediaQuery,
@@ -8,10 +9,11 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 import DrawerComponent from "@components/Drawer/Drawer";
 import * as Style from '@components/Navbar/NavbarMenuStyled';
 
-const NavbarMenu = (props) => {
+const NavbarMenu = () => {
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const pathname = window.location.pathname;
 
   const redirection = (url) => {
     return window.location = url;
@@ -25,20 +27,20 @@ const NavbarMenu = (props) => {
         </>
       ) : (
         <>
-          {props.url === 'demo' ? (
+          {pathname === '/demo/portofolio/' ? (
             <>
-               <Style.Links
-                onClick={() => redirection('/')}
+              <Style.Links
+                onClick={() => redirection('/#itworks')}
               >
                 Cara Pesan
               </Style.Links>
               <Style.Links
-                onClick={() => redirection('/')}
+                onClick={() => redirection('/#pricing')}
               >
                 Paket Harga
               </Style.Links>
               <Style.Links
-                onClick={() => redirection('/')}
+                onClick={() => redirection('/#howitworks')}
               >
                 Tentang Kami
               </Style.Links>
@@ -63,7 +65,7 @@ const NavbarMenu = (props) => {
             </>
           )}
           <Style.Links
-            // onClick={() => redirection('/demo/portofolio')}
+            onClick={() => redirection('demo/portofolio')}
           >
             Demo
           </Style.Links>

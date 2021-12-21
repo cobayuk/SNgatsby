@@ -7,7 +7,7 @@ import {
   ListItemText,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-import scrollTo from 'gatsby-plugin-smoothscroll';
+// import scrollTo from 'gatsby-plugin-smoothscroll';
 import * as Style from '@components/Drawer/DrawerStyled';
 
 const DrawerComponent = () => {
@@ -32,19 +32,23 @@ const DrawerComponent = () => {
     {
       id: 3,
       label_name: "Demo",
-      url_name: "/demo/portofolio"
+      url_name: "demo/portofolio"
     },
-    {
-      id: 4,
-      label_name: "Login",
-      url_name: "/client/login"
-    },
-    {
-      id: 5,
-      label_name: "Daftar",
-      url_name: "/client/daftar"
-    }
+    // {
+    //   id: 4,
+    //   label_name: "Login",
+    //   url_name: "/client/login"
+    // },
+    // {
+    //   id: 5,
+    //   label_name: "Daftar",
+    //   url_name: "/client/daftar"
+    // }
   ];
+
+  const redirectTemplate = (url) => {
+    window.location.href = `/${url}`;
+  }
 
   return (
     <>
@@ -58,7 +62,7 @@ const DrawerComponent = () => {
               <ListItem onClick={() => setOpenDrawer(false)}>
               <ListItemText>
                 <Style.LinkDrawer
-                  onClick={() => scrollTo(`${value.url_name}`)}
+                  onClick={() => redirectTemplate(`${value.url_name}`)}
                 >
                   {value.label_name}
                 </Style.LinkDrawer>
