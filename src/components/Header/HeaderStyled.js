@@ -47,7 +47,6 @@ export const HeaderToolbarTitle = styled(Typography)`
 
 export const Logobrand = styled.img`
   height: 35px;
-  // margin-left: 20px;
   display: flex;
   align-items: align-start;
   @media (max-width: 768px) {

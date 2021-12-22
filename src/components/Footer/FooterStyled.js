@@ -148,6 +148,7 @@ export const HeadingBanner = styled(Typography)`
 
 export const InnerFooter = styled(Box)`
   display: flex;
+  margin: 20px;
 `;
 
 export const SubFooter = styled(Box)`
@@ -191,9 +192,6 @@ export const NavList = styled(Link)`
 `;
 
 export const InnerContainer = styled.div`
-  @media (max-width: 768px) {
-    padding-left: 32px;
-  }
   padding-top: 32px;
 `;
 
@@ -245,7 +243,11 @@ export const CenterGrid = styled(Grid)`
 `;
 
 export const LeftGrid = styled(Grid)`
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  @media (min-width: 1024px) {
+    justify-content: left;
+  }
 `;
 
 export const RightGrid = styled(Grid)`

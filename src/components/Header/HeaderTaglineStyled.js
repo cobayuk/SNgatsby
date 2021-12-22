@@ -30,6 +30,7 @@ export const BoxHeader = styled(Box)`
   @media (min-width: 320px) and (max-width: 360px) {
     padding: 48px 15px 0px 15px;
     height: 350px;
+    margin-top: 15px;
     margin-bottom: 45px;
   }
   @media (min-width: 325px) and (max-width: 360px) {
