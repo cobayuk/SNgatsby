@@ -78,7 +78,7 @@ export const FlowerMiddle = styled.img`
     @media (min-width: ${breakpoints.desktopMin}) {
       width: 35%;
       top: 8em;
-      left: 33%;
+      left: 30%;
     }
     @media (min-width: ${breakpoints.desktopMax}) {
       top: 15em;
@@ -99,7 +99,8 @@ export const WrapperInvite = styled.div`
     top: 18em;
   }
   @media (min-width: ${breakpoints.desktopMin}) {
-    top: 15em;
+    top: 16em;
+    left: -2%;
   }
   @media (min-width: ${breakpoints.desktopMax}) {
     top: 22em;
