@@ -5,7 +5,6 @@ import {
   CssBaseline,
 }
 from '@material-ui/core';
-import { Link } from "gatsby";
 
 import Header from "@components/Header/Header";
 import Layout from "@components/layout";
