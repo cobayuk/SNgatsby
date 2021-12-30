@@ -9,6 +9,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container } from '@material-ui/core';
 import { StaticQuery, graphql } from "gatsby";
+import GlobalStyle from "@styles/global/globalStyled";
 import Footer from "@components/Footer/Footer";
 
 const Layout = ({ children }) => (
@@ -24,6 +25,7 @@ const Layout = ({ children }) => (
       `}
       render={data => (
         <>
+          <GlobalStyle/>
           <Container maxWidth="lg">
             {children}
           </Container>
