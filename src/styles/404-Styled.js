@@ -33,6 +33,9 @@ export const LinkCustom = styled(Link)`
         padding: 13px 25px;
         margin-bottom: 20px;
         color: #ffffff;
+        &:hover, &:focus {
+          background-color: #b68a02;
+        }
     }
     margin: 20px 0px;
     display: inline-block;
