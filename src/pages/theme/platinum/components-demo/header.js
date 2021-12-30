@@ -16,10 +16,10 @@ const HeaderPlatinum = () =>  {
     const calculateTimeLeft = () => {
         var countDownDate = new Date("Jan 22, 2022 15:00:00").getTime();
         var now = new Date().getTime();
-    
+
         let difference = countDownDate - now;
         let timeLeft = {};
-    
+
         if (difference > 0) {
           timeLeft = {
             hari: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -28,19 +28,19 @@ const HeaderPlatinum = () =>  {
             detik: Math.floor((difference / 1000) % 60),
           };
         }
-    
+
         return timeLeft;
     };
-    
+
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
       // const [year] = useState(new Date().getFullYear());
-    
+
     useEffect(() => {
     setTimeout(() => {
         setTimeLeft(calculateTimeLeft());
     }, 1000);
     });
-    
+
     const timerComponents = [];
     Object.keys(timeLeft).forEach((interval) => {
         if (!timeLeft[interval]) {
@@ -62,7 +62,7 @@ const HeaderPlatinum = () =>  {
                          <Style.Invite>Dear you, you’re invited to</Style.Invite>
                         <Style.Title >THE WEDDING OF</Style.Title>
                     </Box>
-                   
+
                     <Grid container spacing={2}>
                         <Style.ResponsiveGrid item xs={12} md={6}>
                             <Style.Groom data-aos="fade-up">
