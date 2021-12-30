@@ -1,22 +1,11 @@
-// import React from "react";
-// import Layout from "./src/components/layout";
+import React from "react";
+import GlobalStyle from "./src/styles/global/globalStyled";
 
-// export const wrapRootElement = ({ element, props }) => {
-//   return (
-//     <>
-//       <Layout {...props}>
-//         {element}
-//       </Layout>
-//     </>
-//   );
-// }
-
-// export const wrapPageElement = ({ element, props }) => {
-//   return (
-//     <>
-//       <Layout {...props}>
-//         {element}
-//       </Layout>
-//     </>
-//   );
-// }
+export const wrapRootElement = ({ element, props }) => {
+  return (
+    <>
+      <GlobalStyle/>
+      {element}
+    </>
+  );
+}

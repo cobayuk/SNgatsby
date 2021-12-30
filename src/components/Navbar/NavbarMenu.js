@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { Link } from "gatsby";
 import {
   useTheme,
   useMediaQuery,
@@ -16,7 +15,7 @@ const NavbarMenu = () => {
   const window = global.window;
   let pathname = typeof window !== 'undefined' ? window.location.pathname : 'undefined';
 
-  const redirection = (url) => {
+  const redirection = (url, ) => {
     return window.location = url;
   }
 
@@ -28,25 +27,22 @@ const NavbarMenu = () => {
         </>
       ) : (
         <>
-          {pathname === '/demo/portofolio/' ? (
+          {pathname.toString() === '/demo/portofolio' ? (
             <>
               <Style.Links
-                onClick={() => redirection('/#itworks')}
+                onClick={() => redirection('/')}
               >
                 Cara Pesan
               </Style.Links>
               <Style.Links
-                onClick={() => redirection('/#pricing')}
+                onClick={() => redirection('/')}
               >
                 Paket Harga
               </Style.Links>
               <Style.Links
-                onClick={() => redirection('/#howitworks')}
+                onClick={() => redirection('/')}
               >
                 Tentang Kami
-              </Style.Links>
-              <Style.Links>
-                Demo
               </Style.Links>
             </>
           ) : (
@@ -66,18 +62,13 @@ const NavbarMenu = () => {
               >
                 Tentang Kami
               </Style.Links>
-              <Style.Links
-                onClick={() => redirection('demo/portofolio')}
+              <Style.LinkRedirect
+                to="/demo/portofolio"
               >
                 Demo
-              </Style.Links>
+              </Style.LinkRedirect>
             </>
           )}
-          {/* <Style.Links
-            onClick={() => redirection('demo/portofolio')}
-          >
-            Demo
-          </Style.Links> */}
           {/* <Style.ButtonLogin href="#">
             Login
           </Style.ButtonLogin>
