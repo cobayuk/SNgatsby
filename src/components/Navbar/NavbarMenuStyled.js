@@ -17,6 +17,7 @@ import {
   Button,
   Typography,
 } from "@material-ui/core";
+import { Link as LinkTo } from "gatsby";
 import { COLORS } from "@styles/constants";
 
 export const LogoNavbar = styled(Typography)`
@@ -32,8 +33,19 @@ export const Links = styled(Button)`
   font-family: Oxygen, sans-serif;
   font-weight: 600;
   text-transform: capitalize;
+  cursor: pointer;
 `;
 
+export const LinkRedirect = styled(LinkTo)`
+  margin: 10px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+  font-family: Oxygen, sans-serif;
+  font-weight: 600;
+  text-transform: capitalize;
+  cursor: pointer;
+`;
 
 export const NavLinksNavbar = styled.div`
   margin-left: 10px;
