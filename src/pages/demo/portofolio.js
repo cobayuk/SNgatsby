@@ -5,6 +5,8 @@ import {
   CssBaseline,
 }
 from '@material-ui/core';
+import { Link } from "gatsby";
+
 import Header from "@components/Header/Header";
 import Layout from "@components/layout";
 import SEO from "@components/seo";
@@ -49,7 +51,7 @@ const DemoPortofolio = () => {
       id: 4,
       image: LeafOfLove,
       name: 'Leaf of Love',
-      url: 'theme/second',
+      url: 'theme/gold/gold',
       type: 'gold',
       tags: 'floral'
     },
@@ -85,7 +87,7 @@ const DemoPortofolio = () => {
   // ];
 
   const primaryFilter = [
-    // { id: 1, text: "rustic" },
+    { id: 1, text: "semua" },
     { id: 2, text: "minimalist" },
     { id: 3, text: "floral" },
     { id: 4, text: "pastel" },
@@ -134,8 +136,8 @@ const DemoPortofolio = () => {
 
   const handleFilterChange = value => () => {
     switch (value) {
-      case "rustic":
-        setThemeTag(value)
+      case "semua":
+        setThemeTag("all")
         break;
       case "floral":
         setThemeTag(value)
