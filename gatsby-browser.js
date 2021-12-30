@@ -7,7 +7,7 @@ const Layout = require("./src/components/layout");
     <>
       <GlobalStyle/>
       <Layout {...props}>
-      {element}
+        {element}
       </Layout>
     </>
   );
