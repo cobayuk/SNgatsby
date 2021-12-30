@@ -44,6 +44,9 @@ const NavbarMenu = () => {
               >
                 Tentang Kami
               </Style.Links>
+              <Style.LinkRedirect>
+                Demo
+              </Style.LinkRedirect>
             </>
           ) : (
             <>

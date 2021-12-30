@@ -33,6 +33,7 @@ export const Links = styled(Button)`
   font-family: Oxygen, sans-serif;
   font-weight: 600;
   text-transform: capitalize;
+  cursor: pointer;
 `;
 
 export const LinkRedirect = styled(LinkTo)`
@@ -43,8 +44,8 @@ export const LinkRedirect = styled(LinkTo)`
   font-family: Oxygen, sans-serif;
   font-weight: 600;
   text-transform: capitalize;
+  cursor: pointer;
 `;
-
 
 export const NavLinksNavbar = styled.div`
   margin-left: 10px;
