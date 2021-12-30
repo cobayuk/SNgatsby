@@ -1,11 +1,9 @@
-const React = require("react");
-const GlobalStyle = require("./src/styles/global/globalStyled");
-const Layout = require("./src/components/layout");
+import React from "react";
+import Layout from "./src/components/layout";
 
- exports.wrapPageElement = ({ element, props }) => {
+ export const wrapPageElement = ({ element, props }) => {
   return (
     <>
-      <GlobalStyle/>
       <Layout {...props}>
         {element}
       </Layout>
