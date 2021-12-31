@@ -135,16 +135,13 @@ export const ListPricingOrder = styled.ul`
 
 export const WrapperPricing = styled(Box)`
   margin-top: 5em;
-  @media (min-width: 320px) and (max-width: 768px) {
-    margin-top: 20em;
-  }
   margin-bottom: 5em;
   padding-top: 50px;
 `;
 
 export const BoxOuterPricing = styled(Container)`
   margin-top: 10em;
-  @media (min-width: 320px) and (max-width: 768px) {
+  @media (max-width: 768px) {
     margin-top: 1em;
   }
 `;

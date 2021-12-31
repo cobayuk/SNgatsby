@@ -55,6 +55,8 @@ export const TaglineCaption = styled(Typography)`
 
 export const TaglineDescription = styled(Typography)`
   font-size: 15px;
+  margin-bottom: 40px;
+  margin-top: 15px;
 `;
 
 export const HeadingIlustration = styled(Typography)`

@@ -114,10 +114,9 @@ export const WrapperHeadings = styled(Box)`
 
 export const WrapperButtonCaraPesan = styled.div`
   display: flex;
-  @media (min-width: 320px) and (max-width: 768px) {
+  @media (max-width: 768px) {
     margin: 0 auto;
     justify-content: center;
-    margin-top: 11em;
   }
   margin-top: 2em;
 `;
