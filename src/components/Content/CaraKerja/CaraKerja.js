@@ -53,7 +53,7 @@ const CaraKerja = () => {
           </Grid>
         </Grid>
       </Container>
-      <Box mt={10} mb={5}>
+      <Box mb={5}>
         <Grid container>
           <Grid item xs={12} md={6} lg={6}>
             <Box
@@ -64,7 +64,7 @@ const CaraKerja = () => {
               <Style.ImageIlustration src={IlustrationsOne} alt="ilustration-one" width="540" height="457"/>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6} lg={6}>
+          <Style.WrapperDescription item xs={12} md={6} lg={6}>
             <Box mt={isMobile ? 5 : 20}>
               <Style.HeadingIlustration
                 variant="h5"
@@ -80,10 +80,10 @@ const CaraKerja = () => {
                 color="textSecondary"
                 component="p"
               >
-                Sesuaikan tema dan mood kamu sendiri dengan cara klik order sekarang atau langsung aja ke menu demo ya kak, disana banyak varian desain yang mungkin cocok untuk kamu. Selamat mencoba
+                Sesuaikan tema dan mood kamu sendiri di menu demo. Kalau udah ketemu yang pas sesuai preferensi kamu, klik tombol order sekarang.
               </Style.DescriptionChooseThemeKece>
             </Box>
-          </Grid>
+          </Style.WrapperDescription>
           {isMobile ? (
             <>
               <Grid item md={6} lg={6}>
@@ -96,8 +96,8 @@ const CaraKerja = () => {
                 <Style.ImageIlustration src={IlustrationsTwo} alt="ilustration-one" width="540" height="457"/>
               </Box>
               </Grid>
-              <Grid item md={6} lg={6}>
-                <Box mt={isMobile ? 5 : 20}>
+              <Style.WrapperDescription item md={6} lg={6}>
+                <Box mt={5}>
                   <Style.HeadingIlustration
                     variant="h5"
                     align="center"
@@ -115,12 +115,12 @@ const CaraKerja = () => {
                     Silahkan isi lengkap data diri kamu beserta data calon mempelai untuk kebutuhan undangan digital yang kamu inginkan dan langsung submit.
                   </Style.DescriptionChooseThemeKece>
                 </Box>
-              </Grid>
+              </Style.WrapperDescription>
             </>
           ) : (
             <>
-              <Grid item md={6} lg={6}>
-                <Box mt={20}>
+              <Style.WrapperDescription item md={6} lg={6}>
+                <Box>
                   <Style.HeadingIlustration
                     variant="h5"
                     align="center"
@@ -138,7 +138,7 @@ const CaraKerja = () => {
                     Silahkan isi lengkap data diri kamu beserta data calon mempelai untuk kebutuhan undangan digital yang kamu inginkan dan langsung submit.
                   </Style.DescriptionChooseThemeKece>
                 </Box>
-              </Grid>
+              </Style.WrapperDescription>
               <Grid item md={6} lg={6}>
                 <Box
                   display="flex"
@@ -160,7 +160,7 @@ const CaraKerja = () => {
               <Style.ImageIlustration src={IlustrationsThree} alt="ilustration-one" width="540" height="457"/>
             </Box>
           </Grid>
-          <Grid item md={6} lg={6}>
+          <Style.WrapperDescription item md={6} lg={6}>
             <Box mt={isMobile ? 5 : 20}>
               <Style.HeadingIlustration
                 variant="h5"
@@ -176,10 +176,10 @@ const CaraKerja = () => {
                 color="textSecondary"
                 component="p"
               >
-                Setelah mengisi formulir dan data diri selanjutnya kamu akan diberikan invoice terkait informasi paket dipilih serta total tagihan yang harus dibayar. Setelah melakukan pembayaran jangan lupa kirim bukti pemesanannya ya.
+                Setelah mengisi formulir dan data diri selanjutnya kamu akan diberikan invoice terkait informasi paket dipilih serta total tagihan yang harus dibayar. Setelah melakukan pembayaran jangan lupa kirim bukti pembayarannya.
               </Style.DescriptionChooseThemeKece>
             </Box>
-          </Grid>
+          </Style.WrapperDescription>
         </Grid>
       </Box>
     </Style.BoxHowItWorks>

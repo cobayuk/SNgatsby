@@ -63,16 +63,19 @@ export const HeadingHowToOrder = styled(Typography)`
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
+  line-height: 24px;
   color: ${COLORS.brownSugar};
   text-transform: uppercase;
-  @media (min-width: 320px) and (max-width: 768px) {
+  margin-bottom: 10px;
+  text-align: left;
+  @media (max-width: 768px) {
     text-align: center;
     font-size: 14px;
-    margin-bottom: 10px;
+    line-height: 18px;
   }
 `;
 
-export const TaglineCaption = styled(Typography)`
+export const TaglineCaption = styled.p`
   font-family: ${FONT_FAMILY.oxygen};
   font-style: normal;
   font-weight: normal;
@@ -81,11 +84,18 @@ export const TaglineCaption = styled(Typography)`
   color: ${COLORS.graySoftly};
   display: flex;
   margin-bottom: 15px;
+  color: rgba(0, 0, 0, 0.54);
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const ImageTagOrnaments = styled.img`
   width: auto;
   height: 155px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 12px;
 `;
 
 export const WrapperHeadings = styled(Box)`
@@ -100,12 +110,5 @@ export const WrapperButtonCaraPesan = styled(Box)`
   @media (min-width: 320px) and (max-width: 768px) {
     margin: 0 auto;
     justify-content: center;
-  }
-`;
-
-export const SpacerOrnamentsMobile = styled(Box)`
-  @media (min-width: 320px) and (max-width: 768px) {
-    margin: 0 auto;
-    margin-bottom: 30px;
   }
 `;
