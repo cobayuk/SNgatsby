@@ -15,10 +15,12 @@ export const DescriptionContainer = styled.div`
     h1 {
         line-height: 24px;
         font-size: 32px;
+        margin: 10px 0px;
     }
     p {
         font-size: 14px;
         line-height: 16px;
+        margin: 20px 0px;
     }
     margin-top: 50px;
     padding: 15px;
@@ -33,6 +35,7 @@ export const LinkCustom = styled(Link)`
         padding: 13px 25px;
         margin-bottom: 20px;
         color: #ffffff;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
         &:hover, &:focus {
           background-color: #b68a02;
         }

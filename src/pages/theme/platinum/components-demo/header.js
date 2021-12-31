@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import { Grid, Box }from '@material-ui/core';
 import * as Style from "@styles/demo/platinum/headerStyle";
 import AOS from 'aos'
@@ -64,12 +65,12 @@ const HeaderPlatinum = () =>  {
                     </Box>
 
                     <Grid container spacing={2}>
-                        <Style.ResponsiveGrid item xs={12} md={6}>
+                        <Style.ResponsiveGrid item xs={12} md={5}>
                             <Style.Groom data-aos="fade-up">
                                 Karim
                             </Style.Groom>
                         </Style.ResponsiveGrid>
-                        <Style.ResponsiveGrid item xs={12} md={1}>
+                        <Style.ResponsiveGrid item xs={12} md={2}>
                             <Style.Ampersand data-aos="fade-up">
                                 &#38;
                             </Style.Ampersand>
@@ -83,7 +84,7 @@ const HeaderPlatinum = () =>  {
                     <Style.CountDown data-aos="fade-up" data-aos-once="true">
                         {timerComponents.length ? timerComponents : <span>22 January 2022</span>}
                     </Style.CountDown>
-                    <Style.Arrow>
+                    <Style.Arrow onClick={() => scrollTo('#intro-section')}>
                         <span></span>
                         <span></span>
                         <span></span>

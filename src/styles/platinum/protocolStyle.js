@@ -7,7 +7,7 @@ export const ContainerProtocol = styled.section`
 `;
 
 export const InnerContainer = styled.div`
-    
+
     @media (min-width: 576px) {
         max-width: 540px;
     }
@@ -36,6 +36,7 @@ export const IntroProtocol = styled.h1`
     color: #000000;
     padding-top: 40px;
     text-align: center;
+    margin-bottom: 20px;
 `;
 
 export const SummaryProtocol = styled.p`
