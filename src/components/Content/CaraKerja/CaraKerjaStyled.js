@@ -19,8 +19,8 @@ import  {
 } from '@material-ui/core';
 import { COLORS, FONT_FAMILY } from "@styles/constants";
 
-export const BoxHowItWorks = styled(Box)`
-  margin-top: 150px;
+export const BoxHowItWorks = styled.div`
+  margin-top: 100px !important;
   padding-top: 50px;
   @media (min-width: 320px) and (max-width: 425px) {
     margin-top: 15px;

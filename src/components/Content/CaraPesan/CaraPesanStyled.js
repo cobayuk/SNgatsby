@@ -26,10 +26,11 @@ export const ContentGridCaraPesan = styled(Grid)`
 `;
 
 export const BoxHowItWorks = styled(Box)`
-  display: flex;
+  display: inline-flex;
   margin-top: 350px;
   padding: 0 10px 0 10px;
   padding-top: 50px;
+  background: none;
   @media (min-width: 320px) and (max-width: 768px) {
     margin-top: 0;
   }
@@ -103,12 +104,20 @@ export const WrapperHeadings = styled(Box)`
   @media (min-width: 320px) and (max-width: 768px) {
     padding-right: 0;
   }
+  background: none !important;
+  @media (min-width: 1024px) {
+    text-align: left;
+    padding: 0;
+  }
+
 `;
 
-export const WrapperButtonCaraPesan = styled(Box)`
+export const WrapperButtonCaraPesan = styled.div`
   display: flex;
   @media (min-width: 320px) and (max-width: 768px) {
     margin: 0 auto;
     justify-content: center;
+    margin-top: 11em;
   }
+  margin-top: 2em;
 `;
