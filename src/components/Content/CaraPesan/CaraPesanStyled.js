@@ -26,10 +26,11 @@ export const ContentGridCaraPesan = styled(Grid)`
 `;
 
 export const BoxHowItWorks = styled(Box)`
-  display: flex;
+  display: inline-flex;
   margin-top: 350px;
   padding: 0 10px 0 10px;
   padding-top: 50px;
+  background: none;
   @media (min-width: 320px) and (max-width: 768px) {
     margin-top: 0;
   }
@@ -63,16 +64,19 @@ export const HeadingHowToOrder = styled(Typography)`
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
+  line-height: 24px;
   color: ${COLORS.brownSugar};
   text-transform: uppercase;
-  @media (min-width: 320px) and (max-width: 768px) {
+  margin-bottom: 10px;
+  text-align: left;
+  @media (max-width: 768px) {
     text-align: center;
     font-size: 14px;
-    margin-bottom: 10px;
+    line-height: 18px;
   }
 `;
 
-export const TaglineCaption = styled(Typography)`
+export const TaglineCaption = styled.p`
   font-family: ${FONT_FAMILY.oxygen};
   font-style: normal;
   font-weight: normal;
@@ -81,11 +85,18 @@ export const TaglineCaption = styled(Typography)`
   color: ${COLORS.graySoftly};
   display: flex;
   margin-bottom: 15px;
+  color: rgba(0, 0, 0, 0.54);
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const ImageTagOrnaments = styled.img`
   width: auto;
   height: 155px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 12px;
 `;
 
 export const WrapperHeadings = styled(Box)`
@@ -93,19 +104,19 @@ export const WrapperHeadings = styled(Box)`
   @media (min-width: 320px) and (max-width: 768px) {
     padding-right: 0;
   }
+  background: none !important;
+  @media (min-width: 1024px) {
+    text-align: left;
+    padding: 0;
+  }
+
 `;
 
-export const WrapperButtonCaraPesan = styled(Box)`
+export const WrapperButtonCaraPesan = styled.div`
   display: flex;
-  @media (min-width: 320px) and (max-width: 768px) {
+  @media (max-width: 768px) {
     margin: 0 auto;
     justify-content: center;
   }
-`;
-
-export const SpacerOrnamentsMobile = styled(Box)`
-  @media (min-width: 320px) and (max-width: 768px) {
-    margin: 0 auto;
-    margin-bottom: 30px;
-  }
+  margin-top: 2em;
 `;

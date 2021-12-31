@@ -15,7 +15,6 @@ import styled from 'styled-components';
 import  {
   Box,
   Grid,
-  Card,
   Button,
   Container,
   Typography
@@ -39,8 +38,8 @@ export const HeadingPriceSeparator = styled(Typography)`
 
 export const  HeadingPricing = styled(Typography)`
   font-size: 40px;
-  @media (min-width: 320px) and (max-width: 425px) {
-    font-size: 30px;
+  @media (max-width: 768px) {
+    font-size: 20px;
   }
   font-family: Oxygen;
   margin-bottom: 30px;
@@ -85,11 +84,18 @@ export const ButtonBoxDiscount = styled(Typography)`
   padding: 3px 11px 26px 15px;
 `;
 
-export const CardsContentArea = styled(Card)`
+export const CardsContentArea = styled.div`
   width: 100%;
   height: ${props => props.title === 'Platinum' ? '600px' : '500px'};
   ${props => props.title === 'Platinum' ? 'margin-top: -3em' : ''};
   box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 3%), 0px 1px 13px 0px rgb(0 0 0 / 4%), 0px 1px 3px 0px rgb(0 0 0 / 47%);
+`;
+
+export const CardsContentAreaMobile = styled.div`
+  width: 100%;
+  height: 500px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-top: 1px solid rgb(0 0 0 / 5%);
 `;
 
 export const CardHeaderTier = styled.div`
@@ -97,6 +103,13 @@ export const CardHeaderTier = styled.div`
   justify-content: center;
   align-item: center;
   padding-top: ${props => props.title === 'Platinum' ? '80px' : '40px'};
+`;
+
+export const CardHeaderTierMobile = styled.div`
+  display: flex;
+  justify-content: center;
+  align-item: center;
+  padding-top: 40px;
 `;
 
 export const HeadingTierPackages = styled(Typography)`
@@ -122,16 +135,13 @@ export const ListPricingOrder = styled.ul`
 
 export const WrapperPricing = styled(Box)`
   margin-top: 5em;
-  @media (min-width: 320px) and (max-width: 768px) {
-    margin-top: 0.5em;
-  }
   margin-bottom: 5em;
   padding-top: 50px;
 `;
 
 export const BoxOuterPricing = styled(Container)`
   margin-top: 10em;
-  @media (min-width: 320px) and (max-width: 768px) {
+  @media (max-width: 768px) {
     margin-top: 1em;
   }
 `;
@@ -142,6 +152,11 @@ export const HeadingFirstTitle = styled(Typography)`
   font-weight: bold;
   color: ${COLORS.brownSugar};
   text-transform: uppercase;
+  margin-bottom: 10px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
 `;
 
 export const CaptionPricing = styled(Typography)`

@@ -28,7 +28,7 @@ export const ContainerFaq = styled(Box)`
 	@media (min-width: 320px) and (max-width: 425px) {
 		margin-top: 100px;
 	}
-`; 
+`;
 
 export const HeadingFaqFirst = styled(Typography)`
 	font-size: 20px;
@@ -37,12 +37,16 @@ export const HeadingFaqFirst = styled(Typography)`
 	color: ${COLORS.brownSugar};
 	text-transform: uppercase;
 	margin-bottom: 10px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
 `;
 
 export const HeadingFaqSecond = styled(Typography)`
 	font-size: 40px;
-	@media (min-width: 320px) and (max-width: 425px) {
-		font-size: 30px;
+	@media (max-width: 768px) {
+		font-size: 20px;
   }
 	font-family: ${FONT_FAMILY.oxygen};
 	font-weight: bold;
@@ -66,7 +70,7 @@ export const MenuAccordion = styled(Accordion)`
 `;
 
 export const ArrowFaq = styled(ExpandMoreIcon)`
-	transform: rotateZ(265deg);
+	transform: rotateZ(180deg);
 `;
 
 export const CustomAccordion = styled(AccordionDetails)`
@@ -96,8 +100,8 @@ export const FaqDescriptions = styled.p`
 	font-size: 16px;
 	line-height: 18px;
 	color: #474747;
-	@media (min-width: 320px) and (max-width: 768px) {
-		font-size: 10px;
+	@media (max-width: 768px) {
+		font-size: 11px;
 		line-height: 15px;
 	}
 `;

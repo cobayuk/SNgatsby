@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import  {
   Box,
   Grid,
@@ -10,6 +10,14 @@ import  {
   useMediaQuery
 }
 from '@material-ui/core';
+import {
+  Carousel,
+  CarouselProvider,
+  Dots,
+  PreviousButton,
+  NextButton
+} from 'react-slim-carousel';
+import 'react-slim-carousel/dist/index.css';
 
 import "swiper/css/swiper.css";
 import Swiper from "react-id-swiper";
@@ -17,14 +25,10 @@ import Swiper from "react-id-swiper";
 import { COLORS } from "@styles/constants";
 import ChecklistIcon from "@assets/ornaments/checklist.svg";
 import * as Style from '@components/Content/Pricing/PricingStyled';
-import "./Pricing.css";
 
 const sliderParams = {
-  slidesPerView: 'auto',
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false
-  },
+  slidesPerView: "auto",
+  centeredSlides: true,
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
@@ -34,7 +38,7 @@ const sliderParams = {
   loop: true
 }
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   buttonBoxDiscountGold:{
     width: 'auto',
     height: '24px',
@@ -111,7 +115,7 @@ const packages = [
 
 ];
 
-const PricingPrice = () => {
+const PricingPriceLegacy = () => {
 
   const classes = useStyles();
   const theme = useTheme();
@@ -125,7 +129,7 @@ const PricingPrice = () => {
       >
         <Style.HeadingFirstTitle
           component="h1"
-          variant="h1"
+          variant="h2"
           align="center"
           color="textPrimary"
         >
@@ -133,7 +137,7 @@ const PricingPrice = () => {
         </Style.HeadingFirstTitle>
         <Style.HeadingPricing
           component="h1"
-          variant="h1"
+          variant="h2"
           align="center"
           color="textPrimary"
           gutterBottom
@@ -149,8 +153,7 @@ const PricingPrice = () => {
           Dengan 3 pilihan paket, kamu bebas pilih fitur manapun suka-suka kamu.
           Nikmati fitur sesuai dengan kebutuhan kamu dengan pelayanan yang tetap nomor satu.
         </Style.CaptionPricing>
-      </Container>
-      {isMobile ? (
+
         <Swiper {...sliderParams}>
           {packages.map((tier, key) => (
             <Grid
@@ -159,14 +162,14 @@ const PricingPrice = () => {
               xs={12}
               md={12}
             >
-              <Style.CardsContentAreaMobile title={tier.title}>
-                <Style.CardHeaderTierMobile title={tier.title}>
+              <Style.CardsContentArea title={tier.title}>
+                <Style.CardHeaderTier title={tier.title}>
                   <Style.HeadingTierPackages
                     component="span"
                   >
                     {tier.title}
                   </Style.HeadingTierPackages>
-                </Style.CardHeaderTierMobile>
+                </Style.CardHeaderTier>
                 <CardContent>
                   <Style.BoxDiscount>
                     <Typography
@@ -221,10 +224,112 @@ const PricingPrice = () => {
                     ))}
                   </Style.ListPricingOrder>
                 </CardContent>
-              </Style.CardsContentAreaMobile>
+              </Style.CardsContentArea>
             </Grid>
           ))}
         </Swiper>
+      </Container>
+      {isMobile ? (
+        <CarouselProvider>
+          <Carousel
+            draggable={true}
+            threshold
+            easing={'ease-in-out'}
+            visibleSlides={1}
+            responsive={{
+              320: {
+                visibleSlides: 1
+              },
+              375: {
+                visibleSlides: 1
+              },
+              425: {
+                visibleSlides: 1
+              },
+              768: {
+                visibleSlides: 3
+              },
+              1024: {
+                visibleSlides: 3
+              }
+            }}
+          >
+            {packages.map((tier, key) => (
+              <Grid
+                key={key}
+                item
+                xs={12}
+                md={12}
+              >
+                <Style.CardsContentArea title={tier.title}>
+                  <Style.CardHeaderTier title={tier.title}>
+                    <Style.HeadingTierPackages
+                      component="span"
+                    >
+                      {tier.title}
+                    </Style.HeadingTierPackages>
+                  </Style.CardHeaderTier>
+                  <CardContent>
+                    <Style.BoxDiscount>
+                      <Typography
+                        className={tier.title === 'Platinum' ? classes.buttonBoxDiscountGold : classes.buttonBoxDiscount}
+                        component="span"
+                      >
+                        {tier.discount}
+                      </Typography>
+                    </Style.BoxDiscount>
+                    <Style.BoxDiscountPrice>
+                      <Style.HeadingDiscountPrice
+                        component="span"
+                      >
+                        {tier.discountPrice}
+                      </Style.HeadingDiscountPrice>
+                    </Style.BoxDiscountPrice>
+                    <Style.CardPricing>
+                      <Style.HeadingPriceSeparator
+                        component="span"
+                        variant="h6"
+                        color="textSecondary"
+                      >
+                        Rp
+                      </Style.HeadingPriceSeparator>
+                      <Style.HeadingPrice
+                        component="h2"
+                        variant="h2"
+                        color="textPrimary"
+                      >
+                        {tier.price}
+                      </Style.HeadingPrice>
+                      <Style.HeadingPricingSuffix
+                        variant="h6"
+                        color="textSecondary"
+                      >
+                        ribu
+                      </Style.HeadingPricingSuffix>
+                    </Style.CardPricing>
+                    <Style.ListPricingOrder>
+                      {tier.description.map((value, key) => (
+                        <Typography
+                          key={key}
+                          component="li"
+                          variant="subtitle1"
+                          align="left"
+                        >
+                          <Box component="span" mr={1}>
+                            <img src={ChecklistIcon} alt="checklist"/>
+                          </Box>
+                          {value}
+                        </Typography>
+                      ))}
+                    </Style.ListPricingOrder>
+                  </CardContent>
+                </Style.CardsContentArea>
+              </Grid>
+            ))}
+          </Carousel>
+          <PreviousButton>Previous</PreviousButton>
+          <NextButton>Next</NextButton>
+        </CarouselProvider>
       ) : (
         <Style.BoxOuterPricing
           maxWidth="lg"
@@ -313,5 +418,5 @@ const PricingPrice = () => {
   );
 }
 
-export default PricingPrice;
+export default PricingPriceLegacy;
 
