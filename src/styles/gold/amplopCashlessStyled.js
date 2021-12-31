@@ -14,13 +14,18 @@ export const CashlessTitle = styled.h1`
     color: #000000;
     padding-top: 40px;
     text-align: center;
+    margin-bottom: 30px;
     @media (min-width: 768px) {
         padding-top: 10px;
     }
 `;
 
 export const AllEwallet = styled.img`
-    transform: scale (1.2) !important;
+    transform: scale(1);
+    @media (max-width: 360px) {
+      transform: scale(0.9);
+    }
+    margin: 20px 0px;
 `;
 
 export const CashlessDescription = styled.p`
@@ -42,9 +47,7 @@ export const SectionBarcode = styled.div`
         font-size: 13px;
         line-height: 16px;
         color: #FFFFFF;
-        // padding-top: 39px;
-        // padding-bottom: 16px;
-        padding: 39px 30px 16px 40px;
+        padding: 40px 30px 30px 40px;
     }
 `;
 
@@ -216,6 +219,9 @@ export const SeparatorContainer = styled.div`
 export const LineSeparator = styled.hr`
     border: 1px solid #BBB0B0;
     width: 68px;
+    height: 2px;
+    top: 8px;
+    position: relative;
     @media (max-width: 360px) {
         width: 40px;
     }

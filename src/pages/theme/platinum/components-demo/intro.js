@@ -14,7 +14,7 @@ const Intro = () =>  {
 
     return(
         <>
-            <Style.WrapperIntro>
+            <Style.WrapperIntro id="intro-section">
                 <Style.ContainerIntro data-aos="fade-up">
                     <Style.IntroText>Bismillaahirrahmaanirrahiim</Style.IntroText>
                     <br/>

@@ -39,6 +39,10 @@ export const WeddingDate = styled.p`
     line-height: 25px;
     text-align: center;
     color: #C2A38E;
+    margin: 40px 0px;
+    @media (min-width: 1024px) {
+      font-size: 30px;
+    }
 `;
 
 export const ProgramTitle = styled.span`

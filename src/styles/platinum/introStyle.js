@@ -46,7 +46,7 @@ export const Ampersand = styled.p`
     text-align: center;
     color: #B37C62;
     display: block;
-    padding-bottom: 20px;
+    margin-top: 50px;
     @media (max-width: 600px) {
         font-size: 48px;
         line-height: 24px;
@@ -58,6 +58,7 @@ export const Person = styled.p`
     font-weight: normal;
     text-align: center;
     color: #B37C62;
+    margin: 55px 0px;
     @media (min-width: 375px) {
         font-size: 48px;
         line-height: 24px;

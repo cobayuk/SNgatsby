@@ -26,7 +26,7 @@ const DemoPortofolio = () => {
       id: 1,
       image: CandyPastel,
       name: 'Candy Pastel',
-      url: 'theme/first',
+      url: 'theme/silver/silver',
       type: 'silver',
       tags: 'pastel'
     },

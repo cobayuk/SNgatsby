@@ -8,7 +8,6 @@ export const ContainerProtocol = styled.section`
 `;
 
 export const InnerContainer = styled.div`
-
     @media (min-width: 576px) {
         max-width: 540px;
     }
@@ -86,6 +85,7 @@ export const ProtocolTitle = styled.h3`
     line-height: 32px;
     @media (max-width: 768px) {
         font-size: 24px;
+        margin: 20px 0px;
     }
     text-align: left;
     color: #000000;
