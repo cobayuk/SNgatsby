@@ -59,8 +59,8 @@ const packages = [
   {
     title: 'Silver',
     price: '69',
-    discount: 'Diskon 30%',
-    discountPrice: '99.000',
+    discount: 'Diskon 40%',
+    discountPrice: '173.000',
     description: [
       'Responsive Layout',
       'Desain Template',
@@ -73,8 +73,8 @@ const packages = [
   {
     title: 'Platinum',
     price: '149',
-    discount: 'Diskon 25%',
-    discountPrice: '199.000',
+    discount: 'Diskon 50%',
+    discountPrice: '298.000',
     description: [
       'Responsive Layout',
       'Desain Template',
@@ -92,8 +92,8 @@ const packages = [
   {
     title: 'Gold',
     price: '99',
-    discount: 'Diskon 35%',
-    discountPrice: '149.000',
+    discount: 'Diskon 45%',
+    discountPrice: '220.000',
     description: [
       'Responsive Layout',
       'Desain Template',
