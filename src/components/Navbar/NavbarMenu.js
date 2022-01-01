@@ -15,10 +15,6 @@ const NavbarMenu = () => {
   const window = global.window;
   let pathname = typeof window !== 'undefined' ? window.location.pathname : 'undefined';
 
-  const redirection = (url, ) => {
-    return window.location = url;
-  }
-
   return (
     <Fragment>
       {isMobile ? (

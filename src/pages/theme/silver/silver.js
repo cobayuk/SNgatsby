@@ -153,7 +153,7 @@ const FirstTheme = () =>  {
           {/* <Style.OrnamentAbstractBottom src={AbstractBottom} alt="ornament-3"/> */}
           {/* <Style.OrnamentFlowerBottom src={FlowerBottom} alt="ornament-4"/> */}
         {/* </Style.OrnamentBottomContainer> */}
-        <Style.WatermarkSungnikah href="https://sungnikah.com"> Built with <span style={{color:'red'}}>❤</span> by sungnikah.com</Style.WatermarkSungnikah>
+        <Style.WatermarkSungnikah to="/"> Built with <span style={{color:'red'}}>❤</span> by sungnikah.com</Style.WatermarkSungnikah>
 
       </Style.QuranVerseContainer>
       {/* <Style.WatermarkContainer>

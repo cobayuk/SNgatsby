@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Box, Link }from '@material-ui/core';
+import { Box }from '@material-ui/core';
+import { Link } from "gatsby";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 
@@ -132,7 +133,7 @@ const SecondTheme = () =>  {
         <Style.ThirdFlowerTop src={OrnamentThirdFlowerTop} alt="ornament-4" />
         <Style.VerseText data-aos="fade-up">“Bahwasanya Allah menciptakan kalian dari jenis kalian berupa perempuan sebagai istri, yang tinggal dengan kalian karena pernikahan, yang kalian lembut kepada istri-istri kalian dan condong kepadanya. Allah jadikan di antara kalian kecintaan, simpati dan kasih sayang, sungguh itu semua adalah tanda yang jelas akan ke-Maha Esaaan Allah dan kasih sayang-Nya kepada makhluk-Nya bagi kaum yang menjalankan akal mereka dan memikirkannya.” <br/><br/>(Q.S. Ar-Rum: 21)</Style.VerseText>
         <Style.ThirdFlowerBottom src={OrnamentThirdFlowerBottom} alt="ornament-5" />
-        <Link href="https://sungnikah.com">
+        <Link to="/">
           <Style.Watermark>Built with <span style={{color:'red'}}>❤</span> by sungnikah.com</Style.Watermark>
         </Link>
       </Style.VerseContainer>

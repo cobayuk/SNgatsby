@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Box, Typography, Button } from '@material-ui/core';
+import { Link } from 'gatsby';
 // Fonts
 import "@fontsource/overlock";
 import "@fontsource/oxygen";
@@ -651,7 +652,7 @@ export const WatermarkContainer = styled.div`
   background-color: light-gray;
 `;
 
-export const WatermarkSungnikah = styled.a`
+export const WatermarkSungnikah = styled(Link)`
     font-family: "Overlock";
     font-style: normal;
     font-weight: bold;
