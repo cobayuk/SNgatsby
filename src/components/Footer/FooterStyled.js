@@ -179,8 +179,8 @@ export const HeadingInnerFooter = styled(Typography)`
   @media (min-width: 1024px) {
     font-size: 16px;
   }
-  color: ${COLORS.grayLigter}; 
-  margin-bottom: 15px;                                                                                                                                           
+  color: ${COLORS.grayLigter};
+  margin-bottom: 15px;
 `;
 
 export const NavList = styled(Link)`
@@ -189,6 +189,22 @@ export const NavList = styled(Link)`
   font-weight: normal;
   font-size: 12px;
   line-height: 28px;
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+  cursor: pointer;
+`;
+
+export const NavListButton = styled.button`
+  font-family: ${FONT_FAMILY.oxygen};
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: none;
 `;
 
 export const InnerContainer = styled.div`
@@ -252,4 +268,10 @@ export const LeftGrid = styled(Grid)`
 
 export const RightGrid = styled(Grid)`
   text-align: right;
+`;
+
+export const SocialMediaContainer = styled.div`
+  @media (min-width: 1024px) {
+    margin-top: 40px;
+  }
 `;

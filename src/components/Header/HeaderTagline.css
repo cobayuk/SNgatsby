@@ -1,0 +1,8 @@
+.icon-arrow {
+  width: 10px;
+  height: auto;
+  transform: rotate(90deg);
+  margin-left: 5px;
+  top: 2px;
+  position: relative;
+}
