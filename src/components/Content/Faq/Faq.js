@@ -59,7 +59,7 @@ const FaqContent = () => {
   return (
     <Fragment>
       <CssBaseline/>
-      <Style.ContainerFaq>
+      <Style.ContainerFaq id="faq">
         <Style.HeadingFaqFirst
           component="h1"
           variant="h1"

@@ -38,6 +38,8 @@ export const Links = styled(Button)`
 
 export const LinkRedirect = styled(LinkTo)`
   margin: 10px;
+  padding: 8px 10px;
+  border-radius: 3px;
   font-size: 14px;
   text-decoration: none;
   color: #000;
@@ -45,6 +47,10 @@ export const LinkRedirect = styled(LinkTo)`
   font-weight: 600;
   text-transform: capitalize;
   cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.04);
+  }
 `;
 
 export const NavLinksNavbar = styled.div`

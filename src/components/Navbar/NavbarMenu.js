@@ -29,21 +29,15 @@ const NavbarMenu = () => {
         <>
           {pathname.toString() === '/demo/portofolio' ? (
             <>
-              <Style.Links
-                onClick={() => redirection('/')}
-              >
+              <Style.LinkRedirect to="/">
                 Cara Pesan
-              </Style.Links>
-              <Style.Links
-                onClick={() => redirection('/')}
-              >
+              </Style.LinkRedirect>
+              <Style.LinkRedirect to="/">
                 Paket Harga
-              </Style.Links>
-              <Style.Links
-                onClick={() => redirection('/')}
-              >
+              </Style.LinkRedirect>
+              <Style.LinkRedirect to="/">
                 Tentang Kami
-              </Style.Links>
+              </Style.LinkRedirect>
               <Style.LinkRedirect>
                 Demo
               </Style.LinkRedirect>
@@ -65,9 +59,7 @@ const NavbarMenu = () => {
               >
                 Tentang Kami
               </Style.Links>
-              <Style.LinkRedirect
-                to="/demo/portofolio"
-              >
+              <Style.LinkRedirect to="/demo/portofolio">
                 Demo
               </Style.LinkRedirect>
             </>
