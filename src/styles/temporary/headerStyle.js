@@ -10,7 +10,7 @@
 
 import styled from 'styled-components';
 import { Box, Grid } from '@material-ui/core';
-import AssetHeader from "@assets/photos/asset-3.jpeg";
+import AssetHeader from "@assets/photos/yesibain/cover.jpeg";
 // Fonts
 import "@fontsource/crimson-text";
 import "@fontsource/questrial";
@@ -26,7 +26,7 @@ export const WrapperInvitation = styled(Box)`
         top: 30px;
     }
     @media (min-width: 1024px) {
-        top: 25%;
+        top: 160px;
     }
 `;
 
@@ -152,6 +152,7 @@ export const CountDown = styled.p`
 `;
 
 export const Header = styled(Box)`
+    // margin-top: -14px;
     width: 100vw;
     height: 100vh;
     background:
@@ -163,9 +164,10 @@ export const Header = styled(Box)`
     }
     background-size: cover;
     position: relative;
-    background-position: 44%;
+    background-position: 51%;
     @media (min-width: 768px) {
-        background-position: 35% 20%;
+        // margin-top: -16px;
+        background-position: 50% 20%;
     }
     text-align: center;
 `;
