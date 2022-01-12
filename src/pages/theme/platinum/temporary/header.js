@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import { Grid, Box }from '@material-ui/core';
-import * as Style from "@styles/demo/platinum/headerStyle";
+import * as Style from "@styles/temporary/headerStyle";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 
@@ -33,7 +33,7 @@ const HeaderPlatinum = () =>  {
     }, []);
 
     const calculateTimeLeft = () => {
-        var countDownDate = new Date("Jan 22, 2022 15:00:00").getTime();
+        var countDownDate = new Date("Jan 18, 2022 09:00:00").getTime();
         var now = new Date().getTime();
 
         let difference = countDownDate - now;
@@ -77,21 +77,21 @@ const HeaderPlatinum = () =>  {
         <>
             <Style.Header id="header">
                 <Style.WrapperInvitation>
-                  <audio
-                    ref={myRef}
-                    src={BGMusic}
-                    loop
-                    autoPlay
-                  />
-                  {audioStatus ? (
-                    <Style.AudioButton onClick={pauseAudio}>
-                      <img src={MusicOn} alt="music-off" width="18" height="18"/>
-                    </Style.AudioButton>
-                  ) : (
-                    <Style.AudioButton onClick={startAudio}>
-                      <img src={MusicOff} alt="music-on" width="18" height="18"/>
-                    </Style.AudioButton>
-                  )}
+                    <audio
+                      ref={myRef}
+                      src={BGMusic}
+                      loop
+                      autoPlay
+                    />
+                    {audioStatus ? (
+                      <Style.AudioButton onClick={pauseAudio}>
+                        <img src={MusicOn} alt="music-off" width="18" height="18"/>
+                      </Style.AudioButton>
+                    ) : (
+                      <Style.AudioButton onClick={startAudio}>
+                        <img src={MusicOff} alt="music-on" width="18" height="18"/>
+                      </Style.AudioButton>
+                    )}
                     <Box data-aos="fade-up">
                          <Style.Invite>Dear you, you’re invited to</Style.Invite>
                         <Style.Title >THE WEDDING OF</Style.Title>
@@ -100,7 +100,7 @@ const HeaderPlatinum = () =>  {
                     <Grid container spacing={2}>
                         <Style.ResponsiveGrid item xs={12} md={5}>
                             <Style.Groom data-aos="fade-up">
-                                Karim
+                                Yesi
                             </Style.Groom>
                         </Style.ResponsiveGrid>
                         <Style.ResponsiveGrid item xs={12} md={2}>
@@ -110,12 +110,12 @@ const HeaderPlatinum = () =>  {
                         </Style.ResponsiveGrid>
                         <Style.ResponsiveGrid item xs={12} md={5}>
                             <Style.Bride data-aos="fade-up">
-                                Alyssa
+                                Bain
                             </Style.Bride>
                         </Style.ResponsiveGrid>
                     </Grid>
                     <Style.CountDown data-aos="fade-up" data-aos-once="true">
-                        {timerComponents.length ? timerComponents : <span>22 January 2022</span>}
+                        {timerComponents.length ? timerComponents : <span>11 December 2021</span>}
                     </Style.CountDown>
                     <Style.Arrow onClick={() => scrollTo('#intro-section')}>
                         <span></span>
