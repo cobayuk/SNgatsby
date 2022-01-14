@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import * as Style from "@styles/platinum/introStyle";
+import * as Style from "@styles/temporary/introStyle";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 

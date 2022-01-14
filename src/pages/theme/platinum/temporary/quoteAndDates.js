@@ -42,7 +42,7 @@ const QuotesAndDates = () =>  {
                     Kota Serang - Banten
                 </Style.WeddingLocation>
                 <Style.WrapperMap>
-                    <Style.GoToMap href="https://goo.gl/maps/cxcMdSeDLicBr1u5A" target="_blank">Lihat Peta</Style.GoToMap>
+                    <Style.GoToMap href="https://maps.app.goo.gl/nhoBWkGTZEAu7DUs5" target="_blank">Lihat Peta</Style.GoToMap>
                 </Style.WrapperMap>
             </Style.QuotesContainer>
         </>
