@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Box, Grid } from '@material-ui/core';
 import AssetHeader from "@assets/photos/asset-3.jpeg";
@@ -176,11 +176,19 @@ const Bride = styled.p`
     text-align: left;
 `;
 
+const isBrowser = typeof window !== "undefined"
+
 const Cover = ({ onClick, action }) => {
 
-  const search = window.location.search;
-  const params = new URLSearchParams(search);
-  const keyword = params.get('to')
+  const [keyword, setKeyword] = useState("")
+
+  useEffect(() => {
+    if (isBrowser) {
+      const search = window.location.search;
+      const params = new URLSearchParams(search);
+      setKeyword(params.get('to'))
+    }
+  }, []);
 
   useEffect(() => {
       AOS.init({
@@ -194,7 +202,7 @@ const Cover = ({ onClick, action }) => {
       <Header>
         <WrapperInvitation data-aos="fade-in">
             <Invite>Dear&nbsp;
-              { keyword === undefined || keyword === null
+              {keyword === undefined || keyword === null
                 ? "You"
                 : keyword
               },
