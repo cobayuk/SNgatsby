@@ -9,7 +9,7 @@ export const Footer = styled.div`
     height: 110px;
     background:
         linear-gradient(
-            rgba(0, 0, 0, 0.2), 
+            rgba(0, 0, 0, 0.2),
             rgba(0, 0, 0, 0.9)
         ),
         url(${AssetHeader});

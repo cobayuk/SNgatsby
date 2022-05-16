@@ -17,17 +17,8 @@ import "@fontsource/questrial";
 import "@fontsource/dancing-script";
 
 export const WrapperInvitation = styled(Box)`
-    top: 100px;
+    top: 25%;
     position: relative;
-    @media only screen and (min-width: 768px) and (max-width: 992px) {
-        top: 75px;
-    }
-    @media only screen and (min-width: 736px) and (max-width: 737px) {
-        top: 30px;
-    }
-    @media (min-width: 1024px) {
-        top: 25%;
-    }
 `;
 
 export const Invite = styled.p`
@@ -152,6 +143,7 @@ export const CountDown = styled.p`
 `;
 
 export const Header = styled(Box)`
+    margin-top: -35px;
     width: 100vw;
     height: 100vh;
     background:
@@ -177,6 +169,7 @@ export const ResponsiveGrid = styled(Grid)`
 `;
 
 export const Arrow = styled.div`
+    cursor: pointer;
     @media (min-width: 768px) {
         margin-top: -20px;
     }

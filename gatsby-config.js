@@ -12,8 +12,8 @@ module.exports = {
     seo: {
       description: `Sungnikah merupakan penyedia jasa digital invitation wedding / pernikahan seperti desain jada pembuatan wedding website, jada desain seserahan, dan desain undangan souvenir dan mempertemukan antara client / user dan vendor pernikahan.`,
       robots: `index, follow`,
-      keywords: `Buat undangan, Jasa Undangan Digital, Undangan Digital Keren, Undangan Unik, Undangan Kreatif 2021, Vendor Wedding`,
-      index: `2021`,
+      keywords: `Buat undangan, Jasa Undangan Digital, Undangan Digital Keren, Undangan Unik, Undangan Kreatif 2022, Vendor Wedding`,
+      index: `2022`,
       canonical: `https://sungnikah.com/articles`
     }
   },
