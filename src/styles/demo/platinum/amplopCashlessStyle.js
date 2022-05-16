@@ -62,7 +62,22 @@ export const GirlAvatar = styled.img`
     left: 0;
     position: absolute;
     @media (min-width: 768px) {
-        left: 11em;
+        left: 19em;
+    }
+    @media (min-width: 1280px) {
+      left: 27em;
+    }
+    @media (min-width: 1366px) {
+      left: 30em;
+    }
+    @media (min-width: 1440px) {
+      left: 32em;
+    }
+    @media (min-width: 1920px) {
+      left: 47em;
+    }
+    @media (min-width: 2560px) {
+      left: 67em;
     }
 `;
 
@@ -92,15 +107,28 @@ export const ManAvatarFull = styled.img`
     }
     @media (min-width: 768px) {
         display: block;
+        right: 14em;
+    }
+    @media (min-width: 1280px) {
+      right: 22em;
+    }
+    @media (min-width: 1366px) {
+      right: 25em;
+    }
+    @media (min-width: 1440px) {
+      right: 27em;
+    }
+    @media (min-width: 1920px) {
+      right: 42em;
+    }
+    @media (min-width: 2560px) {
+      right: 62em;
     }
     width: 170px;
     height: auto;
     float: right;
     right: 0;
     position: absolute;
-    @media (min-width: 768px) {
-        right: 7em;
-    }
 `;
 
 export const SquareBarcode = styled.div`
@@ -200,8 +228,15 @@ export const CopyToClipboardButton = styled.button`
     font-size: 10px;
     line-height: 13px;
     margin-top: 8px;
+    cursor: pointer;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    touch-action: manipulation;
+    will-change: transform;
+    display: inline-block;
     &:hover, &:focus {
         background: #b98e0a;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(-2px);
     }
 `;
 

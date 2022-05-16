@@ -35,8 +35,8 @@ export const WeddingDate = styled.p`
     font-family: DM Serif Display;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 30px;
+    line-height: 40px;
     text-align: center;
     color: #C2A38E;
     margin: 40px 0px;
@@ -49,8 +49,8 @@ export const ProgramTitle = styled.span`
     font-family: DM Serif Display;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 18px;
+    line-height: 25px;
     text-align: center;
     color: #C2A38E;
 `;
@@ -112,12 +112,18 @@ export const GoToMap = styled.a`
     color: #FFFFFF;
     padding: 12px 32px;
     background: #E77F78;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
     border-radius: 30px;
     border: none;
     margin-bottom: 24px;
     text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    touch-action: manipulation;
+    will-change: transform;
+    display: inline-block;
     &:focus, &:hover {
         background: #f79c96;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(-2px);
     }
 `;
