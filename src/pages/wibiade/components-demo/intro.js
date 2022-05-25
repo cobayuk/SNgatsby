@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import * as Style from "@styles/demo/platinum/introStyle";
+import * as Style from "@styles/temporary/wibiade/introStyle";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 
@@ -29,7 +29,7 @@ const Intro = () =>  {
                 </Style.ContainerIntro>
                 <Style.GroomWrapper data-aos="fade-up">
                     <Style.Person>Wibi Agung Prasetyo</Style.Person>
-                    <Style.Parent>Putra pertama dari Bpk. M. Rudiono dan Ibu Yuliarsih</Style.Parent>
+                    <Style.Parent>Putra dari Bpk. M. Rudiono dan Ibu Yuliarsih</Style.Parent>
                 </Style.GroomWrapper>
                 <Style.Ampersand data-aos="fade-up">
                     &#38;

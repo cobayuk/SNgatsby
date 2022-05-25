@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import * as Style from "@styles/demo/platinum/footerStyle";
+import * as Style from "@styles/temporary/wibiade/footerStyle";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 
@@ -15,7 +15,7 @@ const Footer = () =>  {
   return(
     <>
       <Style.Footer>
-        <Style.Hashtag data-aos="fade-up">Thankyou #WibiAde</Style.Hashtag>
+        <Style.Hashtag data-aos="fade-up">Thankyou #WibiAdelia</Style.Hashtag>
       </Style.Footer>
       <Style.WrapperWatermark>
         <span>Built with ❤️ &nbsp; by</span> <a href="https://sungnikah.com" target="_blank">sungnikah</a>
