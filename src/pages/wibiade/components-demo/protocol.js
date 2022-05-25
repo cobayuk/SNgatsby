@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import * as Style from "@styles/demo/platinum/protocolStyle";
+import * as Style from "@styles/temporary/wibiade/protocolStyle";
 import WearMask from "@assets/protocol/wear-mask.jpg";
 import HandSanitizer from "@assets/protocol/handsanitizer.jpg";
 import Distance from "@assets/protocol/distance.jpg";
@@ -16,7 +16,7 @@ const Protocol = () =>  {
     }, []);
 
     return(
-        <>  
+        <>
             <Style.ContainerProtocol>
                 <Style.InnerContainer>
                     <Style.IntroProtocol data-aos="fade-down">Protokol Kesehatan</Style.IntroProtocol>
@@ -51,7 +51,7 @@ const Protocol = () =>  {
                             </Style.WrapperProtocol>
                         </Style.GridProtocol>
                     </Style.GridContainer>
-                    
+
                     <Style.GridContainer container>
                         <Style.GridItem item xs={12} sm={6}>
                             <Style.ProtocolImage data-aos="fade-in" src={Distance} alt="keep-the-distance" width="800" height="450"/>

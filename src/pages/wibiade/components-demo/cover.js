@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Box, Grid } from '@material-ui/core';
-import AssetHeader from "@assets/photos/asset-3.jpeg";
+import AssetHeader from "@assets/photos/wibiadelia/cover.jpg";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -19,7 +19,7 @@ const Header = styled(Box)`
     position: relative;
     background-position: 44%;
     @media (min-width: 768px) {
-        background-position: 35% 20%;
+        background-position: 35% 60%;
     }
     text-align: center;
 `;

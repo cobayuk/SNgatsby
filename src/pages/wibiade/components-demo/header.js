@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import { Grid, Box }from '@material-ui/core';
-import * as Style from "@styles/demo/platinum/headerStyle";
+import * as Style from "@styles/temporary/wibiade/headerStyle";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 
