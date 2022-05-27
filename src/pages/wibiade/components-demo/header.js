@@ -6,9 +6,8 @@ import AOS from 'aos'
 import 'aos/dist/aos.css';
 
 import BGMusic from '../../../assets/audio/a-thousand-years.mp3';
-
-import MusicOn from '../../../assets/svg/audio-play.svg';
-
+// import MusicOn from '../../../assets/svg/audio-play.svg';
+import MusicOn from '../../../assets/svg/music-animation.svg';
 import MusicOff from '../../../assets/svg/audio-mute.svg';
 
 const HeaderPlatinum = () =>  {

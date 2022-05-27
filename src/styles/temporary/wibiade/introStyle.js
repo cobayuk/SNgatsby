@@ -9,6 +9,7 @@
 */
 
 import styled from 'styled-components';
+import { Grid } from '@material-ui/core';
 // Fonts
 import "@fontsource/crimson-text";
 import "@fontsource/dancing-script";
@@ -41,34 +42,14 @@ export const IntroText = styled.p`
 export const Ampersand = styled.p`
     font-family: Dancing Script;
     font-weight: normal;
-    font-size: 50px;
+    font-size: 9em;
     line-height: 24px;
     text-align: center;
     color: #B37C62;
     display: block;
     margin-top: 50px;
     @media (max-width: 600px) {
-        font-size: 48px;
-        line-height: 24px;
-    }
-`;
-
-export const Person = styled.p`
-    font-family: Dancing Script;
-    font-weight: normal;
-    text-align: center;
-    color: #B37C62;
-    margin: 55px 0px;
-    @media (max-width: 360px) {
-      font-size: 36px;
-      line-height: 36px;
-    }
-    @media (min-width: 375px) {
-        font-size: 36px;
-        line-height: 24px;
-    }
-    @media (min-width: 600px) {
-        font-size: 50px;
+        font-size: 5em;
         line-height: 24px;
     }
 `;
@@ -87,6 +68,15 @@ export const Parent = styled.p`
     }
 `;
 
+export const GridCustom = styled(Grid)`
+    align-items: baseline;
+    margin-bottom: 40px;
+`;
+
+export const Poster = styled.img`
+    border-radius: 50%;
+`;
+
 export const GroomWrapper = styled.div`
     margin-top: -24px;
     @media (max-width: 600px) {
@@ -97,5 +87,27 @@ export const GroomWrapper = styled.div`
 export const BrideWrapper = styled.div`
     @media (max-width: 600px) {
         padding: 0px 25px;
+    }
+`;
+
+export const AvatarWrapper = styled.div`
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: -20px;
+`;
+
+export const PersonName = styled.p`
+    font-family: Crimson Text;
+    font-weight: 400;
+    text-align: center;
+    color: #B37C62;
+    margin: 40px 0px;
+    @media (min-width: 320px) {
+      font-size: 24px;
+      line-height: 16px;
+    }
+    @media (min-width: 600px) {
+        font-size: 24px;
+        line-height: 16px;
     }
 `;

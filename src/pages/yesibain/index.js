@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 import SEO from "@components/seo";
 import { CssBaseline } from '@material-ui/core';
-import HeaderPlatinum from "@pages/theme/platinum/temporary/header";
-import Intro from "@pages/theme/platinum/temporary/intro";
-import OurGallery from "@pages/theme/platinum/temporary/gallery";
-import QuotesAndDates from "@pages/theme/platinum/temporary/quoteAndDates";
-import Footer from "@pages/theme/platinum/temporary/footer";
+import HeaderPlatinum from "./components/header";
+import Intro from "./components/intro";
+import OurGallery from "./components/gallery";
+import QuotesAndDates from "./components/quoteAndDates";
+import Footer from "./components/footer";
 import "./base.css";
 
 const YesiBain = () => {
