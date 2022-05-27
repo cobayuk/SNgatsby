@@ -176,6 +176,10 @@ const Bride = styled.p`
     text-align: left;
 `;
 
+const EmptyInvite = styled.div`
+    margin-top: -35px;
+`;
+
 const isBrowser = typeof window !== "undefined"
 
 const Cover = ({ onClick, action }) => {
@@ -201,13 +205,17 @@ const Cover = ({ onClick, action }) => {
     <>
       <Header>
         <WrapperInvitation data-aos="fade-in">
-            <Invite>Dear&nbsp;
-              {keyword === undefined || keyword === null
-                ? "You"
-                : keyword
-              },
-              &nbsp;you're invited to
-            </Invite>
+            {keyword === null || keyword === undefined ? (
+                <EmptyInvite></EmptyInvite>
+            ) : (
+               <Invite>Dear&nbsp;
+                  {keyword === undefined || keyword === null
+                    ? "You"
+                    : keyword
+                  },
+                  &nbsp;you're invited to
+                </Invite>
+            )}
             <Title>THE WEDDING OF</Title>
             <Grid container spacing={2}>
               <ResponsiveGrid item xs={12} md={5}>
