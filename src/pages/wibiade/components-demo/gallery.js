@@ -7,16 +7,14 @@ import {
 import "lightgallery.js/dist/css/lightgallery.css";
 import * as Style from "@styles/temporary/wibiade/galleryStyle";
 import "./additional.css";
-import LandscapeTwo from "@assets/photos/wibiadelia/wa-landscape-2.jpg";
+import LandscapeTwo from "@assets/photos/wibiadelia/wa-landscape-new-1.jpg";
 import LandscapeFive from "@assets/photos/wibiadelia/wa-landscape-new-2.jpg";
-import LandscapeSix from "@assets/photos/wibiadelia/wa-landscape-new-3.jpg";
+import LandscapeSix from "@assets/photos/wibiadelia/wa-landscape-11.jpg";
 import LandscapeEight from "@assets/photos/wibiadelia/wa-landscape-8.jpg";
-import LandscapeTen from "@assets/photos/wibiadelia/wa-landscape-10.jpg";
-import PotraitOne from "@assets/photos/wibiadelia/wa-potrait-1.jpg";
+import LandscapeTen from "@assets/photos/wibiadelia/wa-landscape-new-5.jpg";
+import PotraitOne from "@assets/photos/wibiadelia/wa-potrait-2.jpg";
 import PotraitTwo from "@assets/photos/wibiadelia/wa-potrait-new-1.jpg";
-import PotraitFour from "@assets/photos/wibiadelia/wa-potrait-4.jpg";
-import PotraitFive from "@assets/photos/wibiadelia/wa-potrait-5.jpg";
-import PotraitSix from "@assets/photos/wibiadelia/wa-potrait-6.jpg";
+import LandscapeSeven from "@assets/photos/wibiadelia/wa-landscape-new-4.jpg";
 
 const OurGallery = () =>  {
 
@@ -25,9 +23,7 @@ const OurGallery = () =>  {
         LandscapeEight,
         PotraitOne,
         LandscapeTwo,
-        PotraitFour,
-        PotraitFive,
-        PotraitSix,
+        LandscapeSeven,
         LandscapeTen,
         PotraitTwo,
         LandscapeSix,
