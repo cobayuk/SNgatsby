@@ -11,7 +11,8 @@ import * as Style from '@components/Navbar/NavbarMenuStyled';
 const NavbarMenu = () => {
 
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  // const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery('(max-width:425px)')
   const window = global.window;
   let pathname = typeof window !== 'undefined' ? window.location.pathname : 'undefined';
 

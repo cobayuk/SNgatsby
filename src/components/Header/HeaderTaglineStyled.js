@@ -80,7 +80,7 @@ export const BoxReactangleSmall = styled(Box)`
     top: 256px;
     left: 28px;
     color: ${COLORS.white};
-    width: 230px;
+    width: 250px;
     height: 57px;
     display: flex;
     padding: 10px;
@@ -120,9 +120,14 @@ export const BoxOrnamentsOne = styled(Box)`
       left: 38px;
       justify-content: flex-end;
     }
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 768px) {
       top: -2em;
-      right: 0;
+      left: 0px;
+    }
+    @media (min-width: 1024px) {
+      top: -12em;
+      right: 12em;
+      left: unset;
     }
   }
 `;
@@ -144,6 +149,9 @@ export const BoxOrnamentsThree = styled(Box)`
     right: -9em;
     display: flex;
     position: relative;
+    @media (max-width: 1024px) {
+      display: none;
+    }
   }
 `;
 

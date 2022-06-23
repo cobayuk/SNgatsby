@@ -19,7 +19,8 @@ const Header = () => {
 
   // let sanitizeUrl = url.substring(1, url.lastIndexOf('/'));
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  // const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery('(max-width:425px)')
 
   const HeaderAppBar = styled(AppBar)`
     left: 0;

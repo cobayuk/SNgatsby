@@ -25,6 +25,7 @@ const sliderParams = {
     delay: 2500,
     disableOnInteraction: false
   },
+  initialSlide: 1,
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
@@ -67,6 +68,7 @@ const packages = [
       'Penghitung Waktu Mundur',
       'Navigasi Peta',
       'Quotes/Qur’an Verse',
+      'Unlimited Tamu Undangan'
       // 'Belum Termasuk Domain'
     ]
   },
@@ -82,10 +84,11 @@ const packages = [
       'Navigasi Peta',
       'Quotes/Qur’an Verse',
       'Protokol Kesehatan',
-      // 'Audio Musik',
+      'Audio Musik',
       'Galeri Foto',
       // 'Facebook Comment',
       'Amplop Digital',
+      'Unlimited Tamu Undangan'
       // 'Sudah Termasuk Domain'
     ]
   },
@@ -101,8 +104,9 @@ const packages = [
       'Navigasi Peta',
       'Quotes/Qur’an Verse',
       'Protokol Kesehatan',
+      'Audio Musik',
       'Amplop Digital',
-      // 'Audio Musik',
+      'Unlimited Tamu Undangan'
       // 'Galeri Foto',
       // 'Facebook Comment',
       // 'Belum Termasuk Domain'
@@ -115,7 +119,8 @@ const PricingPrice = () => {
 
   const classes = useStyles();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  // const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery('(max-width:425px)')
 
   return (
     <Style.WrapperPricing id="pricing">

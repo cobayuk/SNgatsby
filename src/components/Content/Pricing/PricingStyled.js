@@ -86,16 +86,16 @@ export const ButtonBoxDiscount = styled(Typography)`
 
 export const CardsContentArea = styled.div`
   width: 100%;
-  height: ${props => props.title === 'Platinum' ? '600px' : '500px'};
+  height: ${props => props.title === 'Platinum' ? '600px' : '530px'};
   ${props => props.title === 'Platinum' ? 'margin-top: -3em' : ''};
   box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 3%), 0px 1px 13px 0px rgb(0 0 0 / 4%), 0px 1px 3px 0px rgb(0 0 0 / 47%);
 `;
 
 export const CardsContentAreaMobile = styled.div`
   width: 100%;
-  height: 500px;
+  height: ${props => props.title === 'Platinum' ? '600px' : '550px'};
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  border-top: 1px solid rgb(0 0 0 / 5%);
+  border: 1px solid rgb(0 0 0 / 5%);
 `;
 
 export const CardHeaderTier = styled.div`
