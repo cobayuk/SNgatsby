@@ -27,7 +27,7 @@ const FirstTheme = () =>  {
   }, []);
 
   const calculateTimeLeft = () => {
-    let countDownDate = new Date("Jan 31, 2022 15:00:00").getTime();
+    let countDownDate = new Date("Dec 31, 2022 09:00:00").getTime();
     let now = new Date().getTime();
 
     let difference = countDownDate - now;
@@ -35,10 +35,10 @@ const FirstTheme = () =>  {
 
     if (difference > 0) {
       timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
+        hari: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        jam: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        menit: Math.floor((difference / 1000 / 60) % 60),
+        detik: Math.floor((difference / 1000) % 60),
       };
     }
 
@@ -97,7 +97,7 @@ const FirstTheme = () =>  {
           </Box>
           <Style.CountdownContainer data-aos="fade-up">
             <Style.WeddingCountdown>
-              {timerComponents.length ? timerComponents : <span>Happy Wedding</span>}
+              {timerComponents.length ? timerComponents : <span>31 December 2022</span>}
             </Style.WeddingCountdown>
           </Style.CountdownContainer>
         </Style.IntroWrapper>
@@ -126,7 +126,7 @@ const FirstTheme = () =>  {
           <Style.Parents data-aos="fade-up">Putri pertama dari Bpk. Jojo Amin dan Ibu Sari Asih</Style.Parents>
           <Style.Greeting data-aos="fade-up">Yang Insya Allah akan dilaksanakan pada:</Style.Greeting>
           <Style.WeddingDate data-aos="fade-up">
-            Sabtu, 22 Februari 2021<br/><br/>
+            Sabtu, 31 Desember 2022<br/><br/>
             Akad Nikah
           </Style.WeddingDate>
           <Style.Parents data-aos="fade-up">Pukul 09:00 - 10:00 WIB</Style.Parents>
@@ -153,7 +153,7 @@ const FirstTheme = () =>  {
           {/* <Style.OrnamentAbstractBottom src={AbstractBottom} alt="ornament-3"/> */}
           {/* <Style.OrnamentFlowerBottom src={FlowerBottom} alt="ornament-4"/> */}
         {/* </Style.OrnamentBottomContainer> */}
-        <Style.WatermarkSungnikah to="/"> Built with <span style={{color:'red'}}>❤</span> by sungnikah.com</Style.WatermarkSungnikah>
+        <Style.WatermarkContainer> <span>Built with ❤️ &nbsp; by</span> <a href="https://sungnikah.com" target="_blank">sungnikah.com</a></Style.WatermarkContainer>
 
       </Style.QuranVerseContainer>
       {/* <Style.WatermarkContainer>

@@ -31,7 +31,7 @@ const SecondTheme = () =>  {
   }, []);
 
   const calculateTimeLeft = () => {
-    let countDownDate = new Date("Jan 31, 2022 15:00:00").getTime();
+    let countDownDate = new Date("Dec 31, 2022 09:00:00").getTime();
     let now = new Date().getTime();
 
     let difference = countDownDate - now;
@@ -85,7 +85,7 @@ const SecondTheme = () =>  {
           <Style.Grooms data-aos="fade-down">{configThemesSecond.groom.nickName}</Style.Grooms>
           <Style.Ampersand src={AmpersandDivider} alt="ampersand" data-aos="fade-up"/>
           <Style.Bride data-aos="fade-up">{configThemesSecond.bride.nickName}</Style.Bride>
-          <Style.WeddingDate data-aos="fade-up">{configThemesSecond.placeHolderTag.timeStarted}</Style.WeddingDate>
+          <Style.WeddingDate data-aos="fade-up">{timerComponents.length ? timerComponents : <span>31 December 2022</span>}</Style.WeddingDate>
         </Style.WrapperInvite>
         <Style.FlowerMiddle src={MiddleFrame} alt="frame-middle" />
         <Style.FlowerBottomRight src={OrnamentFlowerBottom} alt="ornament-2" />
@@ -104,8 +104,8 @@ const SecondTheme = () =>  {
         <Style.AmpersandBride data-aos="fade-up">&#38;</Style.AmpersandBride>
         <Style.GroomFull data-aos="fade-up">{configThemesSecond.bride.fullName}</Style.GroomFull>
         <Style.Parents data-aos="fade-up">{configThemesSecond.bride.parents.tagline}</Style.Parents>
-        <Style.WeddingDateSecond data-aos="fade-up">{configThemesSecond.contractMarriage.dateTime}</Style.WeddingDateSecond>
-        <Style.CountDown data-aos="fade-up"> {timerComponents.length ? timerComponents : <span>Happy Wedding!</span>}</Style.CountDown>
+        <Style.WeddingDateSecond data-aos="fade-up">Sabtu, 31 Desember 2022</Style.WeddingDateSecond>
+        <Style.CountDown data-aos="fade-up"> {timerComponents.length ? timerComponents : <span>31 December 2022</span>}</Style.CountDown>
         <Style.WeddingCeremony data-aos="fade-up">Akad</Style.WeddingCeremony>
         <Style.WeddingTime data-aos="fade-up">Pukul 09:00 - 10:00 WIB</Style.WeddingTime>
         <Style.LineDividers src={LineDivider} alt="divider" data-aos="fade-up"/>
@@ -133,9 +133,7 @@ const SecondTheme = () =>  {
         <Style.ThirdFlowerTop src={OrnamentThirdFlowerTop} alt="ornament-4" />
         <Style.VerseText data-aos="fade-up">“Bahwasanya Allah menciptakan kalian dari jenis kalian berupa perempuan sebagai istri, yang tinggal dengan kalian karena pernikahan, yang kalian lembut kepada istri-istri kalian dan condong kepadanya. Allah jadikan di antara kalian kecintaan, simpati dan kasih sayang, sungguh itu semua adalah tanda yang jelas akan ke-Maha Esaaan Allah dan kasih sayang-Nya kepada makhluk-Nya bagi kaum yang menjalankan akal mereka dan memikirkannya.” <br/><br/>(Q.S. Ar-Rum: 21)</Style.VerseText>
         <Style.ThirdFlowerBottom src={OrnamentThirdFlowerBottom} alt="ornament-5" />
-        <Link to="/">
-          <Style.Watermark>Built with <span style={{color:'red'}}>❤</span> by sungnikah.com</Style.Watermark>
-        </Link>
+          <Style.Watermark><span>Built with ❤️ &nbsp; by</span> <a href="https://sungnikah.com" target="_blank">sungnikah.com</a></Style.Watermark>
       </Style.VerseContainer>
     </Box>
   );

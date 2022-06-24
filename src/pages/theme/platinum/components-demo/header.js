@@ -6,7 +6,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css';
 
 import BGMusic from '../../../../assets/audio/pengungkapan-hatimu.mp3';
-import MusicOn from '../../../../assets/svg/audio-play.svg';
+import MusicOn from '../../../../assets/svg/music-animation.svg';
 import MusicOff from '../../../../assets/svg/audio-mute.svg';
 
 const HeaderPlatinum = () =>  {
@@ -16,7 +16,6 @@ const HeaderPlatinum = () =>  {
 
     const startAudio = () => {
       myRef.current.play();
-
       changeAudioStatus(true);
     };
 
@@ -33,7 +32,7 @@ const HeaderPlatinum = () =>  {
     }, []);
 
     const calculateTimeLeft = () => {
-        var countDownDate = new Date("Jan 22, 2022 15:00:00").getTime();
+        var countDownDate = new Date("Dec 31, 2022 09:00:00").getTime();
         var now = new Date().getTime();
 
         let difference = countDownDate - now;
@@ -93,7 +92,7 @@ const HeaderPlatinum = () =>  {
                     </Style.AudioButton>
                   )}
                     <Box data-aos="fade-up">
-                         <Style.Invite>Dear you, you’re invited to</Style.Invite>
+                         {/* <Style.Invite>Dear you, you’re invited to</Style.Invite> */}
                         <Style.Title >THE WEDDING OF</Style.Title>
                     </Box>
 

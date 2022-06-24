@@ -17,7 +17,8 @@ import './HeaderTagline.css';
 const HeaderTagline = () => {
 
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  // const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery('(max-width:1023px)')
 
   return (
     <Style.BoxHeader>
