@@ -20,7 +20,7 @@ const QuotesAndDates = () =>  {
                 “Bahwasanya Allah menciptakan kalian dari jenis kalian berupa perempuan sebagai istri, yang tinggal dengan kalian karena pernikahan, yang kalian lembut kepada istri-istri kalian dan condong kepadanya. Allah jadikan di antara kalian kecintaan, simpati dan kasih sayang, sungguh itu semua adalah tanda yang jelas akan ke-Maha Esaaan Allah dan kasih sayang-Nya kepada makhluk-Nya bagi kaum yang menjalankan akal mereka dan memikirkannya.”
                 <br/><br/>(Q.S. Ar-Rum: 21)
                 </Style.QuotesText>
-                <Style.WeddingDate>Sabtu, 22 Januari 2022</Style.WeddingDate>
+                <Style.WeddingDate>Sabtu, 31 Desember 2022</Style.WeddingDate>
                 <Grid container>
                     <Grid item xs={6}>
                         <Style.ContainerProgram>

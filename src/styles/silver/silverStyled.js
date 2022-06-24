@@ -560,44 +560,6 @@ export const OrnamentFlowerBottom = styled.img`
   display: block;
   margin-top: 50px;
   z-index: 1;
-  // @media(min-width: 320px) {
-  //   bottom: -13em;
-  // }
-  // @media(min-width: 360px) {
-  //   bottom: -21.7em;
-  // }
-  // @media(min-width: 375px) {
-  //    top: 119px;
-  // }
-  // @media(min-width: 425px) {
-  //   width: 30%;
-  //   bottom: -26em;
-  // }
-  // @media(min-width: 768px) {
-  //   width: 20%;
-  //   bottom: -33.5em;
-  // }
-  // @media (min-width: 414px) {
-  //   bottom: -30em;
-  //   width: 26%;
-  // }
-  // @media (min-width: 768px) {
-  //   bottom: -44em;
-  // }
-  // @media (min-width: 1024px) {
-  //   bottom: -30em;
-  // }
-  // @media (min-width: 1280px) {
-  //   bottom: -30.5em;
-  //   width: 15%;
-  // }
-  // @media (min-width: 1366px) {
-  //   bottom: -33.5em;
-  //   width: 15%;
-  // }
-  // @media (min-width: 1920px) {
-  //   bottom: -43.5em;
-  // }
 `;
 
 export const OrnamentAbstractBottom = styled.img`
@@ -605,40 +567,6 @@ export const OrnamentAbstractBottom = styled.img`
   width: 27%;
   left: 0;
   margin-top: 48px;
-  // @media(min-width: 320px) {
-  //   bottom: -13em;
-  // }
-  // @media(min-width: 360px) {
-  //   bottom: -21.7em;
-  // }
-  // @media(min-width: 375px) {
-  //   top: 92px;
-  // }
-  // @media(min-width: 414px) {
-  //   width: 35%;
-  //   bottom: -30em;
-  // }
-  // @media(min-width: 425px) {
-  //   width: 40%;
-  //   bottom: -26em;
-  // }
-  // @media (min-width: 768px) {
-  //   width: 35%;
-  //   bottom: -44em;
-  // }
-  // @media (min-width: 1024px) {
-  //   bottom: -30em;
-  // }
-  // @media (min-width: 1280px) {
-  //   bottom: -30.5em
-  // }
-  // @media (min-width: 1366px) {
-  //   bottom: -33.5em;
-  //   width: 20%;
-  // }
-  // @media (min-width: 1920px) {
-  //   bottom: -43.5em;
-  // }
 `;
 
 export const OrnamentBottomContainer = styled(Box)`
@@ -648,11 +576,6 @@ export const OrnamentBottomContainer = styled(Box)`
 `;
 
 export const WatermarkContainer = styled.div`
-  z-index: 10;
-  background-color: light-gray;
-`;
-
-export const WatermarkSungnikah = styled(Link)`
     font-family: "Overlock";
     font-style: normal;
     font-weight: bold;
@@ -662,9 +585,6 @@ export const WatermarkSungnikah = styled(Link)`
     text-align: center;
     text-decoration: none;
     color: black;
-    &span {
-      color: red;
-    }
     @media (min-width: 320px) {
       font-size: 12px;
       margin-top: 11em;
@@ -672,9 +592,10 @@ export const WatermarkSungnikah = styled(Link)`
     @media (min-width: 360px) {
       margin-top: 20em;
     }
-    @media (min-width: 414px) {
-
-    }
     position: relative;
     margin-top: 16em;
+    a {
+      color: #E2B62E;
+      text-decoration: none;
+    }
 `;

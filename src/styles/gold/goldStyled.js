@@ -613,5 +613,17 @@ export const Watermark = styled(Typography)`
       bottom: 30px;
       left: 50px;
     }
+    a {
+      font-family: "Overlock";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 9px;
+      line-height: 11px;
+      color: #E2B62E;
+      text-decoration: none;
+      @media (min-width: ${breakpoints.tabletSmall}) {
+        font-size: 15px;
+      }
+    }
   }
 `;
