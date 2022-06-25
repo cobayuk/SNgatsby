@@ -490,6 +490,7 @@ export const SeeMap = styled(Button)`
     width: 230px;
     height: 45px;
     z-index: 10;
+    text-transform: capitalize;
     @media (min-width: ${breakpoints.mobileSmall}) {
       width: 150px;
     }
@@ -626,4 +627,23 @@ export const Watermark = styled(Typography)`
       }
     }
   }
+`;
+
+export const AudioButton = styled.button`
+  border-radius: 50%;
+  padding: 10px 12px;;
+  outline: none;
+  background: white;
+  border: none;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 30px 15px;;
+  z-index: 100;
+`;
+
+export const AudioIcon = styled.img`
+    width: 18px;
+    height: 18px;
 `;
