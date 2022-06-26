@@ -64,7 +64,8 @@ const details = () => {
         <Style.GroomFull data-aos="fade-up">Budi Sucipto (Kudus)</Style.GroomFull>
         <Style.Parents data-aos="fade-up">Putra dari Bpk. Edy Suryono (Alm) dan Ibu Sukarnah (Almh)</Style.Parents>
         <Style.WeddingDateSecond data-aos="fade-up">Rabu, 6 Juli 2022</Style.WeddingDateSecond>
-        <Style.CountDown data-aos="fade-up"> {timerComponents.length ? timerComponents : <span>6 Juli 2022</span>}</Style.CountDown>
+        {/* <Style.CountDown data-aos="fade-up"> {timerComponents.length ? timerComponents : <span></span>}</Style.CountDown> */}
+        <Style.CountDown data-aos="fade-up"><span></span></Style.CountDown>
         <Style.WeddingCeremony data-aos="fade-up">Akad</Style.WeddingCeremony>
         <Style.WeddingTime data-aos="fade-up">Pukul 08:00 WIB s/d Selesai</Style.WeddingTime>
         <Style.LineDividers src={LineDivider} alt="divider" data-aos="fade-up"/>

@@ -30,8 +30,8 @@
      `
    )
 
-   const metaTitle = "The Wedding of Ria & Budi"
-   const metaDescription = "The Wedding of Ria & Budi"
+   const metaTitle = "The Wedding of Endang & Budi"
+   const metaDescription = "The Wedding of Endang & Budi"
    const metaKeywords = keywords || site.siteMetadata.seo.keywords
 
    return (
