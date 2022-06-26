@@ -260,6 +260,31 @@ export const WeddingDate = styled(Typography)`
   }
 `;
 
+export const CustomWeddingDate = styled.p`
+  font-family: "Oxygen";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #5B5B5F;
+  text-align: center;
+  top: 50px;
+  position: relative;
+  @media (min-width: ${breakpoints.mobileSmall}) {
+    top: -5px;
+  }
+  @media (min-width: ${breakpoints.mobileModerate}) {
+    top: 40px;
+  }
+  @media (min-width: ${breakpoints.mobileMedium}) {
+    top: 25px;
+  }
+  @media (min-width: ${breakpoints.tabletSmall}) {
+    font-size: 15px;
+    top: 80px;
+  }
+`;
+
 export const FlowerBottomRight = styled.img`
   position: absolute;
   width: 60%;

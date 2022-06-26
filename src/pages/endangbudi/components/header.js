@@ -97,10 +97,11 @@ const header = () => {
         <Style.WrapperInvite>
           <Style.InvitedPerson data-aos="fade-up">YOU’RE INVITED TO</Style.InvitedPerson>
           <Style.WeddingTitle data-aos="fade-up">THE WEDDING OF</Style.WeddingTitle>
-          <Style.Grooms data-aos="fade-down">Ria</Style.Grooms>
+          <Style.Grooms data-aos="fade-down">Endang</Style.Grooms>
           <Style.Ampersand src={AmpersandDivider} alt="ampersand" data-aos="fade-up"/>
           <Style.Bride data-aos="fade-up">Budi</Style.Bride>
-          <Style.WeddingDate data-aos="fade-up">{timerComponents.length ? timerComponents : <span>6 Juli 2022</span>}</Style.WeddingDate>
+          {/* <Style.WeddingDate data-aos="fade-up">{timerComponents.length ? timerComponents : <span>6 Juli 2022</span>}</Style.WeddingDate> */}
+          <Style.CustomWeddingDate data-aos="fade-up">6 Juli 2022</Style.CustomWeddingDate>
         </Style.WrapperInvite>
         <Style.FlowerMiddle src={MiddleFrame} alt="frame-middle" />
         <Style.FlowerBottomRight src={OrnamentFlowerBottom} alt="ornament-2" />
