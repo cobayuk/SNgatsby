@@ -1,11 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import { Grid, Box }from '@material-ui/core';
 import * as Style from "@styles/demo/platinum/headerStyle";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 
+import BGMusic from '../../../../assets/audio/pengungkapan-hatimu.mp3';
+import MusicOn from '../../../../assets/svg/music-animation.svg';
+import MusicOff from '../../../../assets/svg/audio-mute.svg';
+
 const HeaderPlatinum = () =>  {
+
+    const [audioStatus, changeAudioStatus] = useState(false);
+    const myRef = useRef();
+
+    const startAudio = () => {
+      myRef.current.play();
+      changeAudioStatus(true);
+    };
+
+    const pauseAudio = () => {
+      myRef.current.pause();
+      changeAudioStatus(false);
+    };
 
     useEffect(() => {
         AOS.init({
@@ -15,7 +32,7 @@ const HeaderPlatinum = () =>  {
     }, []);
 
     const calculateTimeLeft = () => {
-        var countDownDate = new Date("Jan 22, 2022 15:00:00").getTime();
+        var countDownDate = new Date("Dec 31, 2022 09:00:00").getTime();
         var now = new Date().getTime();
 
         let difference = countDownDate - now;
@@ -59,8 +76,23 @@ const HeaderPlatinum = () =>  {
         <>
             <Style.Header id="header">
                 <Style.WrapperInvitation>
+                  <audio
+                    ref={myRef}
+                    src={BGMusic}
+                    loop
+                    autoPlay
+                  />
+                  {audioStatus ? (
+                    <Style.AudioButton onClick={pauseAudio}>
+                      <img src={MusicOn} alt="music-off" width="18" height="18"/>
+                    </Style.AudioButton>
+                  ) : (
+                    <Style.AudioButton onClick={startAudio}>
+                      <img src={MusicOff} alt="music-on" width="18" height="18"/>
+                    </Style.AudioButton>
+                  )}
                     <Box data-aos="fade-up">
-                         <Style.Invite>Dear you, you’re invited to</Style.Invite>
+                         {/* <Style.Invite>Dear you, you’re invited to</Style.Invite> */}
                         <Style.Title >THE WEDDING OF</Style.Title>
                     </Box>
 

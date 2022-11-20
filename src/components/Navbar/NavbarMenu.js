@@ -11,13 +11,10 @@ import * as Style from '@components/Navbar/NavbarMenuStyled';
 const NavbarMenu = () => {
 
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  // const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery('(max-width:425px)')
   const window = global.window;
   let pathname = typeof window !== 'undefined' ? window.location.pathname : 'undefined';
-
-  const redirection = (url, ) => {
-    return window.location = url;
-  }
 
   return (
     <Fragment>
@@ -29,21 +26,15 @@ const NavbarMenu = () => {
         <>
           {pathname.toString() === '/demo/portofolio' ? (
             <>
-              <Style.Links
-                onClick={() => redirection('/')}
-              >
+              <Style.LinkRedirect to="/">
                 Cara Pesan
-              </Style.Links>
-              <Style.Links
-                onClick={() => redirection('/')}
-              >
+              </Style.LinkRedirect>
+              <Style.LinkRedirect to="/">
                 Paket Harga
-              </Style.Links>
-              <Style.Links
-                onClick={() => redirection('/')}
-              >
+              </Style.LinkRedirect>
+              <Style.LinkRedirect to="/">
                 Tentang Kami
-              </Style.Links>
+              </Style.LinkRedirect>
               <Style.LinkRedirect>
                 Demo
               </Style.LinkRedirect>
@@ -65,9 +56,7 @@ const NavbarMenu = () => {
               >
                 Tentang Kami
               </Style.Links>
-              <Style.LinkRedirect
-                to="/demo/portofolio"
-              >
+              <Style.LinkRedirect to="/demo/portofolio">
                 Demo
               </Style.LinkRedirect>
             </>

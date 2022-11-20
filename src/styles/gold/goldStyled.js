@@ -260,6 +260,31 @@ export const WeddingDate = styled(Typography)`
   }
 `;
 
+export const CustomWeddingDate = styled.p`
+  font-family: "Oxygen";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #5B5B5F;
+  text-align: center;
+  top: 50px;
+  position: relative;
+  @media (min-width: ${breakpoints.mobileSmall}) {
+    top: -5px;
+  }
+  @media (min-width: ${breakpoints.mobileModerate}) {
+    top: 40px;
+  }
+  @media (min-width: ${breakpoints.mobileMedium}) {
+    top: 25px;
+  }
+  @media (min-width: ${breakpoints.tabletSmall}) {
+    font-size: 15px;
+    top: 80px;
+  }
+`;
+
 export const FlowerBottomRight = styled.img`
   position: absolute;
   width: 60%;
@@ -490,6 +515,7 @@ export const SeeMap = styled(Button)`
     width: 230px;
     height: 45px;
     z-index: 10;
+    text-transform: capitalize;
     @media (min-width: ${breakpoints.mobileSmall}) {
       width: 150px;
     }
@@ -613,5 +639,36 @@ export const Watermark = styled(Typography)`
       bottom: 30px;
       left: 50px;
     }
+    a {
+      font-family: "Overlock";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 9px;
+      line-height: 11px;
+      color: #E2B62E;
+      text-decoration: none;
+      @media (min-width: ${breakpoints.tabletSmall}) {
+        font-size: 15px;
+      }
+    }
   }
+`;
+
+export const AudioButton = styled.button`
+  border-radius: 50%;
+  padding: 10px 12px;;
+  outline: none;
+  background: white;
+  border: none;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 30px 15px;;
+  z-index: 100;
+`;
+
+export const AudioIcon = styled.img`
+    width: 18px;
+    height: 18px;
 `;

@@ -59,13 +59,13 @@ export const Person = styled.p`
     text-align: center;
     color: #B37C62;
     margin: 55px 0px;
-    @media (min-width: 375px) {
-        font-size: 48px;
-        line-height: 24px;
-    }
     @media (max-width: 360px) {
+      font-size: 36px;
+      line-height: 36px;
+    }
+    @media (min-width: 375px) {
         font-size: 36px;
-        line-height: 36px;
+        line-height: 24px;
     }
     @media (min-width: 600px) {
         font-size: 50px;

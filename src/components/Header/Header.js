@@ -19,23 +19,28 @@ const Header = () => {
 
   // let sanitizeUrl = url.substring(1, url.lastIndexOf('/'));
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  // const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery('(max-width:425px)')
 
   const HeaderAppBar = styled(AppBar)`
-    left: 0;
-    top: 0;
-    background-color: white;
-    box-shadow: none;
-    @media (min-width: 1024px) {
-      padding-top: 50px;
+    && {
+      left: 0;
+      top: 0;
+      background-color: white;
+      box-shadow: none;
+      @media (min-width: 1024px) {
+        padding-top: 50px;
+      }
+      transition: all 2s ease;
     }
-    transition: all 2s ease;
   `;
 
   const NavbarContainer = styled.div`
-    right: 0;
-    position: absolute;
-    transition: all 2s ease;
+    && {
+      right: 0;
+      position: absolute;
+      transition: all 2s ease;
+    }
   `;
 
   return (

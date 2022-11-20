@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "gatsby";
 import * as Style from "@styles/demo/platinum/footerStyle";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
@@ -18,7 +19,7 @@ const Footer = () =>  {
         <Style.Hashtag data-aos="fade-up">Thankyou #KarimAlyssa</Style.Hashtag>
       </Style.Footer>
       <Style.WrapperWatermark>
-        <span>Built with ❤️ by</span> <a href="https://sungnikah.com">sungnikah.com</a>
+        <span>Built with ❤️ by</span> <Link to="/">sungnikah.com</Link>
       </Style.WrapperWatermark>
     </>
   );

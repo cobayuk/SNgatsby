@@ -48,7 +48,7 @@ const FaqListQuestions = [
 
 const FaqContent = () => {
   const [expanded, setExpanded] = useState(false);
-  
+
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -59,7 +59,7 @@ const FaqContent = () => {
   return (
     <Fragment>
       <CssBaseline/>
-      <Style.ContainerFaq>
+      <Style.ContainerFaq id="faq">
         <Style.HeadingFaqFirst
           component="h1"
           variant="h1"
@@ -74,13 +74,13 @@ const FaqContent = () => {
           align="center"
           color="textPrimary"
         >
-          Pertanyaan yang Sering diajukan 
+          Pertanyaan yang Sering diajukan
         </Style.HeadingFaqSecond>
-        <Box mt={isMobile ? 5 : 15}>
+        <div style={isMobile ? {marginTop: "40px"} : {marginTop: "120px"}}>
           {FaqListQuestions.map((value, key) => (
-            <Style.MenuAccordion 
+            <Style.MenuAccordion
               key={key}
-              expanded={expanded === `panel${key}`} 
+              expanded={expanded === `panel${key}`}
               onChange={handleChange(`panel${key}`)}
             >
               <Style.HeadingAccordionSummary
@@ -97,7 +97,7 @@ const FaqContent = () => {
               </Style.CustomAccordion>
             </Style.MenuAccordion>
           ))}
-        </Box>
+        </div>
       </Style.ContainerFaq>
     </Fragment>
   );

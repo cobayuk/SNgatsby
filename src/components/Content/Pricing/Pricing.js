@@ -10,19 +10,32 @@ import  {
   useMediaQuery
 }
 from '@material-ui/core';
-import {
-  Carousel,
-  CarouselProvider,
-  Dots,
-  PreviousButton,
-  NextButton
-} from 'react-slim-carousel';
-import 'react-slim-carousel/dist/index.css';
+
+import "swiper/css/swiper.css";
+import Swiper from "react-id-swiper";
+
 import { COLORS } from "@styles/constants";
 import ChecklistIcon from "@assets/ornaments/checklist.svg";
 import * as Style from '@components/Content/Pricing/PricingStyled';
+import "./Pricing.css";
 
-const useStyles = makeStyles((theme) => ({
+const sliderParams = {
+  slidesPerView: 'auto',
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false
+  },
+  initialSlide: 1,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    dynamicBullets: true,
+    clickable: true
+  },
+  loop: true
+}
+
+const useStyles = makeStyles(() => ({
   buttonBoxDiscountGold:{
     width: 'auto',
     height: '24px',
@@ -47,22 +60,23 @@ const packages = [
   {
     title: 'Silver',
     price: '69',
-    discount: 'Diskon 30%',
-    discountPrice: '99.000',
+    discount: 'Diskon 40%',
+    discountPrice: '173.000',
     description: [
       'Responsive Layout',
       'Desain Template',
       'Penghitung Waktu Mundur',
       'Navigasi Peta',
       'Quotes/Qur’an Verse',
+      'Unlimited Tamu Undangan'
       // 'Belum Termasuk Domain'
     ]
   },
   {
     title: 'Platinum',
     price: '149',
-    discount: 'Diskon 25%',
-    discountPrice: '199.000',
+    discount: 'Diskon 50%',
+    discountPrice: '298.000',
     description: [
       'Responsive Layout',
       'Desain Template',
@@ -70,18 +84,19 @@ const packages = [
       'Navigasi Peta',
       'Quotes/Qur’an Verse',
       'Protokol Kesehatan',
-      // 'Audio Musik',
+      'Audio Musik',
       'Galeri Foto',
       // 'Facebook Comment',
       'Amplop Digital',
+      'Unlimited Tamu Undangan'
       // 'Sudah Termasuk Domain'
     ]
   },
   {
     title: 'Gold',
     price: '99',
-    discount: 'Diskon 35%',
-    discountPrice: '149.000',
+    discount: 'Diskon 45%',
+    discountPrice: '220.000',
     description: [
       'Responsive Layout',
       'Desain Template',
@@ -89,8 +104,9 @@ const packages = [
       'Navigasi Peta',
       'Quotes/Qur’an Verse',
       'Protokol Kesehatan',
+      'Audio Musik',
       'Amplop Digital',
-      // 'Audio Musik',
+      'Unlimited Tamu Undangan'
       // 'Galeri Foto',
       // 'Facebook Comment',
       // 'Belum Termasuk Domain'
@@ -103,7 +119,8 @@ const PricingPrice = () => {
 
   const classes = useStyles();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  // const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery('(max-width:425px)')
 
   return (
     <Style.WrapperPricing id="pricing">
@@ -113,7 +130,7 @@ const PricingPrice = () => {
       >
         <Style.HeadingFirstTitle
           component="h1"
-          variant="h2"
+          variant="h1"
           align="center"
           color="textPrimary"
         >
@@ -121,7 +138,7 @@ const PricingPrice = () => {
         </Style.HeadingFirstTitle>
         <Style.HeadingPricing
           component="h1"
-          variant="h2"
+          variant="h1"
           align="center"
           color="textPrimary"
           gutterBottom
@@ -139,106 +156,79 @@ const PricingPrice = () => {
         </Style.CaptionPricing>
       </Container>
       {isMobile ? (
-        <CarouselProvider>
-          <Carousel
-            draggable={true}
-            threshold
-            easing={'ease-in-out'}
-            visibleSlides={1}
-            responsive={{
-              320: {
-                visibleSlides: 1
-              },
-              375: {
-                visibleSlides: 1
-              },
-              425: {
-                visibleSlides: 1
-              },
-              768: {
-                visibleSlides: 3
-              },
-              1024: {
-                visibleSlides: 3
-              }
-            }}
-          >
-            {packages.map((tier, key) => (
-              <Grid
-                key={key}
-                item
-                xs={12}
-                md={12}
-              >
-                <Style.CardsContentArea title={tier.title}>
-                  <Style.CardHeaderTier title={tier.title}>
-                    <Style.HeadingTierPackages
+        <Swiper {...sliderParams}>
+          {packages.map((tier, key) => (
+            <Grid
+              key={key}
+              item
+              xs={12}
+              md={12}
+            >
+              <Style.CardsContentAreaMobile title={tier.title}>
+                <Style.CardHeaderTierMobile title={tier.title}>
+                  <Style.HeadingTierPackages
+                    component="span"
+                  >
+                    {tier.title}
+                  </Style.HeadingTierPackages>
+                </Style.CardHeaderTierMobile>
+                <CardContent>
+                  <Style.BoxDiscount>
+                    {tier.title === 'Platinum' ? (
+                      <Style.PinkBox>{tier.discount}</Style.PinkBox>
+                    ) : (
+                      <Style.GreyBox>{tier.discount}</Style.GreyBox>
+                    )}
+                  </Style.BoxDiscount>
+                  <Style.BoxDiscountPrice>
+                    <Style.HeadingDiscountPrice
                       component="span"
                     >
-                      {tier.title}
-                    </Style.HeadingTierPackages>
-                  </Style.CardHeaderTier>
-                  <CardContent>
-                    <Style.BoxDiscount>
+                      {tier.discountPrice}
+                    </Style.HeadingDiscountPrice>
+                  </Style.BoxDiscountPrice>
+                  <Style.CardPricing>
+                    <Style.HeadingPriceSeparator
+                      component="span"
+                      variant="h6"
+                      color="textSecondary"
+                    >
+                      Rp
+                    </Style.HeadingPriceSeparator>
+                    <Style.HeadingPrice
+                      component="h2"
+                      variant="h2"
+                      color="textPrimary"
+                    >
+                      {tier.price}
+                    </Style.HeadingPrice>
+                    <Style.HeadingPricingSuffix
+                      variant="h6"
+                      color="textSecondary"
+                    >
+                      ribu
+                    </Style.HeadingPricingSuffix>
+                  </Style.CardPricing>
+                  <Style.ListPricingOrder>
+                    {tier.description.map((value, key) => (
                       <Typography
-                        className={tier.title === 'Platinum' ? classes.buttonBoxDiscountGold : classes.buttonBoxDiscount}
-                        component="span"
+                        key={key}
+                        component="li"
+                        variant="subtitle1"
+                        align="left"
                       >
-                        {tier.discount}
+                        <Style.ChecklistWrapper>
+                          <img src={ChecklistIcon} alt="checklist"/>
+                        </Style.ChecklistWrapper>
+                        {value}
                       </Typography>
-                    </Style.BoxDiscount>
-                    <Style.BoxDiscountPrice>
-                      <Style.HeadingDiscountPrice
-                        component="span"
-                      >
-                        {tier.discountPrice}
-                      </Style.HeadingDiscountPrice>
-                    </Style.BoxDiscountPrice>
-                    <Style.CardPricing>
-                      <Style.HeadingPriceSeparator
-                        component="span"
-                        variant="h6"
-                        color="textSecondary"
-                      >
-                        Rp
-                      </Style.HeadingPriceSeparator>
-                      <Style.HeadingPrice
-                        component="h2"
-                        variant="h2"
-                        color="textPrimary"
-                      >
-                        {tier.price}
-                      </Style.HeadingPrice>
-                      <Style.HeadingPricingSuffix
-                        variant="h6"
-                        color="textSecondary"
-                      >
-                        ribu
-                      </Style.HeadingPricingSuffix>
-                    </Style.CardPricing>
-                    <Style.ListPricingOrder>
-                      {tier.description.map((value, key) => (
-                        <Typography
-                          key={key}
-                          component="li"
-                          variant="subtitle1"
-                          align="left"
-                        >
-                          <Box component="span" mr={1}>
-                            <img src={ChecklistIcon} alt="checklist"/>
-                          </Box>
-                          {value}
-                        </Typography>
-                      ))}
-                    </Style.ListPricingOrder>
-                  </CardContent>
-                </Style.CardsContentArea>
-              </Grid>
-            ))}
-          </Carousel>
-          <PreviousButton>Previous</PreviousButton>
-          <NextButton>Next</NextButton>
-        </CarouselProvider>
+                    ))}
+                  </Style.ListPricingOrder>
+                </CardContent>
+              </Style.CardsContentAreaMobile>
+            </Grid>
+          ))}
+        </Swiper>
       ) : (
         <Style.BoxOuterPricing
           maxWidth="lg"
@@ -265,12 +255,11 @@ const PricingPrice = () => {
                   </Style.CardHeaderTier>
                   <CardContent>
                     <Style.BoxDiscount>
-                      <Typography
-                        className={tier.title === 'Platinum' ? classes.buttonBoxDiscountGold : classes.buttonBoxDiscount}
-                        component="span"
-                      >
-                        {tier.discount}
-                      </Typography>
+                      {tier.title === 'Platinum' ? (
+                        <Style.PinkBox>{tier.discount}</Style.PinkBox>
+                      ) : (
+                        <Style.GreyBox>{tier.discount}</Style.GreyBox>
+                      )}
                     </Style.BoxDiscount>
                     <Style.BoxDiscountPrice>
                       <Style.HeadingDiscountPrice
@@ -309,9 +298,9 @@ const PricingPrice = () => {
                           variant="subtitle1"
                           align="left"
                         >
-                          <Box component="span" mr={1}>
+                          <Style.ChecklistWrapper>
                             <img src={ChecklistIcon} alt="checklist"/>
-                          </Box>
+                          </Style.ChecklistWrapper>
                           {value}
                         </Typography>
                       ))}
