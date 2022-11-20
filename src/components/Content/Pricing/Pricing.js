@@ -174,12 +174,11 @@ const PricingPrice = () => {
                 </Style.CardHeaderTierMobile>
                 <CardContent>
                   <Style.BoxDiscount>
-                    <Typography
-                      className={tier.title === 'Platinum' ? classes.buttonBoxDiscountGold : classes.buttonBoxDiscount}
-                      component="span"
-                    >
-                      {tier.discount}
-                    </Typography>
+                    {tier.title === 'Platinum' ? (
+                      <Style.PinkBox>{tier.discount}</Style.PinkBox>
+                    ) : (
+                      <Style.GreyBox>{tier.discount}</Style.GreyBox>
+                    )}
                   </Style.BoxDiscount>
                   <Style.BoxDiscountPrice>
                     <Style.HeadingDiscountPrice
@@ -218,9 +217,9 @@ const PricingPrice = () => {
                         variant="subtitle1"
                         align="left"
                       >
-                        <Box component="span" mr={1}>
+                        <Style.ChecklistWrapper>
                           <img src={ChecklistIcon} alt="checklist"/>
-                        </Box>
+                        </Style.ChecklistWrapper>
                         {value}
                       </Typography>
                     ))}
@@ -256,12 +255,11 @@ const PricingPrice = () => {
                   </Style.CardHeaderTier>
                   <CardContent>
                     <Style.BoxDiscount>
-                      <Typography
-                        className={tier.title === 'Platinum' ? classes.buttonBoxDiscountGold : classes.buttonBoxDiscount}
-                        component="span"
-                      >
-                        {tier.discount}
-                      </Typography>
+                      {tier.title === 'Platinum' ? (
+                        <Style.PinkBox>{tier.discount}</Style.PinkBox>
+                      ) : (
+                        <Style.GreyBox>{tier.discount}</Style.GreyBox>
+                      )}
                     </Style.BoxDiscount>
                     <Style.BoxDiscountPrice>
                       <Style.HeadingDiscountPrice
@@ -300,9 +298,9 @@ const PricingPrice = () => {
                           variant="subtitle1"
                           align="left"
                         >
-                          <Box component="span" mr={1}>
+                          <Style.ChecklistWrapper>
                             <img src={ChecklistIcon} alt="checklist"/>
-                          </Box>
+                          </Style.ChecklistWrapper>
                           {value}
                         </Typography>
                       ))}
