@@ -19,7 +19,7 @@ import {
 } from 'react-slim-carousel';
 import 'react-slim-carousel/dist/index.css';
 
-import "swiper/css/swiper.css";
+// import "swiper/css/swiper.css";
 import Swiper from "react-id-swiper";
 
 import { COLORS } from "@styles/constants";
