@@ -48,10 +48,13 @@ const Author = styled.span`
   font-weight: normal;
   font-size: 15px;
   line-height: 15px;
-  text-align: center;
+  text-align: end;
   color: #58595B;
   display: block;
   margin-top: 15px;
+  @media (max-width: 767px) {
+    text-align: center;
+  }
 `;
 
 const SecondColumn = styled.div`
