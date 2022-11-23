@@ -41,7 +41,7 @@ const QuotesAndDates = () =>  {
                     Jl. Wr. Supratman RT.06/010 No.16 Rengas - Ciputat Timur. Tangerang Selatan - Banten. Sebrang Masjid Jami Ar-Rahmah
                 </Style.WeddingLocation>
                 <Style.WrapperMap>
-                    <Style.GoToMap href="https://goo.gl/maps/ppFoJnpJqFGf5Y7v7" target="_blank">Lihat Peta</Style.GoToMap>
+                    <Style.GoToMap href="https://goo.gl/maps/dro2ySv2d9UdgPgx6" target="_blank">Lihat Peta</Style.GoToMap>
                 </Style.WrapperMap>
             </Style.QuotesContainer>
         </>

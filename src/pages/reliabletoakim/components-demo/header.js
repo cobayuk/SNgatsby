@@ -116,7 +116,7 @@ const HeaderPlatinum = () =>  {
                     <Style.CountDown data-aos="fade-up" data-aos-once="true">
                         {timerComponents.length ? timerComponents : <span>3 January 2023</span>}
                     </Style.CountDown>
-                    <Style.Arrow onClick={() => scrollTo('#intro-section')}>
+                    <Style.Arrow onClick={() => scrollTo('#video-section')}>
                         <span></span>
                         <span></span>
                         <span></span>
