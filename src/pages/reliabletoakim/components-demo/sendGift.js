@@ -45,7 +45,7 @@ const SendGift = () =>  {
           timeout: 500,
         }}
       >
-        <Fade in={open}>
+        <Fade in={openGift}>
           <Style.ModalWrapper>
               <Style.InnerModal>
                 <Style.BankLogo src={BCALogo} alt="mandiri-logo" width="70"/>
