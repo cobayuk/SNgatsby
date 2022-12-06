@@ -25,13 +25,13 @@ const QuotesAndDates = () =>  {
                     <Grid item xs={6}>
                         <Style.ContainerProgram>
                             <Style.ProgramTitle>Akad Nikah</Style.ProgramTitle>
-                            <Style.ProgramTime>Pukul 08:00 WIB s/d 10.00 WIB</Style.ProgramTime>
+                            <Style.ProgramTime>Pukul 08:00 s/d 10.00 WIB</Style.ProgramTime>
                         </Style.ContainerProgram>
                     </Grid>
                     <Grid item xs={6}>
                         <Style.SecondContainerProgram>
                             <Style.ProgramTitle>Resepsi</Style.ProgramTitle>
-                            <Style.ProgramTime>Pukul 11:00 - 16:00 WIB</Style.ProgramTime>
+                            <Style.ProgramTime>Pukul 11:00 s/d 16:00 WIB</Style.ProgramTime>
                         </Style.SecondContainerProgram>
                     </Grid>
                 </Grid>
@@ -41,7 +41,7 @@ const QuotesAndDates = () =>  {
                     Jl. Wr. Supratman RT.06/010 No.16 Rengas - Ciputat Timur. Tangerang Selatan - Banten. Sebrang Masjid Jami Ar-Rahmah
                 </Style.WeddingLocation>
                 <Style.WrapperMap>
-                    <Style.GoToMap href="https://goo.gl/maps/dro2ySv2d9UdgPgx6" target="_blank">Lihat Peta</Style.GoToMap>
+                    <Style.GoToMap href="https://goo.gl/maps/dro2ySv2d9UdgPgx6" target="_blank">View Map</Style.GoToMap>
                 </Style.WrapperMap>
             </Style.QuotesContainer>
         </>

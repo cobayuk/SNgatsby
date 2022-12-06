@@ -112,3 +112,23 @@ export const PersonName = styled.p`
         line-height: 16px;
     }
 `;
+
+export const InstagramWrapper = styled.div`
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+`;
+
+export const InstagramContainer = styled.a`
+    background: #B37C62;
+    border-radius: 50%;
+    padding: 4px;
+    display: inline-flex;
+    :hover {
+      background: #e98a5e;
+    }
+`;
+
+export const InstagramIcon = styled.svg`
+    fill: #FFFFFF;
+`;
