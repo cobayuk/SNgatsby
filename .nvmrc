@@ -1,4 +1,4 @@
-v18.12.0
-echo "v18.12.0" > .nvmrc
+v14.18.2
+echo "v14.18.2" > .nvmrc
 echo "lts/*" > .nvmrc
 echo "node" > .nvmrc
