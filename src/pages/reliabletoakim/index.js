@@ -12,6 +12,7 @@ import Footer from "./components-demo/footer";
 import "./base.css";
 import VideoSection from "./components-demo/video";
 import SendGift from "./components-demo/sendGift";
+import Comments from "../../components/Comments";
 
 const Index = () =>  {
 
@@ -35,6 +36,7 @@ const Index = () =>  {
           <LiveMoment />
           <Protocol/>
           <SendGift/>
+          <Comments/>
           <Footer/>
         </Fragment>
       ) : (
