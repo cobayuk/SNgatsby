@@ -10,7 +10,6 @@ const Comments = () => {
   }, []);
 
   const initGrapComment = () => {
-    console.log('init')
     window.gc_params = {
       graphcomment_id: 'SungnikahID',
       fixed_header_height: 0,
