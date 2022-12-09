@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
+import { Box } from "@material-ui/core";
 
 const Comments = () => {
 
@@ -8,15 +9,6 @@ const Comments = () => {
     initGrapComment();
   }, []);
 
-  const initCommento = () => {
-    const script = document.createElement('script');
-    script.src = 'https://cdn.commento.io/js/commento.js';
-    script.async = true;
-
-    const comments = document.getElementById('comments-container');
-    if (comments) comments.appendChild(script);
-  }
-
   const initGrapComment = () => {
     console.log('init')
     window.gc_params = {
@@ -25,7 +17,7 @@ const Comments = () => {
     };
 
     const script = document.createElement('script');
-    script.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+    script.src = 'https://graphcomment.com/js/integration.js?' + Date.now();
     script.async = true;
 
     const comments = document.getElementById(COMMENTS_ID);
@@ -34,16 +26,16 @@ const Comments = () => {
     // This function will get called when the component unmounts
     // To make sure we don't end up with multiple instances of the comments component
     return () => {
-        const comments = document.getElementById(COMMENTS_ID);
-        if (comments) comments.innerHTML = '';
+      const comments = document.getElementById(COMMENTS_ID);
+      if (comments) comments.innerHTML = '';
     };
   }
 
   return (
     <Fragment>
-      {/* <div id="comments-container"></div> */}
-      {/* <div id="commento"></div> */}
-      <div id={COMMENTS_ID}></div>
+      <Box mb={15} mt={5}>
+        <div id={COMMENTS_ID}></div>
+      </Box>
     </Fragment>
   );
 };
