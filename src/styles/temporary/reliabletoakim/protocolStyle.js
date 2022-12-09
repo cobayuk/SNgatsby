@@ -3,7 +3,8 @@ import "@fontsource/oxygen";
 import { Grid } from '@material-ui/core';
 
 export const ContainerProtocol = styled.section`
-    background: #FFFFFF;
+    background: #F7F7F7;
+    padding-bottom: 24px;
 `;
 
 export const InnerContainer = styled.div`
@@ -60,60 +61,13 @@ export const ProtocolImage = styled.img`
     height: auto;
     display: block;
     margin: 0 auto;
-    @media (min-width: 768px) {
-        margin: 32px 0px;
+    max-width: 300px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    @media (min-width: 1024px) {
+      max-width: 400px;
     }
-    max-width: 100%;
     height: auto;
-`;
-
-export const WrapperProtocol = styled.div`
-    padding: 0px 15px;
-    @media (min-width: 768px) {
-        padding: 0px 40px;
-    }
-`;
-
-export const ProtocolTitle = styled.h3`
-    font-family: Oxygen;
-    font-style: normal;
-    font-weight: bolder;
-    font-size: 32px;
-    line-height: 32px;
-    margin: 20px 0px;
-    @media (max-width: 768px) {
-        font-size: 24px;
-    }
-    text-align: left;
-    color: #000000;
-`;
-
-export const ProtocolDescription = styled.p`
-    font-family: Oxygen;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: left;
-    color: #6c757d;
-    margin-bottom: 30px;
-`;
-
-export const GridProtocol = styled(Grid)`
-    display: flex;
-    align-items: center;
-`;
-
-export const GridOrderMobile = styled(Grid)`
-    @media (min-width: 576px) {
-        position: relative;
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-    @media(min-width: 768px) {
-        order: 12;
-    }
+    border-radius: 16px;
 `;
 
 export const GridContainer = styled(Grid)`

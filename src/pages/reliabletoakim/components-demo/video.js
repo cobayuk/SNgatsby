@@ -7,6 +7,9 @@ const WrapperOuter = styled.div`
   margin-left: 5%;
   margin-right: 5%;
   padding: 5%;
+  @media (max-width: 767px) {
+    padding: 5% 5% 20% 5%;
+  }
 `;
 
 const InnerWrapper = styled.div`
@@ -21,6 +24,7 @@ const FirstColumn = styled.div`
   @media (max-width: 767px) {
     flex-basis: 100%;
     margin-bottom: 40px;
+    margin: 30% 0;
   }
 `;
 
@@ -36,6 +40,21 @@ const Story = styled.h2`
   }
   line-height: 1em;
   color: #C2A38E;
+`;
+
+const Author = styled.span`
+  font-family: Crimson Text;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  text-align: end;
+  color: #58595B;
+  display: block;
+  margin-top: 15px;
+  @media (max-width: 767px) {
+    text-align: center;
+  }
 `;
 
 const SecondColumn = styled.div`
@@ -69,15 +88,16 @@ const VideoPlayer = styled.video`
 const VideoSection = () => {
 
   return (
-      <WrapperOuter>
+      <WrapperOuter id="video-section">
         <InnerWrapper>
           <FirstColumn>
             <Story>We are most alive <br />when we’re in love.</Story>
+            <Author>- John Updike</Author>
           </FirstColumn>
           <SecondColumn>
             <OuterVideo>
               <VideoWrapper>
-                <VideoPlayer src={Teaser} autoPlay muted loop></VideoPlayer>
+                <VideoPlayer playsInline preload="none" src={Teaser} autoPlay muted loop></VideoPlayer>
               </VideoWrapper>
             </OuterVideo>
           </SecondColumn>

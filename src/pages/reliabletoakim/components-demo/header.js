@@ -41,10 +41,10 @@ const HeaderPlatinum = () =>  {
 
         if (difference > 0) {
           timeLeft = {
-            hari: Math.floor(difference / (1000 * 60 * 60 * 24)),
-            jam: Math.floor((difference / (1000 * 60 * 60)) % 24),
-            menit: Math.floor((difference / 1000 / 60) % 60),
-            detik: Math.floor((difference / 1000) % 60),
+            days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+            hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+            minutes: Math.floor((difference / 1000 / 60) % 60),
+            seconds: Math.floor((difference / 1000) % 60),
           };
         }
 
@@ -116,7 +116,7 @@ const HeaderPlatinum = () =>  {
                     <Style.CountDown data-aos="fade-up" data-aos-once="true">
                         {timerComponents.length ? timerComponents : <span>3 January 2023</span>}
                     </Style.CountDown>
-                    <Style.Arrow onClick={() => scrollTo('#intro-section')}>
+                    <Style.Arrow onClick={() => scrollTo('#video-section')}>
                         <span></span>
                         <span></span>
                         <span></span>

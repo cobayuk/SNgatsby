@@ -8,7 +8,7 @@ import {
 }
 from '@material-ui/core';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import { SocialMediaIconsReact } from 'social-media-icons-react';
+// import { SocialMediaIconsReact } from 'social-media-icons-react';
 import BrandLogo from "@assets/logo/brand.svg";
 import PaymentGroup from "@assets/payments/icon-payment.svg";
 import * as Style from '@components/Footer/FooterStyled';
@@ -119,7 +119,7 @@ const Footer = () => {
                 <Style.SocialMediaContainer>
                   <Grid container>
                     <Style.LeftGrid item xs={4} md={4} lg={4}>
-                      <SocialMediaIconsReact
+                      {/* <SocialMediaIconsReact
                         borderColor="white"
                         borderWidth="2"
                         borderStyle="solid"
@@ -130,10 +130,10 @@ const Footer = () => {
                         roundness="50%"
                         url="https://www.facebook.com/sungnikah/"
                         size="37"
-                      />
+                      /> */}
                     </Style.LeftGrid>
                     <Style.LeftGrid item xs={4} md={4} lg={4}>
-                      <SocialMediaIconsReact
+                      {/* <SocialMediaIconsReact
                         borderColor="white"
                         borderWidth="2"
                         borderStyle="solid"
@@ -144,10 +144,10 @@ const Footer = () => {
                         roundness="50%"
                         url="https://www.instagram.com/sungnikah/"
                         size="37"
-                      />
+                      /> */}
                     </Style.LeftGrid>
                     <Style.LeftGrid item xs={4} md={4} lg={4}>
-                      <SocialMediaIconsReact
+                      {/* <SocialMediaIconsReact
                         borderColor="white"
                         borderWidth="2"
                         borderStyle="solid"
@@ -158,7 +158,7 @@ const Footer = () => {
                         roundness="50%"
                         url="https://wa.me/6287872136170?text=Halo%20Tim Sungnikah%2C%20saya%20ingin%20bertanya"
                         size="37"
-                      />
+                      /> */}
                     </Style.LeftGrid>
                   </Grid>
                 </Style.SocialMediaContainer>
@@ -229,7 +229,7 @@ const Footer = () => {
                 <Style.SocialMediaContainer>
                   <Grid container>
                     <Style.LeftGrid item xs={4} md={4} lg={4}>
-                      <SocialMediaIconsReact
+                      {/* <SocialMediaIconsReact
                         borderColor="white"
                         borderWidth="2"
                         borderStyle="solid"
@@ -240,10 +240,10 @@ const Footer = () => {
                         roundness="50%"
                         url="https://www.facebook.com/sungnikah/"
                         size="37"
-                      />
+                      /> */}
                     </Style.LeftGrid>
                     <Style.LeftGrid item xs={4} md={4} lg={4}>
-                      <SocialMediaIconsReact
+                      {/* <SocialMediaIconsReact
                         borderColor="white"
                         borderWidth="2"
                         borderStyle="solid"
@@ -254,10 +254,10 @@ const Footer = () => {
                         roundness="50%"
                         url="https://www.instagram.com/sungnikah/"
                         size="37"
-                      />
+                      /> */}
                     </Style.LeftGrid>
                     <Style.LeftGrid item xs={4} md={4} lg={4}>
-                      <SocialMediaIconsReact
+                      {/* <SocialMediaIconsReact
                         borderColor="white"
                         borderWidth="2"
                         borderStyle="solid"
@@ -268,7 +268,7 @@ const Footer = () => {
                         roundness="50%"
                         url="https://wa.me/6287872136170?text=Halo%20Tim Sungnikah%2C%20saya%20ingin%20bertanya"
                         size="37"
-                      />
+                      /> */}
                     </Style.LeftGrid>
                   </Grid>
                 </Style.SocialMediaContainer>

@@ -11,7 +11,7 @@ import  {
 }
 from '@material-ui/core';
 
-import "swiper/css/swiper.css";
+// import "swiper/css/swiper.css";
 import Swiper from "react-id-swiper";
 
 import { COLORS } from "@styles/constants";

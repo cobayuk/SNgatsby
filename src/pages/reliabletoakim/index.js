@@ -4,13 +4,15 @@ import HeaderPlatinum from "./components-demo/header";
 import Intro from "./components-demo/intro";
 import OurGallery from "./components-demo/gallery";
 import QuotesAndDates from "./components-demo/quoteAndDates";
+import LiveMoment from "./components-demo/liveMoment";
 import Protocol from "./components-demo/protocol";
-import AmplopCashless from "./components-demo/amplopCashless";
 import SEO from "./components-demo/seo";
 
 import Footer from "./components-demo/footer";
 import "./base.css";
 import VideoSection from "./components-demo/video";
+import SendGift from "./components-demo/sendGift";
+import Comments from "../../components/Comments";
 
 const Index = () =>  {
 
@@ -31,8 +33,10 @@ const Index = () =>  {
 
           <OurGallery/>
           <QuotesAndDates/>
+          <LiveMoment />
           <Protocol/>
-          <AmplopCashless/>
+          <SendGift/>
+          <Comments/>
           <Footer/>
         </Fragment>
       ) : (
