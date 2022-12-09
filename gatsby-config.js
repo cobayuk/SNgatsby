@@ -18,10 +18,23 @@ module.exports = {
     }
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      // options: {
+      //   stylesProvider: {
+      //     injectFirst: true,
+      //   },
+      // },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        ssr: true
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-smoothscroll`,
     {
@@ -84,12 +97,6 @@ module.exports = {
     //     url: "https://snanorest.api.dev"
     //   }
     // },
-    {
-      resolve: `gatsby-plugin-styled-components`,
-      options: {
-        ssr: true
-      },
-    },
     // {
     //   resolve: 'gatsby-plugin-crisp-chat',
     //   options: {

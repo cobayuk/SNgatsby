@@ -19,7 +19,7 @@ import {
 from '@material-ui/core';
 import { COLORS } from "@styles/constants";
 
-export const BoxHeader = styled(Box)`
+export const BoxHeader = styled.div`
   width: 100%;
   border: 1px solid #f7f7f7;
   height: 600px;
@@ -44,19 +44,21 @@ export const BoxHeader = styled(Box)`
 `;
 
 export const HeadingTagline = styled.h1`
-  font-size: 48px;
-  font-style: normal;
-  font-family: Oxygen;
-  font-weight: bold;
-  line-height: 61px;
-  @media (max-width: 768px) {
-    font-size: 18px;
-    line-height: 22px;
+  && {
+    font-size: 48px;
+    font-style: normal;
+    font-family: Oxygen;
+    font-weight: bold;
+    line-height: 61px;
+    @media (max-width: 768px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 `;
 
 export const ParagraphTagline = styled(Typography)`
-  &.MuiTypography-body1 {
+  && {
     color: #928D97;
     font-size: 20px;
     margin-top: 3em;
@@ -76,7 +78,7 @@ export const ParagraphTagline = styled(Typography)`
 `;
 
 export const BoxReactangleSmall = styled(Box)`
-  &.MuiBox-root {
+  && {
     top: 256px;
     left: 28px;
     color: ${COLORS.white};
@@ -92,17 +94,19 @@ export const BoxReactangleSmall = styled(Box)`
 `;
 
 export const HeadingLove = styled(Typography)`
-  &.MuiTypography-body1 {
+  && {
     font-size: 12px;
   }
 `;
 
 export const IconCircleLove = styled.img`
-  padding-right: 10px;
+  && {
+    padding-right: 10px;
+  }
 `;
 
 export const BoxOrnamentsOne = styled(Box)`
-  &.MuiBox-root {
+  && {
     top: -12em;
     right: 150px;
     display: flex;
@@ -133,7 +137,7 @@ export const BoxOrnamentsOne = styled(Box)`
 `;
 
 export const BoxOrnamentsTwo = styled(Box)`
-  &.MuiBox-root {
+  && {
     top: -310px;
     left: 140px;
     float: right;
@@ -143,7 +147,7 @@ export const BoxOrnamentsTwo = styled(Box)`
 `;
 
 export const BoxOrnamentsThree = styled(Box)`
-  &.MuiBox-root {
+  && {
     top: -5em;
     float: right;
     right: -9em;
@@ -156,7 +160,7 @@ export const BoxOrnamentsThree = styled(Box)`
 `;
 
 export const BoxOrnamentsFour = styled(Box)`
-  &.MuiBox-root {
+  && {
     display: flex;
     position: relative;
     right: 16em;

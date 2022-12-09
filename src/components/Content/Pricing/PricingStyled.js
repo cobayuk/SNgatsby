@@ -22,66 +22,83 @@ import  {
 import { COLORS, FONT_SIZE, FONT_FAMILY } from "@styles/constants";
 
 export const HeadingPrice = styled(Typography)`
-  font-weight: bold;
-  font-family: ${FONT_FAMILY.oxygen};
-  margin-left: 10px;
+  && {
+    font-weight: bold;
+    font-family: ${FONT_FAMILY.oxygen};
+    margin-left: 10px;
+  }
 `;
 
 export const HeadingPriceSeparator = styled(Typography)`
-  position: relative;
-  top: -32px;
-  bottom: 0;
-  font-weight: bold;
-  font-size: ${FONT_SIZE.font24};
-  color: ${COLORS.black};
+  && {
+    position: relative;
+    top: -32px;
+    bottom: 0;
+    font-weight: bold;
+    font-size: ${FONT_SIZE.font24};
+    color: ${COLORS.black};
+  }
+
 `;
 
 export const  HeadingPricing = styled(Typography)`
-  font-size: 40px;
-  @media (max-width: 768px) {
-    font-size: 20px;
+  && {
+    font-size: 40px;
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+    font-family: Oxygen;
+    margin-bottom: 30px;
+    font-weight: bold;
   }
-  font-family: Oxygen;
-  margin-bottom: 30px;
-  font-weight: bold;
 `;
 
 export const HeadingPricingSuffix = styled(Typography)`
-  font-size: ${FONT_SIZE.font24};
-  color: ${COLORS.black};
+  && {
+    font-size: ${FONT_SIZE.font24};
+    color: ${COLORS.black};
+  }
 `;
 
 export const BoxDiscount = styled(Typography)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
+  && {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
 `;
 
 export const HeadingDiscountPrice = styled(Typography)`
-  font-size: ${FONT_SIZE.font20};
-  color: ${COLORS.mediumGray};
-  text-decoration: line-through;
+  && {
+    font-size: ${FONT_SIZE.font20};
+    color: ${COLORS.mediumGray};
+    text-decoration: line-through;
+  }
 `;
 
-export const ButtonBoxDiscountGold = styled(Typography)`
-  width: auto;
-  height: 24px;
-  background: ${COLORS.pinky};
-  border-radius: 16px;
-  color: ${COLORS.white};
-  text-align: center;
-  padding: 3px 11px 26px 15px;
+export const PinkBox = styled(Typography)`
+  && {
+    width: auto;
+    height: 24px;
+    background: ${COLORS.pinky};
+    border-radius: 16px;
+    color: ${COLORS.white};
+    text-align: center;
+    padding: 3px 11px 26px 15px;
+  }
 `;
 
-export const ButtonBoxDiscount = styled(Typography)`
-  width: auto;
-  height: 24px;
-  background: ${COLORS.softlyGray};
-  border-radius: 16px;
-  color: ${COLORS.softlyBlack};
-  text-align: center;
-  padding: 3px 11px 26px 15px;
+export const GreyBox = styled(Typography)`
+  && {
+    width: auto;
+    height: 24px;
+    background: ${COLORS.softlyGray};
+    border-radius: 16px;
+    color: ${COLORS.softlyBlack};
+    text-align: center;
+    padding: 3px 11px 26px 15px;
+  }
 `;
 
 export const CardsContentArea = styled.div`
@@ -113,18 +130,26 @@ export const CardHeaderTierMobile = styled.div`
 `;
 
 export const HeadingTierPackages = styled(Typography)`
-  font-size: 36px;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 42px;
-
+  && {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 42px;
+  }
 `;
 
 export const CardPricing = styled(Box)`
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  margin-bottom: 15px;
+  && {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 15px;
+  }
+`;
+
+export const ChecklistWrapper = styled.div`
+  margin-right: 8px;
+  display: inline-flex;
 `;
 
 export const ListPricingOrder = styled.ul`
@@ -134,57 +159,66 @@ export const ListPricingOrder = styled.ul`
 `;
 
 export const WrapperPricing = styled(Box)`
-  margin-top: 5em;
-  margin-bottom: 5em;
-  padding-top: 50px;
+  && {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    padding-top: 50px;
+  }
 `;
 
 export const BoxOuterPricing = styled(Container)`
-  margin-top: 10em;
-  @media (max-width: 768px) {
-    margin-top: 1em;
+  && {
+    margin-top: 10em;
+    @media (max-width: 768px) {
+      margin-top: 1em;
+    }
   }
 `;
 
 export const HeadingFirstTitle = styled(Typography)`
-  font-size: 20px;
-  font-family: ${FONT_FAMILY.oxygen};
-  font-weight: bold;
-  color: ${COLORS.brownSugar};
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  @media (max-width: 768px) {
-    font-size: 14px;
-    line-height: 18px;
+  && {
+    font-size: 20px;
+    font-family: ${FONT_FAMILY.oxygen};
+    font-weight: bold;
+    color: ${COLORS.brownSugar};
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 `;
 
 export const CaptionPricing = styled(Typography)`
-  font-size: 15px;
-  font-family: ${FONT_FAMILY.oxygen};
-  margin-bottom: 30px;
+  && {
+    font-size: 15px;
+    font-family: ${FONT_FAMILY.oxygen};
+    margin-bottom: 30px;
+  }
 `;
 
 export const ButtonActionPricing = styled(Button)`
-  background-color: ${COLORS.golden};
-  border: 0;
-  color: ${COLORS.white};
-  /* &:hover: {
-    background-color: ${COLORS.golderDark};
+  && {
+    background-color: ${COLORS.golden};
+    border: 0;
     color: ${COLORS.white};
-    border: 0; */
-  /* } */
+  }
 `;
 
 export const BoxDiscountPrice = styled(Box)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  && {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const ContainerSliderGrid = styled(Grid)`
-  display: flex;
-  @media (min-width: 320px) and (max-width: 768px) {
-    display: inline-flex;
+  && {
+    display: flex;
+    @media (min-width: 320px) and (max-width: 768px) {
+      display: inline-flex;
+    }
   }
 `;

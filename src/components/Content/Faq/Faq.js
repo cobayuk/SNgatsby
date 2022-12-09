@@ -76,7 +76,7 @@ const FaqContent = () => {
         >
           Pertanyaan yang Sering diajukan
         </Style.HeadingFaqSecond>
-        <Box mt={isMobile ? 5 : 15}>
+        <div style={isMobile ? {marginTop: "40px"} : {marginTop: "120px"}}>
           {FaqListQuestions.map((value, key) => (
             <Style.MenuAccordion
               key={key}
@@ -97,7 +97,7 @@ const FaqContent = () => {
               </Style.CustomAccordion>
             </Style.MenuAccordion>
           ))}
-        </Box>
+        </div>
       </Style.ContainerFaq>
     </Fragment>
   );

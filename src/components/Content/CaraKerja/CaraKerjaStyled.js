@@ -28,57 +28,69 @@ export const BoxHowItWorks = styled.div`
 `;
 
 export const HeadingItWork = styled(Typography)`
-  font-size: 20px;
-  font-family: ${FONT_FAMILY.oxygen};
-  font-weight: bold;
-  color: ${COLORS.brownSugar};
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  @media (max-width: 768px) {
-    font-size: 14px;
-    line-height: 18px;
+  && {
+    font-size: 20px;
+    font-family: ${FONT_FAMILY.oxygen};
+    font-weight: bold;
+    color: ${COLORS.brownSugar};
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 `;
 
 export const TaglineCaption = styled(Typography)`
-  font-size: 40px;
-  @media (max-width: 768px) {
-		font-size: 20px;
+  && {
+    font-size: 40px;
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+    @media (min-width: 1024px) {
+      margin-bottom: 30px;
+    }
+    font-family: ${FONT_FAMILY.oxygen};
+    font-weight: bold;
+    color: ${COLORS.black};
   }
-  @media (min-width: 1024px) {
-    margin-bottom: 30px;
-  }
-  font-family: ${FONT_FAMILY.oxygen};
-  font-weight: bold;
-  color: ${COLORS.black};
 `;
 
 export const TaglineDescription = styled(Typography)`
-  font-size: 15px;
-  margin-bottom: 40px;
-  margin-top: 15px;
+  && {
+    font-size: 15px;
+    margin-bottom: 40px;
+    margin-top: 15px;
+  }
 `;
 
 export const HeadingIlustration = styled(Typography)`
-  text-align: left;
-  @media (max-width: 768px) {
-    text-align: center;
-    font-size: 16px;
+  && {
+    text-align: left;
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 16px;
+    }
+    color: ${COLORS.black};
+    font-weight: bold;
+    font-family: ${FONT_FAMILY.oxygen};
+    margin-bottom: 10px;
   }
-  color: ${COLORS.black};
-  font-weight: bold;
-  font-family: ${FONT_FAMILY.oxygen};
-  margin-bottom: 10px;
+
 `;
 
 export const DescriptionChooseThemeKece = styled(Typography)`
-  font-size: 15px;
-  text-align: left;
-  font-family: ${FONT_FAMILY.oxygen};
-  @media (max-width: 768px) {
-    padding: 0px 15px;
-    text-align: center;
+  && {
+    font-size: 15px;
+    text-align: left;
+    font-family: ${FONT_FAMILY.oxygen};
+    @media (max-width: 768px) {
+      padding: 0px 15px;
+      text-align: center;
+    }
   }
+
 `;
 
 export const ImageIlustration = styled.img`
@@ -95,7 +107,9 @@ export const ImageIlustration = styled.img`
 `;
 
 export const WrapperDescription = styled(Grid)`
-  @media (min-width: 1024px) {
-    align-self: center;
+  && {
+    @media (min-width: 1024px) {
+      align-self: center;
+    }
   }
 `;

@@ -110,7 +110,7 @@ export const GridCenter = styled(Grid)`
   align-items: center;
 `;
 
-export const WrapperInline = styled(Box)`
+export const WrapperInline = styled.div`
   display: table-cell;
   color: ${COLORS.white};
   padding-top: 25px;
@@ -120,7 +120,7 @@ export const WrapperInline = styled(Box)`
   }
 `;
 
-export const WrapperMediaSocial = styled(Box)`
+export const WrapperMediaSocial = styled.div`
   & div {
     color: ${COLORS.white};
     display: inline-flex;
@@ -130,12 +130,12 @@ export const WrapperMediaSocial = styled(Box)`
   }
 `;
 
-export const BoxMediaSocial = styled(Box)`
+export const BoxMediaSocial = styled.div`
   padding-left: 15px;
   display: flex;
 `;
 
-export const HeadingBanner = styled(Typography)`
+export const HeadingBanner = styled.span`
   text-align: center;
   font-size: 28px;
   font-weight: bold;
@@ -146,12 +146,12 @@ export const HeadingBanner = styled(Typography)`
   }
 `;
 
-export const InnerFooter = styled(Box)`
+export const InnerFooter = styled.div`
   display: flex;
   margin: 20px;
 `;
 
-export const SubFooter = styled(Box)`
+export const SubFooter = styled.div`
   display: flex;
   flex-direction: colum;
   width: 100%;
@@ -171,16 +171,18 @@ export const ImageBrandFooter = styled.img`
 `;
 
 export const HeadingInnerFooter = styled(Typography)`
-  font-family: ${FONT_FAMILY.oxygen};
-  font-style: normal;
-  font-weight: bold;
-  font-size: ${FONT_SIZE.font20};
-  line-height: 25px;
-  @media (min-width: 1024px) {
-    font-size: 16px;
+  && {
+    font-family: ${FONT_FAMILY.oxygen};
+    font-style: normal;
+    font-weight: bold;
+    font-size: ${FONT_SIZE.font20};
+    line-height: 25px;
+    @media (min-width: 1024px) {
+      font-size: 16px;
+    }
+    color: ${COLORS.grayLigter};
+    margin-bottom: 15px;
   }
-  color: ${COLORS.grayLigter};
-  margin-bottom: 15px;
 `;
 
 export const NavList = styled(Link)`
